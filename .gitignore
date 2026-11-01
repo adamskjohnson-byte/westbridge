@@ -1,0 +1,23 @@
+# Dependencies and generated output
+node_modules/
+vendor/
+dist/
+build/
+
+# Local secrets and environment overrides
+.env
+.env.*
+!.env.example
+
+# IDE and operating system files
+.idea/
+.vscode/
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
+
+# Laravel runtime and generated files
+server/storage/*.key
+server/bootstrap/cache/*.php
+server/database/*.sqlite
