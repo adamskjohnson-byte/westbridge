@@ -1,0 +1,30 @@
+{
+  "comment": "Crawler-only exceptions for built-in library labels and non-translatable proper names or numeric values. JSON has no comment syntax, so this field documents the patterns below.",
+  "patterns": [
+    "^Westbridge National Bank$",
+    "^(Westbridge|National Bank|PSEUDO)$",
+    "^(?:Elena Brooks|Marcus Chen|Priya Nair|Alicia R\\.|Jordan L\\.|Maya P\\.|Theo N\\.|Sofia K\\.|Daniel B\\.)$",
+    "^(?:Krasutskaya|nattanan23|flyerwerk|konkapo|OleksandrPidvalnyi|PublicDomainPictures|geralt|cskkkk|Pexels|stevepb|VISHNU_KV|089photoshootings|ChiemSeherin)$",
+    "^Marketplace$",
+    "^6248 0000 0000 2105$",
+    "^\\d+(?:[,.]\\d+)?(?:K\\+|%| USD)?$",
+    "^\\$\\d[\\d,]*(?:\\.\\d{2})?$",
+    "^Notifications alt\\+T$",
+    "^Demo only\\. Westbridge National Bank is not a real bank\\. No real money is held\\.$",
+    "^https?:\\/\\/",
+    "^mailto:",
+    "^#[A-Za-z0-9_-]+$",
+    "^\\d+(?:\\.\\d+)?%?$",
+    "^Coming soon$",
+    "^Login$",
+    "^Register$",
+    "^Forgot password$",
+    "^Search$"
+  ],
+  "routes": {
+    "/": [
+      "Westbridge National Bank",
+      "Demo only. Westbridge National Bank is not a real bank. No real money is held."
+    ]
+  }
+}

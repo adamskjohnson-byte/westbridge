@@ -1,0 +1,439 @@
+{
+  "hero": {
+    "card": {
+      "ariaLabel": "Illustration einer Westbridge-Debitkarte (Demo, keine echte Karte)",
+      "cardholder": "Karteninhaber",
+      "expiryLabel": "Gültig bis",
+      "holder": "WESTBRIDGE MITGLIED"
+    },
+    "eyebrow": "Für ein gutes Gefühl im Alltag",
+    "headline": "Banking, das Klarheit und Ruhe schafft und Sie langfristig begleitet.",
+    "subheadline": "Eröffnen Sie ein Girokonto, bauen Sie Ihre Rücklagen auf und behalten Sie jede Überweisung im Blick – mit einem digitalen Banking-Erlebnis, das von Anfang an einfach ist.",
+    "primaryCta": "Konto eröffnen",
+    "secondaryCta": "So funktioniert es"
+  },
+  "videoShowcase": {
+    "unmute": "Ton einschalten",
+    "tapToUnmute": "Zum Einschalten des Tons tippen",
+    "replay": "Erneut abspielen",
+    "play": "Video abspielen",
+    "eyebrow": "Erleben Sie es in Aktion",
+    "heading": "Lernen Sie Westbridge kennen",
+    "description": "Entdecken Sie eine übersichtlichere Art, Ihr Banking im Alltag zu verwalten."
+  },
+  "trust": {
+    "title": "Ein besseres Banking-Erlebnis für jeden Tag",
+    "stats": [
+      {
+        "label": "Kundinnen und Kunden",
+        "note": "mit Privat- und Geschäftskonten"
+      },
+      {
+        "label": "Filialen",
+        "note": "für Gemeinden im ganzen Land"
+      },
+      {
+        "label": "Verfügbarkeit",
+        "note": "mit sicherem, durchgehendem Zugang"
+      },
+      {
+        "label": "Jahre",
+        "note": "verlässlicher Service"
+      }
+    ],
+    "note": "Beispielhafte Zahlen für diese Demo."
+  },
+  "products": {
+    "eyebrow": "Produkte",
+    "title": "Flexible Lösungen für Ihren Alltag und Ihren Beruf.",
+    "items": [
+      {
+        "title": "Girokonto",
+        "description": "Bezahlen, überweisen und sparen – mit Echtzeit-Überblick und einfacher Rechnungszahlung."
+      },
+      {
+        "title": "Sparen",
+        "description": "Setzen Sie Ihre Sparziele mit attraktiver Verzinsung, regelmäßigen Überweisungen und einfacher Fortschrittsanzeige um."
+      },
+      {
+        "title": "Kreditkarten",
+        "description": "Genießen Sie Flexibilität im Alltag – mit Prämien, Kartenkontrollen und sofortigen Benachrichtigungen."
+      },
+      {
+        "title": "Kredite",
+        "description": "Finanzieren Sie wichtige Schritte im Leben mit transparenten Konditionen und persönlicher Unterstützung."
+      },
+      {
+        "title": "Immobilienfinanzierung",
+        "description": "Finden Sie mit Beratung, die zu Ihrem Zeitplan und Ihren Zielen passt, den Weg ins eigene Zuhause."
+      }
+    ]
+  },
+  "whyWestbridge": {
+    "eyebrow": "Warum Westbridge",
+    "title": "Durchdachtes Banking, das sich am echten Leben orientiert.",
+    "items": [
+      {
+        "title": "Sofortüberweisungen",
+        "description": "Überweisen Sie Geld in Sekunden zwischen Konten und an andere Personen – ganz unkompliziert."
+      },
+      {
+        "title": "Rund um die Uhr für Sie da",
+        "description": "Sprechen Sie bei Fragen jederzeit mit einer echten Fachperson – am Tag und in der Nacht."
+      },
+      {
+        "title": "Keine versteckten Gebühren",
+        "description": "Mit klaren Preisen wissen Sie von Anfang an, woran Sie sind – ohne unangenehme Überraschungen."
+      },
+      {
+        "title": "Cleverer Überblick über Ihre Ausgaben",
+        "description": "Erkennen Sie Trends, ordnen Sie Einkäufe Kategorien zu und behalten Sie Ihr Monatsbudget im Blick."
+      },
+      {
+        "title": "Kartenkontrolle",
+        "description": "Sperren oder entsperren Sie Ihre Karte und legen Sie direkt in der App Limits fest."
+      },
+      {
+        "title": "Sicherheit",
+        "description": "Integrierter Schutz durch mehrere Prüfschritte, Benachrichtigungen und zuverlässige Überwachung."
+      }
+    ]
+  },
+  "dashboardPreview": {
+    "ariaLabel": "Illustration der Westbridge-Onlineübersicht mit Beispieldaten",
+    "cashFlowChartLabel": "Beispielhafter Verlauf des Geldflusses",
+    "eyebrow": "Ihr Geld auf einen Blick",
+    "heading": "Ihre Finanzen im Alltag klar im Blick.",
+    "description": "Sehen Sie an einem Ort, was eingeht, was ausgeht und welche Kontobewegungen wichtig sind.",
+    "benefits": [
+      "Auswertungen, mit denen Sie Ausgabemuster leichter erkennen",
+      "Sofortige Benachrichtigungen bei Kontobewegungen",
+      "Kartenkontrollen, mit denen Sie alles im Griff haben",
+      "Monatsabrechnungen, genau dann verfügbar, wenn Sie sie brauchen"
+    ],
+    "account": {
+      "label": "Verfügbarer Kontostand"
+    },
+    "stats": [
+      {
+        "label": "Einnahmen"
+      },
+      {
+        "label": "Ausgaben"
+      }
+    ],
+    "activityLabel": "Letzte Aktivitäten",
+    "activityPeriod": "Dieser Monat",
+    "transactions": [
+      {
+        "name": "Marketplace",
+        "detail": "Kartenzahlung"
+      },
+      {
+        "name": "Gehaltszahlung",
+        "detail": "Kartenzahlung"
+      },
+      {
+        "name": "Lebensmittel",
+        "detail": "Kartenzahlung"
+      }
+    ],
+    "cashFlow": "Geldfluss",
+    "notification": "Zahlung eingegangen +$2,450.00",
+    "securityNotice": "Karte geschützt",
+    "caption": "Beispieldaten zur Veranschaulichung.",
+    "cta": "Konto eröffnen"
+  },
+  "steps": {
+    "eyebrow": "So funktioniert es",
+    "title": "In drei einfachen Schritten starten.",
+    "items": [
+      {
+        "title": "Wählen Sie Ihr Konto",
+        "description": "Finden Sie das passende Konto für Ihre Ziele – ob für tägliche Ausgaben, zum Sparen oder für beides."
+      },
+      {
+        "title": "Richten Sie Ihr Profil ein",
+        "description": "Geben Sie die wichtigsten Daten ein, bestätigen Sie Ihre Identität und passen Sie Ihre Kontoeinstellungen in wenigen Minuten an."
+      },
+      {
+        "title": "Starten Sie sicher ins Banking",
+        "description": "Zahlen Sie Geld auf Ihr Konto ein, richten Sie Ihre Routinen ein und nutzen Sie sofort Ihre Finanztools."
+      }
+    ]
+  },
+  "calculators": {
+    "results": {
+      "estimatedPayments": "Voraussichtliche Raten",
+      "monthlyPayment": "Monatliche Rate",
+      "totalInterest": "Gesamtzinsen",
+      "totalRepayment": "Gesamtrückzahlung",
+      "projectedBalance": "Voraussichtlicher Kontostand",
+      "finalBalance": "Endkontostand",
+      "totalContributed": "Eingezahlter Gesamtbetrag",
+      "interestEarned": "Erwirtschaftete Zinsen",
+      "savingsChart": "Diagramm zur Sparentwicklung"
+    },
+    "eyebrow": "Planungstools",
+    "title": "Rechnen Sie Ihren nächsten Schritt durch, bevor Sie sich entscheiden.",
+    "note": "Schätzungen dienen nur zur Veranschaulichung.",
+    "loan": {
+      "label": "Kreditrechner",
+      "amountLabel": "Kreditbetrag",
+      "rateLabel": "Jahreszinssatz",
+      "termLabel": "Laufzeit in Jahren"
+    },
+    "savings": {
+      "label": "Sparentwicklung",
+      "initialLabel": "Ersteinlage",
+      "contributionLabel": "Monatliche Einzahlung",
+      "rateLabel": "Jahreszinssatz",
+      "yearsLabel": "Jahre"
+    }
+  },
+  "rates": {
+    "columns": {
+      "product": "Produkt",
+      "rate": "Zinssatz",
+      "bestFor": "Geeignet für"
+    },
+    "eyebrow": "Konditionen",
+    "title": "Beispielkonditionen für einige unserer gefragtesten Produkte.",
+    "tabs": [
+      {
+        "label": "Sparen",
+        "rows": [
+          {
+            "product": "Klassisches Sparkonto",
+            "feature": "Flexibler Zugriff"
+          },
+          {
+            "product": "Sparziel-Plan",
+            "feature": "Ideal für automatische Überweisungen"
+          },
+          {
+            "product": "Geschäftsreserve",
+            "feature": "Planung des Geldflusses"
+          }
+        ]
+      },
+      {
+        "label": "Kredite",
+        "rows": [
+          {
+            "product": "Privatkredit",
+            "feature": "Schnelle Bearbeitung"
+          },
+          {
+            "product": "Eigenheimfinanzierung",
+            "feature": "Flexible Rückzahlung"
+          },
+          {
+            "product": "Fahrzeugkredit",
+            "feature": "Einfache monatliche Raten"
+          }
+        ]
+      },
+      {
+        "label": "Immobilienfinanzierung",
+        "rows": [
+          {
+            "product": "Festzins, 30 Jahre",
+            "feature": "Planbare Raten"
+          },
+          {
+            "product": "Festzins, 15 Jahre",
+            "feature": "Schnellerer Vermögensaufbau"
+          },
+          {
+            "product": "Variabler Zinssatz",
+            "feature": "Niedrigerer Anfangszinssatz"
+          }
+        ]
+      }
+    ]
+  },
+  "security": {
+    "eyebrow": "Sicherheit & Datenschutz",
+    "title": "Damit Sie die Kontrolle über Ihr Geld und Ihre Daten behalten.",
+    "items": [
+      "Verschlüsselung bei der Übertragung und Speicherung",
+      "Zwei-Faktor-Authentifizierung",
+      "Betrugsüberwachung und Warnmeldungen",
+      "Karte sofort in der App sperren",
+      "Echtzeit-Benachrichtigungen zu Ihrem Konto",
+      "Datenschutz von Anfang an in jedem Ablauf berücksichtigt"
+    ]
+  },
+  "mobileApp": {
+    "available": "Verfügbar",
+    "balanceChart": "Kontostandsdiagramm der App",
+    "transfers": "Überweisungen",
+    "spending": "Ausgaben",
+    "eyebrow": "Mobile App",
+    "title": "Ihr Banking für unterwegs – übersichtlich und unkompliziert.",
+    "description": "Prüfen Sie Kontostände, überweisen Sie Geld und verwalten Sie Ihre Karten in einer übersichtlichen mobilen Anwendung für den Alltag.",
+    "features": [
+      "Kontostände schnell prüfen",
+      "Clever kategorisierte Ausgaben",
+      "Karten sofort kontrollieren"
+    ],
+    "storeButtons": [
+      {
+        "label": "App Store",
+        "meta": "Demnächst verfügbar"
+      },
+      {
+        "label": "Google Play",
+        "meta": "Demnächst verfügbar"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Erfahrungen unserer Kundinnen und Kunden",
+    "title": "Menschen bleiben bei Westbridge, weil sich Banking persönlich anfühlt.",
+    "items": [
+      {
+        "name": "Alicia R.",
+        "role": "Freiberufliche Designerin",
+        "quote": "Mit der App habe ich meine Ausgaben leicht im Blick, und Überweisungen gehen sofort. Alles wirkt angenehm ruhig und nicht überladen."
+      },
+      {
+        "name": "Jordan L.",
+        "role": "Erstkäufer",
+        "quote": "Die Beratung zur Immobilienfinanzierung war klar und hilfreich. Ich fühlte mich nie unter Druck gesetzt, und jeder Schritt war verständlich."
+      },
+      {
+        "name": "Maya P.",
+        "role": "Betriebsleiterin",
+        "quote": "Mit den Tools für unser Geschäftskonto behalten wir unseren Geldfluss ohne zusätzliche Komplexität im Griff. Die Oberfläche ist übersichtlich und zuverlässig."
+      },
+      {
+        "name": "Theo N.",
+        "role": "Elternteil von zwei Kindern",
+        "quote": "Sparziele, Benachrichtigungen und regelmäßige Überweisungen greifen so gut ineinander, dass sich meine Finanzen endlich gut organisieren lassen."
+      },
+      {
+        "name": "Sofia K.",
+        "role": "Remote-Beraterin",
+        "quote": "Man merkt, dass dieser Service für den Alltag gemacht ist. Ich kann Kontostände prüfen und in weniger als einer Minute Geld überweisen."
+      },
+      {
+        "name": "Daniel B.",
+        "role": "Kleinunternehmer",
+        "quote": "Die Kartenkontrollen und Sicherheitstools geben mir ein gutes Gefühl. Das ist Banking für Menschen, die etwas bewegen wollen, nicht nur für Papierkram."
+      }
+    ]
+  },
+  "blog": {
+    "eyebrow": "Wissenswertes",
+    "title": "Praktische Tipps für die Momente, auf die es ankommt.",
+    "posts": [
+      {
+        "category": "Sparen",
+        "title": "Eine bessere Sparroutine entwickeln, ohne zu viel auszugeben",
+        "excerpt": "Ein einfacher monatlicher Rhythmus hilft Ihnen, unkomplizierter und regelmäßiger zu sparen.",
+        "readTime": "4 Min. Lesezeit"
+      },
+      {
+        "category": "Planung",
+        "title": "Wann Sie Ihren Kredit prüfen sollten, bevor sich die Zinsen erneut ändern",
+        "excerpt": "Schon kleine Unterschiede bei Zinssatz und Laufzeit können Ihr Monatsbudget spürbar verändern.",
+        "readTime": "5 Min. Lesezeit"
+      },
+      {
+        "category": "Wohnen",
+        "title": "Drei Finanzgewohnheiten für ein entspannteres erstes Jahr im eigenen Zuhause",
+        "excerpt": "Ein verlässlicher Plan für Rechnungen, Rücklagen und Notfälle senkt den Stress, wenn der Alltag voll wird.",
+        "readTime": "6 Min. Lesezeit"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Häufige Fragen",
+    "title": "Antworten auf häufig gestellte Fragen.",
+    "items": [
+      {
+        "question": "Wie schnell kann ich ein Konto eröffnen?",
+        "answer": "Die meisten Antragstellenden können die erste Einrichtung in weniger als zehn Minuten abschließen. Nach der Bestätigung ist der Kontozugang häufig kurz darauf verfügbar."
+      },
+      {
+        "question": "Fallen monatliche Kontoführungsgebühren an?",
+        "answer": "Viele unserer Konten für den Alltag sind besonders unkompliziert. Über mögliche Gebühren informieren wir transparent, bevor Sie sich entscheiden."
+      },
+      {
+        "question": "Kann ich Geld an Freunde und Familie senden?",
+        "answer": "Ja. Für unterstützte Kontoarten sind Sofortüberweisungen und geplante Zahlungen im digitalen Banking verfügbar."
+      },
+      {
+        "question": "Wie schütze ich meine Karte, wenn sie verloren geht?",
+        "answer": "Sie können Ihre Karte sofort in der App pausieren oder sperren und sie bei Bedarf wieder aktivieren."
+      },
+      {
+        "question": "Welche täglichen Transaktionslimits gelten?",
+        "answer": "Die Limits unterscheiden sich je nach Konto und Transaktionsart. In der App sehen Sie die geltenden Grenzen vor jeder Überweisung."
+      },
+      {
+        "question": "Wann ist der Kundenservice erreichbar?",
+        "answer": "Bei Fragen zu Konten und Sicherheit ist der Support rund um die Uhr erreichbar. Persönliche Unterstützung erhalten Sie während erweiterter Servicezeiten."
+      },
+      {
+        "question": "Kann ich Sparziele festlegen?",
+        "answer": "Ja. Sie können Sparpläne für bestimmte Ziele erstellen, Überweisungen automatisieren und Ihren Fortschritt zentral verfolgen."
+      },
+      {
+        "question": "Kann ich Kartenkontrollen für Online-Einkäufe nutzen?",
+        "answer": "Unsere App bietet Funktionen für Ausgabemuster, Kartenaktivitäten und Transaktionsmeldungen, damit Sie stets den Überblick behalten."
+      }
+    ]
+  },
+  "contact": {
+    "branchLocator": "Filialfinder",
+    "branchDescription": "Finden Sie eine Servicestelle in Ihrer Nähe.",
+    "visitBranch": "Filiale besuchen",
+    "sending": "Wird gesendet…",
+    "eyebrow": "Kontakt",
+    "title": "Wenn Sie Unterstützung brauchen, sprechen Sie mit einer Fachperson von Westbridge.",
+    "description": "Ob Sie Fragen zur Kontoeröffnung haben oder einen größeren Kauf planen: Wir helfen Ihnen gerne weiter.",
+    "form": {
+      "name": "Name",
+      "email": "E-Mail-Adresse",
+      "subject": "Betreff",
+      "message": "Nachricht",
+      "submit": "Nachricht senden"
+    },
+    "branches": [
+      {
+        "city": "Portland",
+        "address": "88 Alder Row",
+        "hours": "Mo.–Fr. · 9:00–17:30 Uhr"
+      },
+      {
+        "city": "Austin",
+        "address": "24 Cedar Avenue",
+        "hours": "Mo.–Sa. · 9:00–18:00 Uhr"
+      },
+      {
+        "city": "Chicago",
+        "address": "410 Elm Plaza",
+        "hours": "Mo.–Fr. · 8:30–17:00 Uhr"
+      },
+      {
+        "city": "Boston",
+        "address": "910 Harbor Street",
+        "hours": "Mo.–Fr. · 9:00–18:30 Uhr"
+      }
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "Rundbrief",
+    "title": "Jede Woche praktische Finanztipps direkt in Ihrem Posteingang.",
+    "placeholder": "E-Mail-Adresse",
+    "cta": "Newsletter abonnieren",
+    "joining": "Anmeldung läuft…"
+  },
+  "meta": {
+    "description": "Entdecken Sie Girokonten, Sparangebote, Kredite und Banking-Lösungen für den Alltag bei Westbridge National Bank. Nur eine Demo; es wird kein echtes Geld verwahrt."
+  },
+  "_notice": "Maschinell übersetzter Entwurf; bitte von einer muttersprachlichen Person prüfen lassen."
+}

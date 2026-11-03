@@ -3,6 +3,10 @@ node_modules/
 vendor/
 dist/
 build/
+.env.local
+client/.env.local
+client/scripts/.cache/
+qa-screenshots/
 
 # Local secrets and environment overrides
 .env

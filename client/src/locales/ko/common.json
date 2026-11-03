@@ -1,0 +1,488 @@
+{
+  "nav": {
+    "personal": "Personal",
+    "business": "Business",
+    "loans": "Loans",
+    "security": "Security"
+  },
+  "buttons": {
+    "login": "Login",
+    "openAccount": "Open Account"
+  },
+  "footer": {
+    "disclaimer": "Demo only. Westbridge National Bank is not a real bank. No real money is held.",
+    "photoSource": "Photos from Pixabay",
+    "photoCredits": "Photo credits"
+  },
+  "authPitch": {
+    "eyebrow": "A clear start with Westbridge",
+    "heading": "Your everyday banking, thoughtfully organized.",
+    "body": "A calmer place to manage the accounts and plans that move you forward.",
+    "benefits": [
+      "Keep checking and savings in one clear view",
+      "See transfer activity and status at a glance",
+      "Get help from a team that listens"
+    ],
+    "disclaimer": "Demo only. Westbridge National Bank is not a real bank. No real money is held."
+  },
+  "navigation": {
+    "primaryLabel": "Primary navigation",
+    "primaryLinks": [
+      {
+        "label": "Personal"
+      },
+      {
+        "label": "Business"
+      },
+      {
+        "label": "Loans"
+      },
+      {
+        "label": "Security"
+      }
+    ],
+    "footerColumns": [
+      {
+        "title": "Products",
+        "links": [
+          {
+            "label": "Checking"
+          },
+          {
+            "label": "Savings"
+          },
+          {
+            "label": "All products"
+          },
+          {
+            "label": "Loans"
+          },
+          {
+            "label": "Rates"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About Westbridge"
+          },
+          {
+            "label": "Leadership"
+          },
+          {
+            "label": "Contact"
+          }
+        ]
+      },
+      {
+        "title": "Support",
+        "links": [
+          {
+            "label": "Help center"
+          },
+          {
+            "label": "Blog"
+          },
+          {
+            "label": "Security"
+          }
+        ]
+      },
+      {
+        "title": "Legal",
+        "links": [
+          {
+            "label": "Privacy"
+          },
+          {
+            "label": "Terms"
+          },
+          {
+            "label": "Cookies"
+          }
+        ]
+      }
+    ]
+  },
+  "brand": {
+    "homeLabel": "Westbridge National Bank home"
+  },
+  "accessibility": {
+    "skipToContent": "Skip to content",
+    "closeMenu": "Close menu",
+    "sliderValue": "Value {{value}}"
+  },
+  "navbar": {
+    "dashboard": "Dashboard",
+    "loggingOut": "Logging out…",
+    "logOut": "Log out",
+    "account": "Account",
+    "accountMenuLabel": "Account menu for {{name}}",
+    "login": "Login",
+    "openAccount": "Open Account",
+    "closeNavigation": "Close navigation menu",
+    "openNavigation": "Open navigation menu"
+  },
+  "languageSwitcher": {
+    "triggerLabel": "Language: {{language}}",
+    "searchLabel": "Search languages",
+    "searchPlaceholder": "Search languages",
+    "listLabel": "Languages",
+    "noResults": "No languages found."
+  },
+  "theme": {
+    "toggleLabel": "Current theme: {{current}}. Switch to {{next}} theme",
+    "names": {
+      "system": "system",
+      "light": "light",
+      "dark": "dark"
+    }
+  },
+  "breadcrumbs": {
+    "label": "Breadcrumb",
+    "home": "Home"
+  },
+  "carousel": {
+    "previous": "Previous slide",
+    "next": "Next slide"
+  },
+  "forms": {
+    "firstName": "First name",
+    "lastName": "Last name",
+    "emailAddress": "Email address",
+    "password": "Password",
+    "confirmPassword": "Confirm password",
+    "newPassword": "New password",
+    "confirmNewPassword": "Confirm new password",
+    "validation": {
+      "emailRequired": "Enter your email address.",
+      "emailInvalid": "Enter a valid email address.",
+      "emailMax": "Email must be 254 characters or fewer.",
+      "nameMin": "Enter at least 2 characters.",
+      "nameMax": "Name must be 60 characters or fewer.",
+      "nameMax100": "Name must be 100 characters or fewer.",
+      "subjectMin": "Please add a subject.",
+      "subjectMax": "Subject must be 150 characters or fewer.",
+      "messageMin": "Please share a few more details.",
+      "messageMax": "Message must be 2000 characters or fewer.",
+      "passwordMin": "Use at least 10 characters.",
+      "passwordLowercase": "Include a lowercase letter.",
+      "passwordUppercase": "Include an uppercase letter.",
+      "passwordNumber": "Include a number.",
+      "passwordRequired": "Enter your password.",
+      "confirmPassword": "Confirm your password.",
+      "acceptTerms": "You must accept the terms to continue.",
+      "passwordMismatch": "Passwords do not match."
+    },
+    "errors": {
+      "rateLimit": "Too many attempts. Try again in a minute.",
+      "reviewAndRetry": "Please review the information and try again.",
+      "connection": "Unable to connect. Check your connection and try again.",
+      "submit": "We could not submit your request. Please try again."
+    },
+    "contact": {
+      "success": "Your message has been sent."
+    },
+    "newsletter": {
+      "success": "You are subscribed to the newsletter."
+    }
+  },
+  "actions": {
+    "continue": "Continue"
+  },
+  "auth": {
+    "startHere": "Start here",
+    "openAccount": "Open an account",
+    "registerDescription": "A few details, then we’ll send an email verification link.",
+    "createAccount": "Create account",
+    "creatingAccount": "Creating account…",
+    "acceptTermsLead": "I accept the",
+    "demoTerms": "demo terms",
+    "alreadyHaveAccount": "Already have an account?",
+    "signIn": "Sign in",
+    "signInHeading": "Sign in to your account",
+    "loginDescription": "Use your Westbridge demo account details.",
+    "welcomeBack": "Welcome back",
+    "newToWestbridge": "New to Westbridge?",
+    "forgotPassword": "Forgot password?",
+    "rememberMe": "Remember me on this device",
+    "signingIn": "Signing in…",
+    "resetPassword": "Reset your password",
+    "forgotDescription": "Enter the email address on your account and we’ll send a reset link if it matches.",
+    "nextStep": "Next step",
+    "checkInbox": "Check your inbox",
+    "resetEmailSentIfExists": "If that email exists, a reset link is on its way.",
+    "returnToSignIn": "Return to sign in",
+    "accountRecovery": "Account recovery",
+    "forgotPasswordQuestion": "Forgot your password?",
+    "sending": "Sending…",
+    "sendResetLink": "Send reset link",
+    "backToSignIn": "Back to sign in",
+    "chooseNewPassword": "Choose a new password",
+    "resetDescription": "Choose a new password for your Westbridge demo account.",
+    "passwordResetSuccess": "Your password has been reset. Sign in with your new password.",
+    "resetLinkUnavailable": "Reset link unavailable",
+    "requestNewLink": "Request a new link",
+    "resetLinkInvalid": "This password reset link is invalid or has expired. Request a new link to continue.",
+    "requestNewResetLink": "Request a new reset link",
+    "resetEmailLabel": "For {{email}}",
+    "saving": "Saving…",
+    "saveNewPassword": "Save new password",
+    "verifyEmail": "Verify your email",
+    "verifyDescription": "Confirm your email address to finish setting up your account.",
+    "verificationLinkSent": "A new verification link is on its way.",
+    "oneLastStep": "One last step",
+    "verificationSentTo": "We sent a verification link to {{email}}. Open it to finish setting up your account.",
+    "resendAvailable_one": "Resend available in {{count}} second",
+    "resendAvailable_other": "Resend available in {{count}} seconds",
+    "resendVerification": "Resend verification email",
+    "emailConfirmed": "Email confirmed",
+    "allSet": "You’re all set.",
+    "emailVerifiedContinue": "Your email address is verified. Continue to your account when you’re ready.",
+    "linkUnavailable": "Link unavailable",
+    "linkCannotBeUsed": "This link can’t be used",
+    "verificationLinkInvalid": "This verification link is invalid or has expired.",
+    "signInToRequestLink": "Sign in to request another link",
+    "showPassword": "Show password",
+    "hidePassword": "Hide password",
+    "passwordRules": {
+      "length": "At least 10 characters",
+      "uppercase": "One uppercase letter",
+      "lowercase": "One lowercase letter",
+      "number": "One number"
+    },
+    "passwordStrength_one": "Password strength: {{count}} of {{total}} requirements met",
+    "passwordStrength_other": "Password strength: {{count}} of {{total}} requirements met",
+    "loadingAccount": "Loading your account",
+    "checkingSession": "Checking your session…",
+    "errors": {
+      "accountSuspended": "This account is currently paused. Please contact support for help.",
+      "rateLimit": "Too many attempts. Please wait a moment and try again.",
+      "reviewAndRetry": "Please review the information and try again.",
+      "invalidCredentials": "The email address or password is incorrect.",
+      "createAccount": "We could not create your account.",
+      "signIn": "We could not sign you in. Please try again.",
+      "sendReset": "We could not send the reset email. Please try again.",
+      "resetPassword": "We could not reset your password. Please try again.",
+      "waitBeforeResend": "Please wait before requesting another link.",
+      "resendVerification": "We could not resend the link. Please try again shortly.",
+      "verifyEmail": "We could not verify this email address. Please request a fresh link."
+    }
+  },
+  "apiErrors": {
+    "generic": "Something went wrong. Please try again.",
+    "network_error": "Unable to connect. Check your connection and try again.",
+    "unauthenticated": "Your session has ended. Please sign in again.",
+    "forbidden": "You are not allowed to do that.",
+    "account_suspended": "This account is paused. Please contact support.",
+    "email_not_verified": "Verify your email address to continue.",
+    "invalid_verification_link": "This verification link is invalid or has expired.",
+    "role_forbidden": "Your account does not have access to this page.",
+    "not_found": "That page or item could not be found.",
+    "csrf_mismatch": "Your session needs to refresh. Please try again.",
+    "validation_failed": "Please check the information and try again.",
+    "too_many_requests": "Too many requests. Please wait and try again.",
+    "server_error": "A server error occurred. Please try again shortly.",
+    "http_error": "The request could not be completed. Please try again.",
+    "validation": {
+      "email_required": "Enter your email address.",
+      "email_invalid": "Enter a valid email address.",
+      "email_max": "Email must be 254 characters or fewer.",
+      "email_taken": "That email address is already in use.",
+      "name_required": "Enter your name.",
+      "name_invalid": "Enter a valid name.",
+      "name_min": "Enter at least 2 characters.",
+      "name_max": "Name must be 60 characters or fewer.",
+      "subject_required": "Enter a subject.",
+      "subject_invalid": "Enter a valid subject.",
+      "subject_min": "Subject must be at least 3 characters.",
+      "subject_max": "Subject must be 150 characters or fewer.",
+      "message_required": "Enter a message.",
+      "message_invalid": "Enter a valid message.",
+      "message_min": "Message must be at least 10 characters.",
+      "message_max": "Message must be 2000 characters or fewer.",
+      "password_required": "Enter your password.",
+      "password_invalid": "Enter a valid password.",
+      "password_min": "Use at least 10 characters.",
+      "password_uppercase": "Include an uppercase letter.",
+      "password_lowercase": "Include a lowercase letter.",
+      "password_number": "Include a number.",
+      "password_confirmed": "The passwords do not match.",
+      "password_confirmation_required": "Confirm your password.",
+      "password_compromised": "Choose a password that has not appeared in a data breach.",
+      "terms_required": "You must accept the terms to continue.",
+      "remember_invalid": "Choose a valid remember-me setting.",
+      "credentials_invalid": "The email address or password is incorrect.",
+      "reset_token_required": "The reset token is required.",
+      "reset_token_invalid": "This reset link is invalid or has expired. Request a new one."
+    }
+  },
+  "dashboard": {
+    "description": "Your Westbridge demo account overview.",
+    "overview": "Overview",
+    "greeting": {
+      "morning": "Good morning, {{name}}",
+      "afternoon": "Good afternoon, {{name}}",
+      "evening": "Good evening, {{name}}"
+    },
+    "shell": {
+      "primaryNavigation": "Dashboard navigation",
+      "mobileNavigation": "Dashboard tabs",
+      "workspace": "Your money",
+      "overview": "Overview",
+      "transactions": "Transactions",
+      "transfers": "Transfers",
+      "cards": "Cards",
+      "settings": "Settings",
+      "comingSoon": "Coming soon",
+      "demoNotice": "Demo money only",
+      "live": "Available now",
+      "more": "More"
+    },
+    "demoMoney": "Demo money",
+    "balanceAcrossAccounts": "Across {{count}} accounts",
+    "accountNumberCopied": "Account number copied",
+    "accountNumberCopyError": "Could not copy the account number",
+    "copyAccountNumber": "Copy full account number",
+    "viewTransactions": "View transactions",
+    "viewAll": "View all",
+    "thisMonth": "This month",
+    "income": "Income",
+    "spending": "Spending",
+    "net": "Net",
+    "month": "Month",
+    "sixMonthActivity": "Income and spending",
+    "chartAccessibleSummary": "Monthly income and spending for the last six months. Data is also available in the table following the chart.",
+    "spendingByCategory": "Spending by category",
+    "noSpending": "No spending recorded this month.",
+    "cashFlowAndSpending": "Cash flow and spending categories",
+    "noActivityYet": "No activity yet. Your transactions will appear here.",
+    "status": {
+      "active": "Active",
+      "frozen": "Frozen",
+      "closed": "Closed"
+    },
+    "category": {
+      "transfer": "Transfer",
+      "deposit": "Deposit",
+      "withdrawal": "Withdrawal",
+      "bill_payment": "Bill payment",
+      "card": "Card purchase",
+      "fee": "Fee",
+      "interest": "Interest",
+      "other": "Other"
+    },
+    "transactions": {
+      "title": "Transactions",
+      "pagination": "Transaction pages",
+      "previousPage": "Previous page",
+      "nextPage": "Next page",
+      "goToPage": "Go to page {{page}}",
+      "referenceCopied": "Reference copied",
+      "copyFailed": "Could not copy",
+      "dateTime": "Date and time",
+      "dateLabel": "Date",
+      "counterparty": "Counterparty",
+      "notAvailable": "Not available",
+      "detailTitle": "Transaction details",
+      "detailDescription": "Full details for this ledger entry.",
+      "accountLabel": "Account",
+      "amountLabel": "Amount",
+      "balanceAfter": "Balance after",
+      "categoryLabel": "Category",
+      "reference": "Reference",
+      "copyReference": "Copy reference",
+      "description": "Description",
+      "closeDetails": "Close details",
+      "exportTruncated": "Exported the first 10,000 rows",
+      "exportSuccess": "CSV export downloaded",
+      "exportRateLimited": "Too many exports, try again in a minute",
+      "exportPending": "Preparing CSV…",
+      "exportCsv": "Export CSV",
+      "filters": "Transaction filters",
+      "search": "Search",
+      "searchPlaceholder": "Description or counterparty",
+      "direction": "Direction",
+      "allDirections": "All",
+      "credits": "Credits",
+      "debits": "Debits",
+      "sort": "Sort by",
+      "newest": "Newest first",
+      "oldest": "Oldest first",
+      "amountHigh": "Amount: high to low",
+      "amountLow": "Amount: low to high",
+      "pageSize": "Rows per page",
+      "categoriesSelected": "{{count}} selected",
+      "dateRange": "Date range",
+      "dateFrom": "From",
+      "dateTo": "To",
+      "range": {
+        "7": "7 days",
+        "30": "30 days",
+        "90": "90 days",
+        "month": "This month",
+        "custom": "Custom"
+      },
+      "minAmount": "Min amount",
+      "maxAmount": "Max amount",
+      "removeFilter": "Remove filter: {{filter}}",
+      "clearAll": "Clear all",
+      "sortAmount": "Amount sort",
+      "sortDate": "Date sort",
+      "showing": "Showing {{from}}–{{to}} of {{total}}",
+      "noMatches": "No transactions match your filters",
+      "clearFilters": "Clear filters",
+      "tableCaption": "Account transactions. Select a row to view its details."
+    },
+    "eyebrow": "Your Westbridge",
+    "welcome": "Welcome, {{name}}",
+    "signedInAs": "Signed in as {{email}}",
+    "accountsHeading": "Your accounts",
+    "totalBalance": "Total balance",
+    "recentActivity": "Recent activity",
+    "checking": "Checking",
+    "savings": "Savings",
+    "accountNumber": "Account ending in",
+    "selectAccount": "Show activity for {{name}}",
+    "active": "Active",
+    "frozen": "Frozen",
+    "closed": "Closed",
+    "noAccounts": "No accounts are available.",
+    "noTransactions": "No recent transactions for this account.",
+    "dashboardLoadError": "We could not load your accounts.",
+    "activityLoadError": "We could not load this account’s activity.",
+    "retry": "Try again",
+    "loadMore": "Load more",
+    "loading": "Loading…",
+    "downloadCsv": "Download CSV",
+    "credit": "Credit",
+    "debit": "Debit",
+    "categories": {
+      "transfer": "Transfer",
+      "deposit": "Deposit",
+      "withdrawal": "Withdrawal",
+      "bill_payment": "Bill payment",
+      "card": "Card purchase",
+      "fee": "Fee",
+      "interest": "Interest",
+      "other": "Other"
+    },
+    "accountEnding": "Account ending in {{digits}}",
+    "comingNext": "Your banking dashboard is coming in the next phase."
+  },
+  "notFound": {
+    "title": "Page not found",
+    "description": "We couldn’t find that page. Start again or jump to one of these useful places.",
+    "home": "Return home",
+    "products": "Explore products",
+    "help": "Visit the help center",
+    "contact": "Contact Westbridge"
+  },
+  "comingSoon": {
+    "description": "More information about this Westbridge demo page is coming soon.",
+    "message": "Coming soon"
+  },
+  "_comment": "?? ?? ?????. ??? ??? ?????."
+}

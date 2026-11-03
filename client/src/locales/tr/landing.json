@@ -1,0 +1,439 @@
+{
+  "hero": {
+    "card": {
+      "ariaLabel": "Westbridge banka kartı görseli (demo, gerçek kart değildir)",
+      "cardholder": "Kart sahibi",
+      "expiryLabel": "Son kullanma",
+      "holder": "WESTBRIDGE ÜYESİ"
+    },
+    "eyebrow": "Her gün güvenle kullanın",
+    "headline": "Açık, sakin ve uzun vadede yanınızda olan bir bankacılık deneyimi.",
+    "subheadline": "Vadesiz hesap açın, birikimlerinizi büyütün ve her transferi kolay kullanımlı dijital deneyimimizle ilk günden itibaren takip edin.",
+    "primaryCta": "Hesap açın",
+    "secondaryCta": "Nasıl çalıştığını keşfedin"
+  },
+  "videoShowcase": {
+    "unmute": "Videonun sesini açın",
+    "tapToUnmute": "Sesi açmak için dokunun",
+    "replay": "Yeniden oynatın",
+    "play": "Videoyu oynatın",
+    "eyebrow": "Çalışırken görün",
+    "heading": "Westbridge ile tanışın",
+    "description": "Günlük bankacılığı daha net yönetmenin yolunu yakından keşfedin."
+  },
+  "trust": {
+    "title": "Günlük bankacılıkta daha güçlü bir deneyim",
+    "stats": [
+      {
+        "label": "müşteri",
+        "note": "bireysel ve işletme hesaplarında"
+      },
+      {
+        "label": "şube",
+        "note": "ülke genelindeki mahallelere hizmet veriyor"
+      },
+      {
+        "label": "kesintisiz hizmet",
+        "note": "güvenli ve sürekli erişimle"
+      },
+      {
+        "label": "yıl",
+        "note": "güvenilir hizmet"
+      }
+    ],
+    "note": "Bu demodaki rakamlar örnek amaçlıdır."
+  },
+  "products": {
+    "eyebrow": "Ürünler",
+    "title": "Yaşam ve çalışma biçiminize uyum sağlayan esnek araçlar.",
+    "items": [
+      {
+        "title": "Vadesiz hesap",
+        "description": "Harcamalarınızı ve transferlerinizi anlık izleyin, faturalarınızı kolayca ödeyin ve birikim yapın."
+      },
+      {
+        "title": "Birikim hesabı",
+        "description": "Yüksek getirili hedefler, düzenli transferler ve kolay takip ile birikimlerinizi büyütün."
+      },
+      {
+        "title": "Kredi kartları",
+        "description": "Ödüller, harcama kontrolleri ve anlık bildirimlerle günlük harcamalarınızda esneklik kazanın."
+      },
+      {
+        "title": "Krediler",
+        "description": "Hayatınızdaki önemli adımlar için şeffaf koşullar ve destekle güvenle borçlanın."
+      },
+      {
+        "title": "Konut kredileri",
+        "description": "Zaman planınıza ve hedeflerinize uyum sağlayan rehberlikle ev sahibi olma yolunuzu bulun."
+      }
+    ]
+  },
+  "whyWestbridge": {
+    "eyebrow": "Neden Westbridge",
+    "title": "Gerçek yaşama göre tasarlanmış, özenli bankacılık.",
+    "items": [
+      {
+        "title": "Anında transferler",
+        "description": "Hesaplar ve kişiler arasında paranızı alışılmış işlemlerle uğraşmadan saniyeler içinde aktarın."
+      },
+      {
+        "title": "7/24 destek",
+        "description": "Sorularınız olduğunda gece gündüz gerçek bir uzmanla görüşün."
+      },
+      {
+        "title": "Gizli ücret yok",
+        "description": "Şeffaf fiyatlandırma ve daha az sürprizle tüm maliyetleri en baştan görün."
+      },
+      {
+        "title": "Akıllı harcama analizleri",
+        "description": "Eğilimleri inceleyin, alışverişlerinizi sınıflandırın ve aylık bütçenizi takip edin."
+      },
+      {
+        "title": "Kart kontrolleri",
+        "description": "Kartınızı uygulamadan anında kullanıma kapatın, yeniden açın veya limit belirleyin."
+      },
+      {
+        "title": "Güvenlik",
+        "description": "Çok faktörlü doğrulama, bildirimler ve güvenilir izleme ile yerleşik koruma."
+      }
+    ]
+  },
+  "dashboardPreview": {
+    "ariaLabel": "Örnek veriler içeren Westbridge çevrimiçi kontrol paneli görseli",
+    "cashFlowChartLabel": "Örnek nakit akışı eğilimi",
+    "eyebrow": "Paranız bir bakışta",
+    "heading": "Günlük mali durumunuzu net biçimde görün.",
+    "description": "Giren ve çıkan parayı ve önemli hesap hareketlerini tek bir kolay ekranda izleyin.",
+    "benefits": [
+      "Harcama eğilimlerini kolayca fark etmenizi sağlayan analizler",
+      "Hesap hareketlerinde anlık bildirimler",
+      "Kontrolü sizde tutan kart ayarları",
+      "İhtiyaç duyduğunuzda hazır aylık ekstreler"
+    ],
+    "account": {
+      "label": "Kullanılabilir bakiye"
+    },
+    "stats": [
+      {
+        "label": "Gelir"
+      },
+      {
+        "label": "Harcamalar"
+      }
+    ],
+    "activityLabel": "Son hareketler",
+    "activityPeriod": "Bu ay",
+    "transactions": [
+      {
+        "name": "Alışveriş",
+        "detail": "Kart ödemesi"
+      },
+      {
+        "name": "Maaş",
+        "detail": "Kart ödemesi"
+      },
+      {
+        "name": "Market alışverişi",
+        "detail": "Kart ödemesi"
+      }
+    ],
+    "cashFlow": "Nakit akışı",
+    "notification": "Ödeme alındı +$2,450.00",
+    "securityNotice": "Kartınız koruma altında",
+    "caption": "Görsel amaçlı örnek veriler.",
+    "cta": "Hesap açın"
+  },
+  "steps": {
+    "eyebrow": "Nasıl çalışır",
+    "title": "Başlamak için üç kolay adım.",
+    "items": [
+      {
+        "title": "Hesabınızı seçin",
+        "description": "Günlük harcamalarınız, birikimleriniz veya her ikisi için hedeflerinize uygun hesabı seçin."
+      },
+      {
+        "title": "Profilinizi oluşturun",
+        "description": "Temel bilgilerinizi paylaşın, kimliğinizi doğrulayın ve hesap tercihlerinizi dakikalar içinde belirleyin."
+      },
+      {
+        "title": "Bankacılığa güvenle başlayın",
+        "description": "Hesabınıza para yatırın, düzenli işlemlerinizi oluşturun ve finansal araçlarınıza anında erişin."
+      }
+    ]
+  },
+  "calculators": {
+    "results": {
+      "estimatedPayments": "Tahmini ödemeler",
+      "monthlyPayment": "Aylık ödeme",
+      "totalInterest": "Toplam faiz",
+      "totalRepayment": "Toplam geri ödeme",
+      "projectedBalance": "Öngörülen bakiye",
+      "finalBalance": "Dönem sonu bakiyesi",
+      "totalContributed": "Toplam yatırılan tutar",
+      "interestEarned": "Kazanılan faiz",
+      "savingsChart": "Birikim artış grafiği"
+    },
+    "eyebrow": "Planlama araçları",
+    "title": "Karar vermeden önce sonraki adımınızı hesaplayın.",
+    "note": "Tahminler yalnızca örnek amaçlıdır.",
+    "loan": {
+      "label": "Kredi hesaplayıcısı",
+      "amountLabel": "Kredi tutarı",
+      "rateLabel": "Yıllık faiz oranı",
+      "termLabel": "Vade (yıl)"
+    },
+    "savings": {
+      "label": "Birikim artışı",
+      "initialLabel": "İlk yatırılan tutar",
+      "contributionLabel": "Aylık katkı",
+      "rateLabel": "Yıllık faiz oranı",
+      "yearsLabel": "Yıl"
+    }
+  },
+  "rates": {
+    "columns": {
+      "product": "Ürün",
+      "rate": "Faiz oranı",
+      "bestFor": "Uygun olduğu amaç"
+    },
+    "eyebrow": "Faiz oranları",
+    "title": "En çok tercih edilen birkaç ürün için örnek fiyatlar.",
+    "tabs": [
+      {
+        "label": "Birikim",
+        "rows": [
+          {
+            "product": "Klasik Birikim Hesabı",
+            "feature": "Esnek erişim"
+          },
+          {
+            "product": "Hedef Birikim Hesabı",
+            "feature": "Otomatik transfere uygun"
+          },
+          {
+            "product": "İşletme Rezervi",
+            "feature": "Nakit akışı planlaması"
+          }
+        ]
+      },
+      {
+        "label": "Krediler",
+        "rows": [
+          {
+            "product": "Bireysel Kredi",
+            "feature": "Hızlı sonuç"
+          },
+          {
+            "product": "Konut Teminatlı Kredi",
+            "feature": "Esnek geri ödeme"
+          },
+          {
+            "product": "Taşıt Kredisi",
+            "feature": "Kolay aylık ödeme planı"
+          }
+        ]
+      },
+      {
+        "label": "Konut kredileri",
+        "rows": [
+          {
+            "product": "30 Yıl Sabit Faizli",
+            "feature": "Öngörülebilir ödemeler"
+          },
+          {
+            "product": "15 Yıl Sabit Faizli",
+            "feature": "Daha hızlı öz sermaye artışı"
+          },
+          {
+            "product": "Değişken Faizli",
+            "feature": "Daha düşük başlangıç oranı"
+          }
+        ]
+      }
+    ]
+  },
+  "security": {
+    "eyebrow": "Güvenlik ve gizlilik",
+    "title": "Paranızın ve bilgilerinizin kontrolünü size veren bir deneyim.",
+    "items": [
+      "Aktarım sırasında ve depolamada şifreleme",
+      "İki faktörlü kimlik doğrulama",
+      "Dolandırıcılık izleme ve bildirimleri",
+      "Uygulamadan kartı anında kullanıma kapatma",
+      "Anlık hesap bildirimleri",
+      "Her işlemde tasarımdan gelen gizlilik"
+    ]
+  },
+  "mobileApp": {
+    "available": "Kullanılabilir",
+    "balanceChart": "Uygulama bakiye grafiği",
+    "transfers": "Transferler",
+    "spending": "Harcamalar",
+    "eyebrow": "Mobil uygulama",
+    "title": "Bankacılığınız her an yanınızda, gereksiz karmaşa olmadan.",
+    "description": "Günlük kullanım için tasarlanmış sade mobil deneyimden bakiyelerinizi inceleyin, para aktarın ve kartlarınızı yönetin.",
+    "features": [
+      "Bakiyeyi hızla kontrol edin",
+      "Akıllı harcama kategorileri",
+      "Anında kart kontrolleri"
+    ],
+    "storeButtons": [
+      {
+        "label": "App Store",
+        "meta": "Yakında"
+      },
+      {
+        "label": "Google Play",
+        "meta": "Yakında"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Müşteri hikâyeleri",
+    "title": "İnsanlar, kişiye özel deneyimimiz için Westbridge'i tercih ediyor.",
+    "items": [
+      {
+        "name": "Alicia R.",
+        "role": "Serbest çalışan tasarımcı",
+        "quote": "Uygulama harcamalarımı takip etmemi kolaylaştırıyor, transferler de anında gerçekleşiyor. Bunaltıcı değil, aksine çok kullanışlı."
+      },
+      {
+        "name": "Jordan L.",
+        "role": "İlk kez ev alan müşteri",
+        "quote": "Konut kredisiyle ilgili yönlendirme açık ve faydalıydı. Hiç acele ettirilmedim ve her adımı kolayca anladım."
+      },
+      {
+        "name": "Maya P.",
+        "role": "Operasyon yöneticisi",
+        "quote": "İşletme hesabı araçlarımız, nakit akışımızı gereksiz karmaşa olmadan yönetmemize yardımcı oluyor. Arayüz sade ve güvenilir."
+      },
+      {
+        "name": "Theo N.",
+        "role": "İki çocuklu ebeveyn",
+        "quote": "Birikim hedefleri, bildirimler ve düzenli transferler bir arada çalışıyor; sonunda her şeyi kolayca yönetebiliyorum."
+      },
+      {
+        "name": "Sofia K.",
+        "role": "Uzaktan çalışan danışman",
+        "quote": "Hizmetin gerçek yaşama göre tasarlandığı hissediliyor. Bakiyemi kontrol edip bir dakikadan kısa sürede para aktarabiliyorum."
+      },
+      {
+        "name": "Daniel B.",
+        "role": "Küçük işletme sahibi",
+        "quote": "Kart kontrolleri ve güvenlik araçları bana güven veriyor. Bu banka, yalnızca evrak işleri için değil, hayatın içinde olan insanlar için tasarlanmış."
+      }
+    ]
+  },
+  "blog": {
+    "eyebrow": "Öneriler",
+    "title": "Önemli anlar için pratik finans rehberliği.",
+    "posts": [
+      {
+        "category": "Birikim",
+        "title": "Fazla harcamadan daha iyi bir birikim düzeni kurun",
+        "excerpt": "Basit bir aylık düzen, daha az uğraşla ve istikrarlı biçimde birikim yapmanıza yardımcı olabilir.",
+        "readTime": "4 dakika"
+      },
+      {
+        "category": "Planlama",
+        "title": "Faizler yeniden değişmeden önce kredinizi ne zaman gözden geçirmelisiniz?",
+        "excerpt": "Faiz oranı ve vadedeki küçük farklar, aylık bütçenizi önemli ölçüde etkileyebilir.",
+        "readTime": "5 dakika"
+      },
+      {
+        "category": "Konut",
+        "title": "Ev sahibi olduğunuz ilk yılı kolaylaştıracak üç para alışkanlığı",
+        "excerpt": "Faturalar, birikim ve beklenmedik giderler için düzenli bir plan, yoğun zamanlarda stresi azaltır.",
+        "readTime": "6 dakika"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "SSS",
+    "title": "En sık sorulan soruların yanıtları.",
+    "items": [
+      {
+        "question": "Ne kadar sürede hesap açabilirim?",
+        "answer": "Başvuru sahiplerinin çoğu ilk kurulumu on dakikadan kısa sürede tamamlayabilir. Doğrulamanın ardından hesaba genellikle kısa sürede erişilebilir."
+      },
+      {
+        "question": "Aylık hesap işletim ücreti var mı?",
+        "answer": "Günlük hesaplarımızın çoğu kolay kullanım gözetilerek tasarlanmıştır. Ücret bilgileri karar vermeden önce açıkça gösterilir."
+      },
+      {
+        "question": "Arkadaşlarıma ve aileme para gönderebilir miyim?",
+        "answer": "Evet. Desteklenen hesap türlerinde dijital bankacılık üzerinden anlık transfer ve planlı ödeme yapabilirsiniz."
+      },
+      {
+        "question": "Kartım kaybolursa nasıl korumaya alabilirim?",
+        "answer": "Uygulamadan kartınızı hemen geçici olarak durdurabilir veya kullanıma kapatabilir, hazır olduğunuzda yeniden etkinleştirebilirsiniz."
+      },
+      {
+        "question": "Günlük işlem limitleri nelerdir?",
+        "answer": "Limitler hesap türüne ve işlem türüne göre değişir. Uygulama, her transferden önce geçerli kuralları açıkça gösterir."
+      },
+      {
+        "question": "Destek hangi saatlerde hizmet veriyor?",
+        "answer": "Hesap ve güvenlik soruları için desteğe günün her saati ulaşabilirsiniz. Canlı destek, uzatılmış çalışma saatlerinde sunulur."
+      },
+      {
+        "question": "Birikim hedefleri belirleyebilir miyim?",
+        "answer": "Evet. Hedeflerinize göre birikim planları oluşturabilir, transferleri otomatikleştirebilir ve ilerlemenizi tek bir kontrol panelinden takip edebilirsiniz."
+      },
+      {
+        "question": "Çevrimiçi alışverişler için kart kontrolleri sunuyor musunuz?",
+        "answer": "Uygulamamız, harcama alışkanlıkları ve kart hareketleri için kontrollerin yanı sıra işlem bildirimleri sunar; böylece neler olduğunu takip edebilirsiniz."
+      }
+    ]
+  },
+  "contact": {
+    "branchLocator": "Şube bulucu",
+    "branchDescription": "Size yakın bir destek şubesi bulun.",
+    "visitBranch": "Şubeyi ziyaret edin",
+    "sending": "Gönderiliyor…",
+    "eyebrow": "İletişim",
+    "title": "Desteğe ihtiyaç duyduğunuzda Westbridge uzmanıyla görüşün.",
+    "description": "Hesap açma veya büyük bir satın alımı planlama konusunda desteğe ihtiyacınız varsa size yardımcı olmaya hazırız.",
+    "form": {
+      "name": "Ad soyad",
+      "email": "E-posta",
+      "subject": "Konu",
+      "message": "Mesaj",
+      "submit": "Mesaj gönderin"
+    },
+    "branches": [
+      {
+        "city": "Portland",
+        "address": "88 Alder Row",
+        "hours": "Pzt–Cum · 9.00–17.30"
+      },
+      {
+        "city": "Austin",
+        "address": "24 Cedar Avenue",
+        "hours": "Pzt–Cmt · 9.00–18.00"
+      },
+      {
+        "city": "Chicago",
+        "address": "410 Elm Plaza",
+        "hours": "Pzt–Cum · 8.30–17.00"
+      },
+      {
+        "city": "Boston",
+        "address": "910 Harbor Street",
+        "hours": "Pzt–Cum · 9.00–18.30"
+      }
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "E-posta bülteni",
+    "title": "Her hafta gelen kutunuzda pratik bir finans notu.",
+    "placeholder": "E-posta adresi",
+    "cta": "Bültene kaydolun",
+    "joining": "Abone olunuyor…"
+  },
+  "meta": {
+    "description": "Westbridge National Bank ile vadesiz ve birikim hesaplarını, kredileri ve günlük bankacılık araçlarını keşfedin. Yalnızca demo amaçlıdır; gerçek para tutulmaz."
+  },
+  "_notice": "Makine çevirisi taslağıdır; ana dili Türkçe olan biri tarafından gözden geçirilmelidir."
+}

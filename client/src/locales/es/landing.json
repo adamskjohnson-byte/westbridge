@@ -1,0 +1,439 @@
+{
+  "hero": {
+    "card": {
+      "ariaLabel": "Ilustración de una tarjeta de débito de Westbridge (demostración, no es una tarjeta real)",
+      "cardholder": "Titular de la tarjeta",
+      "expiryLabel": "Vence",
+      "holder": "MIEMBRO WESTBRIDGE"
+    },
+    "eyebrow": "Creada para darte confianza cada día",
+    "headline": "Una banca clara y tranquila, pensada para acompañarte a largo plazo.",
+    "subheadline": "Abre una cuenta corriente, haz crecer tus ahorros y consulta cada transferencia con una experiencia digital sencilla desde el primer día.",
+    "primaryCta": "Abrir una cuenta",
+    "secondaryCta": "Descubre cómo funciona"
+  },
+  "videoShowcase": {
+    "unmute": "Activar el sonido del video",
+    "tapToUnmute": "Toca para activar el sonido",
+    "replay": "Volver a reproducir",
+    "play": "Reproducir video",
+    "eyebrow": "Descúbrela en acción",
+    "heading": "Conoce Westbridge",
+    "description": "Descubre una forma más clara de gestionar tus operaciones bancarias diarias."
+  },
+  "trust": {
+    "title": "Una mejor experiencia bancaria para cada día",
+    "stats": [
+      {
+        "label": "clientes",
+        "note": "con cuentas personales y para empresas"
+      },
+      {
+        "label": "sucursales",
+        "note": "al servicio de comunidades de todo el país"
+      },
+      {
+        "label": "disponibilidad",
+        "note": "con acceso seguro y permanente"
+      },
+      {
+        "label": "años",
+        "note": "de servicio confiable"
+      }
+    ],
+    "note": "Cifras ilustrativas de esta demostración."
+  },
+  "products": {
+    "eyebrow": "Productos",
+    "title": "Herramientas flexibles para tu vida y tu trabajo.",
+    "items": [
+      {
+        "title": "Cuenta corriente",
+        "description": "Gasta, envía y ahorra con información en tiempo real y pagos de facturas sencillos."
+      },
+      {
+        "title": "Ahorros",
+        "description": "Avanza hacia tus metas con rendimientos competitivos, transferencias recurrentes y un seguimiento sencillo."
+      },
+      {
+        "title": "Tarjetas de crédito",
+        "description": "Disfruta de flexibilidad diaria con recompensas, controles de compra y alertas instantáneas."
+      },
+      {
+        "title": "Préstamos",
+        "description": "Financia con confianza los momentos importantes de tu vida, con condiciones claras y acompañamiento."
+      },
+      {
+        "title": "Hipotecas",
+        "description": "Acércate a la vivienda propia con orientación adaptada a tus plazos y objetivos."
+      }
+    ]
+  },
+  "whyWestbridge": {
+    "eyebrow": "Por qué Westbridge",
+    "title": "Una banca bien pensada, diseñada para la vida real.",
+    "items": [
+      {
+        "title": "Transferencias instantáneas",
+        "description": "Mueve dinero entre cuentas y personas en segundos, sin complicaciones."
+      },
+      {
+        "title": "Ayuda las 24 horas",
+        "description": "Habla con un especialista cuando tengas preguntas, de día o de noche."
+      },
+      {
+        "title": "Sin cargos ocultos",
+        "description": "Conoce todos los costos desde el principio, con precios claros y menos sorpresas."
+      },
+      {
+        "title": "Análisis inteligentes de gastos",
+        "description": "Revisa tendencias, clasifica compras y mantén al día tu presupuesto mensual."
+      },
+      {
+        "title": "Controles de tarjeta",
+        "description": "Bloquea o desbloquea tu tarjeta y establece límites al instante desde la app."
+      },
+      {
+        "title": "Seguridad",
+        "description": "Protección integrada con verificaciones de varios factores, alertas y monitoreo confiable."
+      }
+    ]
+  },
+  "dashboardPreview": {
+    "ariaLabel": "Ilustración del panel bancario en línea de Westbridge con datos de ejemplo",
+    "cashFlowChartLabel": "Tendencia ilustrativa del flujo de efectivo",
+    "eyebrow": "Tu dinero, de un vistazo",
+    "heading": "Una visión clara de tus finanzas diarias.",
+    "description": "Consulta tus ingresos, gastos y movimientos importantes en un solo lugar y de forma sencilla.",
+    "benefits": [
+      "Análisis de gastos para identificar patrones con facilidad",
+      "Alertas instantáneas sobre la actividad de tu cuenta",
+      "Controles de tarjeta para que siempre tengas el control",
+      "Estados de cuenta mensuales disponibles cuando los necesites"
+    ],
+    "account": {
+      "label": "Saldo disponible"
+    },
+    "stats": [
+      {
+        "label": "Ingresos"
+      },
+      {
+        "label": "Gastos"
+      }
+    ],
+    "activityLabel": "Actividad reciente",
+    "activityPeriod": "Este mes",
+    "transactions": [
+      {
+        "name": "Marketplace",
+        "detail": "Pago con tarjeta"
+      },
+      {
+        "name": "Nómina",
+        "detail": "Pago con tarjeta"
+      },
+      {
+        "name": "Supermercado",
+        "detail": "Pago con tarjeta"
+      }
+    ],
+    "cashFlow": "Flujo de efectivo",
+    "notification": "Pago recibido +$2,450.00",
+    "securityNotice": "Tarjeta protegida",
+    "caption": "Datos de ejemplo con fines ilustrativos.",
+    "cta": "Abrir una cuenta"
+  },
+  "steps": {
+    "eyebrow": "Cómo funciona",
+    "title": "Empieza con estos tres sencillos pasos.",
+    "items": [
+      {
+        "title": "Elige tu cuenta",
+        "description": "Encuentra la opción adecuada para tus objetivos, ya sea para tus gastos diarios, tus ahorros o ambos."
+      },
+      {
+        "title": "Configura tu perfil",
+        "description": "Comparte algunos datos, verifica tu identidad y personaliza tus preferencias en minutos."
+      },
+      {
+        "title": "Empieza a operar con confianza",
+        "description": "Agrega fondos a tu cuenta, establece tus hábitos y accede al instante a tus herramientas financieras."
+      }
+    ]
+  },
+  "calculators": {
+    "results": {
+      "estimatedPayments": "Pagos estimados",
+      "monthlyPayment": "Pago mensual",
+      "totalInterest": "Intereses totales",
+      "totalRepayment": "Reembolso total",
+      "projectedBalance": "Saldo proyectado",
+      "finalBalance": "Saldo final",
+      "totalContributed": "Aportaciones totales",
+      "interestEarned": "Intereses ganados",
+      "savingsChart": "Gráfico de crecimiento de ahorros"
+    },
+    "eyebrow": "Herramientas de planificación",
+    "title": "Evalúa tu próximo paso antes de decidir.",
+    "note": "Estimaciones solo con fines ilustrativos.",
+    "loan": {
+      "label": "Calculadora de préstamos",
+      "amountLabel": "Monto del préstamo",
+      "rateLabel": "Tasa anual",
+      "termLabel": "Plazo en años"
+    },
+    "savings": {
+      "label": "Crecimiento de ahorros",
+      "initialLabel": "Depósito inicial",
+      "contributionLabel": "Aportación mensual",
+      "rateLabel": "Tasa anual",
+      "yearsLabel": "Años"
+    }
+  },
+  "rates": {
+    "columns": {
+      "product": "Producto",
+      "rate": "Rate",
+      "bestFor": "Ideal para"
+    },
+    "eyebrow": "Tasas",
+    "title": "Precios de demostración para algunos de nuestros productos más solicitados.",
+    "tabs": [
+      {
+        "label": "Ahorros",
+        "rows": [
+          {
+            "product": "Ahorros clásicos",
+            "feature": "Acceso flexible"
+          },
+          {
+            "product": "Creador de metas",
+            "feature": "Ideal para transferencias automáticas"
+          },
+          {
+            "product": "Reserva empresarial",
+            "feature": "Planificación del flujo de efectivo"
+          }
+        ]
+      },
+      {
+        "label": "Préstamos",
+        "rows": [
+          {
+            "product": "Préstamo personal",
+            "feature": "Respuesta rápida"
+          },
+          {
+            "product": "Préstamo con garantía hipotecaria",
+            "feature": "Reembolso flexible"
+          },
+          {
+            "product": "Préstamo para vehículo",
+            "feature": "Pagos mensuales sencillos"
+          }
+        ]
+      },
+      {
+        "label": "Hipotecas",
+        "rows": [
+          {
+            "product": "Tasa fija a 30 años",
+            "feature": "Pagos previsibles"
+          },
+          {
+            "product": "Tasa fija a 15 años",
+            "feature": "Acumulación más rápida de capital"
+          },
+          {
+            "product": "Tasa ajustable",
+            "feature": "Tasa inicial más baja"
+          }
+        ]
+      }
+    ]
+  },
+  "security": {
+    "eyebrow": "Seguridad y privacidad",
+    "title": "Diseñada para que tengas el control de tu dinero y tu información.",
+    "items": [
+      "Cifrado durante la transmisión y el almacenamiento",
+      "Autenticación de dos factores",
+      "Monitoreo y alertas contra el fraude",
+      "Bloqueo instantáneo de la tarjeta desde la app",
+      "Notificaciones de cuenta en tiempo real",
+      "Privacidad integrada en cada proceso"
+    ]
+  },
+  "mobileApp": {
+    "available": "Disponible",
+    "balanceChart": "Gráfico de saldo de la app",
+    "transfers": "Transferencias",
+    "spending": "Gastos",
+    "eyebrow": "App móvil",
+    "title": "Lleva tu banco contigo, sin complicaciones.",
+    "description": "Consulta saldos, mueve dinero y gestiona tus tarjetas desde una experiencia móvil sencilla, pensada para tu día a día.",
+    "features": [
+      "Consulta rápida de saldos",
+      "Categorías inteligentes de gastos",
+      "Controles instantáneos de tarjeta"
+    ],
+    "storeButtons": [
+      {
+        "label": "App Store",
+        "meta": "Próximamente"
+      },
+      {
+        "label": "Google Play",
+        "meta": "Próximamente"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Historias de clientes",
+    "title": "Nuestros clientes eligen Westbridge por una experiencia cercana.",
+    "items": [
+      {
+        "name": "Alicia R.",
+        "role": "Diseñadora independiente",
+        "quote": "La app me ayuda a controlar mis gastos y las transferencias son instantáneas. Todo se siente claro y tranquilo, no abrumador."
+      },
+      {
+        "name": "Jordan L.",
+        "role": "Comprador de primera vivienda",
+        "quote": "La orientación hipotecaria fue clara y útil. Nunca me sentí presionado y pude entender cada paso con facilidad."
+      },
+      {
+        "name": "Maya P.",
+        "role": "Gerente de operaciones",
+        "quote": "Las herramientas de nuestra cuenta empresarial nos ayudan a gestionar el flujo de efectivo sin complicaciones. La interfaz es clara y confiable."
+      },
+      {
+        "name": "Theo N.",
+        "role": "Madre de dos hijos",
+        "quote": "Las metas de ahorro, las alertas y las transferencias recurrentes funcionan en conjunto y, por fin, todo resulta fácil de gestionar."
+      },
+      {
+        "name": "Sofia K.",
+        "role": "Consultora a distancia",
+        "quote": "Se nota que el servicio está pensado para la vida real. Puedo consultar saldos y mover dinero en menos de un minuto."
+      },
+      {
+        "name": "Daniel B.",
+        "role": "Propietario de una pequeña empresa",
+        "quote": "Los controles de tarjeta y las herramientas de seguridad me dan confianza. Es un banco pensado para personas activas, no solo para hacer trámites."
+      }
+    ]
+  },
+  "blog": {
+    "eyebrow": "Ideas y consejos",
+    "title": "Orientación práctica para los momentos que más importan.",
+    "posts": [
+      {
+        "category": "Ahorros",
+        "title": "Cómo crear el hábito de ahorrar sin gastar de más",
+        "excerpt": "Una rutina mensual sencilla puede ayudarte a ahorrar con constancia y menos esfuerzo.",
+        "readTime": "4 min de lectura"
+      },
+      {
+        "category": "Planificación",
+        "title": "Cuándo revisar tu préstamo antes de que vuelvan a cambiar las tasas",
+        "excerpt": "Pequeñas diferencias en la tasa y el plazo pueden afectar significativamente tu presupuesto mensual.",
+        "readTime": "5 min de lectura"
+      },
+      {
+        "category": "Vivienda",
+        "title": "Tres hábitos financieros para vivir con más tranquilidad el primer año en casa propia",
+        "excerpt": "Un sistema constante para las facturas, los ahorros y las emergencias ayuda a reducir el estrés cuando la vida se complica.",
+        "readTime": "6 min de lectura"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Preguntas frecuentes",
+    "title": "Respuestas a las preguntas más habituales.",
+    "items": [
+      {
+        "question": "¿Qué tan rápido puedo abrir una cuenta?",
+        "answer": "La mayoría de las personas puede completar la configuración inicial en menos de diez minutos y acceder a la cuenta poco después de verificar su identidad."
+      },
+      {
+        "question": "¿Hay cargos mensuales por mantenimiento?",
+        "answer": "Muchas de nuestras cuentas diarias están diseñadas para ser sencillas de usar, y los detalles de los cargos se muestran claramente antes de tomar una decisión."
+      },
+      {
+        "question": "¿Puedo enviar dinero a amigos y familiares?",
+        "answer": "Sí. La experiencia de banca digital permite hacer transferencias instantáneas y programar pagos en los tipos de cuenta compatibles."
+      },
+      {
+        "question": "¿Cómo protejo mi tarjeta si la pierdo?",
+        "answer": "Puedes pausar o bloquear la tarjeta de inmediato desde la app y volver a activarla cuando quieras."
+      },
+      {
+        "question": "¿Cuáles son los límites diarios de transacciones?",
+        "answer": "Los límites varían según la cuenta y el tipo de operación. La app muestra claramente las reglas vigentes antes de cada transferencia."
+      },
+      {
+        "question": "¿En qué horario está disponible el equipo de ayuda?",
+        "answer": "El equipo puede ayudarte las 24 horas con consultas sobre cuentas y seguridad, y ofrece atención personalizada durante un horario laboral ampliado."
+      },
+      {
+        "question": "¿Puedo establecer metas de ahorro?",
+        "answer": "Sí. Puedes crear planes de ahorro para tus objetivos, automatizar transferencias y seguir tu progreso desde un solo panel de control."
+      },
+      {
+        "question": "¿La app permite controlar las compras en línea con tarjeta?",
+        "answer": "Nuestra app incluye controles para tus hábitos de gasto y la actividad de tu tarjeta, además de alertas de transacciones para que estés al tanto de tus movimientos."
+      }
+    ]
+  },
+  "contact": {
+    "branchLocator": "Localizador de sucursales",
+    "branchDescription": "Encuentra una oficina de atención cerca de ti.",
+    "visitBranch": "Visitar una sucursal",
+    "sending": "Enviando…",
+    "eyebrow": "Contacto",
+    "title": "Habla con un especialista de Westbridge cuando necesites ayuda.",
+    "description": "Ya sea que necesites orientación para abrir una cuenta o planificar una compra importante, estamos aquí para ayudarte.",
+    "form": {
+      "name": "Nombre",
+      "email": "Correo electrónico",
+      "subject": "Asunto",
+      "message": "Mensaje",
+      "submit": "Enviar mensaje"
+    },
+    "branches": [
+      {
+        "city": "Portland",
+        "address": "88 Alder Row",
+        "hours": "Lun–Vie · 9:00–5:30"
+      },
+      {
+        "city": "Austin",
+        "address": "24 Cedar Avenue",
+        "hours": "Lun–Sáb · 9:00–6:00"
+      },
+      {
+        "city": "Chicago",
+        "address": "410 Elm Plaza",
+        "hours": "Lun–Vie · 8:30–5:00"
+      },
+      {
+        "city": "Boston",
+        "address": "910 Harbor Street",
+        "hours": "Lun–Vie · 9:00–6:30"
+      }
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "Boletín",
+    "title": "Un consejo práctico sobre finanzas en tu correo cada semana.",
+    "placeholder": "Correo electrónico",
+    "cta": "Suscribirme al boletín",
+    "joining": "Suscribiendo…"
+  },
+  "meta": {
+    "description": "Explora cuentas corrientes, ahorros, préstamos y herramientas bancarias para el día a día con Westbridge National Bank. Solo demostración; no se guarda dinero real."
+  },
+  "_notice": "Borrador traducido automáticamente; Se requiere revisión nativa."
+}

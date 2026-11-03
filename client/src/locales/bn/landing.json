@@ -1,0 +1,439 @@
+{
+  "hero": {
+    "card": {
+      "ariaLabel": "Illustration of a Westbridge debit card (demo, not a real card)",
+      "cardholder": "Cardholder",
+      "expiryLabel": "Expires",
+      "holder": "WESTBRIDGE MEMBER"
+    },
+    "eyebrow": "Built for everyday confidence",
+    "headline": "Banking that feels clear, calm, and ready for the long run.",
+    "subheadline": "Open a checking account, grow your savings, and keep every transfer in view with a digital experience designed to feel simple from day one.",
+    "primaryCta": "Open an account",
+    "secondaryCta": "See how it works"
+  },
+  "videoShowcase": {
+    "unmute": "Unmute video",
+    "tapToUnmute": "Tap to unmute",
+    "replay": "Replay",
+    "play": "Play video",
+    "eyebrow": "See it in action",
+    "heading": "Meet Westbridge",
+    "description": "Take a closer look at a clearer way to manage everyday banking."
+  },
+  "trust": {
+    "title": "A stronger everyday banking experience",
+    "stats": [
+      {
+        "label": "customers",
+        "note": "across personal and business accounts"
+      },
+      {
+        "label": "branches",
+        "note": "serving neighborhoods nationwide"
+      },
+      {
+        "label": "uptime",
+        "note": "with secure, always-on access"
+      },
+      {
+        "label": "years",
+        "note": "of dependable service"
+      }
+    ],
+    "note": "Illustrative figures for this demo."
+  },
+  "products": {
+    "eyebrow": "Products",
+    "title": "Flexible tools for the way you live and work.",
+    "items": [
+      {
+        "title": "Checking",
+        "description": "Spend, send, and save with real-time visibility and easy bill pay."
+      },
+      {
+        "title": "Savings",
+        "description": "Build momentum with high-yield goals, recurring transfers, and simple tracking."
+      },
+      {
+        "title": "Credit Cards",
+        "description": "Enjoy everyday flexibility with rewards, purchase controls, and instant alerts."
+      },
+      {
+        "title": "Loans",
+        "description": "Borrow with confidence for life’s milestones with transparent terms and support."
+      },
+      {
+        "title": "Mortgages",
+        "description": "Find a path to homeownership with guidance that adapts to your timeline and goals."
+      }
+    ]
+  },
+  "whyWestbridge": {
+    "eyebrow": "Why Westbridge",
+    "title": "Thoughtful banking designed around real life.",
+    "items": [
+      {
+        "title": "Instant transfers",
+        "description": "Move money between accounts and people in seconds, without the usual friction."
+      },
+      {
+        "title": "24/7 support",
+        "description": "Speak with a real specialist whenever questions come up, day or night."
+      },
+      {
+        "title": "No hidden fees",
+        "description": "See the full picture up front with straightforward pricing and fewer surprises."
+      },
+      {
+        "title": "Smart spending insights",
+        "description": "Review trends, categorize purchases, and stay on top of your monthly plan."
+      },
+      {
+        "title": "Card controls",
+        "description": "Freeze, unfreeze, or set limits instantly from the app with complete control."
+      },
+      {
+        "title": "Security",
+        "description": "Protection built in with multi-factor checks, alerts, and reliable monitoring."
+      }
+    ]
+  },
+  "dashboardPreview": {
+    "ariaLabel": "Illustration of the Westbridge online dashboard with sample data",
+    "cashFlowChartLabel": "Illustrative cash flow trend",
+    "eyebrow": "Your money at a glance",
+    "heading": "A clear view of your everyday finances.",
+    "description": "See what is coming in, what is going out, and the activity that matters in one simple place.",
+    "benefits": [
+      "Spending insights that make patterns easier to spot",
+      "Instant alerts when account activity happens",
+      "Card controls that keep you in charge",
+      "Monthly statements, ready when you need them"
+    ],
+    "account": {
+      "label": "Available balance"
+    },
+    "stats": [
+      {
+        "label": "Income"
+      },
+      {
+        "label": "Spending"
+      }
+    ],
+    "activityLabel": "Recent activity",
+    "activityPeriod": "This month",
+    "transactions": [
+      {
+        "name": "Marketplace",
+        "detail": "Card payment"
+      },
+      {
+        "name": "Payroll",
+        "detail": "Card payment"
+      },
+      {
+        "name": "Groceries",
+        "detail": "Card payment"
+      }
+    ],
+    "cashFlow": "Cash flow",
+    "notification": "Payment received +$2,450.00",
+    "securityNotice": "Card protected",
+    "caption": "Sample data for illustration.",
+    "cta": "Open an account"
+  },
+  "steps": {
+    "eyebrow": "How it works",
+    "title": "Three simple steps to get started.",
+    "items": [
+      {
+        "title": "Choose your account",
+        "description": "Pick the right fit for your goals, whether you want everyday spending, saving, or both."
+      },
+      {
+        "title": "Set up your profile",
+        "description": "Share the basics, verify your identity, and tailor your account preferences in minutes."
+      },
+      {
+        "title": "Start banking with confidence",
+        "description": "Fund your account, create your routines, and unlock instant access to your money tools."
+      }
+    ]
+  },
+  "calculators": {
+    "results": {
+      "estimatedPayments": "Estimated payments",
+      "monthlyPayment": "Monthly payment",
+      "totalInterest": "Total interest",
+      "totalRepayment": "Total repayment",
+      "projectedBalance": "Projected balance",
+      "finalBalance": "Final balance",
+      "totalContributed": "Total contributed",
+      "interestEarned": "Interest earned",
+      "savingsChart": "Savings growth chart"
+    },
+    "eyebrow": "Planning tools",
+    "title": "Model your next move before you commit.",
+    "note": "Estimates for illustration only.",
+    "loan": {
+      "label": "Loan calculator",
+      "amountLabel": "Loan amount",
+      "rateLabel": "Annual rate",
+      "termLabel": "Term in years"
+    },
+    "savings": {
+      "label": "Savings growth",
+      "initialLabel": "Initial deposit",
+      "contributionLabel": "Monthly contribution",
+      "rateLabel": "Annual rate",
+      "yearsLabel": "Years"
+    }
+  },
+  "rates": {
+    "columns": {
+      "product": "Product",
+      "rate": "Rate",
+      "bestFor": "Best for"
+    },
+    "eyebrow": "Rates",
+    "title": "Demo pricing for a few of our most requested products.",
+    "tabs": [
+      {
+        "label": "Savings",
+        "rows": [
+          {
+            "product": "Classic Savings",
+            "feature": "Flexible access"
+          },
+          {
+            "product": "Goal Builder",
+            "feature": "Auto-transfer friendly"
+          },
+          {
+            "product": "Business Reserve",
+            "feature": "Cash flow planning"
+          }
+        ]
+      },
+      {
+        "label": "Loans",
+        "rows": [
+          {
+            "product": "Personal Loan",
+            "feature": "Fast turnaround"
+          },
+          {
+            "product": "Home Equity",
+            "feature": "Flexible repayment"
+          },
+          {
+            "product": "Vehicle Loan",
+            "feature": "Simple monthly terms"
+          }
+        ]
+      },
+      {
+        "label": "Mortgages",
+        "rows": [
+          {
+            "product": "30-Year Fixed",
+            "feature": "Predictable payments"
+          },
+          {
+            "product": "15-Year Fixed",
+            "feature": "Faster equity growth"
+          },
+          {
+            "product": "Adjustable",
+            "feature": "Lower initial rate"
+          }
+        ]
+      }
+    ]
+  },
+  "security": {
+    "eyebrow": "Security & privacy",
+    "title": "Designed to keep you in control of your money and your information.",
+    "items": [
+      "Encryption in transit and at rest",
+      "Two-factor authentication",
+      "Fraud monitoring and alerts",
+      "Instant card freeze from the app",
+      "Real-time account notifications",
+      "Privacy by design for every workflow"
+    ]
+  },
+  "mobileApp": {
+    "available": "Available",
+    "balanceChart": "App balance chart",
+    "transfers": "Transfers",
+    "spending": "Spending",
+    "eyebrow": "Mobile app",
+    "title": "Take your banking with you without the noise.",
+    "description": "Review balances, move money, and manage your cards from a clean mobile experience built for daily routines.",
+    "features": [
+      "Quick balance checks",
+      "Smart spending categories",
+      "Instant card controls"
+    ],
+    "storeButtons": [
+      {
+        "label": "App Store",
+        "meta": "Coming soon"
+      },
+      {
+        "label": "Google Play",
+        "meta": "Coming soon"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Customer stories",
+    "title": "People stay with Westbridge because the experience feels personal.",
+    "items": [
+      {
+        "name": "Alicia R.",
+        "role": "Freelance designer",
+        "quote": "The app makes it easy to stay ahead of my spending, and the transfers feel instant. It feels calm, not overwhelming."
+      },
+      {
+        "name": "Jordan L.",
+        "role": "First-time buyer",
+        "quote": "The mortgage guidance was clear and helpful. I never felt rushed, and every step was easier to understand."
+      },
+      {
+        "name": "Maya P.",
+        "role": "Operations manager",
+        "quote": "Our business account tools help us manage cash flow without extra complexity. The interface is clean and dependable."
+      },
+      {
+        "name": "Theo N.",
+        "role": "Parent of two",
+        "quote": "Saving goals, alerts, and recurring transfers all work together in a way that finally feels manageable."
+      },
+      {
+        "name": "Sofia K.",
+        "role": "Remote consultant",
+        "quote": "It feels like the service was designed around real life. I can check balances and move money in under a minute."
+      },
+      {
+        "name": "Daniel B.",
+        "role": "Small business owner",
+        "quote": "The card controls and security tools give me confidence. It feels like a bank built for active people, not just paperwork."
+      }
+    ]
+  },
+  "blog": {
+    "eyebrow": "Insights",
+    "title": "Practical guidance for the moments that matter most.",
+    "posts": [
+      {
+        "category": "Savings",
+        "title": "Building a better savings routine without overspending",
+        "excerpt": "A simple monthly rhythm can help you save with less friction and more consistency.",
+        "readTime": "4 min read"
+      },
+      {
+        "category": "Planning",
+        "title": "When to review your loan before rates change again",
+        "excerpt": "Small differences in rate and term can shift your monthly budget in meaningful ways.",
+        "readTime": "5 min read"
+      },
+      {
+        "category": "Home",
+        "title": "Three money habits that make the first year of homeownership calmer",
+        "excerpt": "A steady system for bills, savings, and emergencies helps reduce stress when life gets busy.",
+        "readTime": "6 min read"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "FAQ",
+    "title": "Answers to the questions people ask most often.",
+    "items": [
+      {
+        "question": "How quickly can I open an account?",
+        "answer": "Most applicants can complete the initial setup in under ten minutes, with account access often available shortly after verification."
+      },
+      {
+        "question": "Are there monthly maintenance fees?",
+        "answer": "Many of our everyday accounts are designed to be low friction, and fee details are shown clearly before a decision is made."
+      },
+      {
+        "question": "Can I send money to friends and family?",
+        "answer": "Yes. Instant transfers and scheduled payments are available within the digital banking experience for supported account types."
+      },
+      {
+        "question": "How do I protect my card if it goes missing?",
+        "answer": "You can pause or freeze a card right away from the app, then reactivate it whenever you are ready."
+      },
+      {
+        "question": "What are the daily transaction limits?",
+        "answer": "Limits vary by account and activity type, and the app provides a clear view of the current rules before each transfer."
+      },
+      {
+        "question": "What support hours are available?",
+        "answer": "Support is available around the clock for account and security questions, with live assistance during extended business hours."
+      },
+      {
+        "question": "Can I set savings goals?",
+        "answer": "Yes. You can create goal-based saving plans, automate transfers, and track progress from a single dashboard."
+      },
+      {
+        "question": "Do you offer card controls for online purchases?",
+        "answer": "Our app includes controls for spending patterns, card activity, and transaction alerts so you can stay aware of what is happening."
+      }
+    ]
+  },
+  "contact": {
+    "branchLocator": "Branch locator",
+    "branchDescription": "Find a local support office near you.",
+    "visitBranch": "Visit a branch",
+    "sending": "Sending…",
+    "eyebrow": "Contact",
+    "title": "Speak with a Westbridge specialist when you need support.",
+    "description": "Whether you want guidance on opening an account or planning a major purchase, we are here to help.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send message"
+    },
+    "branches": [
+      {
+        "city": "Portland",
+        "address": "88 Alder Row",
+        "hours": "Mon–Fri · 9:00–5:30"
+      },
+      {
+        "city": "Austin",
+        "address": "24 Cedar Avenue",
+        "hours": "Mon–Sat · 9:00–6:00"
+      },
+      {
+        "city": "Chicago",
+        "address": "410 Elm Plaza",
+        "hours": "Mon–Fri · 8:30–5:00"
+      },
+      {
+        "city": "Boston",
+        "address": "910 Harbor Street",
+        "hours": "Mon–Fri · 9:00–6:30"
+      }
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "Newsletter",
+    "title": "A practical money note in your inbox each week.",
+    "placeholder": "Email address",
+    "cta": "Join the newsletter",
+    "joining": "Joining…"
+  },
+  "meta": {
+    "description": "Explore checking, savings, loans, and everyday banking tools with Westbridge National Bank. Demo only; no real money is held."
+  },
+  "_notice": "মেশিন-অনুবাদিত খসড়া; নেটিভ পর্যালোচনা প্রয়োজন."
+}

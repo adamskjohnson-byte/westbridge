@@ -1,0 +1,607 @@
+{
+  "photoCredits": {
+    "title": "Fotoğraf kaynakları",
+    "description": "Bu demo sitesinde kullanılan örnek fotoğrafların kaynak bilgileri.",
+    "attributionPrefix": "Fotoğraf:",
+    "attributionSuffix": "Pixabay'de",
+    "empty": "Fotoğraflar yalnızca örnek amaçlıdır. Görsellerdeki kişiler Westbridge müşterisi veya çalışanı değildir."
+  },
+  "about": {
+    "sections": {
+      "story": "Hikâyemiz",
+      "mission": "Misyonumuz",
+      "values": "İlkelerimiz",
+      "timeline": "Kısa tarihçe",
+      "leadership": "Yönetim ekibi",
+      "fictionalPeople": "Görsellerdeki tüm kişiler bu demo için oluşturulmuş kurgusal karakterlerdir."
+    },
+    "eyebrow": "Westbridge hakkında",
+    "title": "İnsanları odağına alan, daha sağlam bir gelecek.",
+    "description": "Bu demo projesi için oluşturulmuş, topluma önem veren kurgusal bir bankayız. Hikâyemiz, günlük para kararlarını daha anlaşılır ve daha az stresli hâle getirmekle ilgili.",
+    "story": "Westbridge basit bir fikirle yola çıktı: Bankacılık, seçenekleri anlamayı zorlaştırmak yerine insanları ileriye taşımalı. Açık bilgileri, kullanışlı dijital araçları ve insan desteğini tek bir yerde buluşturuyoruz.",
+    "mission": "Hizmet verdiğimiz kişi ve işletmeler için günlük bankacılığı daha anlaşılır, erişilebilir ve destekleyici hâle getirmek.",
+    "values": [
+      {
+        "title": "Açıklık",
+        "description": "Seçenekleri anlaşılır biçimde açıklamak, maliyetleri en baştan göstermek ve sonraki adımı netleştirmek."
+      },
+      {
+        "title": "Özen",
+        "description": "Her soruyu sabırla, her müşteriyi saygıyla karşılamak."
+      },
+      {
+        "title": "Sorumluluk",
+        "description": "Bilinçli ve uzun vadeli kararları destekleyen araçlar ve alışkanlıklar geliştirmek."
+      },
+      {
+        "title": "Gelişim",
+        "description": "Gerçek ihtiyaçlardan kopmadan deneyimi sürekli iyileştirmek."
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Açık bir fikir",
+        "description": "Küçük bir ekip, günlük bankacılıkta daha anlaşılır bir deneyim hayal etti."
+      },
+      {
+        "title": "Önce toplum",
+        "description": "Demo hikâyesinde kurgusal Westbridge mahalle ofislerinin ilki açıldı."
+      },
+      {
+        "title": "Tasarımdan gelen dijitallik",
+        "description": "Mobil araçlar, hesap kontrollerini ve planlamayı günlük yaşama taşıdı."
+      },
+      {
+        "title": "Geleceği birlikte kuruyoruz",
+        "description": "Deneyimi daha kullanışlı, kapsayıcı ve anlaşılır kılmaya devam ediyoruz.",
+        "year": ""
+      }
+    ],
+    "leadership": [
+      {
+        "name": "Elena Brooks",
+        "role": "Üst Yönetici",
+        "bio": "Müşteri güvenine ve uygulanabilir yeniliklere odaklanan kurgusal bir yönetici."
+      },
+      {
+        "name": "Marcus Chen",
+        "role": "Toplum İlişkileri Yöneticisi",
+        "bio": "Yerel bakış açılarını ürün kararlarına taşıyan kurgusal bir yönetici."
+      },
+      {
+        "name": "Priya Nair",
+        "role": "Teknoloji Yöneticisi",
+        "bio": "Güvenli dijital bankacılığı kolaylaştırmak için çalışan kurgusal bir yönetici."
+      }
+    ]
+  },
+  "audiences": {
+    "personal": {
+      "eyebrow": "Bireysel bankacılık",
+      "title": "Önem verdiğiniz şeylere yer açan günlük bankacılık.",
+      "description": "Günlük harcamalarınızı, birikimlerinizi, kredilerinizi ve planlarınızı tek bir ekranda yönetin.",
+      "cta": "Tüm ürünleri inceleyin"
+    },
+    "business": {
+      "eyebrow": "İşletme bankacılığı",
+      "title": "İşletme paranızı yönetmenin daha özenli bir yolu.",
+      "description": "Günlük ödemelerden nakit rezervlerine kadar işletme finansmanınızı destekleyen pratik araçlar edinin.",
+      "cta": "Ekibimizle görüşün"
+    }
+  },
+  "products": [
+    {
+      "title": "Vadesiz hesap",
+      "description": "Günlük harcamalarınız, faturalarınız ve transferleriniz için güvenilir bir hesap.",
+      "highlights": [
+        "Kolay günlük erişim",
+        "Fatura ödeme ve planlı transferler",
+        "Anlık hareket bildirimleri"
+      ]
+    },
+    {
+      "title": "Birikim hesabı",
+      "description": "Önemli hedeflerinize doğru düzenli adımlarla birikim alışkanlığı kazanın.",
+      "highlights": [
+        "Hedefe özel birikim bölümleri",
+        "Düzenli transferler",
+        "Net ilerleme takibi"
+      ]
+    },
+    {
+      "title": "Kredi kartları",
+      "description": "Yararlı kontroller ve hareket takibiyle esnek alışveriş olanağı.",
+      "highlights": [
+        "Anında kart kontrolleri",
+        "Alışveriş bildirimleri",
+        "Kolay hareket incelemesi"
+      ]
+    },
+    {
+      "title": "Krediler",
+      "description": "Net tahminler ve pratik yönlendirmeyle kredi seçeneklerini keşfedin.",
+      "highlights": [
+        "Bireysel ve taşıt kredileri",
+        "Esnek geri ödeme seçenekleri",
+        "Kolay ödeme hesaplayıcısı"
+      ]
+    },
+    {
+      "title": "Konut kredileri",
+      "description": "Rakamları anlaşılır kılan yönlendirmeyle ev sahibi olma planı yapın.",
+      "highlights": [
+        "Sabit ve değişken faiz seçenekleri",
+        "Başvuru öncesi ödeme tahminleri",
+        "Her adımda destek"
+      ]
+    }
+  ],
+  "security": {
+    "eyebrow": "Güvenlik ve gizlilik",
+    "title": "Her adımda güveninizi destekleyen güvenlik.",
+    "description": "Demo güvenlik yaklaşımımız hesap korumalarını, yararlı bildirimleri ve bilgilerinizle ilgili açık seçenekleri bir araya getirir.",
+    "practices": [
+      {
+        "title": "Hesap erişimi",
+        "description": "Çok faktörlü doğrulama ve oturum kontrolleri girişlerinizi korumaya yardımcı olur."
+      },
+      {
+        "title": "Veri koruması",
+        "description": "Bilgiler aktarılırken ve saklanırken korunmaları için şifreleme kullanılır."
+      },
+      {
+        "title": "İşlem takibi",
+        "description": "Hesap bildirimleri hareketleri fark etmenize ve hızla yanıt vermenize yardımcı olur."
+      },
+      {
+        "title": "Kart kontrolü",
+        "description": "Kartınızı bulamadığınızda uygulamadan geçici olarak durdurun, bulduğunuzda yeniden etkinleştirin."
+      },
+      {
+        "title": "Gizlilik tercihleri",
+        "description": "Açık ayarlar, bilgilerinizin nasıl kullanıldığını anlamanızı kolaylaştırır."
+      },
+      {
+        "title": "Destek",
+        "description": "Bir mesaj veya hesap hareketi size doğru görünmüyorsa destek ekibiyle iletişime geçin."
+      }
+    ],
+    "scamTips": [
+      "Beklenmedik bir arama veya mesaja yanıt olarak tek kullanımlık kodunuzu, parolanızı ya da kart bilgilerinizin tamamını asla paylaşmayın.",
+      "Bağlantıları açmadan önce durup düşünün. Beklenmedik bir mesajdaki bağlantıyı kullanmak yerine resmi siteyi veya uygulamayı doğrudan açın.",
+      "Acil para transferi, hediye kartı satın alma veya işlemi gizli tutma taleplerine karşı dikkatli olun.",
+      "Arayan kişiyi, onun görüşme sırasında verdiği numarayı değil, güvendiğiniz bir numarayı kullanarak ayrıca doğrulayın.",
+      "Şüpheli hareketleri hemen bildirin. Kartınızın bilgilerinin ele geçirildiğini düşünüyorsanız kartınızı kullanıma kapatın."
+    ]
+  },
+  "faq": [
+    {
+      "name": "Hesaplar",
+      "items": [
+        {
+          "question": "Ne kadar sürede hesap açabilirim?",
+          "answer": "Başvuru sahiplerinin çoğu ilk kurulumu on dakikadan kısa sürede tamamlayabilir; doğrulamanın ardından hesaba erişim sağlanır."
+        },
+        {
+          "question": "Hesap açmak için neler gerekli?",
+          "answer": "Temel kişisel bilgilerinize ve kimlik bilgilerinize ihtiyacınız olacak. Demo, gerçek finansal verileri toplamaz veya saklamaz."
+        },
+        {
+          "question": "Birden fazla hesap açabilir miyim?",
+          "answer": "Evet. Günlük harcamalarınızı ve farklı hedeflere yönelik birikimlerinizi ayrı hesaplarda düzenleyebilirsiniz."
+        }
+      ]
+    },
+    {
+      "name": "Ödemeler ve kartlar",
+      "items": [
+        {
+          "question": "Arkadaşlarıma ve aileme para gönderebilir miyim?",
+          "answer": "Bu demo deneyiminde desteklenen hesap türleri için anlık transferler ve planlı ödemeler kullanılabilir."
+        },
+        {
+          "question": "Kartım kaybolursa nasıl korumaya alabilirim?",
+          "answer": "Uygulamadan kartınızı geçici olarak durdurun veya kullanıma kapatın; bulursanız yeniden etkinleştirin."
+        },
+        {
+          "question": "Günlük işlem limitleri nelerdir?",
+          "answer": "Limitler işlem türüne göre değişir. Arayüz, transfer gönderilmeden önce geçerli limitleri göstermelidir."
+        },
+        {
+          "question": "Kart alışverişleri için bildirim ayarlayabilir miyim?",
+          "answer": "Evet. Hesap bildirimleri, son kart hareketlerinden haberdar olmanıza yardımcı olur."
+        }
+      ]
+    },
+    {
+      "name": "Birikim ve kredi",
+      "items": [
+        {
+          "question": "Birikim hedefleri belirleyebilir miyim?",
+          "answer": "Bir hedef oluşturun, transferleri planlayın ve ilerlemenizi hesap kontrol panelinizden inceleyin."
+        },
+        {
+          "question": "Kredi ödememi nasıl tahmin edebilirim?",
+          "answer": "Tutar, faiz oranı ve vadeye göre tahmini ödemenizi hesaplamak için krediler sayfamızdaki kredi hesaplayıcısını kullanın."
+        },
+        {
+          "question": "Bu sitedeki faiz oranları güncel teklifler mi?",
+          "answer": "Hayır. Gösterilen oranlar yalnızca örnek demo verileridir ve gerçek teklifler değildir."
+        }
+      ]
+    },
+    {
+      "name": "Destek ve güvenlik",
+      "items": [
+        {
+          "question": "Destek hangi saatlerde hizmet veriyor?",
+          "answer": "Bu kurgusal demoda hesap ve güvenlik soruları için desteğin günün her saati sunulduğu belirtilir."
+        },
+        {
+          "question": "Westbridge bilgilerimi nasıl koruyor?",
+          "answer": "Demo; şifreleme, çok faktörlü doğrulama ve hesap bildirimleri gibi önlemleri açıklar."
+        },
+        {
+          "question": "Şüpheli bir mesaj alırsam ne yapmalıyım?",
+          "answer": "Kodları paylaşmayın ve beklenmedik bağlantıları açmayın. Resmi site veya uygulama üzerinden destek ekibiyle iletişime geçin."
+        }
+      ]
+    }
+  ],
+  "blog": [
+    {
+      "category": "Birikim",
+      "title": "Fazla harcamadan daha iyi bir birikim düzeni kurun",
+      "excerpt": "Basit bir aylık düzen, daha az uğraşla ve daha istikrarlı biçimde birikim yapmanıza yardımcı olabilir.",
+      "readTime": "4 dakika",
+      "published": "14 Ekim 2026",
+      "paragraphs": [
+        "Birikim düzeni, gerçek yaşamınıza uyduğunda en iyi sonucu verir. Önce faturalarınıza, temel ihtiyaçlarınıza ve biraz esnekliğe yer bırakan, düzenli ayırabileceğiniz bir tutar belirleyin.",
+        "Ardından bu alışkanlığı maaş günü gibi her ay zaten gerçekleşen bir zamana bağlayın. Otomatik transfer, sürekli ilgilenmeniz gerekmeksizin istikrarlı ilerlemenizi sağlayabilir.",
+        "Son olarak her hedefe bir ad verin ve ara sıra durumunu kontrol edin. Amaç her kuruşu en iyi şekilde değerlendirmek değil, doğru kararları tekrarlamayı kolaylaştırmaktır."
+      ]
+    },
+    {
+      "category": "Planlama",
+      "title": "Faizler yeniden değişmeden önce kredinizi ne zaman gözden geçirmelisiniz?",
+      "excerpt": "Faiz oranı ve vadedeki küçük farklar, aylık bütçenizi önemli ölçüde etkileyebilir.",
+      "readTime": "5 dakika",
+      "published": "29 Eylül 2026",
+      "paragraphs": [
+        "Krediyi gözden geçirirken amaç yalnızca dikkat çeken bir faiz oranının peşinden gitmek değil, mevcut koşulların planlarınıza hâlâ uyup uymadığını değerlendirmektir.",
+        "Mevcut bakiyeyi, kalan vadeyi, ücretleri ve yeni seçeneğin toplam maliyetini karşılaştırın. Vade uzarsa aylık ödemeniz düşse bile toplamda daha fazla ödeme yapabilirsiniz.",
+        "Tahminleri başlangıç noktası olarak kullanın; karar vermeden önce ayrıntıları yetkin bir uzmana danışın. Bu demo sitesindeki rakamlar yalnızca örnektir."
+      ]
+    },
+    {
+      "category": "Konut",
+      "title": "Ev sahibi olduğunuz ilk yılı kolaylaştıracak üç para alışkanlığı",
+      "excerpt": "Faturalar, birikim ve beklenmedik giderler için düzenli bir plan, yoğun zamanlarda stresi azaltır.",
+      "readTime": "6 dakika",
+      "published": "8 Eylül 2026",
+      "paragraphs": [
+        "Yeni bir evdeki ilk yıl, gözden kaçması kolay masrafları beraberinde getirebilir. Yaklaşan faturaları her ay gözden geçirmek bu giderleri görünür kılar.",
+        "Ev bakımı için ayrı bir birikim hedefi belirlemek, onarım ve mevsimsel ihtiyaçlar için kaynak oluşturur. Küçük ama düzenli katkılar bile beklenmedik bir sonraki masrafı karşılamayı kolaylaştırabilir.",
+        "Planı basit tutun: Yapabildiğiniz ödemeleri otomatikleştirin, ayda bir gözden geçirin ve koşullarınız değiştikçe güncelleyin. Herkese uyan tek bir bütçe yoktur."
+      ]
+    }
+  ],
+  "legal": {
+    "privacy": {
+      "title": "Gizlilik bildirimi",
+      "description": "Kurgusal bir bankanın bilgi uygulamalarını nasıl açıklayabileceğine dair örnek bir genel bakış.",
+      "sections": [
+        {
+          "heading": "Bu demodaki bilgiler",
+          "body": "Bu, eğitim amaçlı kurgusal bir projedir. Gerçek kişisel, hesap veya finansal bilgilerinizi girmeyin. Form gönderimleri istemci tarafında örneklenir ve bir bankacılık hizmetine iletilmez."
+        },
+        {
+          "heading": "Bilgiler nasıl kullanılabilir?",
+          "body": "Gerçek bir hizmette bilgiler; talep edilen ürünleri sunmak, hesapları korumak, yasal yükümlülükleri yerine getirmek ve desteği iyileştirmek için kullanılabilir. Gerçek bir kuruluş, verileri toplamadan önce tüm açıklamaları sunar."
+        },
+        {
+          "heading": "Seçenekleriniz",
+          "body": "Gerçek bir gizlilik bildirimi; erişim, düzeltme, silme, iletişim tercihleri, saklama süreleri ve iletişim seçeneklerini ayrıntılı biçimde açıklar."
+        },
+        {
+          "heading": "Sorularınız mı var?",
+          "body": "Bu demoda gerçek bir banka veya gizlilik birimi yoktur. Sitedeki diğer iletişim bilgileri kurgusaldır."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Kullanım koşulları",
+      "description": "Kurgusal bir bankacılık sitesi demosu için örnek koşullar.",
+      "sections": [
+        {
+          "heading": "Yalnızca demo amaçlıdır",
+          "body": "Westbridge National Bank gerçek bir banka değildir. Bu site yalnızca öğrenme ve tanıtım amacıyla sunulur; bankacılık, finans, hukuk veya vergi danışmanlığı sağlamaz."
+        },
+        {
+          "heading": "Gerçek hesap veya teklif yoktur",
+          "body": "Gösterilen faiz oranları, bakiyeler, ürünler, konumlar, kişiler ve hizmetler kurgusal veya örnek amaçlıdır. Bu sitedeki hiçbir içerik finansal ürün sunma, onaylama ya da sağlama taahhüdü değildir."
+        },
+        {
+          "heading": "Kabul edilebilir kullanım",
+          "body": "Siteyi yasalara uygun kullanın; çalışmasını aksatmaya, kısıtlı sistemlere erişmeye veya hassas bilgileri göndermeye çalışmayın."
+        },
+        {
+          "heading": "Değişiklikler ve kullanılabilirlik",
+          "body": "Gerçek bir hizmet; kullanılabilirliği, geçerli hukuku, uyuşmazlık süreçlerini ve faaliyet gösterdiği bölgeye özgü diğer koşulları tanımlar."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Çerez bildirimi",
+      "description": "Bu demo projesindeki çerezler ve yerel tarayıcı depolaması hakkında örnek bilgiler.",
+      "sections": [
+        {
+          "heading": "Gerekli depolama",
+          "body": "Bu demo, seçtiğiniz görünüm tercihini hatırlamak için tarayıcı depolamasını kullanır. Uygulama reklam çerezleri kullanmaz."
+        },
+        {
+          "heading": "Analiz",
+          "body": "Bu demoda analiz takibi yapılandırılmamıştır. Gerçek bir hizmet, kullandığı analiz teknolojilerini ve amaçlarını açıklar."
+        },
+        {
+          "heading": "Kontrolleriniz",
+          "body": "Tarayıcı ayarlarınızdan site depolamasını temizleyebilirsiniz. Bu işlem kayıtlı görünüm tercihlerinizi sıfırlayabilir."
+        }
+      ]
+    }
+  },
+  "images": {
+    "products": {
+      "checking": {
+        "alt": "Harcamalarını yönetmek için telefondaki bankacılık uygulamasını kullanan kişi"
+      },
+      "savings": {
+        "alt": "Bütçe planlayıcısı ve birikim defterinin bulunduğu çalışma masası"
+      },
+      "credit-cards": {
+        "alt": "Ödeme noktasında temassız kart kullanan eller"
+      },
+      "loans": {
+        "alt": "Çalışma masasında finansal evrakları inceleyen küçük işletme sahibi"
+      },
+      "mortgages": {
+        "alt": "Bir evin önünde yeni evlerinin anahtarlarını tutan aile"
+      }
+    },
+    "sections": {
+      "support": {
+        "alt": "Müşteriye yardımcı olurken kulaklık kullanan müşteri temsilcisi"
+      },
+      "security": {
+        "alt": "Güvenli giriş ve doğrulama istemini gösteren akıllı telefon ekranı"
+      },
+      "cta-banner": {
+        "alt": "Bankacılık çağrı bandında kullanılan, şehir silüeti üzerinde gün doğumu"
+      },
+      "branch": {
+        "alt": "Modern bir banka şubesinin aydınlık iç mekânı"
+      }
+    },
+    "blog": {
+      "tip-1": {
+        "alt": "Aylık bütçe planı için hesap makinesi ve notlar"
+      },
+      "tip-2": {
+        "alt": "Güvenli bankacılık için dizüstü bilgisayar ve çevrimiçi çalışma düzeni"
+      },
+      "tip-3": {
+        "alt": "Uzun vadeli hedefler için birikim kavanozuna atılan madeni paralar"
+      }
+    },
+    "about": {
+      "team": {
+        "alt": "Masa çevresinde toplantı yaparak iş birliği içindeki ekip"
+      },
+      "headquarters": {
+        "alt": "Cam pencereli modern ofis binası ve şık giriş holü"
+      }
+    }
+  },
+  "design": {
+    "colorTokens": [
+      {
+        "name": "Arka plan"
+      },
+      {
+        "name": "Kart"
+      },
+      {
+        "name": "Ön plan"
+      },
+      {
+        "name": "Birincil"
+      },
+      {
+        "name": "İkincil"
+      },
+      {
+        "name": "Soluk"
+      },
+      {},
+      {
+        "name": "Bronz"
+      },
+      {
+        "name": "Kenarlık"
+      },
+      {
+        "name": "Odak halkası"
+      },
+      {
+        "name": "Yıkıcı"
+      }
+    ],
+    "typographySamples": [
+      {
+        "sample": "Daha sağlam bir gelecek"
+      },
+      {
+        "name": "Başlık 1",
+        "sample": "Açık ve anlaşılır bankacılık"
+      },
+      {
+        "name": "Başlık 2",
+        "sample": "Size göre tasarlandı"
+      },
+      {
+        "name": "Başlık 3",
+        "sample": "Özenli hizmet"
+      },
+      {
+        "name": "Başlık 4",
+        "sample": "Günlük ihtiyaçlar"
+      },
+      {
+        "name": "Gövde metni",
+        "sample": "Günlük bankacılık için açık ve özenli bir deneyim."
+      },
+      {
+        "name": "Küçük metin",
+        "sample": "Yararlı ayrıntılar, kolay okunur biçimde."
+      }
+    ],
+    "page": {
+      "themeLabel": "{{theme}} tema",
+      "themeNames": {
+        "light": "Açık",
+        "dark": "Koyu"
+      },
+      "typography": "Tipografi",
+      "buttonsAndFields": "Düğmeler ve alanlar",
+      "componentSpecimens": "Bileşen örnekleri",
+      "componentDescription": "Ortak kontroller için etkileşimli denemeler.",
+      "navigationPanels": "Gezinme ve paneller",
+      "overview": "Genel bakış",
+      "controls": "Kontroller",
+      "cardTitle": "Kart başlığı",
+      "cardDescription": "Kısa bir kart açıklaması.",
+      "cardContent": "Kart içeriği Classic yüzey ve köşe yuvarlaklığı belirteçlerini kullanır.",
+      "accordionItem": "Akordeon öğesi",
+      "accordionContent": "Açıklama içeriği normal belge akışında kalır.",
+      "openSheet": "Paneli açın",
+      "sheetPanel": "Sayfa paneli",
+      "sheetDescription": "Erişilebilir odak yönetimi Radix Dialog tarafından sağlanır.",
+      "formControls": "Form kontrolleri",
+      "firstTab": "İlk sekme",
+      "secondTab": "İkinci sekme",
+      "firstTabContent": "Birinci sekme içeriği.",
+      "secondTabContent": "İkinci sekme içeriği.",
+      "accountType": "Hesap türü",
+      "exampleValue": "Örnek değer: {{value}}",
+      "defaultBadge": "Varsayılan rozeti",
+      "secondaryBadge": "İkincil",
+      "outlineBadge": "Kontur",
+      "tooltip": "Bilgi balonu",
+      "tooltipDescription": "Yararlı bağlamsal ayrıntı",
+      "showToast": "Kısa bildirimi gösterin",
+      "demoToast": "Demo bildirimi gösterildi",
+      "carousel": "Döngü",
+      "firstSlide": "İlk slayt",
+      "secondSlide": "İkinci slayt",
+      "thirdSlide": "Üçüncü slayt",
+      "title": "Classic tasarım temeli",
+      "eyebrow": "Geliştirici önizlemesi",
+      "description": "Westbridge arayüzü için renk, yazı tipi, logo ve bileşen referansları.",
+      "primary": "Birincil",
+      "outline": "Kontur",
+      "secondary": "İkincil",
+      "ghost": "Hayalet",
+      "destructive": "Yıkıcı",
+      "emailAddress": "E-posta adresi",
+      "emailPlaceholder": "siz@ornek.test",
+      "message": "Mesaj",
+      "notePlaceholder": "Kısa bir not"
+    }
+  },
+  "labels": {
+    "about": "Hakkında",
+    "personal": "Bireysel",
+    "business": "İşletme",
+    "products": "Ürünler",
+    "loans": "Krediler",
+    "rates": "Faiz oranları",
+    "security": "Güvenlik",
+    "helpCenter": "Yardım merkezi",
+    "faq": "SSS",
+    "contact": "İletişim",
+    "blog": "Yazılar",
+    "notFound": "Bulunamadı"
+  },
+  "actions": {
+    "exploreProduct": "{{product}} ürününü inceleyin",
+    "viewRates": "Demo faiz oranlarını görün",
+    "askAboutProduct": "{{product}} hakkında bilgi alın",
+    "readArticle": "Makaleyi okuyun"
+  },
+  "productsPage": {
+    "title": "Günlük planlar ve büyük hedefler için ürünler",
+    "description": "Bir sonraki finansal adımınızı netleştirmek için tasarlanan kurgusal Westbridge ürünlerini inceleyin.",
+    "sectionsLabel": "Ürün bölümleri",
+    "itemNumber": "{{number}} / Ürün"
+  },
+  "tables": {
+    "product": "Ürün",
+    "exampleRate": "Örnek oran",
+    "illustrativeRate": "Temsili oran",
+    "designedFor": "Kullanım amacı",
+    "feature": "Özellik"
+  },
+  "loansPage": {
+    "title": "Size uygun bir planla borçlanın",
+    "description": "Kurgusal kredi seçeneklerini inceleyin, örnek faiz oranlarını karşılaştırın ve karar vermeden önce aylık ödemelerinizi tahmin edin.",
+    "types": {
+      "personal": {
+        "title": "Bireysel krediler",
+        "description": "Sabit aylık ödemelerle bir alışverişinizi planlayın veya giderlerinizi birleştirin."
+      },
+      "vehicle": {
+        "title": "Taşıt kredileri",
+        "description": "Yeni veya ikinci el aracınızı finanse etmenin öngörülebilir bir yolunu keşfedin."
+      },
+      "home": {
+        "title": "Konut finansmanı",
+        "description": "Yeni bir başlangıç için konut kredisi ve konut teminatlı finansman seçeneklerini inceleyin."
+      }
+    },
+    "rateHeading": "Örnek kredi faiz oranları",
+    "disclaimer": "Faiz oranları ve tahminler yalnızca örnek demo verileridir; teklif veya finansal tavsiye değildir."
+  },
+  "ratesPage": {
+    "title": "Faiz oranları ve ürün ayrıntıları",
+    "description": "Bu demoda yer alan ürünler için örnek faiz oranlarıdır. Gerçek bir finans kuruluşu tarafından sunulan güncel oranlar değildir.",
+    "disclaimer": "Tüm faiz oranları demo projesine ait örnek verilerdir ve kurgusal senaryoda değişebilir."
+  },
+  "securityPage": {
+    "scamEyebrow": "Dolandırıcılığa karşı dikkatli olun",
+    "scamTitle": "Durun, doğrulayın, sonra harekete geçin.",
+    "disclaimer": "Westbridge kurgusal bir demodur. Bu sitede gerçek giriş bilgilerinizi veya finansal bilgilerinizi asla kullanmayın."
+  },
+  "faqPage": {
+    "title": "Sık sorulan sorular",
+    "description": "Hesaplar, ödemeler, krediler, destek ve güvenlik hakkındaki yanıtları arayın.",
+    "searchLabel": "Sık sorulan sorularda arayın",
+    "searchPlaceholder": "Sorularda arayın",
+    "noResults": "“{{query}}” ile eşleşen soru bulunamadı. Başka bir arama deneyin."
+  },
+  "blogPage": {
+    "title": "Günlük kararlar için öneriler",
+    "description": "Para yönetimi alışkanlıklarını daha anlaşılır kılmaya yönelik pratik ve kurgusal öneriler.",
+    "eyebrow": "Westbridge dergisi",
+    "notFoundTitle": "Makale bulunamadı",
+    "notFoundDescription": "Bu makale demoda mevcut değil.",
+    "browseArticles": "Tüm makalelere göz atın",
+    "postMetadata": "{{category}} · {{published}} · {{readTime}}",
+    "disclaimer": "Bu makale demo projesi için hazırlanmış kurgusal bir eğitim içeriğidir ve finansal tavsiye değildir.",
+    "backToInsights": "Önerilere dönün"
+  },
+  "legalPage": {
+    "eyebrow": "Yasal bilgiler",
+    "sampleNotice": "Demo projesi için örnek metin."
+  },
+  "_notice": "Makine çevirisi taslağıdır; ana dili Türkçe olan biri tarafından gözden geçirilmelidir."
+}

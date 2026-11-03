@@ -1,0 +1,487 @@
+{
+  "nav": {
+    "personal": "Privati",
+    "business": "Imprese",
+    "loans": "Prestiti",
+    "security": "Sicurezza"
+  },
+  "buttons": {
+    "login": "Accedi",
+    "openAccount": "Apri un conto"
+  },
+  "footer": {
+    "disclaimer": "Solo a scopo dimostrativo. Westbridge National Bank non è una banca reale. Non vengono custoditi denaro o fondi reali.",
+    "photoSource": "Foto da Pixabay",
+    "photoCredits": "Crediti fotografici"
+  },
+  "authPitch": {
+    "eyebrow": "Un inizio chiaro con Westbridge",
+    "heading": "La tua banca di tutti i giorni, organizzata con cura.",
+    "body": "Un modo più sereno per gestire i conti e i progetti che ti aiutano a progredire.",
+    "benefits": [
+      "Tieni sotto controllo conto corrente e risparmi in un'unica schermata",
+      "Consulta subito movimenti e stato dei trasferimenti",
+      "Ricevi assistenza da un team che ti ascolta"
+    ],
+    "disclaimer": "Solo a scopo dimostrativo. Westbridge National Bank non è una banca reale. Non vengono custoditi denaro o fondi reali."
+  },
+  "navigation": {
+    "primaryLabel": "Navigazione principale",
+    "primaryLinks": [
+      {
+        "label": "Privati"
+      },
+      {
+        "label": "Imprese"
+      },
+      {
+        "label": "Prestiti"
+      },
+      {
+        "label": "Sicurezza"
+      }
+    ],
+    "footerColumns": [
+      {
+        "title": "Prodotti",
+        "links": [
+          {
+            "label": "Conto corrente"
+          },
+          {
+            "label": "Risparmio"
+          },
+          {
+            "label": "Tutti i prodotti"
+          },
+          {
+            "label": "Prestiti"
+          },
+          {
+            "label": "Tassi"
+          }
+        ]
+      },
+      {
+        "title": "La banca",
+        "links": [
+          {
+            "label": "Chi è Westbridge"
+          },
+          {
+            "label": "Dirigenza"
+          },
+          {
+            "label": "Contatti"
+          }
+        ]
+      },
+      {
+        "title": "Assistenza",
+        "links": [
+          {
+            "label": "Centro assistenza"
+          },
+          {
+            "label": "Articoli"
+          },
+          {
+            "label": "Sicurezza"
+          }
+        ]
+      },
+      {
+        "title": "Informazioni legali",
+        "links": [
+          {
+            "label": "Informativa sulla privacy"
+          },
+          {
+            "label": "Termini di utilizzo"
+          },
+          {
+            "label": "Cookie"
+          }
+        ]
+      }
+    ]
+  },
+  "brand": {
+    "homeLabel": "Home page di Westbridge National Bank"
+  },
+  "accessibility": {
+    "skipToContent": "Vai al contenuto",
+    "closeMenu": "Chiudi menu",
+    "sliderValue": "Valore {{value}}"
+  },
+  "navbar": {
+    "dashboard": "Pannello di controllo",
+    "loggingOut": "Disconnessione in corso…",
+    "logOut": "Esci",
+    "account": "Conto",
+    "accountMenuLabel": "Menu del conto di {{name}}",
+    "login": "Accedi",
+    "openAccount": "Apri un conto",
+    "closeNavigation": "Chiudi il menu di navigazione",
+    "openNavigation": "Apri il menu di navigazione"
+  },
+  "languageSwitcher": {
+    "triggerLabel": "Lingua: {{language}}",
+    "searchLabel": "Cerca lingue",
+    "searchPlaceholder": "Cerca lingue",
+    "listLabel": "Lingue",
+    "noResults": "Nessuna lingua trovata."
+  },
+  "theme": {
+    "toggleLabel": "Tema attuale: {{current}}. Passa al tema {{next}}",
+    "names": {
+      "system": "di sistema",
+      "light": "chiaro",
+      "dark": "scuro"
+    }
+  },
+  "breadcrumbs": {
+    "label": "Percorso di navigazione",
+    "home": "Pagina iniziale"
+  },
+  "carousel": {
+    "previous": "Diapositiva precedente",
+    "next": "Diapositiva successiva"
+  },
+  "forms": {
+    "firstName": "Nome",
+    "lastName": "Cognome",
+    "emailAddress": "Indirizzo e-mail",
+    "password": "Parola d’accesso",
+    "confirmPassword": "Conferma la password",
+    "newPassword": "Nuova password",
+    "confirmNewPassword": "Conferma la nuova password",
+    "validation": {
+      "emailRequired": "Inserisci il tuo indirizzo e-mail.",
+      "emailInvalid": "Inserisci un indirizzo e-mail valido.",
+      "emailMax": "L'indirizzo e-mail non può superare i 254 caratteri.",
+      "nameMin": "Inserisci almeno 2 caratteri.",
+      "nameMax": "Il nome non può superare i 60 caratteri.",
+      "nameMax100": "Il nome non può superare i 100 caratteri.",
+      "subjectMin": "Inserisci un oggetto.",
+      "subjectMax": "L'oggetto non può superare i 150 caratteri.",
+      "messageMin": "Aggiungi qualche dettaglio in più.",
+      "messageMax": "Il messaggio non può superare i 2000 caratteri.",
+      "passwordMin": "Usa almeno 10 caratteri.",
+      "passwordLowercase": "Includi una lettera minuscola.",
+      "passwordUppercase": "Includi una lettera maiuscola.",
+      "passwordNumber": "Includi un numero.",
+      "passwordRequired": "Inserisci la tua password.",
+      "confirmPassword": "Conferma la tua password.",
+      "acceptTerms": "Per continuare, devi accettare i termini.",
+      "passwordMismatch": "Le password non corrispondono."
+    },
+    "errors": {
+      "rateLimit": "Troppi tentativi. Riprova tra un minuto.",
+      "reviewAndRetry": "Controlla le informazioni e riprova.",
+      "connection": "Impossibile connettersi. Controlla la connessione e riprova.",
+      "submit": "Non è stato possibile inviare la richiesta. Riprova."
+    },
+    "contact": {
+      "success": "Il tuo messaggio è stato inviato."
+    },
+    "newsletter": {
+      "success": "La tua iscrizione alla newsletter è stata completata."
+    }
+  },
+  "actions": {
+    "continue": "Continua"
+  },
+  "auth": {
+    "startHere": "Inizia da qui",
+    "openAccount": "Apri un conto",
+    "registerDescription": "Inserisci pochi dati: ti invieremo un link per verificare il tuo indirizzo e-mail.",
+    "createAccount": "Crea un conto",
+    "creatingAccount": "Creazione del conto in corso…",
+    "acceptTermsLead": "Accetto i",
+    "demoTerms": "termini della demo",
+    "alreadyHaveAccount": "Hai già un conto?",
+    "signIn": "Accedi",
+    "signInHeading": "Accedi al tuo conto",
+    "loginDescription": "Usa i dati del tuo conto demo Westbridge.",
+    "welcomeBack": "Bentornato",
+    "newToWestbridge": "È la tua prima volta su Westbridge?",
+    "forgotPassword": "Password dimenticata?",
+    "rememberMe": "Ricordami su questo dispositivo",
+    "signingIn": "Accesso in corso…",
+    "resetPassword": "Reimposta la password",
+    "forgotDescription": "Inserisci l'indirizzo e-mail associato al conto. Se corrisponde, ti invieremo un link per reimpostare la password.",
+    "nextStep": "Passaggio successivo",
+    "checkInbox": "Controlla la posta in arrivo",
+    "resetEmailSentIfExists": "Se l'indirizzo e-mail è registrato, riceverai a breve un link per reimpostare la password.",
+    "returnToSignIn": "Torna all'accesso",
+    "accountRecovery": "Recupero del conto",
+    "forgotPasswordQuestion": "Hai dimenticato la password?",
+    "sending": "Invio in corso…",
+    "sendResetLink": "Invia il link di reimpostazione",
+    "backToSignIn": "Torna all'accesso",
+    "chooseNewPassword": "Scegli una nuova password",
+    "resetDescription": "Scegli una nuova password per il tuo conto demo Westbridge.",
+    "passwordResetSuccess": "La password è stata reimpostata. Accedi con la nuova password.",
+    "resetLinkUnavailable": "Link di reimpostazione non disponibile",
+    "requestNewLink": "Richiedi un nuovo link",
+    "resetLinkInvalid": "Il link per reimpostare la password non è valido o è scaduto. Richiedi un nuovo link per continuare.",
+    "requestNewResetLink": "Richiedi un nuovo link di reimpostazione",
+    "resetEmailLabel": "Per {{email}}",
+    "saving": "Salvataggio in corso…",
+    "saveNewPassword": "Salva la nuova password",
+    "verifyEmail": "Verifica il tuo indirizzo e-mail",
+    "verifyDescription": "Conferma il tuo indirizzo e-mail per completare la configurazione del conto.",
+    "verificationLinkSent": "È in arrivo un nuovo link di verifica.",
+    "oneLastStep": "Ancora un ultimo passaggio",
+    "verificationSentTo": "Abbiamo inviato un link di verifica a {{email}}. Aprilo per completare la configurazione del conto.",
+    "resendAvailable_one": "Potrai inviare di nuovo tra {{count}} secondo",
+    "resendAvailable_other": "Potrai inviare di nuovo tra {{count}} secondi",
+    "resendVerification": "Invia di nuovo l'e-mail di verifica",
+    "emailConfirmed": "E-mail confermata",
+    "allSet": "È tutto pronto.",
+    "emailVerifiedContinue": "Il tuo indirizzo e-mail è verificato. Quando vuoi, puoi proseguire verso il conto.",
+    "linkUnavailable": "Link non disponibile",
+    "linkCannotBeUsed": "Questo link non può essere utilizzato",
+    "verificationLinkInvalid": "Il link di verifica non è valido o è scaduto.",
+    "signInToRequestLink": "Accedi per richiedere un altro link",
+    "showPassword": "Mostra password",
+    "hidePassword": "Nascondi password",
+    "passwordRules": {
+      "length": "Almeno 10 caratteri",
+      "uppercase": "Una lettera maiuscola",
+      "lowercase": "Una lettera minuscola",
+      "number": "One number"
+    },
+    "passwordStrength_one": "Sicurezza della password: {{count}} requisiti soddisfatti su {{total}}",
+    "passwordStrength_other": "Sicurezza della password: {{count}} requisiti soddisfatti su {{total}}",
+    "loadingAccount": "Caricamento del conto in corso",
+    "checkingSession": "Verifica della sessione in corso…",
+    "errors": {
+      "accountSuspended": "Questo conto è temporaneamente sospeso. Contatta l'assistenza per ricevere aiuto.",
+      "rateLimit": "Troppi tentativi. Attendi qualche istante e riprova.",
+      "reviewAndRetry": "Controlla le informazioni e riprova.",
+      "invalidCredentials": "L'indirizzo e-mail o la password non sono corretti.",
+      "createAccount": "Non è stato possibile creare il conto.",
+      "signIn": "Non è stato possibile effettuare l'accesso. Riprova.",
+      "sendReset": "Non è stato possibile inviare l'e-mail di reimpostazione. Riprova.",
+      "resetPassword": "Non è stato possibile reimpostare la password. Riprova.",
+      "waitBeforeResend": "Attendi prima di richiedere un altro link.",
+      "resendVerification": "Non è stato possibile inviare di nuovo il link. Riprova tra poco.",
+      "verifyEmail": "Non è stato possibile verificare questo indirizzo e-mail. Richiedi un nuovo link."
+    }
+  },
+  "apiErrors": {
+    "generic": "Si è verificato un errore. Riprova.",
+    "network_error": "Impossibile connettersi. Controlla la connessione e riprova.",
+    "unauthenticated": "La sessione è terminata. Accedi di nuovo.",
+    "forbidden": "Non hai l’autorizzazione per eseguire questa operazione.",
+    "account_suspended": "Questo account è sospeso. Contatta l’assistenza.",
+    "email_not_verified": "Verifica il tuo indirizzo e-mail per continuare.",
+    "invalid_verification_link": "Questo link di verifica non è valido o è scaduto.",
+    "role_forbidden": "Il tuo account non può accedere a questa pagina.",
+    "not_found": "La pagina o l’elemento non è stato trovato.",
+    "csrf_mismatch": "La sessione deve essere aggiornata. Riprova.",
+    "validation_failed": "Controlla i dati e riprova.",
+    "too_many_requests": "Troppe richieste. Attendi e riprova.",
+    "server_error": "Si è verificato un errore del server. Riprova a breve.",
+    "http_error": "Impossibile completare la richiesta. Riprova.",
+    "validation": {
+      "email_required": "Inserisci il tuo indirizzo e-mail.",
+      "email_invalid": "Inserisci un indirizzo e-mail valido.",
+      "email_max": "L’indirizzo e-mail non può superare 254 caratteri.",
+      "email_taken": "Questo indirizzo e-mail è già in uso.",
+      "name_required": "Inserisci il tuo nome.",
+      "name_invalid": "Inserisci un nome valido.",
+      "name_min": "Inserisci almeno 2 caratteri.",
+      "name_max": "Il nome non può superare 60 caratteri.",
+      "subject_required": "Inserisci un oggetto.",
+      "subject_invalid": "Inserisci un oggetto valido.",
+      "subject_min": "L’oggetto deve contenere almeno 3 caratteri.",
+      "subject_max": "L’oggetto non può superare 150 caratteri.",
+      "message_required": "Inserisci un messaggio.",
+      "message_invalid": "Inserisci un messaggio valido.",
+      "message_min": "Il messaggio deve contenere almeno 10 caratteri.",
+      "message_max": "Il messaggio non può superare 2.000 caratteri.",
+      "password_required": "Inserisci la password.",
+      "password_invalid": "Inserisci una password valida.",
+      "password_min": "Usa almeno 10 caratteri.",
+      "password_uppercase": "Includi una lettera maiuscola.",
+      "password_lowercase": "Includi una lettera minuscola.",
+      "password_number": "Includi un numero.",
+      "password_confirmed": "Le password non corrispondono.",
+      "password_confirmation_required": "Conferma la password.",
+      "password_compromised": "Scegli una password che non sia comparsa in una violazione dei dati.",
+      "terms_required": "Devi accettare i termini per continuare.",
+      "remember_invalid": "Scegli un’impostazione valida per ricordare l’accesso.",
+      "credentials_invalid": "L’indirizzo e-mail o la password non sono corretti.",
+      "reset_token_required": "Il token di reimpostazione è obbligatorio.",
+      "reset_token_invalid": "Questo link di reimpostazione non è valido o è scaduto. Richiedine uno nuovo."
+    }
+  },
+  "dashboard": {
+    "description": "Panoramica del tuo conto demo Westbridge.",
+    "overview": "Panoramica",
+    "greeting": {
+      "morning": "Buongiorno, {{name}}",
+      "afternoon": "Buon pomeriggio, {{name}}",
+      "evening": "Buonasera, {{name}}"
+    },
+    "shell": {
+      "primaryNavigation": "Navigazione del pannello",
+      "mobileNavigation": "Schede del pannello",
+      "workspace": "Il tuo denaro",
+      "overview": "Panoramica",
+      "transactions": "Transazioni",
+      "transfers": "Trasferimenti",
+      "cards": "Carte",
+      "settings": "Impostazioni",
+      "comingSoon": "In arrivo",
+      "demoNotice": "Solo denaro demo",
+      "live": "Disponibile ora",
+      "more": "Altro"
+    },
+    "demoMoney": "Denaro demo",
+    "balanceAcrossAccounts": "Su {{count}} conti",
+    "accountNumberCopied": "Numero di conto copiato",
+    "accountNumberCopyError": "Impossibile copiare il numero di conto",
+    "copyAccountNumber": "Copia il numero completo del conto",
+    "viewTransactions": "Visualizza transazioni",
+    "viewAll": "Visualizza tutto",
+    "thisMonth": "Questo mese",
+    "income": "Entrate",
+    "spending": "Spese",
+    "net": "Saldo netto",
+    "month": "Mese",
+    "sixMonthActivity": "Entrate e spese",
+    "chartAccessibleSummary": "Entrate e spese mensili degli ultimi sei mesi. I dati sono disponibili anche nella tabella dopo il grafico.",
+    "spendingByCategory": "Spese per categoria",
+    "noSpending": "Nessuna spesa registrata questo mese.",
+    "cashFlowAndSpending": "Flusso di cassa e spese per categoria",
+    "noActivityYet": "Nessuna attività per ora. Le tue transazioni appariranno qui.",
+    "status": {
+      "active": "Attivo",
+      "frozen": "Bloccato",
+      "closed": "Chiuso"
+    },
+    "category": {
+      "transfer": "Trasferimento",
+      "deposit": "Deposito",
+      "withdrawal": "Prelievo",
+      "bill_payment": "Pagamento bolletta",
+      "card": "Acquisto con carta",
+      "fee": "Commissione",
+      "interest": "Interessi",
+      "other": "Altro"
+    },
+    "transactions": {
+      "title": "Transazioni",
+      "pagination": "Pagine delle transazioni",
+      "previousPage": "Pagina precedente",
+      "nextPage": "Pagina successiva",
+      "goToPage": "Vai alla pagina {{page}}",
+      "referenceCopied": "Riferimento copiato",
+      "copyFailed": "Impossibile copiare",
+      "dateTime": "Data e ora",
+      "dateLabel": "Data",
+      "counterparty": "Beneficiario",
+      "notAvailable": "Non disponibile",
+      "detailTitle": "Dettagli della transazione",
+      "detailDescription": "Dettagli completi di questa registrazione contabile.",
+      "accountLabel": "Conto",
+      "amountLabel": "Importo",
+      "balanceAfter": "Saldo successivo",
+      "categoryLabel": "Categoria",
+      "reference": "Riferimento",
+      "copyReference": "Copia riferimento",
+      "description": "Descrizione",
+      "closeDetails": "Chiudi dettagli",
+      "exportTruncated": "Esportate le prime 10.000 righe",
+      "exportSuccess": "File CSV scaricato",
+      "exportRateLimited": "Troppe esportazioni. Riprova tra un minuto",
+      "exportPending": "Preparazione del CSV…",
+      "exportCsv": "Esporta CSV",
+      "filters": "Filtri delle transazioni",
+      "search": "Cerca",
+      "searchPlaceholder": "Descrizione o beneficiario",
+      "direction": "Direzione",
+      "allDirections": "Tutte",
+      "credits": "Accrediti",
+      "debits": "Addebiti",
+      "sort": "Ordina per",
+      "newest": "Prima le più recenti",
+      "oldest": "Prima le meno recenti",
+      "amountHigh": "Importo: dal maggiore al minore",
+      "amountLow": "Importo: dal minore al maggiore",
+      "pageSize": "Righe per pagina",
+      "categoriesSelected": "{{count}} selezionate",
+      "dateRange": "Intervallo di date",
+      "dateFrom": "Da",
+      "dateTo": "A",
+      "range": {
+        "7": "7 giorni",
+        "30": "30 giorni",
+        "90": "90 giorni",
+        "month": "Questo mese",
+        "custom": "Personalizzato"
+      },
+      "minAmount": "Importo minimo",
+      "maxAmount": "Importo massimo",
+      "removeFilter": "Rimuovi filtro: {{filter}}",
+      "clearAll": "Cancella tutto",
+      "sortAmount": "Ordinamento per importo",
+      "sortDate": "Ordinamento per data",
+      "showing": "Visualizzazione di {{from}}–{{to}} su {{total}}",
+      "noMatches": "Nessuna transazione corrisponde ai filtri",
+      "clearFilters": "Cancella filtri",
+      "tableCaption": "Transazioni del conto. Seleziona una riga per visualizzarne i dettagli."
+    },
+    "eyebrow": "Il tuo conto Westbridge",
+    "welcome": "Ti diamo il benvenuto, {{name}}",
+    "signedInAs": "Hai effettuato l'accesso come {{email}}",
+    "accountsHeading": "I tuoi conti",
+    "totalBalance": "Saldo totale",
+    "recentActivity": "Attività recente",
+    "checking": "Conto corrente",
+    "savings": "Risparmi",
+    "accountNumber": "Account ending in",
+    "selectAccount": "Mostra l’attività di {{name}}",
+    "active": "Attivo",
+    "frozen": "Bloccato",
+    "closed": "Chiuso",
+    "noAccounts": "Nessun conto disponibile.",
+    "noTransactions": "Nessuna transazione recente per questo conto.",
+    "dashboardLoadError": "Impossibile caricare i tuoi conti.",
+    "activityLoadError": "Impossibile caricare l’attività di questo conto.",
+    "retry": "Riprova",
+    "loadMore": "Carica altro",
+    "loading": "Caricamento…",
+    "downloadCsv": "Scarica CSV",
+    "credit": "Accredito",
+    "debit": "Addebito",
+    "categories": {
+      "transfer": "Bonifico",
+      "deposit": "Deposito",
+      "withdrawal": "Prelievo",
+      "bill_payment": "Pagamento bolletta",
+      "card": "Acquisto con carta",
+      "fee": "Commissione",
+      "interest": "Interessi",
+      "other": "Altro"
+    },
+    "accountEnding": "Conto che termina con {{digits}}"
+  },
+  "notFound": {
+    "title": "Pagina non trovata",
+    "description": "Non abbiamo trovato la pagina. Ricomincia dalla pagina iniziale o visita una di queste sezioni utili.",
+    "home": "Torna alla pagina iniziale",
+    "products": "Scopri i prodotti",
+    "help": "Visita il centro assistenza",
+    "contact": "Contatta Westbridge"
+  },
+  "comingSoon": {
+    "description": "Presto saranno disponibili altre informazioni su questa pagina demo di Westbridge.",
+    "message": "Prossimamente"
+  },
+  "_notice": "Traduzione automatica provvisoria; richiede la revisione di una persona madrelingua."
+}

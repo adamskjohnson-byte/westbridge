@@ -1,0 +1,607 @@
+{
+  "photoCredits": {
+    "title": "Photo credits",
+    "description": "Attribution for illustrative photography used on this demo site.",
+    "attributionPrefix": "Photo by",
+    "attributionSuffix": "on Pixabay",
+    "empty": "Photos are used for illustration only. People shown are not Westbridge customers or employees."
+  },
+  "about": {
+    "sections": {
+      "story": "Our story",
+      "mission": "Our mission",
+      "values": "What guides us",
+      "timeline": "A short history",
+      "leadership": "Leadership",
+      "fictionalPeople": "All people shown are fictional characters created for this demo."
+    },
+    "eyebrow": "About Westbridge",
+    "title": "A steadier way forward, built around people.",
+    "description": "We are a fictional community-minded bank created for this demo project. Our story is about making everyday money decisions feel more understandable and less stressful.",
+    "story": "Westbridge began with a straightforward idea: banking should help people move forward, not make them work harder to understand their options. We bring clear information, useful digital tools, and human support together in one place.",
+    "mission": "Make everyday banking clearer, more accessible, and more supportive for the people and businesses we serve.",
+    "values": [
+      {
+        "title": "Clarity",
+        "description": "Explain choices plainly, show costs up front, and make the next step easy to see."
+      },
+      {
+        "title": "Care",
+        "description": "Treat every question with patience and every customer with respect."
+      },
+      {
+        "title": "Stewardship",
+        "description": "Build tools and habits that support thoughtful, long-term decisions."
+      },
+      {
+        "title": "Progress",
+        "description": "Keep improving the experience while staying grounded in real needs."
+      }
+    ],
+    "timeline": [
+      {
+        "title": "A clear idea",
+        "description": "A small team imagined a more understandable everyday banking experience."
+      },
+      {
+        "title": "Community first",
+        "description": "The first fictional Westbridge neighborhood offices opened in the demo story."
+      },
+      {
+        "title": "Digital by design",
+        "description": "Mobile tools brought account controls and planning closer to daily life."
+      },
+      {
+        "title": "Building what is next",
+        "description": "We continue to make the experience more useful, inclusive, and clear.",
+        "year": ""
+      }
+    ],
+    "leadership": [
+      {
+        "name": "Elena Brooks",
+        "role": "Chief Executive Officer",
+        "bio": "A fictional leader focused on customer trust and practical innovation."
+      },
+      {
+        "name": "Marcus Chen",
+        "role": "Chief Community Officer",
+        "bio": "A fictional leader who brings local perspectives into product decisions."
+      },
+      {
+        "name": "Priya Nair",
+        "role": "Chief Technology Officer",
+        "bio": "A fictional leader working to make secure digital banking feel simple."
+      }
+    ]
+  },
+  "audiences": {
+    "personal": {
+      "eyebrow": "Personal banking",
+      "title": "Everyday banking that makes room for what matters.",
+      "description": "Keep day-to-day spending, saving, borrowing, and planning in one clear view.",
+      "cta": "Explore all products"
+    },
+    "business": {
+      "eyebrow": "Business banking",
+      "title": "A more considered way to manage your business money.",
+      "description": "From daily payments to cash reserves, get practical tools that keep business finances moving.",
+      "cta": "Talk with our team"
+    }
+  },
+  "products": [
+    {
+      "title": "Checking",
+      "description": "A dependable home for everyday spending, bills, and transfers.",
+      "highlights": [
+        "No-fuss everyday access",
+        "Bill pay and scheduled transfers",
+        "Real-time activity alerts"
+      ]
+    },
+    {
+      "title": "Savings",
+      "description": "Build a habit around the goals that matter, one steady step at a time.",
+      "highlights": [
+        "Goal-based savings buckets",
+        "Recurring transfers",
+        "Clear progress tracking"
+      ]
+    },
+    {
+      "title": "Credit Cards",
+      "description": "Flexible purchasing with useful controls and activity visibility.",
+      "highlights": [
+        "Instant card controls",
+        "Purchase alerts",
+        "Straightforward activity review"
+      ]
+    },
+    {
+      "title": "Loans",
+      "description": "Explore borrowing options with clear estimates and practical guidance.",
+      "highlights": [
+        "Personal and vehicle loans",
+        "Flexible repayment options",
+        "A simple payment estimator"
+      ]
+    },
+    {
+      "title": "Mortgages",
+      "description": "Plan for a home with guidance that keeps the numbers understandable.",
+      "highlights": [
+        "Fixed and adjustable options",
+        "Payment estimates before applying",
+        "Support through each step"
+      ]
+    }
+  ],
+  "security": {
+    "eyebrow": "Security & privacy",
+    "title": "Security that supports confidence at every step.",
+    "description": "Our demo security approach combines account protections, useful alerts, and clear choices about your information.",
+    "practices": [
+      {
+        "title": "Account access",
+        "description": "Multi-factor verification and session checks help protect sign-ins."
+      },
+      {
+        "title": "Data protection",
+        "description": "Encryption is used to protect information while it moves and while it is stored."
+      },
+      {
+        "title": "Transaction awareness",
+        "description": "Account alerts help you notice activity and respond quickly."
+      },
+      {
+        "title": "Card control",
+        "description": "Pause a card in the app if it is misplaced, then turn it back on when found."
+      },
+      {
+        "title": "Privacy choices",
+        "description": "Clear settings make it easier to understand how information is used."
+      },
+      {
+        "title": "Support",
+        "description": "Contact the support team if a message or account activity does not look right."
+      }
+    ],
+    "scamTips": [
+      "Never share a one-time passcode, password, or full card details in response to an unexpected call or message.",
+      "Pause before opening links. Visit the official site or app directly instead of using a link in a surprise message.",
+      "Be cautious of urgent requests to move money, buy gift cards, or keep a transaction secret.",
+      "Verify a caller independently using a trusted number, not a number they provide during the call.",
+      "Report suspicious activity promptly and freeze your card if you believe it may be compromised."
+    ]
+  },
+  "faq": [
+    {
+      "name": "Accounts",
+      "items": [
+        {
+          "question": "How quickly can I open an account?",
+          "answer": "Most applicants can complete the initial setup in under ten minutes, with access available after verification."
+        },
+        {
+          "question": "What do I need to open an account?",
+          "answer": "You will need basic personal details and identity information. The demo does not collect or store real financial data."
+        },
+        {
+          "question": "Can I open more than one account?",
+          "answer": "Yes. You can organize everyday spending and savings in separate accounts for different goals."
+        }
+      ]
+    },
+    {
+      "name": "Payments and cards",
+      "items": [
+        {
+          "question": "Can I send money to friends and family?",
+          "answer": "Instant transfers and scheduled payments are available for supported account types in this demo experience."
+        },
+        {
+          "question": "How do I protect my card if it goes missing?",
+          "answer": "Pause or freeze a card in the app, then reactivate it if you find it."
+        },
+        {
+          "question": "What are the daily transaction limits?",
+          "answer": "Limits vary by activity type. The interface should show applicable limits before a transfer is submitted."
+        },
+        {
+          "question": "Can I set alerts for card purchases?",
+          "answer": "Yes. Account notifications help you stay aware of recent card activity."
+        }
+      ]
+    },
+    {
+      "name": "Savings and borrowing",
+      "items": [
+        {
+          "question": "Can I set savings goals?",
+          "answer": "Create a goal, schedule transfers, and review your progress from your account dashboard."
+        },
+        {
+          "question": "How do I estimate a loan payment?",
+          "answer": "Use the loan calculator on our loans page to model an estimated payment based on amount, rate, and term."
+        },
+        {
+          "question": "Are the rates on this site current offers?",
+          "answer": "No. Rates shown are illustrative demo data only and are not actual offers."
+        }
+      ]
+    },
+    {
+      "name": "Support and security",
+      "items": [
+        {
+          "question": "What support hours are available?",
+          "answer": "Support is presented as available around the clock for account and security questions in this fictional demo."
+        },
+        {
+          "question": "How does Westbridge protect my information?",
+          "answer": "The demo describes measures such as encryption, multi-factor verification, and account alerts."
+        },
+        {
+          "question": "What should I do if I receive a suspicious message?",
+          "answer": "Do not share codes or follow unexpected links. Contact support using the official site or app."
+        }
+      ]
+    }
+  ],
+  "blog": [
+    {
+      "category": "Savings",
+      "title": "Building a better savings routine without overspending",
+      "excerpt": "A simple monthly rhythm can help you save with less friction and more consistency.",
+      "readTime": "4 min read",
+      "published": "October 14, 2026",
+      "paragraphs": [
+        "A savings routine works best when it fits your real life. Start by choosing a repeatable amount that leaves room for bills, essentials, and a little flexibility.",
+        "Next, connect the habit to a moment that already happens each month, such as payday. An automatic transfer can make progress feel steady without requiring constant attention.",
+        "Finally, give each goal a name and check in occasionally. The point is not to optimize every dollar; it is to make the next good decision easier to repeat."
+      ]
+    },
+    {
+      "category": "Planning",
+      "title": "When to review your loan before rates change again",
+      "excerpt": "Small differences in rate and term can shift your monthly budget in meaningful ways.",
+      "readTime": "5 min read",
+      "published": "September 29, 2026",
+      "paragraphs": [
+        "Reviewing a loan is less about chasing a headline rate and more about checking whether the full arrangement still fits your plans.",
+        "Compare the current balance, remaining term, any fees, and the total cost of a new option. A lower monthly payment can still mean paying more overall if the term is extended.",
+        "Use estimates as a starting point, then ask a qualified professional to explain the details before making a decision. Figures on this demo site are illustrative only."
+      ]
+    },
+    {
+      "category": "Home",
+      "title": "Three money habits that make the first year of homeownership calmer",
+      "excerpt": "A steady system for bills, savings, and emergencies helps reduce stress when life gets busy.",
+      "readTime": "6 min read",
+      "published": "September 8, 2026",
+      "paragraphs": [
+        "The first year in a new home often brings expenses that are easy to overlook. A monthly review of upcoming bills can help keep those costs visible.",
+        "A separate home-maintenance savings goal creates room for repairs and seasonal needs. Even small, regular contributions can make the next unexpected expense easier to absorb.",
+        "Keep the system simple: automate what you can, review it once a month, and adjust when your circumstances change. There is no single budget that works for everyone."
+      ]
+    }
+  ],
+  "legal": {
+    "privacy": {
+      "title": "Privacy notice",
+      "description": "A sample overview of how a fictional bank might describe information practices.",
+      "sections": [
+        {
+          "heading": "Information in this demo",
+          "body": "This is a fictional educational project. Do not enter real personal, account, or financial information. Form submissions are mocked in the client and are not sent to a banking service."
+        },
+        {
+          "heading": "How information could be used",
+          "body": "In a real service, information may be used to provide requested products, protect accounts, meet legal obligations, and improve support. A real institution would provide complete disclosures before collecting data."
+        },
+        {
+          "heading": "Your choices",
+          "body": "A production privacy notice would explain access, correction, deletion, communication preferences, retention, and contact options in detail."
+        },
+        {
+          "heading": "Questions",
+          "body": "For this demo, there is no real bank or privacy office. Contact details elsewhere on this site are fictional."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Terms of use",
+      "description": "Sample terms for a fictional banking website demonstration.",
+      "sections": [
+        {
+          "heading": "Demo use only",
+          "body": "Westbridge National Bank is not a real bank. This site is provided for learning and demonstration purposes only and does not provide banking, financial, legal, or tax advice."
+        },
+        {
+          "heading": "No real accounts or offers",
+          "body": "Rates, balances, products, locations, people, and services shown are fictional or illustrative. Nothing on this site is an offer, approval, or commitment to provide a financial product."
+        },
+        {
+          "heading": "Acceptable use",
+          "body": "Use the site lawfully and do not attempt to disrupt its operation, access restricted systems, or submit sensitive information."
+        },
+        {
+          "heading": "Changes and availability",
+          "body": "A production service would define availability, governing law, dispute processes, and other terms specific to its jurisdiction and operations."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Cookie notice",
+      "description": "Sample information about cookies and local browser storage in this demo project.",
+      "sections": [
+        {
+          "heading": "Essential storage",
+          "body": "This demo uses browser storage to remember your selected appearance preference. The application does not use advertising cookies."
+        },
+        {
+          "heading": "Analytics",
+          "body": "No analytics tracking is configured as part of this demo. A real service would disclose any analytics technologies and their purposes."
+        },
+        {
+          "heading": "Your controls",
+          "body": "You can clear site storage using your browser settings. Doing so may reset saved appearance preferences."
+        }
+      ]
+    }
+  },
+  "images": {
+    "products": {
+      "checking": {
+        "alt": "Person using a banking app on a phone to manage spending"
+      },
+      "savings": {
+        "alt": "Planner and savings notebook on a desk with a growing budget"
+      },
+      "credit-cards": {
+        "alt": "Hands using a contactless payment card at a checkout counter"
+      },
+      "loans": {
+        "alt": "Small business owner reviewing financial paperwork at a desk"
+      },
+      "mortgages": {
+        "alt": "Family holding the keys to a new home in front of a house"
+      }
+    },
+    "sections": {
+      "support": {
+        "alt": "Customer service representative wearing a headset while helping a client"
+      },
+      "security": {
+        "alt": "Smartphone screen showing a secure login and verification prompt"
+      },
+      "cta-banner": {
+        "alt": "Sunrise over a city skyline, used as a banking call-to-action banner"
+      },
+      "branch": {
+        "alt": "A bright interior view of a modern bank branch lobby"
+      }
+    },
+    "blog": {
+      "tip-1": {
+        "alt": "Budget calculator and notes for a monthly money plan"
+      },
+      "tip-2": {
+        "alt": "Laptop and secure online work setup for banking safety"
+      },
+      "tip-3": {
+        "alt": "Coins dropping into a savings jar for long-term goals"
+      }
+    },
+    "about": {
+      "team": {
+        "alt": "Business team collaborating in a meeting around a table"
+      },
+      "headquarters": {
+        "alt": "Modern office building with glass windows and a polished lobby"
+      }
+    }
+  },
+  "design": {
+    "colorTokens": [
+      {
+        "name": "Background"
+      },
+      {
+        "name": "Card"
+      },
+      {
+        "name": "Foreground"
+      },
+      {
+        "name": "Primary"
+      },
+      {
+        "name": "Secondary"
+      },
+      {
+        "name": "Muted"
+      },
+      {},
+      {
+        "name": "Bronze"
+      },
+      {
+        "name": "Border"
+      },
+      {
+        "name": "Ring"
+      },
+      {
+        "name": "Destructive"
+      }
+    ],
+    "typographySamples": [
+      {
+        "sample": "A steadier way forward"
+      },
+      {
+        "name": "Heading 1",
+        "sample": "Banking with clarity"
+      },
+      {
+        "name": "Heading 2",
+        "sample": "Built around you"
+      },
+      {
+        "name": "Heading 3",
+        "sample": "Thoughtful service"
+      },
+      {
+        "name": "Heading 4",
+        "sample": "Everyday essentials"
+      },
+      {
+        "name": "Body",
+        "sample": "A clear, considered experience for everyday banking."
+      },
+      {
+        "name": "Small",
+        "sample": "Helpful details, kept easy to read."
+      }
+    ],
+    "page": {
+      "themeLabel": "{{theme}} theme",
+      "themeNames": {
+        "light": "Light",
+        "dark": "Dark"
+      },
+      "typography": "Typography",
+      "buttonsAndFields": "Buttons and fields",
+      "componentSpecimens": "Component specimens",
+      "componentDescription": "Interactive checks for the shared controls.",
+      "navigationPanels": "Navigation and panels",
+      "overview": "Overview",
+      "controls": "Controls",
+      "cardTitle": "Card title",
+      "cardDescription": "A short card description.",
+      "cardContent": "Card content follows the Classic surface and radius tokens.",
+      "accordionItem": "Accordion item",
+      "accordionContent": "Disclosure content stays in normal document flow.",
+      "openSheet": "Open sheet",
+      "sheetPanel": "Sheet panel",
+      "sheetDescription": "Accessible focus handling comes from Radix Dialog.",
+      "formControls": "Form controls",
+      "firstTab": "First tab",
+      "secondTab": "Second tab",
+      "firstTabContent": "Tab content one.",
+      "secondTabContent": "Tab content two.",
+      "accountType": "Account type",
+      "exampleValue": "Example value: {{value}}",
+      "defaultBadge": "Default badge",
+      "secondaryBadge": "Secondary",
+      "outlineBadge": "Outline",
+      "tooltip": "Tooltip",
+      "tooltipDescription": "Helpful contextual detail",
+      "showToast": "Show toast",
+      "demoToast": "Demo toast shown",
+      "carousel": "Carousel",
+      "firstSlide": "First slide",
+      "secondSlide": "Second slide",
+      "thirdSlide": "Third slide",
+      "title": "Classic design foundation",
+      "eyebrow": "Developer preview",
+      "description": "Color, type, logo, and component references for the Westbridge interface.",
+      "primary": "Primary",
+      "outline": "Outline",
+      "secondary": "Secondary",
+      "ghost": "Ghost",
+      "destructive": "Destructive",
+      "emailAddress": "Email address",
+      "emailPlaceholder": "you@example.test",
+      "message": "Message",
+      "notePlaceholder": "A short note"
+    }
+  },
+  "labels": {
+    "about": "About",
+    "personal": "Personal",
+    "business": "Business",
+    "products": "Products",
+    "loans": "Loans",
+    "rates": "Rates",
+    "security": "Security",
+    "helpCenter": "Help center",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "blog": "Blog",
+    "notFound": "Not found"
+  },
+  "actions": {
+    "exploreProduct": "Explore {{product}}",
+    "viewRates": "View demo rates",
+    "askAboutProduct": "Ask about {{product}}",
+    "readArticle": "Read article"
+  },
+  "productsPage": {
+    "title": "Products for everyday plans and bigger milestones",
+    "description": "Explore fictional Westbridge products, each designed to make the next financial step clearer.",
+    "sectionsLabel": "Product sections",
+    "itemNumber": "{{number}} / Product"
+  },
+  "tables": {
+    "product": "Product",
+    "exampleRate": "Example rate",
+    "illustrativeRate": "Illustrative rate",
+    "designedFor": "Designed for",
+    "feature": "Feature"
+  },
+  "loansPage": {
+    "title": "Borrow with a plan that fits",
+    "description": "Explore fictional loan options, compare illustrative rates, and estimate monthly payments before making a decision.",
+    "types": {
+      "personal": {
+        "title": "Personal loans",
+        "description": "Plan for a purchase or combine expenses with fixed monthly payments."
+      },
+      "vehicle": {
+        "title": "Vehicle loans",
+        "description": "Explore a predictable way to finance a new or used vehicle."
+      },
+      "home": {
+        "title": "Home financing",
+        "description": "Review mortgage and home-equity options for your next chapter."
+      }
+    },
+    "rateHeading": "Illustrative loan rates",
+    "disclaimer": "Rates and estimates are illustrative demo data only, not offers or financial advice."
+  },
+  "ratesPage": {
+    "title": "Rates and product details",
+    "description": "Illustrative rates for the products featured in this demo. Actual rates are not offered by a real financial institution.",
+    "disclaimer": "All rates are sample data for a demo project and are subject to change in the fictional scenario."
+  },
+  "securityPage": {
+    "scamEyebrow": "Stay safe from scams",
+    "scamTitle": "Pause, verify, then act.",
+    "disclaimer": "Westbridge is a fictional demo. Never use real credentials or financial information on this site."
+  },
+  "faqPage": {
+    "title": "Frequently asked questions",
+    "description": "Search answers about accounts, payments, borrowing, support, and security.",
+    "searchLabel": "Search frequently asked questions",
+    "searchPlaceholder": "Search questions",
+    "noResults": "No questions match “{{query}}”. Try a different search."
+  },
+  "blogPage": {
+    "title": "Insights for everyday decisions",
+    "description": "Practical, fictional guidance for making money routines easier to understand.",
+    "eyebrow": "Westbridge journal",
+    "notFoundTitle": "Article not found",
+    "notFoundDescription": "That article is not available in this demo.",
+    "browseArticles": "Browse all articles",
+    "postMetadata": "{{category}} · {{published}} · {{readTime}}",
+    "disclaimer": "This article is fictional educational content for a demo project and is not financial advice.",
+    "backToInsights": "Back to insights"
+  },
+  "legalPage": {
+    "eyebrow": "Legal information",
+    "sampleNotice": "Sample text for a demo project."
+  },
+  "_comment": "???????????????"
+}

@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@radix-ui/react-direction": "^1.2.0",
+    "recharts": "^3.10.1"
+  }
+}

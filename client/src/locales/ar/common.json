@@ -1,0 +1,495 @@
+{
+  "nav": {
+    "personal": "الخدمات الشخصية",
+    "business": "الأعمال",
+    "loans": "القروض",
+    "security": "الأمان"
+  },
+  "buttons": {
+    "login": "تسجيل الدخول",
+    "openAccount": "افتح حسابًا"
+  },
+  "footer": {
+    "disclaimer": "للعرض التجريبي فقط. Westbridge National Bank ليس بنكًا حقيقيًا، ولا يحتفظ بأموال حقيقية.",
+    "photoSource": "صور من Pixabay",
+    "photoCredits": "اعتمادات الصور"
+  },
+  "authPitch": {
+    "eyebrow": "بداية واضحة مع Westbridge",
+    "heading": "خدماتك المصرفية اليومية، منظمة بعناية.",
+    "body": "مساحة أكثر هدوءًا لإدارة الحسابات والخطط التي تساعدك على التقدم.",
+    "benefits": [
+      "تابع حسابك الجاري وحساب التوفير في عرض واضح واحد",
+      "اطّلع فورًا على حركة التحويلات وحالتها",
+      "احصل على المساعدة من فريق يُصغي إليك"
+    ],
+    "disclaimer": "للعرض التجريبي فقط. Westbridge National Bank ليس بنكًا حقيقيًا، ولا يحتفظ بأموال حقيقية."
+  },
+  "navigation": {
+    "primaryLabel": "التنقل الرئيسي",
+    "primaryLinks": [
+      {
+        "label": "الخدمات الشخصية"
+      },
+      {
+        "label": "الأعمال"
+      },
+      {
+        "label": "القروض"
+      },
+      {
+        "label": "الأمان"
+      }
+    ],
+    "footerColumns": [
+      {
+        "title": "المنتجات",
+        "links": [
+          {
+            "label": "حساب جارٍ"
+          },
+          {
+            "label": "حساب توفير"
+          },
+          {
+            "label": "كل المنتجات"
+          },
+          {
+            "label": "القروض"
+          },
+          {
+            "label": "الأسعار"
+          }
+        ]
+      },
+      {
+        "title": "الشركة",
+        "links": [
+          {
+            "label": "عن Westbridge"
+          },
+          {
+            "label": "القيادة"
+          },
+          {
+            "label": "اتصل بنا"
+          }
+        ]
+      },
+      {
+        "title": "الدعم",
+        "links": [
+          {
+            "label": "مركز المساعدة"
+          },
+          {
+            "label": "المدونة"
+          },
+          {
+            "label": "الأمان"
+          }
+        ]
+      },
+      {
+        "title": "الشؤون القانونية",
+        "links": [
+          {
+            "label": "الخصوصية"
+          },
+          {
+            "label": "الشروط"
+          },
+          {
+            "label": "ملفات تعريف الارتباط"
+          }
+        ]
+      }
+    ]
+  },
+  "brand": {
+    "homeLabel": "الصفحة الرئيسية لـ Westbridge National Bank"
+  },
+  "accessibility": {
+    "skipToContent": "انتقل إلى المحتوى",
+    "closeMenu": "يرجى إغلاق القائمة",
+    "sliderValue": "القيمة {{value}}"
+  },
+  "navbar": {
+    "dashboard": "لوحة التحكم",
+    "loggingOut": "جارٍ تسجيل الخروج…",
+    "logOut": "تسجيل الخروج",
+    "account": "الحساب",
+    "accountMenuLabel": "قائمة حساب {{name}}",
+    "login": "تسجيل الدخول",
+    "openAccount": "افتح حسابًا",
+    "closeNavigation": "يرجى إغلاق قائمة التنقل",
+    "openNavigation": "يرجى فتح قائمة التنقل"
+  },
+  "languageSwitcher": {
+    "triggerLabel": "اللغة: {{language}}",
+    "searchLabel": "ابحث عن لغة",
+    "searchPlaceholder": "ابحث عن لغة",
+    "listLabel": "اللغات",
+    "noResults": "لم يتم العثور على لغات."
+  },
+  "theme": {
+    "toggleLabel": "السمة الحالية: {{current}}. انتقل إلى سمة {{next}}",
+    "names": {
+      "system": "النظام",
+      "light": "فاتح",
+      "dark": "داكن"
+    }
+  },
+  "breadcrumbs": {
+    "label": "مسار التنقل",
+    "home": "الرئيسية"
+  },
+  "carousel": {
+    "previous": "الشريحة السابقة",
+    "next": "الشريحة التالية"
+  },
+  "forms": {
+    "firstName": "الاسم الأول",
+    "lastName": "اسم العائلة",
+    "emailAddress": "البريد الإلكتروني",
+    "password": "كلمة المرور",
+    "confirmPassword": "تأكيد كلمة المرور",
+    "newPassword": "كلمة مرور جديدة",
+    "confirmNewPassword": "تأكيد كلمة المرور الجديدة",
+    "validation": {
+      "emailRequired": "يرجى إدخال بريدك الإلكتروني.",
+      "emailInvalid": "يرجى إدخال بريد إلكتروني صالح.",
+      "emailMax": "يرجى إدخال بريد إلكتروني لا يتجاوز 254 حرفًا.",
+      "nameMin": "يرجى إدخال حرفين على الأقل.",
+      "nameMax": "يرجى إدخال اسم لا يتجاوز 60 حرفًا.",
+      "nameMax100": "يرجى إدخال اسم لا يتجاوز 100 حرف.",
+      "subjectMin": "يرجى إدخال موضوع.",
+      "subjectMax": "يرجى إدخال موضوع لا يتجاوز 150 حرفًا.",
+      "messageMin": "يرجى إضافة مزيد من التفاصيل.",
+      "messageMax": "يرجى ألا تتجاوز الرسالة 2000 حرف.",
+      "passwordMin": "يرجى استخدام 10 أحرف على الأقل.",
+      "passwordLowercase": "يرجى إضافة حرف صغير واحد على الأقل.",
+      "passwordUppercase": "يرجى إضافة حرف كبير واحد على الأقل.",
+      "passwordNumber": "يرجى إضافة رقم واحد على الأقل.",
+      "passwordRequired": "يرجى إدخال كلمة المرور.",
+      "confirmPassword": "يرجى تأكيد كلمة المرور.",
+      "acceptTerms": "يرجى قبول الشروط للمتابعة.",
+      "passwordMismatch": "يرجى التأكد من تطابق كلمتي المرور."
+    },
+    "errors": {
+      "rateLimit": "محاولات كثيرة جدًا. يرجى المحاولة مجددًا بعد دقيقة.",
+      "reviewAndRetry": "يرجى مراجعة المعلومات والمحاولة مجددًا.",
+      "connection": "تعذر الاتصال. يرجى التحقق من اتصالك والمحاولة مجددًا.",
+      "submit": "تعذر إرسال طلبك. يرجى المحاولة مجددًا."
+    },
+    "contact": {
+      "success": "تم إرسال رسالتك."
+    },
+    "newsletter": {
+      "success": "تم اشتراكك في النشرة البريدية."
+    }
+  },
+  "actions": {
+    "continue": "متابعة"
+  },
+  "auth": {
+    "startHere": "ابدأ من هنا",
+    "openAccount": "افتح حسابًا",
+    "registerDescription": "أدخل بعض البيانات، وسنرسل إليك رابطًا للتحقق من بريدك الإلكتروني.",
+    "createAccount": "إنشاء حساب",
+    "creatingAccount": "جارٍ إنشاء الحساب…",
+    "acceptTermsLead": "أوافق على",
+    "demoTerms": "شروط العرض التجريبي",
+    "alreadyHaveAccount": "هل لديك حساب بالفعل؟",
+    "signIn": "تسجيل الدخول",
+    "signInHeading": "سجّل الدخول إلى حسابك",
+    "loginDescription": "استخدم بيانات حسابك التجريبي لدى Westbridge.",
+    "welcomeBack": "مرحبًا بعودتك",
+    "newToWestbridge": "هل هذه زيارتك الأولى إلى Westbridge؟",
+    "forgotPassword": "هل نسيت كلمة المرور؟",
+    "rememberMe": "تذكّرني على هذا الجهاز",
+    "signingIn": "جارٍ تسجيل الدخول…",
+    "resetPassword": "إعادة تعيين كلمة المرور",
+    "forgotDescription": "أدخل البريد الإلكتروني المرتبط بحسابك، وسنرسل رابط إعادة التعيين إذا تطابق.",
+    "nextStep": "الخطوة التالية",
+    "checkInbox": "تحقق من صندوق الوارد",
+    "resetEmailSentIfExists": "إذا كان هذا البريد الإلكتروني مسجلًا، فالرابط في طريقه إليك.",
+    "returnToSignIn": "العودة إلى تسجيل الدخول",
+    "accountRecovery": "استرداد الحساب",
+    "forgotPasswordQuestion": "هل نسيت كلمة المرور؟",
+    "sending": "جارٍ الإرسال…",
+    "sendResetLink": "إرسال رابط إعادة التعيين",
+    "backToSignIn": "العودة إلى تسجيل الدخول",
+    "chooseNewPassword": "اختر كلمة مرور جديدة",
+    "resetDescription": "اختر كلمة مرور جديدة لحسابك التجريبي لدى Westbridge.",
+    "passwordResetSuccess": "تمت إعادة تعيين كلمة المرور. سجّل الدخول باستخدام كلمة المرور الجديدة.",
+    "resetLinkUnavailable": "رابط إعادة التعيين غير متاح",
+    "requestNewLink": "طلب رابط جديد",
+    "resetLinkInvalid": "رابط إعادة تعيين كلمة المرور غير صالح أو انتهت صلاحيته. اطلب رابطًا جديدًا للمتابعة.",
+    "requestNewResetLink": "طلب رابط جديد لإعادة التعيين",
+    "resetEmailLabel": "لـ {{email}}",
+    "saving": "جارٍ الحفظ…",
+    "saveNewPassword": "حفظ كلمة المرور الجديدة",
+    "verifyEmail": "تحقق من بريدك الإلكتروني",
+    "verifyDescription": "أكّد بريدك الإلكتروني لإكمال إعداد حسابك.",
+    "verificationLinkSent": "رابط تحقق جديد في طريقه إليك.",
+    "oneLastStep": "خطوة أخيرة",
+    "verificationSentTo": "أرسلنا رابط تحقق إلى {{email}}. افتحه لإكمال إعداد حسابك.",
+    "resendAvailable_one": "إعادة الإرسال متاحة بعد ثانية واحدة",
+    "resendAvailable_other": "إعادة الإرسال متاحة بعد {{count}} ثانية",
+    "resendVerification": "إعادة إرسال رسالة التحقق",
+    "emailConfirmed": "تم تأكيد البريد الإلكتروني",
+    "allSet": "أصبح كل شيء جاهزًا.",
+    "emailVerifiedContinue": "تم التحقق من بريدك الإلكتروني. انتقل إلى حسابك عندما تكون مستعدًا.",
+    "linkUnavailable": "الرابط غير متاح",
+    "linkCannotBeUsed": "لا يمكن استخدام هذا الرابط",
+    "verificationLinkInvalid": "رابط التحقق غير صالح أو انتهت صلاحيته.",
+    "signInToRequestLink": "سجّل الدخول لطلب رابط آخر",
+    "showPassword": "إظهار كلمة المرور",
+    "hidePassword": "إخفاء كلمة المرور",
+    "passwordRules": {
+      "length": "10 أحرف على الأقل",
+      "uppercase": "حرف كبير واحد",
+      "lowercase": "حرف صغير واحد",
+      "number": "رقم واحد"
+    },
+    "passwordStrength_one": "قوة كلمة المرور: تم استيفاء شرط واحد من أصل {{total}}",
+    "passwordStrength_other": "قوة كلمة المرور: تحقق {{count}} من {{total}} شرط",
+    "loadingAccount": "جارٍ تحميل حسابك",
+    "checkingSession": "جارٍ التحقق من جلستك…",
+    "errors": {
+      "accountSuspended": "هذا الحساب موقوف مؤقتًا. يرجى التواصل مع الدعم للمساعدة.",
+      "rateLimit": "محاولات كثيرة جدًا. يرجى الانتظار قليلًا والمحاولة مجددًا.",
+      "reviewAndRetry": "يرجى مراجعة المعلومات والمحاولة مجددًا.",
+      "invalidCredentials": "البريد الإلكتروني أو كلمة المرور غير صحيحة.",
+      "createAccount": "تعذر إنشاء حسابك.",
+      "signIn": "تعذر تسجيل دخولك. يرجى المحاولة مجددًا.",
+      "sendReset": "تعذر إرسال رسالة إعادة التعيين. يرجى المحاولة مجددًا.",
+      "resetPassword": "تعذرت إعادة تعيين كلمة المرور. يرجى المحاولة مجددًا.",
+      "waitBeforeResend": "يرجى الانتظار قبل طلب رابط آخر.",
+      "resendVerification": "تعذرت إعادة إرسال الرابط. يرجى المحاولة بعد قليل.",
+      "verifyEmail": "تعذر التحقق من هذا البريد الإلكتروني. يرجى طلب رابط جديد."
+    },
+    "resendAvailable_zero": "إعادة الإرسال متاحة الآن",
+    "resendAvailable_two": "إعادة الإرسال متاحة بعد ثانيتين",
+    "resendAvailable_few": "إعادة الإرسال متاحة بعد {{count}} ثوانٍ",
+    "resendAvailable_many": "إعادة الإرسال متاحة بعد {{count}} ثانية",
+    "passwordStrength_zero": "قوة كلمة المرور: لم يتحقق أي شرط من {{total}}",
+    "passwordStrength_two": "قوة كلمة المرور: تم استيفاء شرطين من أصل {{total}}",
+    "passwordStrength_few": "قوة كلمة المرور: تحقق {{count}} من {{total}} شروط",
+    "passwordStrength_many": "قوة كلمة المرور: تحقق {{count}} من {{total}} شرطًا"
+  },
+  "apiErrors": {
+    "generic": "حدث خطأ. يُرجى المحاولة مرة أخرى.",
+    "network_error": "تعذّر الاتصال. تحقّق من اتصالك وحاول مرة أخرى.",
+    "unauthenticated": "انتهت جلستك. يُرجى تسجيل الدخول مرة أخرى.",
+    "forbidden": "ليس لديك إذن لتنفيذ هذا الإجراء.",
+    "account_suspended": "هذا الحساب معلّق. يُرجى التواصل مع الدعم.",
+    "email_not_verified": "تحقّق من بريدك الإلكتروني للمتابعة.",
+    "invalid_verification_link": "رابط التحقق غير صالح أو انتهت صلاحيته.",
+    "role_forbidden": "لا يملك حسابك صلاحية الوصول إلى هذه الصفحة.",
+    "not_found": "تعذّر العثور على هذه الصفحة أو العنصر.",
+    "csrf_mismatch": "يجب تحديث جلستك. يُرجى المحاولة مرة أخرى.",
+    "validation_failed": "تحقّق من المعلومات وحاول مرة أخرى.",
+    "too_many_requests": "عدد الطلبات كبير جدًا. يُرجى الانتظار ثم المحاولة مرة أخرى.",
+    "server_error": "حدث خطأ في الخادم. يُرجى المحاولة بعد قليل.",
+    "http_error": "تعذّر إكمال الطلب. يُرجى المحاولة مرة أخرى.",
+    "validation": {
+      "email_required": "أدخل عنوان بريدك الإلكتروني.",
+      "email_invalid": "أدخل عنوان بريد إلكتروني صالحًا.",
+      "email_max": "يجب ألا يتجاوز البريد الإلكتروني 254 حرفًا.",
+      "email_taken": "عنوان البريد الإلكتروني مستخدم بالفعل.",
+      "name_required": "أدخل اسمك.",
+      "name_invalid": "أدخل اسمًا صالحًا.",
+      "name_min": "أدخل حرفين على الأقل.",
+      "name_max": "يجب ألا يتجاوز الاسم 60 حرفًا.",
+      "subject_required": "أدخل موضوعًا.",
+      "subject_invalid": "أدخل موضوعًا صالحًا.",
+      "subject_min": "يجب ألا يقل الموضوع عن 3 أحرف.",
+      "subject_max": "يجب ألا يتجاوز الموضوع 150 حرفًا.",
+      "message_required": "أدخل رسالة.",
+      "message_invalid": "أدخل رسالة صالحة.",
+      "message_min": "يجب ألا تقل الرسالة عن 10 أحرف.",
+      "message_max": "يجب ألا تتجاوز الرسالة 2000 حرف.",
+      "password_required": "أدخل كلمة المرور.",
+      "password_invalid": "أدخل كلمة مرور صالحة.",
+      "password_min": "استخدم 10 أحرف على الأقل.",
+      "password_uppercase": "أضف حرفًا كبيرًا.",
+      "password_lowercase": "أضف حرفًا صغيرًا.",
+      "password_number": "أضف رقمًا.",
+      "password_confirmed": "كلمتا المرور غير متطابقتين.",
+      "password_confirmation_required": "أكّد كلمة المرور.",
+      "password_compromised": "اختر كلمة مرور لم تظهر في تسريب بيانات.",
+      "terms_required": "يجب قبول الشروط للمتابعة.",
+      "remember_invalid": "اختر إعدادًا صالحًا لتذكّر تسجيل الدخول.",
+      "credentials_invalid": "عنوان البريد الإلكتروني أو كلمة المرور غير صحيح.",
+      "reset_token_required": "رمز إعادة التعيين مطلوب.",
+      "reset_token_invalid": "رابط إعادة التعيين غير صالح أو انتهت صلاحيته. اطلب رابطًا جديدًا."
+    }
+  },
+  "dashboard": {
+    "description": "نظرة عامة على حسابك التجريبي لدى Westbridge.",
+    "overview": "نظرة عامة",
+    "greeting": {
+      "morning": "صباح الخير، {{name}}",
+      "afternoon": "طاب يومك، {{name}}",
+      "evening": "مساء الخير، {{name}}"
+    },
+    "shell": {
+      "primaryNavigation": "التنقل في لوحة التحكم",
+      "mobileNavigation": "علامات تبويب لوحة التحكم",
+      "workspace": "أموالك",
+      "overview": "نظرة عامة",
+      "transactions": "المعاملات",
+      "transfers": "التحويلات",
+      "cards": "البطاقات",
+      "settings": "الإعدادات",
+      "comingSoon": "قريبًا",
+      "demoNotice": "أموال تجريبية فقط",
+      "live": "متاح الآن",
+      "more": "المزيد"
+    },
+    "demoMoney": "أموال تجريبية",
+    "balanceAcrossAccounts": "عبر {{count}} حسابات",
+    "accountNumberCopied": "تم نسخ رقم الحساب",
+    "accountNumberCopyError": "تعذر نسخ رقم الحساب",
+    "copyAccountNumber": "نسخ رقم الحساب كاملًا",
+    "viewTransactions": "عرض المعاملات",
+    "viewAll": "عرض الكل",
+    "thisMonth": "هذا الشهر",
+    "income": "الدخل",
+    "spending": "الإنفاق",
+    "net": "الصافي",
+    "month": "الشهر",
+    "sixMonthActivity": "الدخل والإنفاق",
+    "chartAccessibleSummary": "الدخل والإنفاق الشهريان خلال الأشهر الستة الماضية. تتوفر البيانات أيضًا في الجدول بعد الرسم البياني.",
+    "spendingByCategory": "الإنفاق حسب الفئة",
+    "noSpending": "لا توجد مصروفات مسجلة هذا الشهر.",
+    "cashFlowAndSpending": "التدفق النقدي والإنفاق حسب الفئة",
+    "noActivityYet": "لا يوجد نشاط بعد. ستظهر معاملاتك هنا.",
+    "status": {
+      "active": "نشط",
+      "frozen": "مجمّد",
+      "closed": "مغلق"
+    },
+    "category": {
+      "transfer": "تحويل",
+      "deposit": "إيداع",
+      "withdrawal": "سحب",
+      "bill_payment": "دفع فاتورة",
+      "card": "شراء بالبطاقة",
+      "fee": "رسوم",
+      "interest": "فائدة",
+      "other": "أخرى"
+    },
+    "transactions": {
+      "title": "المعاملات",
+      "pagination": "صفحات المعاملات",
+      "previousPage": "الصفحة السابقة",
+      "nextPage": "الصفحة التالية",
+      "goToPage": "الانتقال إلى الصفحة {{page}}",
+      "referenceCopied": "تم نسخ المرجع",
+      "copyFailed": "تعذر النسخ",
+      "dateTime": "التاريخ والوقت",
+      "dateLabel": "التاريخ",
+      "counterparty": "الطرف الآخر",
+      "notAvailable": "غير متاح",
+      "detailTitle": "تفاصيل المعاملة",
+      "detailDescription": "التفاصيل الكاملة لهذا القيد في دفتر الحساب.",
+      "accountLabel": "الحساب",
+      "amountLabel": "المبلغ",
+      "balanceAfter": "الرصيد بعد المعاملة",
+      "categoryLabel": "الفئة",
+      "reference": "المرجع",
+      "copyReference": "نسخ المرجع",
+      "description": "الوصف",
+      "closeDetails": "إغلاق التفاصيل",
+      "exportTruncated": "تم تصدير أول 10,000 صف",
+      "exportSuccess": "تم تنزيل ملف CSV",
+      "exportRateLimited": "طلبات تصدير كثيرة. حاول مجددًا بعد دقيقة",
+      "exportPending": "جارٍ تجهيز CSV…",
+      "exportCsv": "تصدير CSV",
+      "filters": "عوامل تصفية المعاملات",
+      "search": "بحث",
+      "searchPlaceholder": "الوصف أو الطرف الآخر",
+      "direction": "الاتجاه",
+      "allDirections": "الكل",
+      "credits": "الإيداعات",
+      "debits": "المدفوعات",
+      "sort": "ترتيب حسب",
+      "newest": "الأحدث أولًا",
+      "oldest": "الأقدم أولًا",
+      "amountHigh": "المبلغ: من الأعلى إلى الأقل",
+      "amountLow": "المبلغ: من الأقل إلى الأعلى",
+      "pageSize": "الصفوف في الصفحة",
+      "categoriesSelected": "تم تحديد {{count}}",
+      "dateRange": "النطاق الزمني",
+      "dateFrom": "من",
+      "dateTo": "إلى",
+      "range": {
+        "7": "7 أيام",
+        "30": "30 يومًا",
+        "90": "90 يومًا",
+        "month": "هذا الشهر",
+        "custom": "مخصص"
+      },
+      "minAmount": "الحد الأدنى للمبلغ",
+      "maxAmount": "الحد الأقصى للمبلغ",
+      "removeFilter": "إزالة عامل التصفية: {{filter}}",
+      "clearAll": "مسح الكل",
+      "sortAmount": "الترتيب حسب المبلغ",
+      "sortDate": "الترتيب حسب التاريخ",
+      "showing": "عرض {{from}}–{{to}} من {{total}}",
+      "noMatches": "لا توجد معاملات تطابق عوامل التصفية",
+      "clearFilters": "مسح عوامل التصفية",
+      "tableCaption": "معاملات الحساب. اختر صفًا لعرض تفاصيله."
+    },
+    "eyebrow": "حسابك لدى Westbridge",
+    "welcome": "مرحبًا، {{name}}",
+    "signedInAs": "تم تسجيل الدخول باسم {{email}}",
+    "accountsHeading": "حساباتك",
+    "totalBalance": "إجمالي الرصيد",
+    "recentActivity": "النشاط الأخير",
+    "checking": "حساب جارٍ",
+    "savings": "حساب توفير",
+    "accountNumber": "Account ending in",
+    "selectAccount": "عرض نشاط {{name}}",
+    "active": "نشط",
+    "frozen": "مجمّد",
+    "closed": "مغلق",
+    "noAccounts": "لا توجد حسابات متاحة.",
+    "noTransactions": "لا توجد معاملات حديثة لهذا الحساب.",
+    "dashboardLoadError": "تعذّر تحميل حساباتك.",
+    "activityLoadError": "تعذّر تحميل نشاط هذا الحساب.",
+    "retry": "حاول مرة أخرى",
+    "loadMore": "تحميل المزيد",
+    "loading": "جارٍ التحميل…",
+    "downloadCsv": "تنزيل CSV",
+    "credit": "إيداع",
+    "debit": "سحب",
+    "categories": {
+      "transfer": "تحويل",
+      "deposit": "إيداع",
+      "withdrawal": "سحب",
+      "bill_payment": "دفع فاتورة",
+      "card": "شراء بالبطاقة",
+      "fee": "رسوم",
+      "interest": "فائدة",
+      "other": "أخرى"
+    },
+    "accountEnding": "الحساب المنتهي بالأرقام {{digits}}"
+  },
+  "notFound": {
+    "title": "الصفحة غير موجودة",
+    "description": "لم نعثر على هذه الصفحة. ابدأ من جديد أو انتقل إلى أحد هذه الأقسام المفيدة.",
+    "home": "العودة إلى الرئيسية",
+    "products": "استكشف المنتجات",
+    "help": "انتقل إلى مركز المساعدة",
+    "contact": "تواصل مع Westbridge"
+  },
+  "comingSoon": {
+    "description": "ستتوفر قريبًا معلومات إضافية عن صفحة Westbridge التجريبية هذه.",
+    "message": "قريبًا"
+  },
+  "_notice": "مسودة مترجمة آليًا؛ يلزم أن يراجعها متحدث أصلي للغة العربية."
+}

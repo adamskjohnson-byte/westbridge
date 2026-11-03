@@ -1,0 +1,607 @@
+{
+  "photoCredits": {
+    "title": "Crédits photo",
+    "description": "Crédits des photos utilisées à titre d’illustration sur ce site de démonstration.",
+    "attributionPrefix": "Photo de",
+    "attributionSuffix": "sur Pixabay",
+    "empty": "Les photos sont utilisées à titre d’illustration uniquement. Les personnes représentées ne sont ni clientes ni employées de Westbridge."
+  },
+  "about": {
+    "sections": {
+      "story": "Notre histoire",
+      "mission": "Notre mission",
+      "values": "Ce qui nous guide",
+      "timeline": "Quelques dates clés",
+      "leadership": "Notre direction",
+      "fictionalPeople": "Toutes les personnes présentées sont des personnages fictifs créés pour cette démo."
+    },
+    "eyebrow": "À propos de Westbridge",
+    "title": "Avancer plus sereinement, en plaçant les personnes au cœur de nos services.",
+    "description": "Nous sommes une banque fictive, proche des communautés, créée pour ce projet de démonstration. Notre histoire est celle d’une volonté de rendre les décisions financières du quotidien plus compréhensibles et moins stressantes.",
+    "story": "Westbridge est née d’une idée simple : une banque doit aider chacun à avancer, et non compliquer la compréhension des différentes options. Nous réunissons en un même lieu des informations claires, des outils numériques pratiques et un accompagnement humain.",
+    "mission": "Rendre les services bancaires du quotidien plus clairs, plus accessibles et plus attentifs aux besoins des particuliers et des entreprises que nous accompagnons.",
+    "values": [
+      {
+        "title": "Clarté",
+        "description": "Présenter les choix simplement, afficher les frais à l’avance et rendre la prochaine étape évidente."
+      },
+      {
+        "title": "Attention",
+        "description": "Répondre à chaque question avec patience et traiter chaque client avec respect."
+      },
+      {
+        "title": "Responsabilité",
+        "description": "Créer des outils et des habitudes qui favorisent des décisions réfléchies et durables."
+      },
+      {
+        "title": "Progrès",
+        "description": "Améliorer constamment l’expérience tout en restant à l’écoute des besoins réels."
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Une idée claire",
+        "description": "Une petite équipe imagine une expérience bancaire plus simple à comprendre au quotidien."
+      },
+      {
+        "title": "La communauté d’abord",
+        "description": "Dans le récit de cette démo, les premières agences fictives de quartier Westbridge ouvrent leurs portes."
+      },
+      {
+        "title": "Le numérique au service du quotidien",
+        "description": "Les outils mobiles rapprochent la gestion des comptes et la planification de la vie de tous les jours."
+      },
+      {
+        "title": "Construire la suite",
+        "description": "Nous continuons à rendre l’expérience plus utile, inclusive et claire.",
+        "year": ""
+      }
+    ],
+    "leadership": [
+      {
+        "name": "Elena Brooks",
+        "role": "Directrice générale",
+        "bio": "Une dirigeante fictive qui privilégie la confiance des clients et l’innovation concrète."
+      },
+      {
+        "name": "Marcus Chen",
+        "role": "Directeur des relations avec les communautés",
+        "bio": "Un dirigeant fictif qui intègre les points de vue locaux aux décisions concernant les produits."
+      },
+      {
+        "name": "Priya Nair",
+        "role": "Directrice de la technologie",
+        "bio": "Une dirigeante fictive qui œuvre à rendre les services bancaires numériques sécurisés et simples à utiliser."
+      }
+    ]
+  },
+  "audiences": {
+    "personal": {
+      "eyebrow": "Services bancaires aux particuliers",
+      "title": "Une banque au quotidien qui vous laisse la place pour l’essentiel.",
+      "description": "Suivez clairement vos dépenses, votre épargne, vos emprunts et vos projets au même endroit.",
+      "cta": "Découvrir tous les produits"
+    },
+    "business": {
+      "eyebrow": "Services bancaires aux professionnels",
+      "title": "Une approche réfléchie pour gérer les finances de votre entreprise.",
+      "description": "Des paiements quotidiens aux réserves de trésorerie, profitez d’outils pratiques pour faire avancer votre activité.",
+      "cta": "Échanger avec notre équipe"
+    }
+  },
+  "products": [
+    {
+      "title": "Compte courant",
+      "description": "Un compte fiable pour vos dépenses quotidiennes, vos factures et vos virements.",
+      "highlights": [
+        "Un accès simple au quotidien",
+        "Paiement des factures et virements programmés",
+        "Alertes d’activité en temps réel"
+      ]
+    },
+    {
+      "title": "Épargne",
+      "description": "Avancez régulièrement vers les objectifs qui comptent pour vous.",
+      "highlights": [
+        "Sous-comptes d’épargne par objectif",
+        "Virements récurrents",
+        "Suivi clair de votre progression"
+      ]
+    },
+    {
+      "title": "Cartes de crédit",
+      "description": "Payez en toute souplesse grâce à des contrôles pratiques et au suivi de vos opérations.",
+      "highlights": [
+        "Commandes de carte instantanées",
+        "Alertes d’achat",
+        "Consultation simple de l’activité"
+      ]
+    },
+    {
+      "title": "Prêts",
+      "description": "Découvrez des solutions de financement avec des estimations claires et des conseils pratiques.",
+      "highlights": [
+        "Prêts personnels et automobiles",
+        "Options de remboursement souples",
+        "Un calculateur simple des mensualités"
+      ]
+    },
+    {
+      "title": "Prêts immobiliers",
+      "description": "Préparez votre projet immobilier avec des conseils qui rendent les chiffres faciles à comprendre.",
+      "highlights": [
+        "Taux fixes ou variables",
+        "Estimation des mensualités avant toute demande",
+        "Un accompagnement à chaque étape"
+      ]
+    }
+  ],
+  "security": {
+    "eyebrow": "Sécurité et confidentialité",
+    "title": "La sécurité pour avancer en confiance, à chaque étape.",
+    "description": "Dans cette démo, notre approche de la sécurité associe la protection des comptes, des alertes utiles et des choix clairs concernant vos données.",
+    "practices": [
+      {
+        "title": "Accès au compte",
+        "description": "La vérification à plusieurs facteurs et le contrôle des sessions contribuent à protéger les connexions."
+      },
+      {
+        "title": "Protection des données",
+        "description": "Le chiffrement protège les informations pendant leur transmission et leur stockage."
+      },
+      {
+        "title": "Suivi des transactions",
+        "description": "Les alertes de compte vous aident à repérer les opérations et à réagir rapidement."
+      },
+      {
+        "title": "Gestion de la carte",
+        "description": "Mettez votre carte en pause dans l’application si vous l’égarez, puis réactivez-la lorsque vous la retrouvez."
+      },
+      {
+        "title": "Vos choix en matière de confidentialité",
+        "description": "Des paramètres clairs vous aident à comprendre comment vos informations sont utilisées."
+      },
+      {
+        "title": "Assistance",
+        "description": "Contactez l’équipe d’assistance si un message ou une opération sur votre compte vous semble suspect."
+      }
+    ],
+    "scamTips": [
+      "Ne communiquez jamais un code à usage unique, un mot de passe ou l’intégralité des données de votre carte à la suite d’un appel ou d’un message inattendu.",
+      "Avant d’ouvrir un lien, prenez le temps de vérifier. Accédez directement au site ou à l’application officielle plutôt que de suivre un lien reçu dans un message inattendu.",
+      "Méfiez-vous des demandes urgentes de transfert d’argent, d’achat de cartes-cadeaux ou de confidentialité autour d’une transaction.",
+      "Vérifiez l’identité de votre interlocuteur en rappelant un numéro de confiance, et non un numéro qu’il vous aurait donné pendant l’appel.",
+      "Signalez rapidement toute activité suspecte et bloquez votre carte si vous pensez qu’elle a été compromise."
+    ]
+  },
+  "faq": [
+    {
+      "name": "Comptes",
+      "items": [
+        {
+          "question": "Combien de temps faut-il pour ouvrir un compte ?",
+          "answer": "La plupart des personnes peuvent effectuer les premières démarches en moins de dix minutes et accéder à leur compte après vérification."
+        },
+        {
+          "question": "De quelles informations ai-je besoin pour ouvrir un compte ?",
+          "answer": "Vous aurez besoin de quelques renseignements personnels et d’informations permettant de vérifier votre identité. Cette démo ne collecte ni ne stocke de données financières réelles."
+        },
+        {
+          "question": "Puis-je ouvrir plusieurs comptes ?",
+          "answer": "Oui. Vous pouvez répartir vos dépenses courantes et votre épargne entre plusieurs comptes dédiés à différents objectifs."
+        }
+      ]
+    },
+    {
+      "name": "Paiements et cartes",
+      "items": [
+        {
+          "question": "Puis-je envoyer de l’argent à mes proches ?",
+          "answer": "Cette démo propose des virements instantanés et des paiements programmés pour les types de comptes compatibles."
+        },
+        {
+          "question": "Comment protéger ma carte si je ne la retrouve plus ?",
+          "answer": "Mettez votre carte en pause ou bloquez-la depuis l’application, puis réactivez-la si vous la retrouvez."
+        },
+        {
+          "question": "Quels sont les plafonds de transaction quotidiens ?",
+          "answer": "Les plafonds varient selon le type d’opération. L’interface doit afficher les plafonds applicables avant l’envoi d’un virement."
+        },
+        {
+          "question": "Puis-je activer des alertes pour mes achats par carte ?",
+          "answer": "Oui. Les notifications de compte vous permettent de suivre l’activité récente de votre carte."
+        }
+      ]
+    },
+    {
+      "name": "Épargne et emprunts",
+      "items": [
+        {
+          "question": "Puis-je définir des objectifs d’épargne ?",
+          "answer": "Créez un objectif, programmez des virements et consultez votre progression depuis le tableau de bord de votre compte."
+        },
+        {
+          "question": "Comment estimer les mensualités d’un prêt ?",
+          "answer": "Utilisez le calculateur de prêt sur notre page consacrée aux prêts pour estimer vos mensualités selon le montant, le taux et la durée."
+        },
+        {
+          "question": "Les taux indiqués sur ce site sont-ils des offres en vigueur ?",
+          "answer": "Non. Les taux affichés sont des données fictives fournies à titre indicatif et ne constituent pas des offres réelles."
+        }
+      ]
+    },
+    {
+      "name": "Assistance et sécurité",
+      "items": [
+        {
+          "question": "Quels sont les horaires de l’assistance ?",
+          "answer": "Dans cette démo fictive, l’assistance est présentée comme disponible à toute heure pour les questions liées aux comptes et à la sécurité."
+        },
+        {
+          "question": "Comment Westbridge protège-t-elle mes informations ?",
+          "answer": "La démo présente des mesures telles que le chiffrement, la vérification à plusieurs facteurs et les alertes de compte."
+        },
+        {
+          "question": "Que faire si je reçois un message suspect ?",
+          "answer": "Ne communiquez aucun code et ne suivez pas les liens inattendus. Contactez l’assistance depuis le site ou l’application officielle."
+        }
+      ]
+    }
+  ],
+  "blog": [
+    {
+      "category": "Épargne",
+      "title": "Adopter une meilleure routine d’épargne sans trop dépenser",
+      "excerpt": "Un rythme mensuel simple peut vous aider à épargner plus régulièrement et sans effort superflu.",
+      "readTime": "4 min de lecture",
+      "published": "14 octobre 2026",
+      "paragraphs": [
+        "Une routine d’épargne est plus efficace lorsqu’elle s’adapte à votre vie réelle. Commencez par choisir un montant régulier qui vous laisse de quoi payer vos factures et vos dépenses essentielles, tout en gardant un peu de souplesse.",
+        "Associez ensuite cette habitude à un moment qui revient chaque mois, comme le jour de paie. Un virement automatique permet de progresser régulièrement sans avoir à y penser constamment.",
+        "Enfin, donnez un nom à chaque objectif et faites le point de temps en temps. Il ne s’agit pas d’optimiser chaque dollar, mais de rendre plus facile la répétition de bonnes décisions."
+      ]
+    },
+    {
+      "category": "Planification",
+      "title": "Quand réexaminer votre prêt avant une nouvelle évolution des taux",
+      "excerpt": "De faibles écarts de taux ou de durée peuvent avoir un effet important sur votre budget mensuel.",
+      "readTime": "5 min de lecture",
+      "published": "29 septembre 2026",
+      "paragraphs": [
+        "Réexaminer un prêt ne consiste pas tant à rechercher le taux le plus attractif qu’à vérifier si l’ensemble des conditions correspond toujours à vos projets.",
+        "Comparez le solde actuel, la durée restante, les éventuels frais et le coût total d’une nouvelle option. Une mensualité plus faible peut malgré tout entraîner un coût global supérieur si la durée est prolongée.",
+        "Considérez les estimations comme un point de départ, puis demandez à un professionnel qualifié de vous expliquer les détails avant de prendre une décision. Les chiffres de ce site de démonstration sont fournis à titre indicatif uniquement."
+      ]
+    },
+    {
+      "category": "Logement",
+      "title": "Trois habitudes financières pour vivre sereinement votre première année de propriétaire",
+      "excerpt": "Une bonne organisation des factures, de l’épargne et des imprévus aide à réduire le stress quand le quotidien s’accélère.",
+      "readTime": "6 min de lecture",
+      "published": "8 septembre 2026",
+      "paragraphs": [
+        "La première année dans un nouveau logement apporte souvent des dépenses faciles à oublier. Faire chaque mois le point sur les factures à venir aide à garder ces coûts en tête.",
+        "Un objectif d’épargne dédié à l’entretien du logement permet de prévoir les réparations et les besoins saisonniers. Même de petits versements réguliers peuvent aider à absorber une dépense imprévue.",
+        "Gardez une organisation simple : automatisez ce que vous pouvez, faites le point une fois par mois et adaptez-vous à l’évolution de votre situation. Il n’existe pas de budget universel."
+      ]
+    }
+  ],
+  "legal": {
+    "privacy": {
+      "title": "Avis de confidentialité",
+      "description": "Exemple de présentation des pratiques qu’une banque fictive pourrait adopter en matière d’information.",
+      "sections": [
+        {
+          "heading": "Informations dans cette démo",
+          "body": "Ce projet éducatif est fictif. Ne saisissez aucune donnée personnelle, bancaire ou financière réelle. Les formulaires sont simulés dans le client et leurs données ne sont pas transmises à un service bancaire."
+        },
+        {
+          "heading": "Utilisation possible des informations",
+          "body": "Dans un véritable service, les informations peuvent servir à fournir les produits demandés, protéger les comptes, respecter les obligations légales et améliorer l’assistance. Un établissement réel présenterait toutes les informations requises avant de recueillir des données."
+        },
+        {
+          "heading": "Vos choix",
+          "body": "Un avis de confidentialité en production détaillerait les modalités d’accès, de rectification et de suppression des données, les préférences de communication, la durée de conservation et les moyens de contact."
+        },
+        {
+          "heading": "Vos questions",
+          "body": "Cette démo ne représente ni une véritable banque ni un service chargé de la confidentialité. Les coordonnées figurant ailleurs sur ce site sont fictives."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Conditions d’utilisation",
+      "description": "Exemple de conditions pour la démonstration d’un site bancaire fictif.",
+      "sections": [
+        {
+          "heading": "Utilisation réservée à la démo",
+          "body": "Westbridge National Bank n’est pas une véritable banque. Ce site est proposé uniquement à des fins pédagogiques et de démonstration ; il ne constitue pas un conseil bancaire, financier, juridique ou fiscal."
+        },
+        {
+          "heading": "Aucun compte ni aucune offre réelle",
+          "body": "Les taux, soldes, produits, lieux, personnes et services présentés sont fictifs ou donnés à titre indicatif. Aucune information de ce site ne constitue une offre, une approbation ou un engagement à fournir un produit financier."
+        },
+        {
+          "heading": "Utilisation acceptable",
+          "body": "Utilisez ce site conformément à la loi. N’essayez pas d’en perturber le fonctionnement, d’accéder à des systèmes protégés ni de transmettre des informations sensibles."
+        },
+        {
+          "heading": "Modifications et disponibilité",
+          "body": "Un service en production préciserait sa disponibilité, le droit applicable, les procédures de règlement des litiges et les autres conditions propres à son territoire et à son activité."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Avis relatif aux cookies",
+      "description": "Exemple d’informations sur les cookies et le stockage local du navigateur dans ce projet de démonstration.",
+      "sections": [
+        {
+          "heading": "Stockage essentiel",
+          "body": "Cette démo utilise le stockage du navigateur pour mémoriser votre préférence d’apparence. L’application n’utilise pas de cookies publicitaires."
+        },
+        {
+          "heading": "Mesure d’audience",
+          "body": "Aucun suivi statistique n’est configuré dans cette démo. Un service réel préciserait les technologies de mesure utilisées et leurs finalités."
+        },
+        {
+          "heading": "Vos paramètres",
+          "body": "Vous pouvez effacer les données du site dans les paramètres de votre navigateur. Cette action peut réinitialiser vos préférences d’apparence enregistrées."
+        }
+      ]
+    }
+  },
+  "images": {
+    "products": {
+      "checking": {
+        "alt": "Personne utilisant une application bancaire sur son téléphone pour gérer ses dépenses"
+      },
+      "savings": {
+        "alt": "Agenda et carnet d’épargne sur un bureau, avec un budget en progression"
+      },
+      "credit-cards": {
+        "alt": "Mains utilisant une carte de paiement sans contact à une caisse"
+      },
+      "loans": {
+        "alt": "Propriétaire d’une petite entreprise examinant des documents financiers à son bureau"
+      },
+      "mortgages": {
+        "alt": "Famille tenant les clés de sa nouvelle maison devant celle-ci"
+      }
+    },
+    "sections": {
+      "support": {
+        "alt": "Conseiller du service client portant un casque et accompagnant une cliente"
+      },
+      "security": {
+        "alt": "Écran de téléphone affichant une connexion sécurisée et une demande de vérification"
+      },
+      "cta-banner": {
+        "alt": "Lever de soleil sur les toits d’une ville, utilisé comme bannière d’appel à l’action bancaire"
+      },
+      "branch": {
+        "alt": "Vue lumineuse du hall d’une agence bancaire moderne"
+      }
+    },
+    "blog": {
+      "tip-1": {
+        "alt": "Calculatrice de budget et notes pour un plan financier mensuel"
+      },
+      "tip-2": {
+        "alt": "Ordinateur portable et espace de travail sécurisé pour effectuer ses opérations bancaires en ligne"
+      },
+      "tip-3": {
+        "alt": "Pièces glissées dans un bocal d’épargne pour des projets à long terme"
+      }
+    },
+    "about": {
+      "team": {
+        "alt": "Équipe professionnelle collaborant autour d’une table de réunion"
+      },
+      "headquarters": {
+        "alt": "Immeuble de bureaux moderne aux façades vitrées et au hall soigné"
+      }
+    }
+  },
+  "design": {
+    "colorTokens": [
+      {
+        "name": "Arrière-plan"
+      },
+      {
+        "name": "Carte"
+      },
+      {
+        "name": "Premier plan"
+      },
+      {
+        "name": "Principal"
+      },
+      {
+        "name": "Secondaire"
+      },
+      {
+        "name": "Atténué"
+      },
+      {},
+      {
+        "name": "Bronze"
+      },
+      {
+        "name": "Bordure"
+      },
+      {
+        "name": "Anneau de focus"
+      },
+      {
+        "name": "Destructif"
+      }
+    ],
+    "typographySamples": [
+      {
+        "sample": "Avancer plus sereinement"
+      },
+      {
+        "name": "Titre 1",
+        "sample": "Une banque en toute clarté"
+      },
+      {
+        "name": "Titre 2",
+        "sample": "Conçu autour de vous"
+      },
+      {
+        "name": "Titre 3",
+        "sample": "Un service attentionné"
+      },
+      {
+        "name": "Titre 4",
+        "sample": "L’essentiel au quotidien"
+      },
+      {
+        "name": "Corps de texte",
+        "sample": "Une expérience bancaire claire et réfléchie au quotidien."
+      },
+      {
+        "name": "Petit texte",
+        "sample": "Des détails utiles, faciles à lire."
+      }
+    ],
+    "page": {
+      "themeLabel": "Thème {{theme}}",
+      "themeNames": {
+        "light": "Clair",
+        "dark": "Sombre"
+      },
+      "typography": "Typographie",
+      "buttonsAndFields": "Boutons et champs",
+      "componentSpecimens": "Exemples de composants",
+      "componentDescription": "Tests interactifs des commandes partagées.",
+      "navigationPanels": "Navigation et panneaux",
+      "overview": "Vue d’ensemble",
+      "controls": "Commandes",
+      "cardTitle": "Titre de la carte",
+      "cardDescription": "Une courte description de carte.",
+      "cardContent": "Le contenu de la carte respecte les jetons de surface et de rayon du thème Classic.",
+      "accordionItem": "Élément accordéon",
+      "accordionContent": "Le contenu déplié reste dans le flux normal du document.",
+      "openSheet": "Ouvrir le panneau",
+      "sheetPanel": "Panneau latéral",
+      "sheetDescription": "La gestion accessible du focus est assurée par Radix Dialog.",
+      "formControls": "Commandes de formulaire",
+      "firstTab": "Premier onglet",
+      "secondTab": "Deuxième onglet",
+      "firstTabContent": "Contenu du premier onglet.",
+      "secondTabContent": "Contenu du deuxième onglet.",
+      "accountType": "Type de compte",
+      "exampleValue": "Valeur d’exemple : {{value}}",
+      "defaultBadge": "Badge par défaut",
+      "secondaryBadge": "Secondaire",
+      "outlineBadge": "Contour",
+      "tooltip": "Info-bulle",
+      "tooltipDescription": "Précision contextuelle utile",
+      "showToast": "Afficher la notification",
+      "demoToast": "Notification de démo affichée",
+      "carousel": "Carrousel",
+      "firstSlide": "Première diapositive",
+      "secondSlide": "Deuxième diapositive",
+      "thirdSlide": "Troisième diapositive",
+      "title": "Fondations du design Classic",
+      "eyebrow": "Aperçu développeur",
+      "description": "Références des couleurs, de la typographie, du logo et des composants de l’interface Westbridge.",
+      "primary": "Principal",
+      "outline": "Contour",
+      "secondary": "Secondaire",
+      "ghost": "Fantôme",
+      "destructive": "Destructif",
+      "emailAddress": "Adresse e-mail",
+      "emailPlaceholder": "vous@example.test",
+      "message": "Votre message",
+      "notePlaceholder": "Une courte note"
+    }
+  },
+  "labels": {
+    "about": "À propos",
+    "personal": "Particuliers",
+    "business": "Professionnels",
+    "products": "Produits",
+    "loans": "Prêts",
+    "rates": "Taux",
+    "security": "Sécurité",
+    "helpCenter": "Centre d’aide",
+    "faq": "Questions fréquentes",
+    "contact": "Nous contacter",
+    "blog": "Articles",
+    "notFound": "Introuvable"
+  },
+  "actions": {
+    "exploreProduct": "Découvrir {{product}}",
+    "viewRates": "Voir les taux de la démo",
+    "askAboutProduct": "Poser une question sur {{product}}",
+    "readArticle": "Lire l’article"
+  },
+  "productsPage": {
+    "title": "Des produits pour vos projets du quotidien et vos grandes étapes",
+    "description": "Découvrez les produits fictifs de Westbridge, chacun conçu pour vous aider à mieux préparer votre prochain projet financier.",
+    "sectionsLabel": "Rubriques produits",
+    "itemNumber": "{{number}} / Produit"
+  },
+  "tables": {
+    "product": "Produit",
+    "exampleRate": "Taux d’exemple",
+    "illustrativeRate": "Taux indicatif",
+    "designedFor": "Conçu pour",
+    "feature": "Caractéristique"
+  },
+  "loansPage": {
+    "title": "Empruntez selon un plan qui vous convient",
+    "description": "Découvrez des options de prêt fictives, comparez les taux indicatifs et estimez vos mensualités avant de prendre une décision.",
+    "types": {
+      "personal": {
+        "title": "Prêts personnels",
+        "description": "Préparez un achat ou regroupez vos dépenses grâce à des mensualités fixes."
+      },
+      "vehicle": {
+        "title": "Prêts automobiles",
+        "description": "Découvrez une solution prévisible pour financer un véhicule neuf ou d’occasion."
+      },
+      "home": {
+        "title": "Financement immobilier",
+        "description": "Étudiez les options de prêt immobilier et de prêt garanti par la valeur de votre logement pour votre prochain projet."
+      }
+    },
+    "rateHeading": "Taux indicatifs des prêts",
+    "disclaimer": "Les taux et estimations sont des données de démonstration fournies à titre indicatif ; ils ne constituent ni une offre ni un conseil financier."
+  },
+  "ratesPage": {
+    "title": "Taux et détails des produits",
+    "description": "Taux indicatifs pour les produits présentés dans cette démo. Aucun taux réel n’est proposé par un établissement financier.",
+    "disclaimer": "Tous les taux sont des données fictives fournies à titre d’exemple et peuvent varier dans le scénario de démonstration."
+  },
+  "securityPage": {
+    "scamEyebrow": "Protégez-vous des arnaques",
+    "scamTitle": "Prenez le temps de vérifier avant d’agir.",
+    "disclaimer": "Westbridge est une démo fictive. N’utilisez jamais de vrais identifiants ni de véritables informations financières sur ce site."
+  },
+  "faqPage": {
+    "title": "Questions fréquentes",
+    "description": "Recherchez des réponses sur les comptes, les paiements, les emprunts, l’assistance et la sécurité.",
+    "searchLabel": "Rechercher dans les questions fréquentes",
+    "searchPlaceholder": "Rechercher une question",
+    "noResults": "Aucune question ne correspond à « {{query}} ». Essayez une autre recherche."
+  },
+  "blogPage": {
+    "title": "Des conseils pour vos décisions du quotidien",
+    "description": "Des conseils pratiques et fictifs pour mieux comprendre vos habitudes financières.",
+    "eyebrow": "Le journal Westbridge",
+    "notFoundTitle": "Article introuvable",
+    "notFoundDescription": "Cet article n’est pas disponible dans cette démo.",
+    "browseArticles": "Parcourir tous les articles",
+    "postMetadata": "{{category}} · {{published}} · {{readTime}}",
+    "disclaimer": "Cet article est un contenu pédagogique fictif créé pour un projet de démonstration. Il ne constitue pas un conseil financier.",
+    "backToInsights": "Retour aux conseils"
+  },
+  "legalPage": {
+    "eyebrow": "Informations juridiques",
+    "sampleNotice": "Le texte juridique qui suit est un exemple en anglais fourni à titre indicatif pour cette démo."
+  },
+  "_notice": "Traduction automatique provisoire ; révision par un locuteur natif requise."
+}

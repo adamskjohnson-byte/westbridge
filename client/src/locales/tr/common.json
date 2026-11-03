@@ -1,0 +1,486 @@
+{
+  "nav": {
+    "personal": "Bireysel",
+    "business": "İşletme",
+    "loans": "Krediler",
+    "security": "Güvenlik"
+  },
+  "buttons": {
+    "login": "Giriş",
+    "openAccount": "Hesap açın"
+  },
+  "footer": {
+    "disclaimer": "Yalnızca demo amaçlıdır. Westbridge National Bank gerçek bir banka değildir. Gerçek para tutulmaz.",
+    "photoSource": "Pixabay fotoğrafları",
+    "photoCredits": "Fotoğraf kaynakları"
+  },
+  "authPitch": {
+    "eyebrow": "Westbridge ile net bir başlangıç",
+    "heading": "Günlük bankacılığınız, özenle düzenlendi.",
+    "body": "Hesaplarınızı ve hedeflerinizi kolayca yönetebileceğiniz sakin bir alan.",
+    "benefits": [
+      "Vadesiz ve birikim hesaplarınızı tek ekranda görün",
+      "Transfer hareketlerini ve durumunu anında takip edin",
+      "Sizi dinleyen ekibimizden destek alın"
+    ],
+    "disclaimer": "Yalnızca demo amaçlıdır. Westbridge National Bank gerçek bir banka değildir. Gerçek para tutulmaz."
+  },
+  "navigation": {
+    "primaryLabel": "Ana gezinme",
+    "primaryLinks": [
+      {
+        "label": "Bireysel"
+      },
+      {
+        "label": "İşletme"
+      },
+      {
+        "label": "Krediler"
+      },
+      {
+        "label": "Güvenlik"
+      }
+    ],
+    "footerColumns": [
+      {
+        "title": "Ürünler",
+        "links": [
+          {
+            "label": "Vadesiz hesap"
+          },
+          {
+            "label": "Birikim hesabı"
+          },
+          {
+            "label": "Tüm ürünler"
+          },
+          {
+            "label": "Krediler"
+          },
+          {
+            "label": "Faiz oranları"
+          }
+        ]
+      },
+      {
+        "title": "Kurumsal",
+        "links": [
+          {
+            "label": "Westbridge hakkında"
+          },
+          {
+            "label": "Yönetim ekibi"
+          },
+          {
+            "label": "İletişim"
+          }
+        ]
+      },
+      {
+        "title": "Destek",
+        "links": [
+          {
+            "label": "Yardım merkezi"
+          },
+          {
+            "label": "Yazılar"
+          },
+          {
+            "label": "Güvenlik"
+          }
+        ]
+      },
+      {
+        "title": "Yasal",
+        "links": [
+          {
+            "label": "Gizlilik"
+          },
+          {
+            "label": "Koşullar"
+          },
+          {
+            "label": "Çerezler"
+          }
+        ]
+      }
+    ]
+  },
+  "brand": {
+    "homeLabel": "Westbridge National Bank ana sayfası"
+  },
+  "accessibility": {
+    "skipToContent": "İçeriğe geçin",
+    "closeMenu": "Menüyü kapatın",
+    "sliderValue": "Değer: {{value}}"
+  },
+  "navbar": {
+    "dashboard": "Kontrol paneli",
+    "loggingOut": "Oturum kapatılıyor…",
+    "logOut": "Oturumu kapatın",
+    "account": "Hesap",
+    "accountMenuLabel": "{{name}} için hesap menüsü",
+    "login": "Giriş",
+    "openAccount": "Hesap açın",
+    "closeNavigation": "Gezinme menüsünü kapatın",
+    "openNavigation": "Gezinme menüsünü açın"
+  },
+  "languageSwitcher": {
+    "triggerLabel": "Dil: {{language}}",
+    "searchLabel": "Dillerde arayın",
+    "searchPlaceholder": "Dillerde arayın",
+    "listLabel": "Diller",
+    "noResults": "Dil bulunamadı."
+  },
+  "theme": {
+    "toggleLabel": "Geçerli tema: {{current}}. {{next}} temaya geçin",
+    "names": {
+      "system": "sistem",
+      "light": "açık",
+      "dark": "koyu"
+    }
+  },
+  "breadcrumbs": {
+    "label": "İçerik yolu",
+    "home": "Ana sayfa"
+  },
+  "carousel": {
+    "previous": "Önceki slayt",
+    "next": "Sonraki slayt"
+  },
+  "forms": {
+    "firstName": "Ad",
+    "lastName": "Soyad",
+    "emailAddress": "E-posta adresi",
+    "password": "Parola",
+    "confirmPassword": "Parolayı doğrulayın",
+    "newPassword": "Yeni parola",
+    "confirmNewPassword": "Yeni parolayı doğrulayın",
+    "validation": {
+      "emailRequired": "E-posta adresinizi girin.",
+      "emailInvalid": "Geçerli bir e-posta adresi girin.",
+      "emailMax": "E-posta adresi en fazla 254 karakter olabilir.",
+      "nameMin": "En az 2 karakter girin.",
+      "nameMax": "Ad en fazla 60 karakter olabilir.",
+      "nameMax100": "Ad en fazla 100 karakter olabilir.",
+      "subjectMin": "Lütfen bir konu girin.",
+      "subjectMax": "Konu en fazla 150 karakter olabilir.",
+      "messageMin": "Lütfen biraz daha ayrıntı paylaşın.",
+      "messageMax": "Mesaj en fazla 2000 karakter olabilir.",
+      "passwordMin": "En az 10 karakter kullanın.",
+      "passwordLowercase": "En az bir küçük harf ekleyin.",
+      "passwordUppercase": "En az bir büyük harf ekleyin.",
+      "passwordNumber": "En az bir rakam ekleyin.",
+      "passwordRequired": "Parolanızı girin.",
+      "confirmPassword": "Parolanızı doğrulayın.",
+      "acceptTerms": "Devam etmek için koşulları kabul etmelisiniz.",
+      "passwordMismatch": "Parolalar eşleşmiyor."
+    },
+    "errors": {
+      "rateLimit": "Çok fazla deneme yapıldı. Bir dakika sonra tekrar deneyin.",
+      "reviewAndRetry": "Bilgileri kontrol edip tekrar deneyin.",
+      "connection": "Bağlantı kurulamadı. Bağlantınızı kontrol edip tekrar deneyin.",
+      "submit": "İsteğiniz gönderilemedi. Lütfen tekrar deneyin."
+    },
+    "contact": {
+      "success": "Mesajınız gönderildi."
+    },
+    "newsletter": {
+      "success": "Bültene kaydınız tamamlandı."
+    }
+  },
+  "actions": {
+    "continue": "Devam edin"
+  },
+  "auth": {
+    "startHere": "Buradan başlayın",
+    "openAccount": "Hesap açın",
+    "registerDescription": "Birkaç bilgi verin; ardından size e-posta doğrulama bağlantısı gönderelim.",
+    "createAccount": "Hesap oluşturun",
+    "creatingAccount": "Hesap oluşturuluyor…",
+    "acceptTermsLead": "Şunları kabul ediyorum:",
+    "demoTerms": "demo koşulları",
+    "alreadyHaveAccount": "Zaten hesabınız var mı?",
+    "signIn": "Giriş yapın",
+    "signInHeading": "Hesabınıza giriş yapın",
+    "loginDescription": "Westbridge demo hesabı bilgilerinizi kullanın.",
+    "welcomeBack": "Tekrar hoş geldiniz",
+    "newToWestbridge": "Westbridge'i ilk kez mi kullanıyorsunuz?",
+    "forgotPassword": "Parolanızı mı unuttunuz?",
+    "rememberMe": "Bu cihazda oturumumu açık tutun",
+    "signingIn": "Giriş yapılıyor…",
+    "resetPassword": "Parolanızı sıfırlayın",
+    "forgotDescription": "Hesabınızdaki e-posta adresini girin. Eşleşme varsa sıfırlama bağlantısı göndeririz.",
+    "nextStep": "Sonraki adım",
+    "checkInbox": "Gelen kutunuzu kontrol edin",
+    "resetEmailSentIfExists": "Bu e-posta adresi kayıtlıysa sıfırlama bağlantısı yola çıktı.",
+    "returnToSignIn": "Giriş sayfasına dönün",
+    "accountRecovery": "Hesap kurtarma",
+    "forgotPasswordQuestion": "Parolanızı mı unuttunuz?",
+    "sending": "Gönderiliyor…",
+    "sendResetLink": "Sıfırlama bağlantısı gönderin",
+    "backToSignIn": "Girişe dönün",
+    "chooseNewPassword": "Yeni parola belirleyin",
+    "resetDescription": "Westbridge demo hesabınız için yeni bir parola belirleyin.",
+    "passwordResetSuccess": "Parolanız sıfırlandı. Yeni parolanızla giriş yapın.",
+    "resetLinkUnavailable": "Sıfırlama bağlantısı kullanılamıyor",
+    "requestNewLink": "Yeni bağlantı isteyin",
+    "resetLinkInvalid": "Bu parola sıfırlama bağlantısı geçersiz veya süresi dolmuş. Devam etmek için yeni bir bağlantı isteyin.",
+    "requestNewResetLink": "Yeni parola sıfırlama bağlantısı isteyin",
+    "resetEmailLabel": "{{email}} için",
+    "saving": "Kaydediliyor…",
+    "saveNewPassword": "Yeni parolayı kaydedin",
+    "verifyEmail": "E-posta adresinizi doğrulayın",
+    "verifyDescription": "Hesap kurulumunu tamamlamak için e-posta adresinizi doğrulayın.",
+    "verificationLinkSent": "Yeni doğrulama bağlantınız yola çıktı.",
+    "oneLastStep": "Son bir adım kaldı",
+    "verificationSentTo": "{{email}} adresine bir doğrulama bağlantısı gönderdik. Hesap kurulumunu tamamlamak için bağlantıyı açın.",
+    "resendAvailable_one": "Yeniden gönderme {{count}} saniye sonra kullanılabilir",
+    "resendAvailable_other": "Yeniden gönderme {{count}} saniye sonra kullanılabilir",
+    "resendVerification": "Doğrulama e-postasını yeniden gönderin",
+    "emailConfirmed": "E-posta doğrulandı",
+    "allSet": "Her şey hazır.",
+    "emailVerifiedContinue": "E-posta adresiniz doğrulandı. Hazır olduğunuzda hesabınıza geçin.",
+    "linkUnavailable": "Bağlantı kullanılamıyor",
+    "linkCannotBeUsed": "Bu bağlantı kullanılamıyor",
+    "verificationLinkInvalid": "Bu doğrulama bağlantısı geçersiz veya süresi dolmuş.",
+    "signInToRequestLink": "Yeni bağlantı istemek için giriş yapın",
+    "showPassword": "Parolayı gösterin",
+    "hidePassword": "Parolayı gizleyin",
+    "passwordRules": {
+      "length": "En az 10 karakter",
+      "uppercase": "Bir büyük harf",
+      "lowercase": "Bir küçük harf",
+      "number": "Bir rakam"
+    },
+    "passwordStrength_one": "Parola gücü: {{total}} koşuldan {{count}} tanesi karşılandı",
+    "passwordStrength_other": "Parola gücü: {{total}} koşuldan {{count}} tanesi karşılandı",
+    "loadingAccount": "Hesabınız yükleniyor",
+    "checkingSession": "Oturumunuz kontrol ediliyor…",
+    "errors": {
+      "accountSuspended": "Bu hesap şu anda kullanıma kapalı. Yardım için lütfen destek ekibiyle iletişime geçin.",
+      "rateLimit": "Çok fazla deneme yapıldı. Lütfen biraz bekleyip tekrar deneyin.",
+      "reviewAndRetry": "Bilgileri kontrol edip tekrar deneyin.",
+      "invalidCredentials": "E-posta adresi veya parola yanlış.",
+      "createAccount": "Hesabınız oluşturulamadı.",
+      "signIn": "Oturum açılamadı. Lütfen tekrar deneyin.",
+      "sendReset": "Sıfırlama e-postası gönderilemedi. Lütfen tekrar deneyin.",
+      "resetPassword": "Parolanız sıfırlanamadı. Lütfen tekrar deneyin.",
+      "waitBeforeResend": "Yeni bir bağlantı istemeden önce lütfen bekleyin.",
+      "resendVerification": "Bağlantı yeniden gönderilemedi. Lütfen biraz sonra tekrar deneyin.",
+      "verifyEmail": "E-posta adresi doğrulanamadı. Lütfen yeni bir bağlantı isteyin."
+    }
+  },
+  "apiErrors": {
+    "generic": "Bir hata oluştu. Lütfen tekrar deneyin.",
+    "network_error": "Bağlantı kurulamıyor. Bağlantınızı kontrol edip tekrar deneyin.",
+    "unauthenticated": "Oturumunuz sona erdi. Lütfen yeniden giriş yapın.",
+    "forbidden": "Bu işlemi yapma izniniz yok.",
+    "account_suspended": "Bu hesap askıya alındı. Lütfen destek ekibiyle iletişime geçin.",
+    "email_not_verified": "Devam etmek için e-posta adresinizi doğrulayın.",
+    "invalid_verification_link": "Bu doğrulama bağlantısı geçersiz veya süresi dolmuş.",
+    "role_forbidden": "Hesabınızın bu sayfaya erişim izni yok.",
+    "not_found": "Bu sayfa veya öğe bulunamadı.",
+    "csrf_mismatch": "Oturumunuzun yenilenmesi gerekiyor. Lütfen tekrar deneyin.",
+    "validation_failed": "Bilgileri kontrol edip tekrar deneyin.",
+    "too_many_requests": "Çok fazla istek gönderildi. Lütfen bekleyip tekrar deneyin.",
+    "server_error": "Bir sunucu hatası oluştu. Lütfen biraz sonra tekrar deneyin.",
+    "http_error": "İstek tamamlanamadı. Lütfen tekrar deneyin.",
+    "validation": {
+      "email_required": "E-posta adresinizi girin.",
+      "email_invalid": "Geçerli bir e-posta adresi girin.",
+      "email_max": "E-posta adresi en fazla 254 karakter olabilir.",
+      "email_taken": "Bu e-posta adresi zaten kullanılıyor.",
+      "name_required": "Adınızı girin.",
+      "name_invalid": "Geçerli bir ad girin.",
+      "name_min": "En az 2 karakter girin.",
+      "name_max": "Ad en fazla 60 karakter olabilir.",
+      "subject_required": "Bir konu girin.",
+      "subject_invalid": "Geçerli bir konu girin.",
+      "subject_min": "Konu en az 3 karakter olmalıdır.",
+      "subject_max": "Konu en fazla 150 karakter olabilir.",
+      "message_required": "Bir mesaj girin.",
+      "message_invalid": "Geçerli bir mesaj girin.",
+      "message_min": "Mesaj en az 10 karakter olmalıdır.",
+      "message_max": "Mesaj en fazla 2.000 karakter olabilir.",
+      "password_required": "Şifrenizi girin.",
+      "password_invalid": "Geçerli bir şifre girin.",
+      "password_min": "En az 10 karakter kullanın.",
+      "password_uppercase": "Bir büyük harf ekleyin.",
+      "password_lowercase": "Bir küçük harf ekleyin.",
+      "password_number": "Bir rakam ekleyin.",
+      "password_confirmed": "Şifreler eşleşmiyor.",
+      "password_confirmation_required": "Şifrenizi onaylayın.",
+      "password_compromised": "Veri ihlalinde açığa çıkmamış bir şifre seçin.",
+      "terms_required": "Devam etmek için koşulları kabul etmelisiniz.",
+      "remember_invalid": "Oturumu hatırlamak için geçerli bir seçenek belirleyin.",
+      "credentials_invalid": "E-posta adresi veya şifre yanlış.",
+      "reset_token_required": "Şifre sıfırlama belirteci gereklidir.",
+      "reset_token_invalid": "Bu sıfırlama bağlantısı geçersiz veya süresi dolmuş. Yeni bir bağlantı isteyin."
+    }
+  },
+  "dashboard": {
+    "description": "Westbridge demo hesabınıza genel bakış.",
+    "overview": "Genel bakış",
+    "greeting": {
+      "morning": "Günaydın, {{name}}",
+      "afternoon": "İyi günler, {{name}}",
+      "evening": "İyi akşamlar, {{name}}"
+    },
+    "shell": {
+      "primaryNavigation": "Panel gezinmesi",
+      "mobileNavigation": "Panel sekmeleri",
+      "workspace": "Paranız",
+      "overview": "Genel bakış",
+      "transactions": "İşlemler",
+      "transfers": "Transferler",
+      "cards": "Kartlar",
+      "settings": "Ayarlar",
+      "comingSoon": "Yakında",
+      "demoNotice": "Yalnızca demo parası",
+      "live": "Şimdi kullanılabilir",
+      "more": "Daha fazla"
+    },
+    "demoMoney": "Demo parası",
+    "balanceAcrossAccounts": "{{count}} hesapta",
+    "accountNumberCopied": "Hesap numarası kopyalandı",
+    "accountNumberCopyError": "Hesap numarası kopyalanamadı",
+    "copyAccountNumber": "Hesap numarasının tamamını kopyala",
+    "viewTransactions": "İşlemleri görüntüle",
+    "viewAll": "Tümünü görüntüle",
+    "thisMonth": "Bu ay",
+    "income": "Gelir",
+    "spending": "Harcamalar",
+    "net": "Net bakiye",
+    "month": "Ay",
+    "sixMonthActivity": "Gelir ve harcamalar",
+    "chartAccessibleSummary": "Son altı ayın aylık gelir ve harcamaları. Veriler grafikten sonraki tabloda da bulunur.",
+    "spendingByCategory": "Kategoriye göre harcamalar",
+    "noSpending": "Bu ay kaydedilmiş harcama yok.",
+    "cashFlowAndSpending": "Nakit akışı ve kategoriye göre harcamalar",
+    "noActivityYet": "Henüz etkinlik yok. İşlemleriniz burada görünür.",
+    "status": {
+      "active": "Etkin",
+      "frozen": "Dondurulmuş",
+      "closed": "Kapalı"
+    },
+    "category": {
+      "transfer": "Transfer",
+      "deposit": "Para yatırma",
+      "withdrawal": "Para çekme",
+      "bill_payment": "Fatura ödemesi",
+      "card": "Kart harcaması",
+      "fee": "Ücret",
+      "interest": "Faiz",
+      "other": "Diğer"
+    },
+    "transactions": {
+      "title": "İşlemler",
+      "pagination": "İşlem sayfaları",
+      "previousPage": "Önceki sayfa",
+      "nextPage": "Sonraki sayfa",
+      "goToPage": "{{page}}. sayfaya git",
+      "referenceCopied": "Referans kopyalandı",
+      "copyFailed": "Kopyalanamadı",
+      "dateTime": "Tarih ve saat",
+      "dateLabel": "Tarih",
+      "counterparty": "Karşı taraf",
+      "notAvailable": "Mevcut değil",
+      "detailTitle": "İşlem ayrıntıları",
+      "detailDescription": "Bu kayıt defteri satırının tüm ayrıntıları.",
+      "accountLabel": "Hesap",
+      "amountLabel": "Tutar",
+      "balanceAfter": "İşlem sonrası bakiye",
+      "categoryLabel": "Kategori",
+      "reference": "Referans",
+      "copyReference": "Referansı kopyala",
+      "description": "Açıklama",
+      "closeDetails": "Ayrıntıları kapat",
+      "exportTruncated": "İlk 10.000 satır dışa aktarıldı",
+      "exportSuccess": "CSV dosyası indirildi",
+      "exportRateLimited": "Çok fazla dışa aktarma. Bir dakika sonra tekrar deneyin",
+      "exportPending": "CSV hazırlanıyor…",
+      "exportCsv": "CSV dışa aktar",
+      "filters": "İşlem filtreleri",
+      "search": "Ara",
+      "searchPlaceholder": "Açıklama veya karşı taraf",
+      "direction": "Yön",
+      "allDirections": "Tümü",
+      "credits": "Alacaklar",
+      "debits": "Borçlar",
+      "sort": "Sıralama",
+      "newest": "Önce en yeniler",
+      "oldest": "Önce en eskiler",
+      "amountHigh": "Tutar: yüksekten düşüğe",
+      "amountLow": "Tutar: düşükten yükseğe",
+      "pageSize": "Sayfa başına satır",
+      "categoriesSelected": "{{count}} seçildi",
+      "dateRange": "Tarih aralığı",
+      "dateFrom": "Başlangıç",
+      "dateTo": "Bitiş",
+      "range": {
+        "7": "7 gün",
+        "30": "30 gün",
+        "90": "90 gün",
+        "month": "Bu ay",
+        "custom": "Özel"
+      },
+      "minAmount": "En düşük tutar",
+      "maxAmount": "En yüksek tutar",
+      "removeFilter": "Filtreyi kaldır: {{filter}}",
+      "clearAll": "Tümünü temizle",
+      "sortAmount": "Tutara göre sıralama",
+      "sortDate": "Tarihe göre sıralama",
+      "showing": "{{total}} işlemden {{from}}–{{to}} gösteriliyor",
+      "noMatches": "Filtrelerle eşleşen işlem yok",
+      "clearFilters": "Filtreleri temizle",
+      "tableCaption": "Hesap işlemleri. Ayrıntıları görmek için bir satır seçin."
+    },
+    "eyebrow": "Westbridge hesabınız",
+    "welcome": "Hoş geldiniz, {{name}}",
+    "signedInAs": "{{email}} olarak oturum açıldı",
+    "accountsHeading": "Hesaplarınız",
+    "totalBalance": "Toplam bakiye",
+    "recentActivity": "Son hareketler",
+    "checking": "Vadesiz hesap",
+    "savings": "Birikim hesabı",
+    "accountNumber": "Hesap numarası şu rakamlarla bitiyor",
+    "selectAccount": "{{name}} hareketlerini göster",
+    "active": "Etkin",
+    "frozen": "Dondurulmuş",
+    "closed": "Kapalı",
+    "noAccounts": "Kullanılabilir hesap yok.",
+    "noTransactions": "Bu hesapta yakın tarihli işlem yok.",
+    "dashboardLoadError": "Hesaplarınız yüklenemedi.",
+    "activityLoadError": "Bu hesabın hareketleri yüklenemedi.",
+    "retry": "Tekrar deneyin",
+    "loadMore": "Daha fazla yükle",
+    "loading": "Yükleniyor…",
+    "downloadCsv": "CSV indir",
+    "credit": "Alacak",
+    "debit": "Borç",
+    "categories": {
+      "transfer": "Transfer",
+      "deposit": "Yatırma",
+      "withdrawal": "Çekme",
+      "bill_payment": "Fatura ödemesi",
+      "card": "Kart harcaması",
+      "fee": "Ücret",
+      "interest": "Faiz",
+      "other": "Diğer"
+    }
+  },
+  "notFound": {
+    "title": "Sayfa bulunamadı",
+    "description": "Bu sayfayı bulamadık. Baştan başlayabilir veya aşağıdaki yararlı bağlantılardan birini seçebilirsiniz.",
+    "home": "Ana sayfaya dönün",
+    "products": "Ürünleri inceleyin",
+    "help": "Yardım merkezine gidin",
+    "contact": "Westbridge ile iletişim kurun"
+  },
+  "comingSoon": {
+    "description": "Bu Westbridge demo sayfası hakkında daha fazla bilgi yakında burada olacak.",
+    "message": "Yakında"
+  },
+  "_notice": "Makine çevirisi taslağıdır; ana dili Türkçe olan biri tarafından gözden geçirilmelidir."
+}

@@ -1,0 +1,439 @@
+{
+  "hero": {
+    "card": {
+      "ariaLabel": "Illustration d’une carte de débit Westbridge (démo, carte fictive)",
+      "cardholder": "Titulaire de la carte",
+      "expiryLabel": "Expire le",
+      "holder": "MEMBRE WESTBRIDGE"
+    },
+    "eyebrow": "La confiance au quotidien",
+    "headline": "Une banque claire et sereine, conçue pour vous accompagner durablement.",
+    "subheadline": "Ouvrez un compte courant, faites fructifier votre épargne et suivez vos virements grâce à une expérience numérique simple dès le premier jour.",
+    "primaryCta": "Ouvrir un compte",
+    "secondaryCta": "Découvrir le fonctionnement"
+  },
+  "videoShowcase": {
+    "unmute": "Activer le son de la vidéo",
+    "tapToUnmute": "Appuyez pour activer le son",
+    "replay": "Revoir",
+    "play": "Lire la vidéo",
+    "eyebrow": "Découvrez-le en action",
+    "heading": "Découvrez Westbridge",
+    "description": "Découvrez une façon plus claire de gérer vos opérations bancaires au quotidien."
+  },
+  "trust": {
+    "title": "Une meilleure expérience bancaire au quotidien",
+    "stats": [
+      {
+        "label": "clients",
+        "note": "comptes particuliers et professionnels confondus"
+      },
+      {
+        "label": "agences",
+        "note": "au service des communautés partout au pays"
+      },
+      {
+        "label": "de disponibilité",
+        "note": "pour un accès sécurisé en continu"
+      },
+      {
+        "label": "ans",
+        "note": "à vos côtés en toute fiabilité"
+      }
+    ],
+    "note": "Chiffres donnés à titre d’illustration pour cette démo."
+  },
+  "products": {
+    "eyebrow": "Nos produits",
+    "title": "Des solutions souples, adaptées à votre vie et à votre activité.",
+    "items": [
+      {
+        "title": "Compte courant",
+        "description": "Dépensez, envoyez et épargnez en suivant vos opérations en temps réel et en réglant vos factures simplement."
+      },
+      {
+        "title": "Épargne",
+        "description": "Faites avancer vos projets avec des objectifs rémunérés, des virements récurrents et un suivi simple."
+      },
+      {
+        "title": "Cartes de crédit",
+        "description": "Profitez d’une plus grande souplesse au quotidien grâce aux récompenses, au contrôle des achats et aux alertes instantanées."
+      },
+      {
+        "title": "Prêts",
+        "description": "Financez les grandes étapes de votre vie en toute confiance, avec des conditions claires et un accompagnement adapté."
+      },
+      {
+        "title": "Prêts immobiliers",
+        "description": "Préparez votre projet immobilier avec des conseils adaptés à votre calendrier et à vos objectifs."
+      }
+    ]
+  },
+  "whyWestbridge": {
+    "eyebrow": "Pourquoi Westbridge",
+    "title": "Des services bancaires pensés pour la vraie vie.",
+    "items": [
+      {
+        "title": "Virements instantanés",
+        "description": "Transférez de l’argent entre vos comptes ou à vos proches en quelques secondes, en toute simplicité."
+      },
+      {
+        "title": "Assistance 24 h/24, 7 j/7",
+        "description": "Échangez avec un conseiller à tout moment, de jour comme de nuit."
+      },
+      {
+        "title": "Aucuns frais cachés",
+        "description": "Consultez tous les frais à l’avance grâce à une tarification claire, sans mauvaise surprise."
+      },
+      {
+        "title": "Un suivi malin de vos dépenses",
+        "description": "Repérez les tendances, classez vos achats et gardez le cap sur votre budget mensuel."
+      },
+      {
+        "title": "Gestion de votre carte",
+        "description": "Depuis l’application, bloquez ou débloquez votre carte et définissez des plafonds en quelques instants."
+      },
+      {
+        "title": "Sécurité",
+        "description": "Une protection intégrée grâce à la vérification à plusieurs facteurs, aux alertes et à une surveillance fiable."
+      }
+    ]
+  },
+  "dashboardPreview": {
+    "ariaLabel": "Illustration du tableau de bord en ligne Westbridge avec des données d’exemple",
+    "cashFlowChartLabel": "Évolution indicative de la trésorerie",
+    "eyebrow": "Votre argent en un coup d’œil",
+    "heading": "Une vue claire de vos finances au quotidien.",
+    "description": "Retrouvez au même endroit vos entrées, vos sorties et les opérations importantes.",
+    "benefits": [
+      "Des analyses de dépenses pour repérer facilement les tendances",
+      "Des alertes instantanées pour chaque activité sur votre compte",
+      "Des commandes de carte pour garder le contrôle",
+      "Vos relevés mensuels disponibles dès que vous en avez besoin"
+    ],
+    "account": {
+      "label": "Solde disponible"
+    },
+    "stats": [
+      {
+        "label": "Revenus"
+      },
+      {
+        "label": "Dépenses"
+      }
+    ],
+    "activityLabel": "Activité récente",
+    "activityPeriod": "Ce mois-ci",
+    "transactions": [
+      {
+        "name": "Marketplace",
+        "detail": "Paiement par carte"
+      },
+      {
+        "name": "Payroll",
+        "detail": "Paiement par carte"
+      },
+      {
+        "name": "Groceries",
+        "detail": "Paiement par carte"
+      }
+    ],
+    "cashFlow": "Trésorerie",
+    "notification": "Paiement reçu +$2,450.00",
+    "securityNotice": "Carte protégée",
+    "caption": "Données d’exemple à titre d’illustration.",
+    "cta": "Ouvrir un compte"
+  },
+  "steps": {
+    "eyebrow": "Comment ça marche",
+    "title": "Trois étapes simples pour commencer.",
+    "items": [
+      {
+        "title": "Choisissez votre compte",
+        "description": "Trouvez la solution qui correspond à vos objectifs, pour vos dépenses courantes, votre épargne ou les deux."
+      },
+      {
+        "title": "Créez votre profil",
+        "description": "Renseignez quelques informations, confirmez votre identité et personnalisez vos préférences en quelques minutes."
+      },
+      {
+        "title": "Gérez votre argent en toute confiance",
+        "description": "Alimentez votre compte, prenez vos habitudes et accédez immédiatement à vos outils de gestion."
+      }
+    ]
+  },
+  "calculators": {
+    "results": {
+      "estimatedPayments": "Échéances estimées",
+      "monthlyPayment": "Mensualité",
+      "totalInterest": "Intérêts totaux",
+      "totalRepayment": "Montant total remboursé",
+      "projectedBalance": "Solde prévisionnel",
+      "finalBalance": "Solde final",
+      "totalContributed": "Montant total versé",
+      "interestEarned": "Intérêts générés",
+      "savingsChart": "Graphique de croissance de l’épargne"
+    },
+    "eyebrow": "Outils de planification",
+    "title": "Évaluez votre prochain projet avant de vous engager.",
+    "note": "Estimations fournies à titre indicatif uniquement.",
+    "loan": {
+      "label": "Calculateur de prêt",
+      "amountLabel": "Montant du prêt",
+      "rateLabel": "Taux annuel",
+      "termLabel": "Durée en années"
+    },
+    "savings": {
+      "label": "Croissance de l’épargne",
+      "initialLabel": "Dépôt initial",
+      "contributionLabel": "Versement mensuel",
+      "rateLabel": "Taux annuel",
+      "yearsLabel": "Années"
+    }
+  },
+  "rates": {
+    "columns": {
+      "product": "Produit",
+      "rate": "Taux",
+      "bestFor": "Idéal pour"
+    },
+    "eyebrow": "Taux",
+    "title": "Tarifs fictifs de quelques-uns de nos produits les plus demandés.",
+    "tabs": [
+      {
+        "label": "Épargne",
+        "rows": [
+          {
+            "product": "Épargne classique",
+            "feature": "Accès souple"
+          },
+          {
+            "product": "Épargne projets",
+            "feature": "Virements automatiques"
+          },
+          {
+            "product": "Réserve professionnelle",
+            "feature": "Planification de trésorerie"
+          }
+        ]
+      },
+      {
+        "label": "Prêts",
+        "rows": [
+          {
+            "product": "Prêt personnel",
+            "feature": "Traitement rapide"
+          },
+          {
+            "product": "Prêt sur valeur immobilière",
+            "feature": "Remboursement souple"
+          },
+          {
+            "product": "Prêt automobile",
+            "feature": "Mensualités simples"
+          }
+        ]
+      },
+      {
+        "label": "Prêts immobiliers",
+        "rows": [
+          {
+            "product": "Taux fixe sur 30 ans",
+            "feature": "Mensualités prévisibles"
+          },
+          {
+            "product": "Taux fixe sur 15 ans",
+            "feature": "Constitution plus rapide de votre capital immobilier"
+          },
+          {
+            "product": "Taux variable",
+            "feature": "Taux initial plus bas"
+          }
+        ]
+      }
+    ]
+  },
+  "security": {
+    "eyebrow": "Sécurité et confidentialité",
+    "title": "Des solutions conçues pour vous laisser maître de votre argent et de vos données.",
+    "items": [
+      "Chiffrement des données en transit et au repos",
+      "Authentification à deux facteurs",
+      "Surveillance des fraudes et alertes",
+      "Blocage immédiat de la carte depuis l’application",
+      "Notifications de compte en temps réel",
+      "Confidentialité intégrée à chaque parcours"
+    ]
+  },
+  "mobileApp": {
+    "available": "Disponible",
+    "balanceChart": "Graphique du solde dans l’application",
+    "transfers": "Virements",
+    "spending": "Dépenses",
+    "eyebrow": "Application mobile",
+    "title": "Votre banque vous accompagne, en toute simplicité.",
+    "description": "Consultez vos soldes, transférez de l’argent et gérez vos cartes depuis une application claire, conçue pour le quotidien.",
+    "features": [
+      "Consultation rapide des soldes",
+      "Catégories de dépenses intelligentes",
+      "Gestion instantanée des cartes"
+    ],
+    "storeButtons": [
+      {
+        "label": "App Store",
+        "meta": "Bientôt disponible"
+      },
+      {
+        "label": "Google Play",
+        "meta": "Bientôt disponible"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Témoignages",
+    "title": "Nos clients choisissent Westbridge pour une expérience plus humaine.",
+    "items": [
+      {
+        "name": "Alicia R.",
+        "role": "Designer indépendante",
+        "quote": "L’application m’aide à garder le contrôle de mes dépenses et les virements sont instantanés. Tout est clair et apaisant, jamais compliqué."
+      },
+      {
+        "name": "Jordan L.",
+        "role": "Primo-accédant",
+        "quote": "Les conseils pour mon prêt immobilier étaient clairs et utiles. Je ne me suis jamais senti pressé, et chaque étape était facile à comprendre."
+      },
+      {
+        "name": "Maya P.",
+        "role": "Responsable des opérations",
+        "quote": "Les outils de notre compte professionnel nous aident à gérer la trésorerie sans complexité superflue. L’interface est claire et fiable."
+      },
+      {
+        "name": "Theo N.",
+        "role": "Parent de deux enfants",
+        "quote": "Les objectifs d’épargne, les alertes et les virements récurrents fonctionnent ensemble et rendent enfin la gestion plus simple."
+      },
+      {
+        "name": "Sofia K.",
+        "role": "Consultante à distance",
+        "quote": "On sent que le service a été conçu pour la vraie vie. Je consulte mes soldes et transfère de l’argent en moins d’une minute."
+      },
+      {
+        "name": "Daniel B.",
+        "role": "Dirigeant d’une petite entreprise",
+        "quote": "Les commandes de carte et les outils de sécurité me donnent confiance. C’est une banque pensée pour les gens actifs, pas pour la paperasse."
+      }
+    ]
+  },
+  "blog": {
+    "eyebrow": "Conseils",
+    "title": "Des conseils pratiques pour les moments qui comptent.",
+    "posts": [
+      {
+        "category": "Épargne",
+        "title": "Adopter une meilleure routine d’épargne sans trop dépenser",
+        "excerpt": "Un rythme mensuel simple peut vous aider à épargner plus régulièrement et sans effort superflu.",
+        "readTime": "4 min de lecture"
+      },
+      {
+        "category": "Planification",
+        "title": "Quand réexaminer votre prêt avant une nouvelle évolution des taux",
+        "excerpt": "De faibles écarts de taux ou de durée peuvent avoir un effet important sur votre budget mensuel.",
+        "readTime": "5 min de lecture"
+      },
+      {
+        "category": "Logement",
+        "title": "Trois habitudes financières pour vivre sereinement votre première année de propriétaire",
+        "excerpt": "Une bonne organisation des factures, de l’épargne et des imprévus aide à réduire le stress quand le quotidien s’accélère.",
+        "readTime": "6 min de lecture"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Questions fréquentes",
+    "title": "Les réponses aux questions les plus fréquentes.",
+    "items": [
+      {
+        "question": "Combien de temps faut-il pour ouvrir un compte ?",
+        "answer": "La plupart des personnes peuvent effectuer les premières démarches en moins de dix minutes. L’accès au compte est souvent disponible peu après la vérification."
+      },
+      {
+        "question": "Y a-t-il des frais de tenue de compte mensuels ?",
+        "answer": "Nombre de nos comptes du quotidien sont conçus pour être simples à utiliser, et les frais sont clairement indiqués avant toute décision."
+      },
+      {
+        "question": "Puis-je envoyer de l’argent à mes proches ?",
+        "answer": "Oui. Les virements instantanés et les paiements programmés sont proposés dans l’espace bancaire numérique pour les types de comptes compatibles."
+      },
+      {
+        "question": "Comment protéger ma carte si je ne la retrouve plus ?",
+        "answer": "Vous pouvez immédiatement mettre votre carte en pause ou la bloquer depuis l’application, puis la réactiver quand vous le souhaitez."
+      },
+      {
+        "question": "Quels sont les plafonds de transaction quotidiens ?",
+        "answer": "Les plafonds varient selon le compte et le type d’opération. L’application vous indique clairement les règles en vigueur avant chaque virement."
+      },
+      {
+        "question": "Quels sont les horaires de l’assistance ?",
+        "answer": "L’assistance est disponible à toute heure pour les questions liées aux comptes et à la sécurité. Une aide en direct est proposée sur une large plage horaire."
+      },
+      {
+        "question": "Puis-je définir des objectifs d’épargne ?",
+        "answer": "Oui. Créez des plans d’épargne par objectif, automatisez vos virements et suivez votre progression depuis un tableau de bord unique."
+      },
+      {
+        "question": "Puis-je contrôler les achats en ligne avec ma carte ?",
+        "answer": "Notre application propose des outils pour suivre vos dépenses et l’activité de votre carte, ainsi que des alertes de transaction pour rester informé."
+      }
+    ]
+  },
+  "contact": {
+    "branchLocator": "Trouver une agence",
+    "branchDescription": "Trouvez un point d’accueil près de chez vous.",
+    "visitBranch": "Se rendre en agence",
+    "sending": "Envoi…",
+    "eyebrow": "Nous contacter",
+    "title": "Un spécialiste Westbridge est là pour vous accompagner.",
+    "description": "Vous souhaitez ouvrir un compte ou préparer un achat important ? Nous sommes là pour vous aider.",
+    "form": {
+      "name": "Nom",
+      "email": "Adresse e-mail",
+      "subject": "Objet",
+      "message": "Votre message",
+      "submit": "Envoyer le message"
+    },
+    "branches": [
+      {
+        "city": "Portland",
+        "address": "88 Alder Row",
+        "hours": "Lun–ven · 9:00–17:30"
+      },
+      {
+        "city": "Austin",
+        "address": "24 Cedar Avenue",
+        "hours": "Lun–sam · 9:00–18:00"
+      },
+      {
+        "city": "Chicago",
+        "address": "410 Elm Plaza",
+        "hours": "Lun–ven · 8:30–17:00"
+      },
+      {
+        "city": "Boston",
+        "address": "910 Harbor Street",
+        "hours": "Lun–ven · 9:00–18:30"
+      }
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "Infolettre",
+    "title": "Chaque semaine, un conseil pratique sur vos finances dans votre boîte mail.",
+    "placeholder": "Adresse e-mail",
+    "cta": "S’inscrire à l’infolettre",
+    "joining": "Inscription…"
+  },
+  "meta": {
+    "description": "Découvrez les comptes courants, l’épargne, les prêts et les services bancaires du quotidien de Westbridge National Bank. Démo uniquement ; aucun argent réel n’y est détenu."
+  },
+  "_notice": "Traduction automatique provisoire ; révision par un locuteur natif requise."
+}

@@ -1,0 +1,607 @@
+{
+  "photoCredits": {
+    "title": "Créditos das fotos",
+    "description": "Atribuição das fotografias ilustrativas usadas neste site de demonstração.",
+    "attributionPrefix": "Foto de",
+    "attributionSuffix": "no Pixabay",
+    "empty": "As fotos são usadas apenas para fins ilustrativos. As pessoas mostradas não são clientes nem funcionários da Westbridge."
+  },
+  "about": {
+    "sections": {
+      "story": "Nossa história",
+      "mission": "Nossa missão",
+      "values": "O que nos guia",
+      "timeline": "Um breve histórico",
+      "leadership": "Liderança",
+      "fictionalPeople": "Todas as pessoas mostradas são personagens fictícios criados para esta demonstração."
+    },
+    "eyebrow": "Sobre a Westbridge",
+    "title": "Um caminho mais seguro, construído em torno das pessoas.",
+    "description": "Somos um banco fictício, voltado para a comunidade e criado para este projeto de demonstração. Nossa história é sobre tornar as decisões financeiras do dia a dia mais fáceis de entender e menos estressantes.",
+    "story": "A Westbridge nasceu de uma ideia simples: os serviços bancários devem ajudar as pessoas a seguir em frente, não dificultar o entendimento das opções. Reunimos informações claras, ferramentas digitais úteis e atendimento humano em um só lugar.",
+    "mission": "Tornar os serviços bancários do dia a dia mais claros, acessíveis e acolhedores para as pessoas e empresas que atendemos.",
+    "values": [
+      {
+        "title": "Clareza",
+        "description": "Explicar as opções com simplicidade, mostrar os custos desde o início e deixar claro qual é o próximo passo."
+      },
+      {
+        "title": "Atenção",
+        "description": "Responder a cada dúvida com paciência e tratar cada cliente com respeito."
+      },
+      {
+        "title": "Responsabilidade",
+        "description": "Criar ferramentas e hábitos que apoiem decisões conscientes e de longo prazo."
+      },
+      {
+        "title": "Progresso",
+        "description": "Aprimorar continuamente a experiência sem perder de vista as necessidades reais."
+      }
+    ],
+    "timeline": [
+      {
+        "title": "Uma ideia clara",
+        "description": "Uma pequena equipe imaginou uma experiência bancária cotidiana mais fácil de entender."
+      },
+      {
+        "title": "A comunidade em primeiro lugar",
+        "description": "Na história de demonstração, foram inauguradas as primeiras agências fictícias da Westbridge nos bairros."
+      },
+      {
+        "title": "Digital desde o início",
+        "description": "As ferramentas móveis aproximaram o controle das contas e o planejamento da rotina diária."
+      },
+      {
+        "title": "Construindo o futuro",
+        "description": "Continuamos tornando a experiência mais útil, inclusiva e clara.",
+        "year": ""
+      }
+    ],
+    "leadership": [
+      {
+        "name": "Elena Brooks",
+        "role": "Diretora executiva",
+        "bio": "Uma líder fictícia dedicada à confiança dos clientes e à inovação prática."
+      },
+      {
+        "name": "Marcus Chen",
+        "role": "Diretor de relações com a comunidade",
+        "bio": "Um líder fictício que incorpora perspectivas locais às decisões sobre produtos."
+      },
+      {
+        "name": "Priya Nair",
+        "role": "Diretora de tecnologia",
+        "bio": "Uma líder fictícia que trabalha para tornar os serviços bancários digitais seguros e simples."
+      }
+    ]
+  },
+  "audiences": {
+    "personal": {
+      "eyebrow": "Serviços bancários para pessoas",
+      "title": "Serviços bancários para o dia a dia e para o que realmente importa.",
+      "description": "Acompanhe gastos, poupança, empréstimos e planejamento em uma única tela clara.",
+      "cta": "Conheça todos os produtos"
+    },
+    "business": {
+      "eyebrow": "Serviços bancários para empresas",
+      "title": "Uma forma mais cuidadosa de gerenciar o dinheiro da sua empresa.",
+      "description": "De pagamentos diários a reservas de caixa, conte com ferramentas práticas para manter as finanças da empresa em movimento.",
+      "cta": "Converse com nossa equipe"
+    }
+  },
+  "products": [
+    {
+      "title": "Conta corrente",
+      "description": "Uma conta confiável para gastos, pagamentos e transferências do dia a dia.",
+      "highlights": [
+        "Acesso simples para o dia a dia",
+        "Pagamento de contas e transferências agendadas",
+        "Alertas de movimentação em tempo real"
+      ]
+    },
+    {
+      "title": "Poupança",
+      "description": "Crie o hábito de poupar para seus objetivos, avançando com constância, uma etapa de cada vez.",
+      "highlights": [
+        "Reservas de poupança por objetivo",
+        "Transferências recorrentes",
+        "Acompanhamento claro do progresso"
+      ]
+    },
+    {
+      "title": "Cartões de crédito",
+      "description": "Mais flexibilidade nas compras, com controles úteis e visibilidade das movimentações.",
+      "highlights": [
+        "Controle imediato do cartão",
+        "Alertas de compra",
+        "Consulta simples das movimentações"
+      ]
+    },
+    {
+      "title": "Empréstimos",
+      "description": "Conheça opções de crédito com estimativas claras e orientação prática.",
+      "highlights": [
+        "Empréstimos pessoais e para veículos",
+        "Opções flexíveis de pagamento",
+        "Um simulador de parcelas simples"
+      ]
+    },
+    {
+      "title": "Financiamento imobiliário",
+      "description": "Planeje a compra de um imóvel com orientações que facilitam o entendimento dos valores.",
+      "highlights": [
+        "Opções com taxas fixas e ajustáveis",
+        "Estimativas de parcelas antes da solicitação",
+        "Suporte em todas as etapas"
+      ]
+    }
+  ],
+  "security": {
+    "eyebrow": "Segurança e privacidade",
+    "title": "Segurança para você se sentir confiante em cada etapa.",
+    "description": "Nossa abordagem de segurança nesta demonstração combina proteções para sua conta, alertas úteis e opções claras sobre suas informações.",
+    "practices": [
+      {
+        "title": "Acesso à conta",
+        "description": "A verificação em várias etapas e as checagens de sessão ajudam a proteger o acesso."
+      },
+      {
+        "title": "Proteção de dados",
+        "description": "A criptografia protege as informações durante a transmissão e o armazenamento."
+      },
+      {
+        "title": "Acompanhamento de transações",
+        "description": "Os alertas da conta ajudam você a perceber movimentações e agir rapidamente."
+      },
+      {
+        "title": "Controle do cartão",
+        "description": "Pause o cartão pelo aplicativo se não conseguir encontrá-lo e reative-o quando estiver com ele novamente."
+      },
+      {
+        "title": "Opções de privacidade",
+        "description": "Configurações claras facilitam o entendimento de como as informações são usadas."
+      },
+      {
+        "title": "Atendimento",
+        "description": "Entre em contato com a equipe de suporte se uma mensagem ou movimentação da conta parecer suspeita."
+      }
+    ],
+    "scamTips": [
+      "Nunca compartilhe uma senha de uso único, sua senha ou os dados completos do cartão em resposta a uma ligação ou mensagem inesperada.",
+      "Pense antes de abrir links. Acesse diretamente o site ou aplicativo oficial em vez de usar um link recebido em uma mensagem inesperada.",
+      "Desconfie de pedidos urgentes para transferir dinheiro, comprar cartões-presente ou manter uma transação em segredo.",
+      "Confirme a identidade de quem ligou por conta própria, usando um número confiável, e não o número informado durante a ligação.",
+      "Comunique atividades suspeitas imediatamente e bloqueie seu cartão se achar que ele pode ter sido comprometido."
+    ]
+  },
+  "faq": [
+    {
+      "name": "Contas",
+      "items": [
+        {
+          "question": "Em quanto tempo posso abrir uma conta?",
+          "answer": "A maioria das pessoas conclui o cadastro inicial em menos de dez minutos e tem acesso depois da verificação."
+        },
+        {
+          "question": "O que preciso para abrir uma conta?",
+          "answer": "Você precisará informar alguns dados pessoais básicos e informações de identidade. Esta demonstração não coleta nem armazena dados financeiros reais."
+        },
+        {
+          "question": "Posso abrir mais de uma conta?",
+          "answer": "Sim. Você pode separar os gastos do dia a dia e a poupança em contas diferentes para cada objetivo."
+        }
+      ]
+    },
+    {
+      "name": "Pagamentos e cartões",
+      "items": [
+        {
+          "question": "Posso enviar dinheiro para amigos e familiares?",
+          "answer": "Nesta demonstração, transferências instantâneas e pagamentos agendados estão disponíveis para os tipos de conta compatíveis."
+        },
+        {
+          "question": "Como protejo meu cartão se não conseguir encontrá-lo?",
+          "answer": "Pause ou bloqueie o cartão pelo aplicativo e reative-o se encontrá-lo."
+        },
+        {
+          "question": "Quais são os limites diários de transação?",
+          "answer": "Os limites variam conforme o tipo de movimentação. A interface deve mostrar os limites aplicáveis antes do envio de uma transferência."
+        },
+        {
+          "question": "Posso receber alertas de compras feitas com o cartão?",
+          "answer": "Sim. As notificações da conta ajudam você a acompanhar as movimentações recentes do cartão."
+        }
+      ]
+    },
+    {
+      "name": "Poupança e crédito",
+      "items": [
+        {
+          "question": "Posso definir metas de poupança?",
+          "answer": "Crie uma meta, agende transferências e acompanhe seu progresso no painel da conta."
+        },
+        {
+          "question": "Como calculo uma estimativa de parcela de empréstimo?",
+          "answer": "Use a calculadora de empréstimo na página de empréstimos para simular uma parcela com base no valor, na taxa e no prazo."
+        },
+        {
+          "question": "As taxas deste site são ofertas atuais?",
+          "answer": "Não. As taxas exibidas são apenas dados ilustrativos desta demonstração e não são ofertas reais."
+        }
+      ]
+    },
+    {
+      "name": "Atendimento e segurança",
+      "items": [
+        {
+          "question": "Em quais horários o atendimento está disponível?",
+          "answer": "Nesta demonstração fictícia, o atendimento para dúvidas sobre contas e segurança é apresentado como disponível 24 horas por dia."
+        },
+        {
+          "question": "Como a Westbridge protege minhas informações?",
+          "answer": "A demonstração descreve medidas como criptografia, verificação em várias etapas e alertas da conta."
+        },
+        {
+          "question": "O que devo fazer se receber uma mensagem suspeita?",
+          "answer": "Não compartilhe códigos nem acesse links inesperados. Entre em contato com o suporte pelo site ou aplicativo oficial."
+        }
+      ]
+    }
+  ],
+  "blog": [
+    {
+      "category": "Poupança",
+      "title": "Como criar uma rotina de poupança sem gastar além do planejado",
+      "excerpt": "Uma rotina mensal simples ajuda você a poupar com mais consistência e menos esforço.",
+      "readTime": "4 min de leitura",
+      "published": "14 de outubro de 2026",
+      "paragraphs": [
+        "Uma rotina de poupança funciona melhor quando cabe na sua vida real. Comece escolhendo um valor que você possa guardar com frequência, sem comprometer as contas, as despesas essenciais e um pouco de flexibilidade.",
+        "Depois, associe esse hábito a algo que já acontece todo mês, como o dia do pagamento. Uma transferência automática ajuda a manter o progresso sem exigir atenção constante.",
+        "Por fim, dê um nome a cada meta e confira o andamento de vez em quando. A ideia não é otimizar cada dólar, mas facilitar a repetição de boas decisões."
+      ]
+    },
+    {
+      "category": "Planejamento",
+      "title": "Quando revisar seu empréstimo antes que as taxas mudem novamente",
+      "excerpt": "Pequenas diferenças na taxa e no prazo podem afetar bastante seu orçamento mensal.",
+      "readTime": "5 min de leitura",
+      "published": "29 de setembro de 2026",
+      "paragraphs": [
+        "Revisar um empréstimo não é tanto perseguir uma taxa em destaque, mas verificar se as condições como um todo ainda fazem sentido para seus planos.",
+        "Compare o saldo atual, o prazo restante, as possíveis tarifas e o custo total de uma nova opção. Uma parcela mensal menor ainda pode representar um custo total maior se o prazo for ampliado.",
+        "Use as estimativas como ponto de partida e peça a um profissional qualificado que explique os detalhes antes de decidir. Os números deste site de demonstração são apenas ilustrativos."
+      ]
+    },
+    {
+      "category": "Imóveis",
+      "title": "Três hábitos financeiros para um primeiro ano mais tranquilo na casa própria",
+      "excerpt": "Uma rotina para contas, poupança e imprevistos ajuda a reduzir o estresse quando a vida fica corrida.",
+      "readTime": "6 min de leitura",
+      "published": "8 de setembro de 2026",
+      "paragraphs": [
+        "O primeiro ano em uma casa nova costuma trazer despesas que passam despercebidas. Revisar mensalmente as contas que estão por vir ajuda a manter esses custos visíveis.",
+        "Uma meta de poupança separada para a manutenção da casa permite reservar dinheiro para reparos e necessidades sazonais. Mesmo contribuições pequenas e regulares podem ajudar a lidar com o próximo imprevisto.",
+        "Mantenha a rotina simples: automatize o que puder, revise tudo uma vez por mês e faça ajustes quando sua situação mudar. Não existe um orçamento único que funcione para todo mundo."
+      ]
+    }
+  ],
+  "legal": {
+    "privacy": {
+      "title": "Aviso de privacidade",
+      "description": "Um exemplo de como um banco fictício poderia descrever suas práticas relacionadas a informações.",
+      "sections": [
+        {
+          "heading": "Informações nesta demonstração",
+          "body": "Este é um projeto educacional fictício. Não informe dados pessoais, bancários ou financeiros reais. Os formulários são simulados no cliente e as informações não são enviadas a nenhum serviço bancário."
+        },
+        {
+          "heading": "Como as informações poderiam ser usadas",
+          "body": "Em um serviço real, as informações podem ser usadas para fornecer os produtos solicitados, proteger contas, cumprir obrigações legais e melhorar o atendimento. Uma instituição real apresentaria todas as informações necessárias antes de coletar dados."
+        },
+        {
+          "heading": "Suas opções",
+          "body": "Um aviso de privacidade de um serviço em produção explicaria em detalhes como acessar, corrigir e excluir dados, definir preferências de comunicação, conhecer os prazos de retenção e entrar em contato."
+        },
+        {
+          "heading": "Dúvidas",
+          "body": "Esta demonstração não representa um banco real nem um escritório de privacidade. Os dados de contato exibidos em outras partes do site são fictícios."
+        }
+      ]
+    },
+    "terms": {
+      "title": "Termos de uso",
+      "description": "Exemplo de termos para a demonstração de um site bancário fictício.",
+      "sections": [
+        {
+          "heading": "Uso exclusivo para demonstração",
+          "body": "Westbridge National Bank não é um banco real. Este site é oferecido apenas para fins educacionais e de demonstração e não fornece orientação bancária, financeira, jurídica ou tributária."
+        },
+        {
+          "heading": "Sem contas ou ofertas reais",
+          "body": "As taxas, os saldos, os produtos, os locais, as pessoas e os serviços apresentados são fictícios ou ilustrativos. Nada neste site constitui uma oferta, aprovação ou compromisso de fornecer um produto financeiro."
+        },
+        {
+          "heading": "Uso aceitável",
+          "body": "Use o site de acordo com a lei. Não tente interromper seu funcionamento, acessar sistemas restritos nem enviar informações confidenciais."
+        },
+        {
+          "heading": "Alterações e disponibilidade",
+          "body": "Um serviço em produção definiria sua disponibilidade, a legislação aplicável, os processos de resolução de disputas e outras condições próprias de sua jurisdição e operação."
+        }
+      ]
+    },
+    "cookies": {
+      "title": "Aviso sobre cookies",
+      "description": "Informações de exemplo sobre cookies e armazenamento local do navegador neste projeto de demonstração.",
+      "sections": [
+        {
+          "heading": "Armazenamento essencial",
+          "body": "Esta demonstração usa o armazenamento do navegador para lembrar a aparência escolhida. O aplicativo não utiliza cookies de publicidade."
+        },
+        {
+          "heading": "Análise de uso",
+          "body": "Esta demonstração não configura rastreamento analítico. Um serviço real informaria quais tecnologias de análise utiliza e para quais finalidades."
+        },
+        {
+          "heading": "Seus controles",
+          "body": "Você pode apagar os dados do site nas configurações do navegador. Isso pode redefinir as preferências de aparência salvas."
+        }
+      ]
+    }
+  },
+  "images": {
+    "products": {
+      "checking": {
+        "alt": "Pessoa usando um aplicativo bancário no celular para controlar os gastos"
+      },
+      "savings": {
+        "alt": "Agenda e caderno de poupança sobre uma mesa com um orçamento em crescimento"
+      },
+      "credit-cards": {
+        "alt": "Mãos usando um cartão de pagamento por aproximação no caixa"
+      },
+      "loans": {
+        "alt": "Pequeno empresário analisando documentos financeiros em uma mesa"
+      },
+      "mortgages": {
+        "alt": "Família segurando as chaves da casa nova em frente ao imóvel"
+      }
+    },
+    "sections": {
+      "support": {
+        "alt": "Atendente usando um headset enquanto ajuda um cliente"
+      },
+      "security": {
+        "alt": "Tela de celular mostrando um acesso seguro e uma solicitação de verificação"
+      },
+      "cta-banner": {
+        "alt": "Nascer do sol sobre o horizonte de uma cidade, usado como faixa de chamada para ação bancária"
+      },
+      "branch": {
+        "alt": "Vista iluminada do saguão de uma agência bancária moderna"
+      }
+    },
+    "blog": {
+      "tip-1": {
+        "alt": "Calculadora de orçamento e anotações para um planejamento financeiro mensal"
+      },
+      "tip-2": {
+        "alt": "Laptop e ambiente de trabalho on-line seguro para operações bancárias"
+      },
+      "tip-3": {
+        "alt": "Moedas sendo colocadas em um pote de poupança para objetivos de longo prazo"
+      }
+    },
+    "about": {
+      "team": {
+        "alt": "Equipe empresarial colaborando durante uma reunião ao redor de uma mesa"
+      },
+      "headquarters": {
+        "alt": "Prédio comercial moderno com janelas de vidro e saguão bem cuidado"
+      }
+    }
+  },
+  "design": {
+    "colorTokens": [
+      {
+        "name": "Plano de fundo"
+      },
+      {
+        "name": "Cartão"
+      },
+      {
+        "name": "Primeiro plano"
+      },
+      {
+        "name": "Primária"
+      },
+      {
+        "name": "Secundária"
+      },
+      {
+        "name": "Suave"
+      },
+      {},
+      {
+        "name": "Bronze"
+      },
+      {
+        "name": "Borda"
+      },
+      {
+        "name": "Foco"
+      },
+      {
+        "name": "Destrutiva"
+      }
+    ],
+    "typographySamples": [
+      {
+        "sample": "Um caminho mais seguro"
+      },
+      {
+        "name": "Título 1",
+        "sample": "Serviços bancários com clareza"
+      },
+      {
+        "name": "Título 2",
+        "sample": "Feito para você"
+      },
+      {
+        "name": "Título 3",
+        "sample": "Atendimento atencioso"
+      },
+      {
+        "name": "Título 4",
+        "sample": "Essenciais do dia a dia"
+      },
+      {
+        "name": "Texto corrido",
+        "sample": "Uma experiência bancária clara e cuidadosa para o dia a dia."
+      },
+      {
+        "name": "Pequeno",
+        "sample": "Informações úteis e fáceis de ler."
+      }
+    ],
+    "page": {
+      "themeLabel": "Tema {{theme}}",
+      "themeNames": {
+        "light": "Claro",
+        "dark": "Escuro"
+      },
+      "typography": "Tipografia",
+      "buttonsAndFields": "Botões e campos",
+      "componentSpecimens": "Exemplos de componentes",
+      "componentDescription": "Testes interativos dos controles compartilhados.",
+      "navigationPanels": "Navegação e painéis",
+      "overview": "Visão geral",
+      "controls": "Controles",
+      "cardTitle": "Título do cartão",
+      "cardDescription": "Uma breve descrição do cartão.",
+      "cardContent": "O conteúdo do cartão segue os tokens de superfície e raio do estilo Classic.",
+      "accordionItem": "Item expansível",
+      "accordionContent": "O conteúdo expandido permanece no fluxo normal do documento.",
+      "openSheet": "Abrir painel",
+      "sheetPanel": "Painel lateral",
+      "sheetDescription": "O gerenciamento acessível do foco é fornecido pelo Radix Dialog.",
+      "formControls": "Controles de formulário",
+      "firstTab": "Primeira aba",
+      "secondTab": "Segunda aba",
+      "firstTabContent": "Conteúdo da primeira aba.",
+      "secondTabContent": "Conteúdo da segunda aba.",
+      "accountType": "Tipo de conta",
+      "exampleValue": "Valor de exemplo: {{value}}",
+      "defaultBadge": "Selo padrão",
+      "secondaryBadge": "Secundário",
+      "outlineBadge": "Contorno",
+      "tooltip": "Dica de contexto",
+      "tooltipDescription": "Informação contextual útil",
+      "showToast": "Mostrar notificação",
+      "demoToast": "Notificação de demonstração exibida",
+      "carousel": "Carrossel",
+      "firstSlide": "Primeiro slide",
+      "secondSlide": "Segundo slide",
+      "thirdSlide": "Terceiro slide",
+      "title": "Fundamentos do design Classic",
+      "eyebrow": "Prévia para desenvolvedores",
+      "description": "Referências de cores, tipografia, logotipo e componentes da interface da Westbridge.",
+      "primary": "Primário",
+      "outline": "Contorno",
+      "secondary": "Secundário",
+      "ghost": "Transparente",
+      "destructive": "Destrutivo",
+      "emailAddress": "Endereço de e-mail",
+      "emailPlaceholder": "voce@exemplo.test",
+      "message": "Mensagem",
+      "notePlaceholder": "Uma breve observação"
+    }
+  },
+  "labels": {
+    "about": "Sobre",
+    "personal": "Pessoa física",
+    "business": "Empresas",
+    "products": "Produtos",
+    "loans": "Empréstimos",
+    "rates": "Taxas",
+    "security": "Segurança",
+    "helpCenter": "Central de ajuda",
+    "faq": "Perguntas frequentes",
+    "contact": "Contato",
+    "blog": "Artigos",
+    "notFound": "Não encontrado"
+  },
+  "actions": {
+    "exploreProduct": "Conheça {{product}}",
+    "viewRates": "Ver taxas de demonstração",
+    "askAboutProduct": "Pergunte sobre {{product}}",
+    "readArticle": "Ler artigo"
+  },
+  "productsPage": {
+    "title": "Produtos para os planos do dia a dia e as grandes conquistas",
+    "description": "Conheça os produtos fictícios da Westbridge, cada um pensado para deixar mais claro seu próximo passo financeiro.",
+    "sectionsLabel": "Seções de produtos",
+    "itemNumber": "{{number}} / Produto"
+  },
+  "tables": {
+    "product": "Produto",
+    "exampleRate": "Taxa de exemplo",
+    "illustrativeRate": "Taxa ilustrativa",
+    "designedFor": "Ideal para",
+    "feature": "Característica"
+  },
+  "loansPage": {
+    "title": "Peça crédito com um plano que combina com você",
+    "description": "Conheça opções fictícias de empréstimo, compare taxas ilustrativas e estime as parcelas mensais antes de decidir.",
+    "types": {
+      "personal": {
+        "title": "Empréstimos pessoais",
+        "description": "Planeje uma compra ou reúna despesas em parcelas mensais fixas."
+      },
+      "vehicle": {
+        "title": "Financiamento de veículos",
+        "description": "Conheça uma forma previsível de financiar um veículo novo ou usado."
+      },
+      "home": {
+        "title": "Financiamento imobiliário",
+        "description": "Conheça opções de financiamento imobiliário e crédito com garantia de imóvel para sua próxima etapa."
+      }
+    },
+    "rateHeading": "Taxas ilustrativas de empréstimos",
+    "disclaimer": "Taxas e estimativas são apenas dados ilustrativos desta demonstração, não são ofertas nem aconselhamento financeiro."
+  },
+  "ratesPage": {
+    "title": "Taxas e detalhes dos produtos",
+    "description": "Taxas ilustrativas dos produtos apresentados nesta demonstração. As taxas não são oferecidas por uma instituição financeira real.",
+    "disclaimer": "Todas as taxas são dados de exemplo de um projeto de demonstração e podem mudar neste cenário fictício."
+  },
+  "securityPage": {
+    "scamEyebrow": "Proteja-se contra golpes",
+    "scamTitle": "Pare, confirme e só então aja.",
+    "disclaimer": "A Westbridge é uma demonstração fictícia. Nunca use credenciais ou informações financeiras reais neste site."
+  },
+  "faqPage": {
+    "title": "Perguntas frequentes",
+    "description": "Pesquise respostas sobre contas, pagamentos, crédito, atendimento e segurança.",
+    "searchLabel": "Pesquisar perguntas frequentes",
+    "searchPlaceholder": "Pesquisar perguntas",
+    "noResults": "Nenhuma pergunta corresponde a “{{query}}”. Tente outra busca."
+  },
+  "blogPage": {
+    "title": "Informações para as decisões do dia a dia",
+    "description": "Orientações práticas e fictícias para facilitar o entendimento da sua rotina financeira.",
+    "eyebrow": "Revista Westbridge",
+    "notFoundTitle": "Artigo não encontrado",
+    "notFoundDescription": "Este artigo não está disponível nesta demonstração.",
+    "browseArticles": "Ver todos os artigos",
+    "postMetadata": "{{category}} · {{published}} · {{readTime}}",
+    "disclaimer": "Este artigo é um conteúdo educativo fictício para um projeto de demonstração e não constitui aconselhamento financeiro.",
+    "backToInsights": "Voltar às informações"
+  },
+  "legalPage": {
+    "eyebrow": "Informações legais",
+    "sampleNotice": "O texto em inglês é um conteúdo de exemplo."
+  },
+  "_notice": "Tradução automática provisória; requer revisão por uma pessoa falante nativa."
+}

@@ -1,0 +1,439 @@
+{
+  "hero": {
+    "card": {
+      "ariaLabel": "Illustrazione di una carta di debito Westbridge (demo, non è una carta reale)",
+      "cardholder": "Titolare della carta",
+      "expiryLabel": "Scadenza",
+      "holder": "MEMBRO WESTBRIDGE"
+    },
+    "eyebrow": "La serenità di ogni giorno, con una banca al tuo fianco",
+    "headline": "Una banca chiara, semplice e pronta ad accompagnarti nel tempo.",
+    "subheadline": "Apri un conto corrente, fai crescere i tuoi risparmi e tieni sotto controllo ogni trasferimento con un'esperienza digitale semplice fin dal primo giorno.",
+    "primaryCta": "Apri un conto",
+    "secondaryCta": "Scopri come funziona"
+  },
+  "videoShowcase": {
+    "unmute": "Attiva l'audio del video",
+    "tapToUnmute": "Tocca per attivare l'audio",
+    "replay": "Riproduci di nuovo",
+    "play": "Riproduci il video",
+    "eyebrow": "Guarda come funziona",
+    "heading": "Scopri Westbridge",
+    "description": "Scopri da vicino un modo più chiaro di gestire le operazioni bancarie di ogni giorno."
+  },
+  "trust": {
+    "title": "Un'esperienza bancaria migliore, ogni giorno",
+    "stats": [
+      {
+        "label": "clienti",
+        "note": "con conti personali e aziendali"
+      },
+      {
+        "label": "filiali",
+        "note": "al servizio delle comunità in tutto il Paese"
+      },
+      {
+        "label": "disponibilità",
+        "note": "per un accesso sicuro e sempre disponibile"
+      },
+      {
+        "label": "anni",
+        "note": "di servizio affidabile"
+      }
+    ],
+    "note": "Dati puramente indicativi per questa demo."
+  },
+  "products": {
+    "eyebrow": "Prodotti",
+    "title": "Soluzioni flessibili per il tuo modo di vivere e lavorare.",
+    "items": [
+      {
+        "title": "Conto corrente",
+        "description": "Gestisci spese, pagamenti e risparmi con aggiornamenti in tempo reale e bollette facili da pagare."
+      },
+      {
+        "title": "Risparmio",
+        "description": "Dai slancio ai tuoi progetti con obiettivi remunerativi, trasferimenti ricorrenti e un monitoraggio semplice."
+      },
+      {
+        "title": "Carte di credito",
+        "description": "Gestisci le spese quotidiane con flessibilità, vantaggi, controlli sugli acquisti e avvisi immediati."
+      },
+      {
+        "title": "Prestiti",
+        "description": "Affronta con serenità i momenti importanti della vita grazie a condizioni trasparenti e assistenza dedicata."
+      },
+      {
+        "title": "Mutui",
+        "description": "Avvicinati all'acquisto della tua casa con una consulenza adatta ai tuoi tempi e ai tuoi obiettivi."
+      }
+    ]
+  },
+  "whyWestbridge": {
+    "eyebrow": "Perché Westbridge",
+    "title": "Una banca attenta, pensata per la vita di tutti i giorni.",
+    "items": [
+      {
+        "title": "Trasferimenti immediati",
+        "description": "Sposta denaro tra conti e persone in pochi secondi, senza complicazioni."
+      },
+      {
+        "title": "Assistenza 24 ore su 24",
+        "description": "Parla con uno specialista ogni volta che hai una domanda, di giorno o di notte."
+      },
+      {
+        "title": "Nessun costo nascosto",
+        "description": "Conosci subito tutti i costi grazie a condizioni chiare e senza sorprese."
+      },
+      {
+        "title": "Analisi intelligenti delle spese",
+        "description": "Esamina le tendenze, suddividi gli acquisti per categoria e tieni sotto controllo il tuo budget mensile."
+      },
+      {
+        "title": "Controlli della carta",
+        "description": "Blocca o riattiva la carta e imposta limiti direttamente dall'app, in tutta autonomia."
+      },
+      {
+        "title": "Sicurezza",
+        "description": "Protezione integrata con verifiche a più fattori, avvisi e monitoraggio affidabile."
+      }
+    ]
+  },
+  "dashboardPreview": {
+    "ariaLabel": "Illustrazione del pannello online Westbridge con dati di esempio",
+    "cashFlowChartLabel": "Andamento indicativo dei flussi di cassa",
+    "eyebrow": "Il tuo denaro, a colpo d'occhio",
+    "heading": "Una visione chiara delle tue finanze quotidiane.",
+    "description": "Consulta entrate, uscite e movimenti più importanti in un unico spazio semplice.",
+    "benefits": [
+      "Analisi delle spese per individuare facilmente le abitudini",
+      "Avvisi immediati sui movimenti del conto",
+      "Controlli della carta per gestirla in autonomia",
+      "Estratti conto mensili disponibili quando ti servono"
+    ],
+    "account": {
+      "label": "Saldo disponibile"
+    },
+    "stats": [
+      {
+        "label": "Entrate"
+      },
+      {
+        "label": "Spese"
+      }
+    ],
+    "activityLabel": "Movimenti recenti",
+    "activityPeriod": "Questo mese",
+    "transactions": [
+      {
+        "name": "Marketplace",
+        "detail": "Pagamento con carta"
+      },
+      {
+        "name": "Stipendio",
+        "detail": "Pagamento con carta"
+      },
+      {
+        "name": "Spesa alimentare",
+        "detail": "Pagamento con carta"
+      }
+    ],
+    "cashFlow": "Flusso di cassa",
+    "notification": "Pagamento ricevuto +$2,450.00",
+    "securityNotice": "Carta protetta",
+    "caption": "Dati di esempio a scopo illustrativo.",
+    "cta": "Apri un conto"
+  },
+  "steps": {
+    "eyebrow": "Come funziona",
+    "title": "Tre semplici passaggi per iniziare.",
+    "items": [
+      {
+        "title": "Scegli il conto più adatto",
+        "description": "Individua la soluzione giusta per i tuoi obiettivi, che tu voglia gestire le spese quotidiane, risparmiare o fare entrambe le cose."
+      },
+      {
+        "title": "Configura il tuo profilo",
+        "description": "Inserisci i dati essenziali, verifica la tua identità e personalizza le preferenze del conto in pochi minuti."
+      },
+      {
+        "title": "Inizia a gestire il tuo denaro con serenità",
+        "description": "Aggiungi fondi al conto, crea le tue abitudini e accedi subito ai tuoi strumenti finanziari."
+      }
+    ]
+  },
+  "calculators": {
+    "results": {
+      "estimatedPayments": "Rate stimate",
+      "monthlyPayment": "Rata mensile",
+      "totalInterest": "Interessi totali",
+      "totalRepayment": "Rimborso totale",
+      "projectedBalance": "Saldo previsto",
+      "finalBalance": "Saldo finale",
+      "totalContributed": "Totale versato",
+      "interestEarned": "Interessi maturati",
+      "savingsChart": "Grafico della crescita dei risparmi"
+    },
+    "eyebrow": "Strumenti di pianificazione",
+    "title": "Valuta la tua prossima scelta prima di decidere.",
+    "note": "Stime a scopo puramente illustrativo.",
+    "loan": {
+      "label": "Calcolatore del prestito",
+      "amountLabel": "Importo del prestito",
+      "rateLabel": "Tasso annuo",
+      "termLabel": "Durata in anni"
+    },
+    "savings": {
+      "label": "Crescita dei risparmi",
+      "initialLabel": "Deposito iniziale",
+      "contributionLabel": "Versamento mensile",
+      "rateLabel": "Tasso annuo",
+      "yearsLabel": "Anni"
+    }
+  },
+  "rates": {
+    "columns": {
+      "product": "Prodotto",
+      "rate": "Tasso",
+      "bestFor": "Ideale per"
+    },
+    "eyebrow": "Tassi",
+    "title": "Condizioni indicative per alcuni dei prodotti più richiesti.",
+    "tabs": [
+      {
+        "label": "Risparmio",
+        "rows": [
+          {
+            "product": "Risparmio Classic",
+            "feature": "Accesso flessibile"
+          },
+          {
+            "product": "Obiettivi di risparmio",
+            "feature": "Ideale per i trasferimenti automatici"
+          },
+          {
+            "product": "Riserva aziendale",
+            "feature": "Pianificazione dei flussi di cassa"
+          }
+        ]
+      },
+      {
+        "label": "Prestiti",
+        "rows": [
+          {
+            "product": "Prestito personale",
+            "feature": "Tempi rapidi"
+          },
+          {
+            "product": "Prestito con garanzia sulla casa",
+            "feature": "Rimborso flessibile"
+          },
+          {
+            "product": "Prestito per veicoli",
+            "feature": "Rate mensili semplici"
+          }
+        ]
+      },
+      {
+        "label": "Mutui",
+        "rows": [
+          {
+            "product": "Tasso fisso a 30 anni",
+            "feature": "Rate prevedibili"
+          },
+          {
+            "product": "Tasso fisso a 15 anni",
+            "feature": "Crescita più rapida del capitale"
+          },
+          {
+            "product": "Tasso variabile",
+            "feature": "Tasso iniziale più basso"
+          }
+        ]
+      }
+    ]
+  },
+  "security": {
+    "eyebrow": "Sicurezza e privacy",
+    "title": "Pensato per lasciarti il controllo del tuo denaro e dei tuoi dati.",
+    "items": [
+      "Crittografia dei dati durante il trasferimento e l'archiviazione",
+      "Autenticazione a due fattori",
+      "Monitoraggio delle frodi e avvisi",
+      "Blocco immediato della carta dall'app",
+      "Notifiche del conto in tempo reale",
+      "Privacy integrata in ogni operazione"
+    ]
+  },
+  "mobileApp": {
+    "available": "Disponibile",
+    "balanceChart": "Grafico del saldo nell'app",
+    "transfers": "Trasferimenti",
+    "spending": "Spese",
+    "eyebrow": "App mobile",
+    "title": "La tua banca sempre con te, senza complicazioni.",
+    "description": "Controlla i saldi, trasferisci denaro e gestisci le carte con un'esperienza mobile intuitiva, pensata per ogni giorno.",
+    "features": [
+      "Controllo rapido dei saldi",
+      "Categorie di spesa intelligenti",
+      "Controlli immediati della carta"
+    ],
+    "storeButtons": [
+      {
+        "label": "App Store",
+        "meta": "Prossimamente"
+      },
+      {
+        "label": "Google Play",
+        "meta": "Prossimamente"
+      }
+    ]
+  },
+  "testimonials": {
+    "eyebrow": "Le storie dei clienti",
+    "title": "I clienti scelgono Westbridge perché il rapporto è personale.",
+    "items": [
+      {
+        "name": "Alicia R.",
+        "role": "Designer freelance",
+        "quote": "Con l'app tengo facilmente sotto controllo le spese e i trasferimenti sono immediati. È tutto semplice e mai opprimente."
+      },
+      {
+        "name": "Jordan L.",
+        "role": "Acquirente alla prima casa",
+        "quote": "La consulenza sul mutuo è stata chiara e utile. Non mi sono mai sentito sotto pressione e ogni passaggio era facile da capire."
+      },
+      {
+        "name": "Maya P.",
+        "role": "Responsabile operativo",
+        "quote": "Gli strumenti del conto aziendale ci aiutano a gestire i flussi di cassa senza complicazioni. L'interfaccia è chiara e affidabile."
+      },
+      {
+        "name": "Theo N.",
+        "role": "Genitore di due figli",
+        "quote": "Obiettivi di risparmio, avvisi e trasferimenti ricorrenti funzionano insieme in modo finalmente facile da gestire."
+      },
+      {
+        "name": "Sofia K.",
+        "role": "Consulente da remoto",
+        "quote": "Si vede che il servizio è pensato per la vita reale. Posso controllare i saldi e trasferire denaro in meno di un minuto."
+      },
+      {
+        "name": "Daniel B.",
+        "role": "Titolare di una piccola impresa",
+        "quote": "I controlli della carta e gli strumenti di sicurezza mi fanno sentire tranquillo. È una banca pensata per chi ha tante cose da fare, non solo scartoffie."
+      }
+    ]
+  },
+  "blog": {
+    "eyebrow": "Approfondimenti",
+    "title": "Consigli pratici per i momenti che contano di più.",
+    "posts": [
+      {
+        "category": "Risparmio",
+        "title": "Creare una buona abitudine di risparmio senza spendere troppo",
+        "excerpt": "Una semplice routine mensile può aiutarti a risparmiare con costanza e senza complicazioni.",
+        "readTime": "4 min di lettura"
+      },
+      {
+        "category": "Pianificazione",
+        "title": "Quando rivedere il prestito prima che cambino di nuovo i tassi",
+        "excerpt": "Piccole differenze nel tasso e nella durata possono incidere in modo significativo sul budget mensile.",
+        "readTime": "5 min di lettura"
+      },
+      {
+        "category": "Casa",
+        "title": "Tre abitudini finanziarie per vivere con più serenità il primo anno da proprietario",
+        "excerpt": "Un sistema stabile per bollette, risparmi ed emergenze riduce lo stress nei periodi più intensi.",
+        "readTime": "6 min di lettura"
+      }
+    ]
+  },
+  "faq": {
+    "eyebrow": "Domande frequenti",
+    "title": "Le risposte alle domande più comuni.",
+    "items": [
+      {
+        "question": "Quanto tempo serve per aprire un conto?",
+        "answer": "La maggior parte delle persone completa la configurazione iniziale in meno di dieci minuti e può accedere al conto poco dopo la verifica."
+      },
+      {
+        "question": "Sono previste spese mensili di gestione?",
+        "answer": "Molti dei nostri conti per le operazioni quotidiane sono pensati per essere semplici da gestire. Le spese sono indicate chiaramente prima di ogni decisione."
+      },
+      {
+        "question": "Posso inviare denaro ad amici e familiari?",
+        "answer": "Sì. Per i tipi di conto supportati, puoi effettuare trasferimenti immediati e programmare pagamenti tramite i servizi bancari digitali."
+      },
+      {
+        "question": "Come posso proteggere la carta se non la trovo più?",
+        "answer": "Puoi sospendere o bloccare subito la carta dall'app e riattivarla quando vuoi."
+      },
+      {
+        "question": "Quali sono i limiti giornalieri delle operazioni?",
+        "answer": "I limiti variano in base al conto e al tipo di operazione. Prima di ogni trasferimento, l'app mostra chiaramente le condizioni applicabili."
+      },
+      {
+        "question": "In quali orari è disponibile l'assistenza?",
+        "answer": "L'assistenza per domande sul conto e sulla sicurezza è disponibile 24 ore su 24; il supporto con un operatore è attivo per un orario prolungato."
+      },
+      {
+        "question": "Posso impostare obiettivi di risparmio?",
+        "answer": "Sì. Puoi creare piani di risparmio per i tuoi obiettivi, automatizzare i trasferimenti e monitorare i progressi da un unico pannello."
+      },
+      {
+        "question": "L'app offre controlli per gli acquisti online?",
+        "answer": "La nostra app include strumenti per monitorare le spese e i movimenti della carta e ricevere avvisi sulle operazioni, così sai sempre cosa succede."
+      }
+    ]
+  },
+  "contact": {
+    "branchLocator": "Trova una filiale",
+    "branchDescription": "Trova un ufficio di assistenza vicino a te.",
+    "visitBranch": "Visita una filiale",
+    "sending": "Invio in corso…",
+    "eyebrow": "Contatti",
+    "title": "Parla con uno specialista Westbridge quando hai bisogno di assistenza.",
+    "description": "Che tu voglia un consiglio per aprire un conto o pianificare un acquisto importante, siamo qui per aiutarti.",
+    "form": {
+      "name": "Nome",
+      "email": "E-mail",
+      "subject": "Oggetto",
+      "message": "Messaggio",
+      "submit": "Invia il messaggio"
+    },
+    "branches": [
+      {
+        "city": "Portland",
+        "address": "88 Alder Row",
+        "hours": "Lun–ven · 9:00–17:30"
+      },
+      {
+        "city": "Austin",
+        "address": "24 Cedar Avenue",
+        "hours": "Lun–sab · 9:00–18:00"
+      },
+      {
+        "city": "Chicago",
+        "address": "410 Elm Plaza",
+        "hours": "Lun–ven · 8:30–17:00"
+      },
+      {
+        "city": "Boston",
+        "address": "910 Harbor Street",
+        "hours": "Lun–ven · 9:00–18:30"
+      }
+    ]
+  },
+  "newsletter": {
+    "eyebrow": "Aggiornamenti via e-mail",
+    "title": "Un consiglio pratico per le tue finanze, ogni settimana nella tua casella di posta.",
+    "placeholder": "Indirizzo e-mail",
+    "cta": "Iscriviti alla newsletter",
+    "joining": "Iscrizione in corso…"
+  },
+  "meta": {
+    "description": "Scopri conti correnti, soluzioni di risparmio, prestiti e strumenti bancari quotidiani con Westbridge National Bank. Solo demo; non vengono custoditi fondi reali."
+  },
+  "_notice": "Traduzione automatica provvisoria; richiede la revisione di una persona madrelingua."
+}

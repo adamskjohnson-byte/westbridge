@@ -1,0 +1,486 @@
+{
+  "nav": {
+    "personal": "Privatkunden",
+    "business": "Geschäftskunden",
+    "loans": "Kredite",
+    "security": "Sicherheit"
+  },
+  "buttons": {
+    "login": "Anmelden",
+    "openAccount": "Konto eröffnen"
+  },
+  "footer": {
+    "disclaimer": "Nur eine Demo. Westbridge National Bank ist keine echte Bank. Es wird kein echtes Geld verwahrt.",
+    "photoSource": "Fotos von Pixabay",
+    "photoCredits": "Bildnachweise"
+  },
+  "authPitch": {
+    "eyebrow": "Klar starten mit Westbridge",
+    "heading": "Ihr Banking für jeden Tag, übersichtlich organisiert.",
+    "body": "Ein ruhiger Ort, an dem Sie die Konten und Pläne verwalten, die Sie voranbringen.",
+    "benefits": [
+      "Giro- und Sparkonten übersichtlich im Blick behalten",
+      "Aktivität und Status von Überweisungen sofort sehen",
+      "Unterstützung von einem Team erhalten, das zuhört"
+    ],
+    "disclaimer": "Nur eine Demo. Westbridge National Bank ist keine echte Bank. Es wird kein echtes Geld verwahrt."
+  },
+  "navigation": {
+    "primaryLabel": "Hauptnavigation",
+    "primaryLinks": [
+      {
+        "label": "Privatkunden"
+      },
+      {
+        "label": "Geschäftskunden"
+      },
+      {
+        "label": "Kredite"
+      },
+      {
+        "label": "Sicherheit"
+      }
+    ],
+    "footerColumns": [
+      {
+        "title": "Produkte",
+        "links": [
+          {
+            "label": "Girokonto"
+          },
+          {
+            "label": "Sparen"
+          },
+          {
+            "label": "Alle Produkte"
+          },
+          {
+            "label": "Kredite"
+          },
+          {
+            "label": "Zinsen"
+          }
+        ]
+      },
+      {
+        "title": "Unternehmen",
+        "links": [
+          {
+            "label": "Über Westbridge"
+          },
+          {
+            "label": "Führungsteam"
+          },
+          {
+            "label": "Kontakt"
+          }
+        ]
+      },
+      {
+        "title": "Hilfe",
+        "links": [
+          {
+            "label": "Hilfezentrum"
+          },
+          {
+            "label": "Artikel"
+          },
+          {
+            "label": "Sicherheit"
+          }
+        ]
+      },
+      {
+        "title": "Rechtliches",
+        "links": [
+          {
+            "label": "Datenschutz"
+          },
+          {
+            "label": "Nutzungsbedingungen"
+          },
+          {
+            "label": "Cookies"
+          }
+        ]
+      }
+    ]
+  },
+  "brand": {
+    "homeLabel": "Startseite der Westbridge National Bank"
+  },
+  "accessibility": {
+    "skipToContent": "Zum Inhalt springen",
+    "closeMenu": "Menü schließen",
+    "sliderValue": "Wert {{value}}"
+  },
+  "navbar": {
+    "dashboard": "Übersicht",
+    "loggingOut": "Sie werden abgemeldet…",
+    "logOut": "Abmelden",
+    "account": "Konto",
+    "accountMenuLabel": "Kontomenü für {{name}}",
+    "login": "Anmelden",
+    "openAccount": "Konto eröffnen",
+    "closeNavigation": "Navigationsmenü schließen",
+    "openNavigation": "Navigationsmenü öffnen"
+  },
+  "languageSwitcher": {
+    "triggerLabel": "Sprache: {{language}}",
+    "searchLabel": "Sprachen suchen",
+    "searchPlaceholder": "Sprachen suchen",
+    "listLabel": "Sprachen",
+    "noResults": "Keine Sprachen gefunden."
+  },
+  "theme": {
+    "toggleLabel": "Aktuelles Erscheinungsbild: {{current}}. Zum Erscheinungsbild {{next}} wechseln",
+    "names": {
+      "system": "System",
+      "light": "Hell",
+      "dark": "Dunkel"
+    }
+  },
+  "breadcrumbs": {
+    "label": "Brotkrumennavigation",
+    "home": "Startseite"
+  },
+  "carousel": {
+    "previous": "Vorherige Folie",
+    "next": "Nächste Folie"
+  },
+  "forms": {
+    "firstName": "Vorname",
+    "lastName": "Nachname",
+    "emailAddress": "E-Mail-Adresse",
+    "password": "Passwort",
+    "confirmPassword": "Passwort bestätigen",
+    "newPassword": "Neues Passwort",
+    "confirmNewPassword": "Neues Passwort bestätigen",
+    "validation": {
+      "emailRequired": "Bitte geben Sie Ihre E-Mail-Adresse ein.",
+      "emailInvalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein.",
+      "emailMax": "Die E-Mail-Adresse darf höchstens 254 Zeichen lang sein.",
+      "nameMin": "Bitte geben Sie mindestens 2 Zeichen ein.",
+      "nameMax": "Der Name darf höchstens 60 Zeichen lang sein.",
+      "nameMax100": "Der Name darf höchstens 100 Zeichen lang sein.",
+      "subjectMin": "Bitte geben Sie einen Betreff ein.",
+      "subjectMax": "Der Betreff darf höchstens 150 Zeichen lang sein.",
+      "messageMin": "Bitte ergänzen Sie noch ein paar Details.",
+      "messageMax": "Die Nachricht darf höchstens 2000 Zeichen lang sein.",
+      "passwordMin": "Verwenden Sie mindestens 10 Zeichen.",
+      "passwordLowercase": "Fügen Sie einen Kleinbuchstaben hinzu.",
+      "passwordUppercase": "Fügen Sie einen Großbuchstaben hinzu.",
+      "passwordNumber": "Fügen Sie eine Zahl hinzu.",
+      "passwordRequired": "Bitte geben Sie Ihr Passwort ein.",
+      "confirmPassword": "Bitte bestätigen Sie Ihr Passwort.",
+      "acceptTerms": "Sie müssen den Bedingungen zustimmen, um fortzufahren.",
+      "passwordMismatch": "Die Passwörter stimmen nicht überein."
+    },
+    "errors": {
+      "rateLimit": "Zu viele Versuche. Bitte versuchen Sie es in einer Minute erneut.",
+      "reviewAndRetry": "Bitte überprüfen Sie Ihre Angaben und versuchen Sie es erneut.",
+      "connection": "Verbindung nicht möglich. Prüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
+      "submit": "Ihre Anfrage konnte nicht gesendet werden. Bitte versuchen Sie es erneut."
+    },
+    "contact": {
+      "success": "Ihre Nachricht wurde gesendet."
+    },
+    "newsletter": {
+      "success": "Sie haben den Newsletter abonniert."
+    }
+  },
+  "actions": {
+    "continue": "Weiter"
+  },
+  "auth": {
+    "startHere": "Hier geht es los",
+    "openAccount": "Konto eröffnen",
+    "registerDescription": "Noch ein paar Angaben, dann senden wir Ihnen einen Link zur E-Mail-Bestätigung.",
+    "createAccount": "Konto erstellen",
+    "creatingAccount": "Konto wird erstellt…",
+    "acceptTermsLead": "Ich akzeptiere die",
+    "demoTerms": "Demo-Bedingungen",
+    "alreadyHaveAccount": "Sie haben bereits ein Konto?",
+    "signIn": "Anmelden",
+    "signInHeading": "Bei Ihrem Konto anmelden",
+    "loginDescription": "Verwenden Sie die Zugangsdaten Ihres Westbridge-Demokontos.",
+    "welcomeBack": "Willkommen zurück",
+    "newToWestbridge": "Neu bei Westbridge?",
+    "forgotPassword": "Passwort vergessen?",
+    "rememberMe": "Auf diesem Gerät angemeldet bleiben",
+    "signingIn": "Anmeldung läuft…",
+    "resetPassword": "Passwort zurücksetzen",
+    "forgotDescription": "Geben Sie die E-Mail-Adresse Ihres Kontos ein. Wenn sie hinterlegt ist, senden wir Ihnen einen Link zum Zurücksetzen.",
+    "nextStep": "Nächster Schritt",
+    "checkInbox": "Posteingang prüfen",
+    "resetEmailSentIfExists": "Falls diese E-Mail-Adresse bei uns hinterlegt ist, ist ein Link zum Zurücksetzen unterwegs.",
+    "returnToSignIn": "Zurück zur Anmeldung",
+    "accountRecovery": "Kontowiederherstellung",
+    "forgotPasswordQuestion": "Passwort vergessen?",
+    "sending": "Wird gesendet…",
+    "sendResetLink": "Link zum Zurücksetzen senden",
+    "backToSignIn": "Zurück zur Anmeldung",
+    "chooseNewPassword": "Neues Passwort festlegen",
+    "resetDescription": "Legen Sie ein neues Passwort für Ihr Westbridge-Demokonto fest.",
+    "passwordResetSuccess": "Ihr Passwort wurde zurückgesetzt. Melden Sie sich mit Ihrem neuen Passwort an.",
+    "resetLinkUnavailable": "Link nicht verfügbar",
+    "requestNewLink": "Neuen Link anfordern",
+    "resetLinkInvalid": "Dieser Link zum Zurücksetzen des Passworts ist ungültig oder abgelaufen. Fordern Sie einen neuen Link an, um fortzufahren.",
+    "requestNewResetLink": "Neuen Link zum Zurücksetzen anfordern",
+    "resetEmailLabel": "Für {{email}}",
+    "saving": "Wird gespeichert…",
+    "saveNewPassword": "Neues Passwort speichern",
+    "verifyEmail": "E-Mail-Adresse bestätigen",
+    "verifyDescription": "Bestätigen Sie Ihre E-Mail-Adresse, um die Einrichtung Ihres Kontos abzuschließen.",
+    "verificationLinkSent": "Ein neuer Bestätigungslink ist unterwegs.",
+    "oneLastStep": "Noch ein letzter Schritt",
+    "verificationSentTo": "Wir haben einen Bestätigungslink an {{email}} gesendet. Öffnen Sie ihn, um die Einrichtung Ihres Kontos abzuschließen.",
+    "resendAvailable_one": "Erneutes Senden in {{count}} Sekunde möglich",
+    "resendAvailable_other": "Erneutes Senden in {{count}} Sekunden möglich",
+    "resendVerification": "Bestätigungs-E-Mail erneut senden",
+    "emailConfirmed": "E-Mail-Adresse bestätigt",
+    "allSet": "Alles erledigt.",
+    "emailVerifiedContinue": "Ihre E-Mail-Adresse wurde bestätigt. Fahren Sie fort, wenn Sie bereit sind.",
+    "linkUnavailable": "Link nicht verfügbar",
+    "linkCannotBeUsed": "Dieser Link kann nicht verwendet werden",
+    "verificationLinkInvalid": "Dieser Bestätigungslink ist ungültig oder abgelaufen.",
+    "signInToRequestLink": "Melden Sie sich an, um einen weiteren Link anzufordern",
+    "showPassword": "Passwort anzeigen",
+    "hidePassword": "Passwort ausblenden",
+    "passwordRules": {
+      "length": "Mindestens 10 Zeichen",
+      "uppercase": "Ein Großbuchstabe",
+      "lowercase": "Ein Kleinbuchstabe",
+      "number": "One number"
+    },
+    "passwordStrength_one": "Passwortstärke: {{count}} von {{total}} Anforderungen erfüllt",
+    "passwordStrength_other": "Passwortstärke: {{count}} von {{total}} Anforderungen erfüllt",
+    "loadingAccount": "Ihr Konto wird geladen",
+    "checkingSession": "Ihre Sitzung wird überprüft…",
+    "errors": {
+      "accountSuspended": "Dieses Konto ist derzeit pausiert. Wenden Sie sich bitte an den Support.",
+      "rateLimit": "Zu viele Versuche. Bitte warten Sie einen Moment und versuchen Sie es erneut.",
+      "reviewAndRetry": "Bitte überprüfen Sie Ihre Angaben und versuchen Sie es erneut.",
+      "invalidCredentials": "Die E-Mail-Adresse oder das Passwort ist falsch.",
+      "createAccount": "Ihr Konto konnte nicht erstellt werden.",
+      "signIn": "Sie konnten nicht angemeldet werden. Bitte versuchen Sie es erneut.",
+      "sendReset": "Die E-Mail zum Zurücksetzen konnte nicht gesendet werden. Bitte versuchen Sie es erneut.",
+      "resetPassword": "Ihr Passwort konnte nicht zurückgesetzt werden. Bitte versuchen Sie es erneut.",
+      "waitBeforeResend": "Bitte warten Sie, bevor Sie einen weiteren Link anfordern.",
+      "resendVerification": "Der Link konnte nicht erneut gesendet werden. Bitte versuchen Sie es in Kürze erneut.",
+      "verifyEmail": "Diese E-Mail-Adresse konnte nicht bestätigt werden. Bitte fordern Sie einen neuen Link an."
+    }
+  },
+  "apiErrors": {
+    "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
+    "network_error": "Verbindung nicht möglich. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "unauthenticated": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
+    "forbidden": "Sie dürfen diese Aktion nicht ausführen.",
+    "account_suspended": "Dieses Konto ist gesperrt. Bitte wenden Sie sich an den Support.",
+    "email_not_verified": "Bestätigen Sie Ihre E-Mail-Adresse, um fortzufahren.",
+    "invalid_verification_link": "Dieser Bestätigungslink ist ungültig oder abgelaufen.",
+    "role_forbidden": "Ihr Konto hat keinen Zugriff auf diese Seite.",
+    "not_found": "Diese Seite oder dieser Eintrag wurde nicht gefunden.",
+    "csrf_mismatch": "Ihre Sitzung muss aktualisiert werden. Bitte versuchen Sie es erneut.",
+    "validation_failed": "Bitte prüfen Sie die Angaben und versuchen Sie es erneut.",
+    "too_many_requests": "Zu viele Anfragen. Bitte warten Sie und versuchen Sie es erneut.",
+    "server_error": "Ein Serverfehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
+    "http_error": "Die Anfrage konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.",
+    "validation": {
+      "email_required": "Geben Sie Ihre E-Mail-Adresse ein.",
+      "email_invalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
+      "email_max": "Die E-Mail-Adresse darf höchstens 254 Zeichen enthalten.",
+      "email_taken": "Diese E-Mail-Adresse wird bereits verwendet.",
+      "name_required": "Geben Sie Ihren Namen ein.",
+      "name_invalid": "Geben Sie einen gültigen Namen ein.",
+      "name_min": "Geben Sie mindestens 2 Zeichen ein.",
+      "name_max": "Der Name darf höchstens 60 Zeichen enthalten.",
+      "subject_required": "Geben Sie einen Betreff ein.",
+      "subject_invalid": "Geben Sie einen gültigen Betreff ein.",
+      "subject_min": "Der Betreff muss mindestens 3 Zeichen enthalten.",
+      "subject_max": "Der Betreff darf höchstens 150 Zeichen enthalten.",
+      "message_required": "Geben Sie eine Nachricht ein.",
+      "message_invalid": "Geben Sie eine gültige Nachricht ein.",
+      "message_min": "Die Nachricht muss mindestens 10 Zeichen enthalten.",
+      "message_max": "Die Nachricht darf höchstens 2.000 Zeichen enthalten.",
+      "password_required": "Geben Sie Ihr Passwort ein.",
+      "password_invalid": "Geben Sie ein gültiges Passwort ein.",
+      "password_min": "Verwenden Sie mindestens 10 Zeichen.",
+      "password_uppercase": "Fügen Sie einen Großbuchstaben hinzu.",
+      "password_lowercase": "Fügen Sie einen Kleinbuchstaben hinzu.",
+      "password_number": "Fügen Sie eine Zahl hinzu.",
+      "password_confirmed": "Die Passwörter stimmen nicht überein.",
+      "password_confirmation_required": "Bestätigen Sie Ihr Passwort.",
+      "password_compromised": "Wählen Sie ein Passwort, das nicht bei einem Datenleck offengelegt wurde.",
+      "terms_required": "Sie müssen den Bedingungen zustimmen, um fortzufahren.",
+      "remember_invalid": "Wählen Sie eine gültige Einstellung zum Merken der Anmeldung.",
+      "credentials_invalid": "E-Mail-Adresse oder Passwort sind falsch.",
+      "reset_token_required": "Das Zurücksetzungstoken ist erforderlich.",
+      "reset_token_invalid": "Dieser Link zum Zurücksetzen ist ungültig oder abgelaufen. Fordern Sie einen neuen an."
+    }
+  },
+  "dashboard": {
+    "description": "Übersicht über Ihr Westbridge-Demokonto.",
+    "overview": "Übersicht",
+    "greeting": {
+      "morning": "Guten Morgen, {{name}}",
+      "afternoon": "Guten Tag, {{name}}",
+      "evening": "Guten Abend, {{name}}"
+    },
+    "shell": {
+      "primaryNavigation": "Dashboard-Navigation",
+      "mobileNavigation": "Dashboard-Tabs",
+      "workspace": "Ihr Geld",
+      "overview": "Übersicht",
+      "transactions": "Transaktionen",
+      "transfers": "Überweisungen",
+      "cards": "Karten",
+      "settings": "Einstellungen",
+      "comingSoon": "Demnächst verfügbar",
+      "demoNotice": "Nur Demogeld",
+      "live": "Jetzt verfügbar",
+      "more": "Mehr"
+    },
+    "demoMoney": "Demogeld",
+    "balanceAcrossAccounts": "Auf {{count}} Konten",
+    "accountNumberCopied": "Kontonummer kopiert",
+    "accountNumberCopyError": "Kontonummer konnte nicht kopiert werden",
+    "copyAccountNumber": "Vollständige Kontonummer kopieren",
+    "viewTransactions": "Transaktionen ansehen",
+    "viewAll": "Alle ansehen",
+    "thisMonth": "Diesen Monat",
+    "income": "Einnahmen",
+    "spending": "Ausgaben",
+    "net": "Saldo",
+    "month": "Monat",
+    "sixMonthActivity": "Einnahmen und Ausgaben",
+    "chartAccessibleSummary": "Monatliche Einnahmen und Ausgaben der letzten sechs Monate. Die Daten stehen auch in der Tabelle nach dem Diagramm.",
+    "spendingByCategory": "Ausgaben nach Kategorie",
+    "noSpending": "Diesen Monat wurden keine Ausgaben erfasst.",
+    "cashFlowAndSpending": "Zahlungsfluss und Ausgaben nach Kategorie",
+    "noActivityYet": "Noch keine Aktivität. Ihre Transaktionen erscheinen hier.",
+    "status": {
+      "active": "Aktiv",
+      "frozen": "Gesperrt",
+      "closed": "Geschlossen"
+    },
+    "category": {
+      "transfer": "Überweisung",
+      "deposit": "Einzahlung",
+      "withdrawal": "Abhebung",
+      "bill_payment": "Rechnungszahlung",
+      "card": "Kartenzahlung",
+      "fee": "Gebühr",
+      "interest": "Zinsen",
+      "other": "Sonstiges"
+    },
+    "transactions": {
+      "title": "Transaktionen",
+      "pagination": "Transaktionsseiten",
+      "previousPage": "Vorherige Seite",
+      "nextPage": "Nächste Seite",
+      "goToPage": "Zu Seite {{page}}",
+      "referenceCopied": "Referenz kopiert",
+      "copyFailed": "Kopieren nicht möglich",
+      "dateTime": "Datum und Uhrzeit",
+      "dateLabel": "Datum",
+      "counterparty": "Empfänger",
+      "notAvailable": "Nicht verfügbar",
+      "detailTitle": "Transaktionsdetails",
+      "detailDescription": "Vollständige Details zu diesem Ledger-Eintrag.",
+      "accountLabel": "Konto",
+      "amountLabel": "Betrag",
+      "balanceAfter": "Kontostand danach",
+      "categoryLabel": "Kategorie",
+      "reference": "Referenz",
+      "copyReference": "Referenz kopieren",
+      "description": "Beschreibung",
+      "closeDetails": "Details schließen",
+      "exportTruncated": "Die ersten 10.000 Zeilen wurden exportiert",
+      "exportSuccess": "CSV-Datei heruntergeladen",
+      "exportRateLimited": "Zu viele Exporte. Bitte in einer Minute erneut versuchen",
+      "exportPending": "CSV wird vorbereitet…",
+      "exportCsv": "CSV exportieren",
+      "filters": "Transaktionsfilter",
+      "search": "Suchen",
+      "searchPlaceholder": "Beschreibung oder Empfänger",
+      "direction": "Richtung",
+      "allDirections": "Alle",
+      "credits": "Gutschriften",
+      "debits": "Belastungen",
+      "sort": "Sortieren nach",
+      "newest": "Neueste zuerst",
+      "oldest": "Älteste zuerst",
+      "amountHigh": "Betrag: absteigend",
+      "amountLow": "Betrag: aufsteigend",
+      "pageSize": "Zeilen pro Seite",
+      "categoriesSelected": "{{count}} ausgewählt",
+      "dateRange": "Zeitraum",
+      "dateFrom": "Von",
+      "dateTo": "Bis",
+      "range": {
+        "7": "7 Tage",
+        "30": "30 Tage",
+        "90": "90 Tage",
+        "month": "Diesen Monat",
+        "custom": "Benutzerdefiniert"
+      },
+      "minAmount": "Mindestbetrag",
+      "maxAmount": "Höchstbetrag",
+      "removeFilter": "Filter entfernen: {{filter}}",
+      "clearAll": "Alle löschen",
+      "sortAmount": "Sortierung nach Betrag",
+      "sortDate": "Sortierung nach Datum",
+      "showing": "{{from}}–{{to}} von {{total}} werden angezeigt",
+      "noMatches": "Keine Transaktionen entsprechen diesen Filtern",
+      "clearFilters": "Filter löschen",
+      "tableCaption": "Kontotransaktionen. Wählen Sie eine Zeile aus, um Details anzuzeigen."
+    },
+    "eyebrow": "Ihr Westbridge",
+    "welcome": "Willkommen, {{name}}",
+    "signedInAs": "Angemeldet als {{email}}",
+    "accountsHeading": "Ihre Konten",
+    "totalBalance": "Gesamtsaldo",
+    "recentActivity": "Letzte Aktivitäten",
+    "checking": "Girokonto",
+    "savings": "Sparkonto",
+    "accountNumber": "Konto mit Endziffern",
+    "selectAccount": "Aktivitäten für {{name}} anzeigen",
+    "active": "Aktiv",
+    "frozen": "Gesperrt",
+    "closed": "Geschlossen",
+    "noAccounts": "Keine Konten verfügbar.",
+    "noTransactions": "Für dieses Konto gibt es keine aktuellen Transaktionen.",
+    "dashboardLoadError": "Ihre Konten konnten nicht geladen werden.",
+    "activityLoadError": "Die Kontoaktivitäten konnten nicht geladen werden.",
+    "retry": "Erneut versuchen",
+    "loadMore": "Mehr laden",
+    "loading": "Wird geladen…",
+    "downloadCsv": "CSV herunterladen",
+    "credit": "Gutschrift",
+    "debit": "Belastung",
+    "categories": {
+      "transfer": "Überweisung",
+      "deposit": "Einzahlung",
+      "withdrawal": "Abhebung",
+      "bill_payment": "Rechnungszahlung",
+      "card": "Kartenzahlung",
+      "fee": "Gebühr",
+      "interest": "Zinsen",
+      "other": "Sonstiges"
+    }
+  },
+  "notFound": {
+    "title": "Seite nicht gefunden",
+    "description": "Diese Seite konnten wir leider nicht finden. Kehren Sie zum Anfang zurück oder wählen Sie einen dieser hilfreichen Bereiche.",
+    "home": "Zur Startseite",
+    "products": "Produkte entdecken",
+    "help": "Zum Hilfe-Center",
+    "contact": "Westbridge kontaktieren"
+  },
+  "comingSoon": {
+    "description": "Weitere Informationen zu dieser Westbridge-Demoseite folgen in Kürze.",
+    "message": "Demnächst verfügbar"
+  },
+  "_notice": "Maschinell übersetzter Entwurf; bitte von einer muttersprachlichen Person prüfen lassen."
+}

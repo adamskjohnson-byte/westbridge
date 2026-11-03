@@ -7,9 +7,26 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
 
-## React Compiler
+## Photography fetch script
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+To populate the stock photography slots used in the landing pages, create a Pixabay API key and add it to your local environment file:
+
+```bash
+# client/.env.local
+PIXABAY_API_KEY=your_key_here
+```
+
+Then run:
+
+```bash
+npm run photos
+npm run photos -- --list
+npm run photos -- --only mortgages --pick 3 --force
+```
+
+How to get a free Pixabay API key: https://pixabay.com/api/docs/
+
+To replace any photo manually, drop a file with the same name into the matching folder under `public/images/<group>/`.
 
 ## Expanding the Oxlint configuration
 
