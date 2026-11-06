@@ -73,7 +73,7 @@ class ResetPasswordController extends Controller
 
         $user = User::query()->where('email', $attributes['email'])->firstOrFail();
         event(new PasswordReset($user));
-        Notification::send($user, new PasswordChangedNotification);
+        $user->notify(new PasswordChangedNotification);
 
         return ApiResponse::success(null, 'Your password has been reset.');
     }

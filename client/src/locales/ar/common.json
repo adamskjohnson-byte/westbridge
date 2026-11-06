@@ -133,6 +133,7 @@
     "noResults": "لم يتم العثور على لغات."
   },
   "theme": {
+    "label": "السمة",
     "toggleLabel": "السمة الحالية: {{current}}. انتقل إلى سمة {{next}}",
     "names": {
       "system": "النظام",
@@ -257,6 +258,24 @@
     "passwordStrength_other": "قوة كلمة المرور: تحقق {{count}} من {{total}} شرط",
     "loadingAccount": "جارٍ تحميل حسابك",
     "checkingSession": "جارٍ التحقق من جلستك…",
+    "turnstile": {
+      "label": "Security check",
+      "configError": "Security check is unavailable right now.",
+      "verifyingHint": "Checking that you are human…",
+      "loadError": "The security check could not load.",
+      "retry": "Retry check",
+      "accessibleStatus": "Security check status"
+    },
+    "twoFactor": {
+      "checkEmail": "Check your email",
+      "sentTo": "We sent a one-time code to {{email}}.",
+      "codeLabel": "One-time code",
+      "resendCountdown": "Resend available in {{count}}s",
+      "codeExpiry": "Code expires in about {{count}} minutes",
+      "resending": "Sending…",
+      "resend": "Resend code",
+      "differentAccount": "Use a different account"
+    },
     "errors": {
       "accountSuspended": "هذا الحساب موقوف مؤقتًا. يرجى التواصل مع الدعم للمساعدة.",
       "rateLimit": "محاولات كثيرة جدًا. يرجى الانتظار قليلًا والمحاولة مجددًا.",
@@ -268,7 +287,8 @@
       "resetPassword": "تعذرت إعادة تعيين كلمة المرور. يرجى المحاولة مجددًا.",
       "waitBeforeResend": "يرجى الانتظار قبل طلب رابط آخر.",
       "resendVerification": "تعذرت إعادة إرسال الرابط. يرجى المحاولة بعد قليل.",
-      "verifyEmail": "تعذر التحقق من هذا البريد الإلكتروني. يرجى طلب رابط جديد."
+      "verifyEmail": "تعذر التحقق من هذا البريد الإلكتروني. يرجى طلب رابط جديد.",
+      "captcha": "Please complete the security check."
     },
     "resendAvailable_zero": "إعادة الإرسال متاحة الآن",
     "resendAvailable_two": "إعادة الإرسال متاحة بعد ثانيتين",
@@ -280,8 +300,14 @@
     "passwordStrength_many": "قوة كلمة المرور: تحقق {{count}} من {{total}} شرطًا"
   },
   "apiErrors": {
+    "card_frozen": "هذه البطاقة مجمّدة. ألغِ تجميدها قبل المحاولة مجددًا.",
+    "card_cancelled": "أُلغيت هذه البطاقة ولا يمكن استخدامها.",
+    "card_limit_exceeded": "تتجاوز هذه العملية حد البطاقة اليومي.",
+    "current_password_invalid": "The current password is incorrect.",
+    "password_unchanged": "Choose a password different from your current one.",
+    "cannot_revoke_current": "You cannot revoke the device you are using now.",
     "generic": "حدث خطأ. يُرجى المحاولة مرة أخرى.",
-    "network_error": "تعذّر الاتصال. تحقّق من اتصالك وحاول مرة أخرى.",
+    "network_error": "تعذّر الاتصال. تحقق من اتصالك وحاول مجددًا.",
     "unauthenticated": "انتهت جلستك. يُرجى تسجيل الدخول مرة أخرى.",
     "forbidden": "ليس لديك إذن لتنفيذ هذا الإجراء.",
     "account_suspended": "هذا الحساب معلّق. يُرجى التواصل مع الدعم.",
@@ -291,9 +317,20 @@
     "not_found": "تعذّر العثور على هذه الصفحة أو العنصر.",
     "csrf_mismatch": "يجب تحديث جلستك. يُرجى المحاولة مرة أخرى.",
     "validation_failed": "تحقّق من المعلومات وحاول مرة أخرى.",
-    "too_many_requests": "عدد الطلبات كبير جدًا. يُرجى الانتظار ثم المحاولة مرة أخرى.",
+    "too_many_requests": "طلبات كثيرة. انتظر ثم حاول مجددًا.",
     "server_error": "حدث خطأ في الخادم. يُرجى المحاولة بعد قليل.",
     "http_error": "تعذّر إكمال الطلب. يُرجى المحاولة مرة أخرى.",
+    "idempotency_key_reused": "يتعارض هذا الطلب مع طلب سابق.",
+    "insufficient_funds": "لا يحتوي هذا الحساب على رصيد كافٍ. اختر مبلغًا أقل أو حسابًا آخر.",
+    "daily_limit_exceeded": "يتجاوز هذا الدفع الحد اليومي المتبقي.",
+    "account_frozen": "هذا الحساب مجمّد ولا يمكنه إرسال الأموال.",
+    "account_closed": "هذا الحساب مغلق ولا يمكنه إرسال الأموال. اختر حسابًا نشطًا آخر.",
+    "same_account": "اختر حساب وجهة مختلفًا.",
+    "currency_mismatch": "يستخدم الحسابان عملتين مختلفتين ولا يمكن استخدامهما لهذا التحويل.",
+    "recipient_not_found": "تعذّر التحقق من مستفيد نشط.",
+    "amount_invalid": "أدخل مبلغًا ضمن النطاق المسموح.",
+    "biller_not_found": "مزود الخدمة هذا غير متاح الآن.",
+    "reference_invalid": "رقم المرجع لا يطابق صيغة مزود الخدمة.",
     "validation": {
       "email_required": "أدخل عنوان بريدك الإلكتروني.",
       "email_invalid": "أدخل عنوان بريد إلكتروني صالحًا.",
@@ -324,10 +361,168 @@
       "remember_invalid": "اختر إعدادًا صالحًا لتذكّر تسجيل الدخول.",
       "credentials_invalid": "عنوان البريد الإلكتروني أو كلمة المرور غير صحيح.",
       "reset_token_required": "رمز إعادة التعيين مطلوب.",
-      "reset_token_invalid": "رابط إعادة التعيين غير صالح أو انتهت صلاحيته. اطلب رابطًا جديدًا."
+      "reset_token_invalid": "رابط إعادة التعيين غير صالح أو انتهت صلاحيته. اطلب رابطًا جديدًا.",
+      "current_password_invalid": "كلمة المرور الحالية غير صحيحة.",
+      "password_unchanged": "اختر كلمة مرور مختلفة عن الحالية.",
+      "cannot_revoke_current": "لا يمكنك إلغاء جلسة الجهاز الذي تستخدمه الآن."
     }
   },
   "dashboard": {
+    "settings": {
+      "eyebrow": "حسابك",
+      "title": "الإعدادات",
+      "tabs": {
+        "label": "أقسام الإعدادات",
+        "profile": "الملف الشخصي",
+        "security": "الأمان",
+        "preferences": "التفضيلات"
+      },
+      "phone": "رقم الهاتف",
+      "emailReadOnly": "تغيير البريد الإلكتروني غير متاح حاليًا.",
+      "unsavedConfirm": "هل تريد مغادرة الإعدادات دون حفظ التغييرات؟",
+      "saveChanges": "حفظ التغييرات",
+      "profileSaved": "تم حفظ تغييرات الملف الشخصي.",
+      "changePassword": "تغيير كلمة المرور",
+      "currentPassword": "كلمة المرور الحالية",
+      "updatePassword": "تحديث كلمة المرور",
+      "passwordSaved": "تم تغيير كلمة المرور. تم تسجيل الخروج من الأجهزة الأخرى.",
+      "sessionsTitle": "الأجهزة التي سجلت الدخول",
+      "revokeOthers": "تسجيل الخروج من جميع الأجهزة الأخرى",
+      "revokeOthersConfirm": "هل تريد تسجيل الخروج من جميع الأجهزة الأخرى؟",
+      "revokeConfirm": "هل تريد تسجيل الخروج من هذا الجهاز؟",
+      "revokeSession": "إلغاء الجلسة",
+      "thisDevice": "هذا الجهاز",
+      "sessionDevice": "{{device}} · {{browser}} على {{platform}}",
+      "sessionRevoked": "تم تسجيل الخروج من الجلسة.",
+      "othersRevoked": "تم تسجيل الخروج من الأجهزة الأخرى.",
+      "device": {
+        "desktop": "كمبيوتر",
+        "mobile": "هاتف محمول",
+        "tablet": "جهاز لوحي",
+        "unknown": "جهاز غير معروف"
+      },
+      "preferencesSaved": "تم حفظ التفضيلات.",
+      "preferenceSaveError": "تعذر حفظ التفضيل. حاول مرة أخرى.",
+      "savePreferences": "حفظ التفضيلات",
+      "emailActivity": "أرسل إليّ رسائل عن نشاط الحساب",
+      "securityEmailsAlways": "تُرسل رسائل الأمان دائمًا.",
+      "lowBalance": "تنبيه انخفاض الرصيد",
+      "lowBalanceOff": "إيقاف",
+      "lowBalanceAmount": "تنبيه عندما يقل الرصيد عن {{amount}}",
+      "thresholdInvalid": "أدخل مبلغ تنبيه صالحًا.",
+      "twoFactor": {
+        "title": "Two-factor authentication",
+        "enabled": "Two-factor authentication is enabled.",
+        "disabled": "Two-factor authentication is off.",
+        "requiredAdmin": "Required for admins",
+        "enable": "Enable",
+        "disable": "Disable",
+        "enabledToast": "Two-factor authentication enabled.",
+        "disabledToast": "Two-factor authentication disabled.",
+        "confirmPassword": "Confirm your password",
+        "enterCode": "Enter the code",
+        "sentTo": "We sent a code to {{email}}.",
+        "code": "One-time code",
+        "confirm": "Confirm",
+        "sendCode": "Send code",
+        "close": "Close",
+        "enableDescription": "You will need a verification code before signing in.",
+        "disableDescription": "Enter your current password to disable this security step."
+      }
+    },
+    "cards": {
+      "eyebrow": "بطاقات الدفع",
+      "title": "البطاقات",
+      "request": "طلب بطاقة افتراضية",
+      "close": "إغلاق النافذة",
+      "visualLabel": "بطاقة {{nickname}} المنتهية بـ {{last4}}، {{status}}",
+      "cardholder": "حامل البطاقة",
+      "expiry": "تاريخ الانتهاء",
+      "frozen": "مجمّدة",
+      "cancelled": "ملغاة",
+      "switcher": "بطاقاتك",
+      "status": {
+        "active": "نشطة",
+        "frozen": "مجمّدة",
+        "cancelled": "ملغاة"
+      },
+      "linkedAccount": "الحساب المرتبط",
+      "spentToday": "المستخدم من الحد اليومي",
+      "of": "من",
+      "spendingProgress": "إنفاق البطاقة اليومي",
+      "freeze": "تجميد البطاقة",
+      "unfreeze": "إلغاء تجميد البطاقة",
+      "freezeSuccess": "تم تجميد البطاقة",
+      "unfreezeSuccess": "تم إلغاء تجميد البطاقة",
+      "cancelSuccess": "تم إلغاء البطاقة",
+      "edit": "تعديل البطاقة",
+      "testPurchase": "جرّب عملية شراء تجريبية",
+      "cancel": "إلغاء البطاقة",
+      "recentActivity": "أحدث نشاط البطاقة",
+      "noActivity": "لا توجد مشتريات بالبطاقة بعد.",
+      "empty": "ليس لديك بطاقة بعد",
+      "requestTitle": "طلب بطاقة افتراضية",
+      "requestDescription": "اختر حسابًا نشطًا لبطاقة الخصم الافتراضية.",
+      "maximumReached": "وصلت إلى الحد الأقصى وهو ثلاث بطاقات نشطة.",
+      "chooseAccount": "الحساب المرتبط",
+      "nickname": "اسم البطاقة",
+      "editTitle": "تعديل تفاصيل البطاقة",
+      "dailyLimit": "الحد اليومي بالدولار",
+      "limitInvalid": "أدخل مبلغًا صحيحًا ضمن حد البطاقة.",
+      "limitMax": "الحد الأقصى: {{amount}}",
+      "save": "حفظ التغييرات",
+      "cancelTitle": "هل تريد إلغاء هذه البطاقة؟",
+      "cancelWarning": "سيتم إلغاء البطاقة نهائيًا ورفض جميع المشتريات المستقبلية.",
+      "typeToConfirm": "اكتب إلغاء للمتابعة",
+      "confirmWord": "إلغاء",
+      "purchaseTitle": "جرّب عملية شراء تجريبية",
+      "purchaseDemoNote": "تحاكي هذه العملية دفعًا بالبطاقة لأغراض العرض. لا تُستخدم أموال حقيقية.",
+      "merchant": "التاجر",
+      "amountLabel": "المبلغ بالدولار",
+      "purchaseInvalid": "أدخل تاجرًا ومبلغًا بين 0.01 و10,000.00 دولار.",
+      "approved": "تمت الموافقة. الرصيد الجديد:",
+      "declined": "مرفوضة",
+      "purchaseRetry": "تعذّر تأكيد النتيجة. أعد المحاولة للتحقق بأمان من عملية الشراء نفسها.",
+      "processing": "جارٍ التنفيذ…",
+      "submitPurchase": "إرسال عملية الشراء التجريبية",
+      "amount": "المبلغ بالدولار"
+    },
+    "insights": {
+      "eyebrow": "أموالك في سياقها",
+      "title": "الرؤى",
+      "na": "غير متاح",
+      "change": "التغيير: {{value}}",
+      "previousMonth": "الشهر السابق",
+      "dailyAccessible": "الإنفاق اليومي لكل يوم من الشهر المحدد. تظهر القيم أيضًا في الجدول التالي.",
+      "dailyTitle": "الإنفاق اليومي",
+      "categoryAccessible": "الإنفاق حسب الفئة لهذا الشهر والشهر السابق. تظهر القيم أيضًا في الجدول التالي.",
+      "categoryTitle": "مقارنة الفئات",
+      "date": "التاريخ",
+      "monthSelector": "اختيار شهر الرؤى",
+      "previous": "الشهر السابق",
+      "next": "الشهر التالي",
+      "headlines": "الإجماليات الشهرية",
+      "savingsRate": "معدل الادخار",
+      "empty": "لم يُسجّل دخل أو إنفاق هذا الشهر.",
+      "highlights": "ملخص الشهر",
+      "trends": {
+        "up": "بلغ الإنفاق {{amount}}، بزيادة عن {{previous}} في الشهر الماضي.",
+        "down": "بلغ الإنفاق {{amount}}، بانخفاض عن {{previous}} في الشهر الماضي.",
+        "same": "كان الإنفاق قريبًا من الشهر الماضي: {{amount}}.",
+        "noData": "أنفقت {{amount}}؛ لا يوجد إنفاق من الشهر الماضي للمقارنة."
+      },
+      "topCategory": "كانت {{category}} الفئة الأعلى بنسبة {{share}}٪ من الإنفاق.",
+      "noCategory": "لا يوجد إنفاق حسب الفئة لإبرازه هذا الشهر.",
+      "largestExpense": "كان أكبر إنفاق لك على {{name}} بمبلغ {{amount}}.",
+      "noLargest": "لا توجد نفقات لإبرازها هذا الشهر.",
+      "averageAndSavings": "بلغ متوسط الإنفاق اليومي {{amount}}. معدل الادخار: {{savings}}.",
+      "charts": "رسوم الإنفاق",
+      "topMerchants": "أبرز التجار",
+      "purchaseCount_one": "عملية شراء واحدة ({{count}})",
+      "purchaseCount_other": "{{count}} عمليات شراء",
+      "noMerchants": "لا يوجد تجار لترتيبهم هذا الشهر.",
+      "largestTransactions": "أكبر النفقات"
+    },
     "description": "نظرة عامة على حسابك التجريبي لدى Westbridge.",
     "overview": "نظرة عامة",
     "greeting": {
@@ -342,6 +537,7 @@
       "overview": "نظرة عامة",
       "transactions": "المعاملات",
       "transfers": "التحويلات",
+      "bills": "الفواتير",
       "cards": "البطاقات",
       "settings": "الإعدادات",
       "comingSoon": "قريبًا",
@@ -444,6 +640,180 @@
       "clearFilters": "مسح عوامل التصفية",
       "tableCaption": "معاملات الحساب. اختر صفًا لعرض تفاصيله."
     },
+    "transfers": {
+      "title": "التحويلات",
+      "limitRemaining": "الحد اليومي المتبقي:",
+      "progress": "تقدم التحويل",
+      "notProvided": "غير محدد",
+      "leaveConfirm": "هل تريد مغادرة هذا التحويل؟ ستفقد البيانات غير المحفوظة.",
+      "amountInvalid": "أدخل مبلغًا صالحًا أكبر من صفر.",
+      "limitOrBalanceHint": "يتجاوز المبلغ رصيدك أو الحد اليومي المتبقي. راجع المبلغ أو الحساب.",
+      "sameAccount": "اختر حسابًا آخر لاستلام هذا التحويل.",
+      "tabs": {
+        "label": "أقسام التحويلات",
+        "move": "تحويل الأموال",
+        "recipients": "المستفيدون",
+        "history": "السجل"
+      },
+      "steps": {
+        "details": "التفاصيل",
+        "review": "المراجعة",
+        "receipt": "الإيصال"
+      },
+      "details": {
+        "from": "الحساب المصدر",
+        "to": "إلى",
+        "destinations": {
+          "own": "حساباتي",
+          "beneficiary": "مستفيد محفوظ",
+          "new": "مستفيد جديد"
+        },
+        "myAccount": "اختر حسابي",
+        "savedRecipient": "مستفيد محفوظ",
+        "accountNumber": "رقم حساب من 10 أرقام",
+        "amount": "المبلغ بالدولار",
+        "useBalance": "استخدام الرصيد بالكامل",
+        "overBalance": "هذا المبلغ أكبر من الرصيد المتاح.",
+        "overLimit": "هذا المبلغ أكبر من الحد اليومي المتبقي.",
+        "memo": "ملاحظة (اختيارية)"
+      },
+      "lookup": {
+        "check": "تحقق",
+        "checking": "جارٍ التحقق من الحساب…",
+        "numberInvalid": "أدخل رقم حساب من 10 أرقام.",
+        "result": "تم التحقق من صاحب الحساب: {{name}}",
+        "confirm": "هل هذا هو الشخص المقصود: {{name}}؟",
+        "confirmRequired": "أكد المستفيد قبل المتابعة."
+      },
+      "review": {
+        "from": "من",
+        "to": "إلى",
+        "amount": "المبلغ",
+        "memo": "ملاحظة",
+        "fee": "الرسوم",
+        "newBalance": "الرصيد الجديد"
+      },
+      "actions": {
+        "review": "مراجعة التحويل",
+        "back": "رجوع",
+        "confirm": "تأكيد التحويل",
+        "sending": "جارٍ الإرسال…",
+        "retryHint": "ما زالت بياناتك محفوظة. أعد المحاولة عندما تكون مستعدًا.",
+        "retry": "حاول مجددًا"
+      },
+      "receipt": {
+        "success": "اكتمل التحويل",
+        "reference": "المرجع",
+        "copyReference": "نسخ المرجع",
+        "date": "التاريخ والوقت",
+        "newBalance": "الرصيد الجديد",
+        "saveRecipient": "حفظ كمستفيد",
+        "another": "إجراء تحويل آخر",
+        "transactions": "عرض المعاملات",
+        "print": "طباعة الإيصال"
+      },
+      "recipients": {
+        "title": "المستفيدون المحفوظون",
+        "addTitle": "إضافة مستفيد",
+        "empty": "لا يوجد مستفيدون محفوظون بعد.",
+        "maximum": "وصلت إلى الحد الأقصى وهو 50 مستفيدًا.",
+        "count": "{{count}} من 50",
+        "nickname": "اسم مستعار (اختياري)",
+        "add": "إضافة مستفيد",
+        "added": "تم حفظ المستفيد.",
+        "send": "إرسال الأموال",
+        "selectRecipient": "اختر مستفيدًا.",
+        "deleteLabel": "حذف {{name}}",
+        "deleteConfirm": "هل تريد حذف {{name}} من المستفيدين؟",
+        "numberInvalid": "أدخل رقم حساب من 10 أرقام."
+      },
+      "history": {
+        "direction": "نوع التحويل",
+        "all": "الكل",
+        "sent": "المرسلة",
+        "received": "المستلمة",
+        "own": "بين حساباتي",
+        "dateFrom": "من تاريخ",
+        "dateTo": "إلى تاريخ",
+        "empty": "لا توجد تحويلات تطابق عوامل التصفية.",
+        "pagination": "صفحات التحويلات",
+        "openDetail": "فتح تفاصيل التحويل",
+        "detailTitle": "تفاصيل التحويل",
+        "detailDescription": "تفاصيل إيصال هذا التحويل."
+      }
+    },
+    "bills": {
+      "title": "دفع الفواتير",
+      "progress": "تقدم دفع الفاتورة",
+      "limitRemaining": "الحد اليومي المتبقي:",
+      "leaveConfirm": "هل تريد مغادرة عملية الدفع؟ ستفقد البيانات غير المحفوظة.",
+      "limitOrBalanceHint": "يتجاوز المبلغ رصيدك أو الحد اليومي المتبقي. راجع المبلغ أو الحساب.",
+      "steps": {
+        "details": "التفاصيل",
+        "review": "المراجعة",
+        "receipt": "الإيصال"
+      },
+      "details": {
+        "title": "اختر مزود الخدمة",
+        "chooseBiller": "اختر مزود الخدمة",
+        "search": "البحث عن مزود",
+        "noResults": "لا يوجد مزود خدمة يطابق بحثك.",
+        "paymentDetails": "تفاصيل الدفع",
+        "from": "الحساب المصدر",
+        "reference": "رقم المرجع",
+        "amount": "المبلغ بالدولار",
+        "referenceHint": "أدخل المرجع كما يظهر في فاتورتك تمامًا. سيتم التحقق منه عند الإرسال.",
+        "useBalance": "استخدام الرصيد بالكامل"
+      },
+      "categories": {
+        "electricity": "الكهرباء",
+        "water": "المياه",
+        "internet": "الإنترنت",
+        "mobile": "الهاتف المحمول",
+        "insurance": "التأمين",
+        "credit_card": "بطاقة ائتمان",
+        "tv": "التلفاز",
+        "tax": "الضرائب"
+      },
+      "validation": {
+        "chooseBiller": "اختر مزود خدمة للمتابعة.",
+        "chooseAccount": "اختر حسابًا نشطًا.",
+        "reference": "أدخل مرجعًا من حرف إلى 40 حرفًا.",
+        "amount": "أدخل مبلغًا صالحًا أكبر من صفر."
+      },
+      "review": {
+        "from": "من",
+        "biller": "مزود الخدمة",
+        "reference": "رقم المرجع",
+        "amount": "المبلغ",
+        "fee": "الرسوم",
+        "newBalance": "الرصيد الجديد"
+      },
+      "actions": {
+        "review": "مراجعة الدفع",
+        "back": "رجوع",
+        "confirm": "تأكيد الدفع",
+        "sending": "جارٍ الدفع…",
+        "retryHint": "ما زالت بياناتك محفوظة. أعد المحاولة عندما تكون مستعدًا."
+      },
+      "receipt": {
+        "success": "اكتمل الدفع",
+        "transactionReference": "مرجع المعاملة",
+        "date": "التاريخ والوقت",
+        "newBalance": "الرصيد الجديد",
+        "another": "إجراء دفعة أخرى",
+        "transactions": "عرض المعاملات",
+        "print": "طباعة الإيصال"
+      },
+      "recent": {
+        "title": "المدفوعات الأخيرة",
+        "empty": "لا توجد مدفوعات فواتير بعد.",
+        "pagination": "صفحات المدفوعات",
+        "previousPage": "صفحة المدفوعات السابقة",
+        "nextPage": "صفحة المدفوعات التالية",
+        "payAgain": "ادفع مرة أخرى"
+      }
+    },
     "eyebrow": "حسابك لدى Westbridge",
     "welcome": "مرحبًا، {{name}}",
     "signedInAs": "تم تسجيل الدخول باسم {{email}}",
@@ -478,6 +848,75 @@
       "other": "أخرى"
     },
     "accountEnding": "الحساب المنتهي بالأرقام {{digits}}"
+  },
+  "notifications": {
+    "bellLabel_zero": "الإشعارات",
+    "bellLabel_one": "إشعار واحد غير مقروء ({{count}})",
+    "bellLabel_other": "{{count}} إشعارات غير مقروءة",
+    "popoverTitle": "الإشعارات",
+    "eyebrow": "نشاط حسابك",
+    "title": "الإشعارات",
+    "markAll": "تحديد الكل كمقروء",
+    "markRead": "تحديد كمقروء",
+    "unreadOnly": "غير المقروءة فقط",
+    "delete": "حذف الإشعار",
+    "viewAll": "عرض كل الإشعارات",
+    "openRelated": "فتح النشاط المرتبط",
+    "unread": "غير مقروء",
+    "empty": "لا توجد تحديثات جديدة.",
+    "loadError": "تعذر تحميل الإشعارات.",
+    "generic": {
+      "title": "تحديث الحساب",
+      "body": "يوجد تحديث جديد على حسابك."
+    },
+    "transfer_sent": {
+      "title": "تم إرسال التحويل",
+      "body": "أرسلت {{amount_cents}} إلى {{to_masked}}."
+    },
+    "transfer_received": {
+      "title": "تم استلام التحويل",
+      "body": "استلمت {{amount_cents}} من {{from_masked}}."
+    },
+    "bill_paid": {
+      "title": "تم دفع الفاتورة",
+      "body": "دفعت {{amount_cents}} إلى {{biller_name}}."
+    },
+    "card_purchase": {
+      "title": "شراء بالبطاقة",
+      "body": "خصم {{merchant}} مبلغ {{amount_cents}} من البطاقة المنتهية بـ {{last4}}."
+    },
+    "card_frozen": {
+      "title": "تم تجميد البطاقة",
+      "body": "تم تجميد البطاقة المنتهية بـ {{last4}}."
+    },
+    "card_unfrozen": {
+      "title": "تم إلغاء تجميد البطاقة",
+      "body": "أصبحت البطاقة المنتهية بـ {{last4}} نشطة مجددًا."
+    },
+    "card_issued": {
+      "title": "تم إصدار البطاقة",
+      "body": "تم إصدار بطاقة افتراضية منتهية بـ {{last4}}."
+    },
+    "card_cancelled": {
+      "title": "تم إلغاء البطاقة",
+      "body": "تم إلغاء البطاقة المنتهية بـ {{last4}}."
+    },
+    "password_changed": {
+      "title": "تم تغيير كلمة المرور",
+      "body": "تم تغيير كلمة مرور حسابك."
+    },
+    "session_revoked": {
+      "title": "تم تسجيل الخروج من الجهاز",
+      "body": "تم إنهاء جلسة على حسابك."
+    },
+    "low_balance": {
+      "title": "انخفاض الرصيد",
+      "body": "رصيد حساب {{account_type}} هو {{balance_cents}}، أقل من حد التنبيه {{threshold_cents}}."
+    },
+    "welcome": {
+      "title": "مرحبًا بك",
+      "body": "حساب Westbridge التجريبي جاهز."
+    }
   },
   "notFound": {
     "title": "الصفحة غير موجودة",

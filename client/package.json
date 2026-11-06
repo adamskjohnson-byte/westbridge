@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
+    "build:prod": "vite build && node scripts/generate-headers.mjs",
     "lint": "eslint .",
     "format": "prettier --write .",
     "test": "npm run i18n:check && vitest run",
+    "e2e": "node scripts/e2e-runner.mjs",
     "preview": "vite preview",
     "photos": "node --env-file=.env.local scripts/fetch-photos.mjs",
     "i18n:sync": "node scripts/sync-i18n-source.mjs",

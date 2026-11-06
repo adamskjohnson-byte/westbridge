@@ -132,7 +132,7 @@ export default tseslint.config(
     },
     rules: {
       'i18next/no-literal-string': ['error', {
-        ignoreCallee: ['t', 'useTranslation', 'cn', 'clsx'],
+        ignoreCallee: ['t', 'adminT', 'useTranslation', 'cn', 'clsx'],
         ignore: [
           '^Westbridge National Bank$',
           '^Westbridge$',
@@ -162,6 +162,12 @@ export default tseslint.config(
           '^#how-it-works$',
           '^18K\\+$',
           '^(?:Alicia R\\.|Jordan L\\.|Maya P\\.|Theo N\\.|Sofia K\\.|Daniel B\\.)$',
+          '^(?:transactions\\.(?:description|user|direction|category|amount|account)|users\\.(?:name|status|role|verified|accounts|balance|created)|audit\\.actions\\.)',
+          '^(?:created_at|last_login_at|bill_payment|in_progress)$',
+          '^/admin/support\\?user_id=',
+          '^(?:inline-flex items-center gap-1 border px-2 py-1 text-xs font-semibold|border-destructive text-destructive|border-primary text-primary|border-border text-muted-foreground|px-3 py-3 align-middle|border-s-2 p-3|border-primary bg-muted)$',
+          '^/[a-z0-9_#?/-]+$',
+          '^admin-$',
         ],
       }],
     },

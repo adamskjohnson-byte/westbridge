@@ -53,7 +53,7 @@ class AuthSpaTest extends TestCase
             ->assertJsonMissingPath('data.status')
             ->assertJsonMissingPath('data.password');
         $this->assertEqualsCanonicalizing(
-            ['id', 'first_name', 'last_name', 'email', 'role', 'email_verified', 'created_at'],
+            ['id', 'first_name', 'last_name', 'email', 'role', 'email_verified', 'two_factor_enabled', 'created_at'],
             array_keys($response->json('data')),
         );
 
@@ -79,6 +79,11 @@ class AuthSpaTest extends TestCase
             'user_id' => $user->id,
             'action' => 'auth.registered',
         ]);
+        Notification::assertSentTo(
+            $user,
+            WelcomeNotification::class,
+            fn (WelcomeNotification $notification, array $channels): bool => $channels === ['database'],
+        );
 
         $this->artisan('bank:reconcile')->assertExitCode(0);
         Notification::assertSentTo($user, VerifyEmail::class);
@@ -112,16 +117,16 @@ class AuthSpaTest extends TestCase
         ]);
 
         $response->assertCreated()->assertJsonPath('data.email_verified', true);
-        Notification::assertNothingSent();
+        Notification::assertSentTo(User::query()->where('email', 'jamie@example.test')->firstOrFail(), WelcomeNotification::class);
     }
 
     public function test_public_config_endpoint_reflects_email_verification_policy(): void
     {
         config(['bank.auth.require_email_verification' => true]);
-        $this->getJson('/api/v1/config')->assertOk()->assertExactJson(['email_verification_required' => true]);
+        $this->getJson('/api/v1/config')->assertOk()->assertJsonPath('email_verification_required', true)->assertJsonStructure(['turnstile' => ['enabled', 'sitekey'], 'two_factor_admin_required']);
 
         config(['bank.auth.require_email_verification' => false]);
-        $this->getJson('/api/v1/config')->assertOk()->assertExactJson(['email_verification_required' => false]);
+        $this->getJson('/api/v1/config')->assertOk()->assertJsonPath('email_verification_required', false);
     }
 
     public function test_registration_rejects_duplicate_email_case_insensitively(): void
@@ -328,7 +333,6 @@ class AuthSpaTest extends TestCase
 
         $this->withHeaders($this->spaHeaders())->get($url)->assertOk();
         $this->assertNotNull($user->fresh()->email_verified_at);
-        Notification::assertSentTo($user, WelcomeNotification::class);
         $this->assertDatabaseHas('audit_logs', ['user_id' => $user->id, 'action' => 'auth.email_verified']);
 
         $this->withHeaders($this->spaHeaders())->get($url)->assertOk();

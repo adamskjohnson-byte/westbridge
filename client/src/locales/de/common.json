@@ -133,6 +133,7 @@
     "noResults": "Keine Sprachen gefunden."
   },
   "theme": {
+    "label": "Darstellung",
     "toggleLabel": "Aktuelles Erscheinungsbild: {{current}}. Zum Erscheinungsbild {{next}} wechseln",
     "names": {
       "system": "System",
@@ -257,6 +258,24 @@
     "passwordStrength_other": "Passwortstärke: {{count}} von {{total}} Anforderungen erfüllt",
     "loadingAccount": "Ihr Konto wird geladen",
     "checkingSession": "Ihre Sitzung wird überprüft…",
+    "turnstile": {
+      "label": "Security check",
+      "configError": "Security check is unavailable right now.",
+      "verifyingHint": "Checking that you are human…",
+      "loadError": "The security check could not load.",
+      "retry": "Retry check",
+      "accessibleStatus": "Security check status"
+    },
+    "twoFactor": {
+      "checkEmail": "Check your email",
+      "sentTo": "We sent a one-time code to {{email}}.",
+      "codeLabel": "One-time code",
+      "resendCountdown": "Resend available in {{count}}s",
+      "codeExpiry": "Code expires in about {{count}} minutes",
+      "resending": "Sending…",
+      "resend": "Resend code",
+      "differentAccount": "Use a different account"
+    },
     "errors": {
       "accountSuspended": "Dieses Konto ist derzeit pausiert. Wenden Sie sich bitte an den Support.",
       "rateLimit": "Zu viele Versuche. Bitte warten Sie einen Moment und versuchen Sie es erneut.",
@@ -268,12 +287,19 @@
       "resetPassword": "Ihr Passwort konnte nicht zurückgesetzt werden. Bitte versuchen Sie es erneut.",
       "waitBeforeResend": "Bitte warten Sie, bevor Sie einen weiteren Link anfordern.",
       "resendVerification": "Der Link konnte nicht erneut gesendet werden. Bitte versuchen Sie es in Kürze erneut.",
-      "verifyEmail": "Diese E-Mail-Adresse konnte nicht bestätigt werden. Bitte fordern Sie einen neuen Link an."
+      "verifyEmail": "Diese E-Mail-Adresse konnte nicht bestätigt werden. Bitte fordern Sie einen neuen Link an.",
+      "captcha": "Please complete the security check."
     }
   },
   "apiErrors": {
+    "card_frozen": "Diese Karte ist gesperrt. Entsperre sie und versuche es erneut.",
+    "card_cancelled": "Diese Karte wurde gekündigt und kann nicht verwendet werden.",
+    "card_limit_exceeded": "Dieser Kauf überschreitet das Tageslimit der Karte.",
+    "current_password_invalid": "The current password is incorrect.",
+    "password_unchanged": "Choose a password different from your current one.",
+    "cannot_revoke_current": "You cannot revoke the device you are using now.",
     "generic": "Ein Fehler ist aufgetreten. Bitte versuchen Sie es erneut.",
-    "network_error": "Verbindung nicht möglich. Prüfen Sie Ihre Verbindung und versuchen Sie es erneut.",
+    "network_error": "Verbindung fehlgeschlagen. Prüfe deine Verbindung und versuche es erneut.",
     "unauthenticated": "Ihre Sitzung ist abgelaufen. Bitte melden Sie sich erneut an.",
     "forbidden": "Sie dürfen diese Aktion nicht ausführen.",
     "account_suspended": "Dieses Konto ist gesperrt. Bitte wenden Sie sich an den Support.",
@@ -283,9 +309,20 @@
     "not_found": "Diese Seite oder dieser Eintrag wurde nicht gefunden.",
     "csrf_mismatch": "Ihre Sitzung muss aktualisiert werden. Bitte versuchen Sie es erneut.",
     "validation_failed": "Bitte prüfen Sie die Angaben und versuchen Sie es erneut.",
-    "too_many_requests": "Zu viele Anfragen. Bitte warten Sie und versuchen Sie es erneut.",
+    "too_many_requests": "Zu viele Anfragen. Bitte warte und versuche es erneut.",
     "server_error": "Ein Serverfehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
     "http_error": "Die Anfrage konnte nicht abgeschlossen werden. Bitte versuchen Sie es erneut.",
+    "idempotency_key_reused": "Dieser Versuch steht im Konflikt mit einer früheren Anfrage.",
+    "insufficient_funds": "Dieses Konto hat nicht genügend Guthaben. Wähle einen kleineren Betrag oder ein anderes Konto.",
+    "daily_limit_exceeded": "Diese Zahlung überschreitet dein verbleibendes Tageslimit.",
+    "account_frozen": "Dieses Konto ist gesperrt und kann kein Geld senden.",
+    "account_closed": "Dieses Konto ist geschlossen und kann kein Geld senden. Wähle ein anderes aktives Konto.",
+    "same_account": "Wähle ein anderes Zielkonto.",
+    "currency_mismatch": "Diese Konten verwenden unterschiedliche Währungen und können nicht für diese Überweisung genutzt werden.",
+    "recipient_not_found": "Ein aktiver Empfänger konnte nicht bestätigt werden.",
+    "amount_invalid": "Gib einen Betrag innerhalb des zulässigen Bereichs ein.",
+    "biller_not_found": "Dieser Anbieter ist nicht mehr verfügbar.",
+    "reference_invalid": "Die Referenz entspricht nicht dem Format des Anbieters.",
     "validation": {
       "email_required": "Geben Sie Ihre E-Mail-Adresse ein.",
       "email_invalid": "Geben Sie eine gültige E-Mail-Adresse ein.",
@@ -316,10 +353,168 @@
       "remember_invalid": "Wählen Sie eine gültige Einstellung zum Merken der Anmeldung.",
       "credentials_invalid": "E-Mail-Adresse oder Passwort sind falsch.",
       "reset_token_required": "Das Zurücksetzungstoken ist erforderlich.",
-      "reset_token_invalid": "Dieser Link zum Zurücksetzen ist ungültig oder abgelaufen. Fordern Sie einen neuen an."
+      "reset_token_invalid": "Dieser Link zum Zurücksetzen ist ungültig oder abgelaufen. Fordern Sie einen neuen an.",
+      "current_password_invalid": "Das aktuelle Passwort ist falsch.",
+      "password_unchanged": "Wähle ein anderes Passwort als dein aktuelles.",
+      "cannot_revoke_current": "Du kannst das aktuell verwendete Gerät nicht abmelden."
     }
   },
   "dashboard": {
+    "settings": {
+      "eyebrow": "Dein Konto",
+      "title": "Einstellungen",
+      "tabs": {
+        "label": "Einstellungsbereiche",
+        "profile": "Profil",
+        "security": "Sicherheit",
+        "preferences": "Voreinstellungen"
+      },
+      "phone": "Telefonnummer",
+      "emailReadOnly": "Die E-Mail-Adresse kann derzeit noch nicht geändert werden.",
+      "unsavedConfirm": "Einstellungen verlassen, ohne Änderungen zu speichern?",
+      "saveChanges": "Änderungen speichern",
+      "profileSaved": "Profiländerungen gespeichert.",
+      "changePassword": "Passwort ändern",
+      "currentPassword": "Aktuelles Passwort",
+      "updatePassword": "Passwort aktualisieren",
+      "passwordSaved": "Passwort geändert. Andere Geräte wurden abgemeldet.",
+      "sessionsTitle": "Angemeldete Geräte",
+      "revokeOthers": "Alle anderen Geräte abmelden",
+      "revokeOthersConfirm": "Alle anderen Geräte abmelden?",
+      "revokeConfirm": "Dieses Gerät abmelden?",
+      "revokeSession": "Sitzung widerrufen",
+      "thisDevice": "Dieses Gerät",
+      "sessionDevice": "{{device}} · {{browser}} auf {{platform}}",
+      "sessionRevoked": "Sitzung abgemeldet.",
+      "othersRevoked": "Andere Geräte abgemeldet.",
+      "device": {
+        "desktop": "Computer",
+        "mobile": "Mobilgerät",
+        "tablet": "Tablet",
+        "unknown": "Unbekanntes Gerät"
+      },
+      "preferencesSaved": "Einstellungen gespeichert.",
+      "preferenceSaveError": "Einstellung konnte nicht gespeichert werden. Versuche es erneut.",
+      "savePreferences": "Einstellungen speichern",
+      "emailActivity": "E-Mails zu Kontoaktivitäten erhalten",
+      "securityEmailsAlways": "Sicherheits-E-Mails werden immer gesendet.",
+      "lowBalance": "Niedrigstand-Warnung",
+      "lowBalanceOff": "Aus",
+      "lowBalanceAmount": "Warnung unter {{amount}}",
+      "thresholdInvalid": "Gib einen gültigen Warnbetrag ein.",
+      "twoFactor": {
+        "title": "Two-factor authentication",
+        "enabled": "Two-factor authentication is enabled.",
+        "disabled": "Two-factor authentication is off.",
+        "requiredAdmin": "Required for admins",
+        "enable": "Enable",
+        "disable": "Disable",
+        "enabledToast": "Two-factor authentication enabled.",
+        "disabledToast": "Two-factor authentication disabled.",
+        "confirmPassword": "Confirm your password",
+        "enterCode": "Enter the code",
+        "sentTo": "We sent a code to {{email}}.",
+        "code": "One-time code",
+        "confirm": "Confirm",
+        "sendCode": "Send code",
+        "close": "Close",
+        "enableDescription": "You will need a verification code before signing in.",
+        "disableDescription": "Enter your current password to disable this security step."
+      }
+    },
+    "cards": {
+      "eyebrow": "Zahlungskarten",
+      "title": "Karten",
+      "request": "Virtuelle Karte beantragen",
+      "close": "Dialog schließen",
+      "visualLabel": "Karte {{nickname}}, endet auf {{last4}}, {{status}}",
+      "cardholder": "KARTENINHABER",
+      "expiry": "GÜLTIG BIS",
+      "frozen": "Gesperrt",
+      "cancelled": "Gekündigt",
+      "switcher": "Deine Karten",
+      "status": {
+        "active": "Aktiv",
+        "frozen": "Gesperrt",
+        "cancelled": "Gekündigt"
+      },
+      "linkedAccount": "Verknüpftes Konto",
+      "spentToday": "Tageslimit genutzt",
+      "of": "von",
+      "spendingProgress": "Tägliche Kartenausgaben",
+      "freeze": "Karte sperren",
+      "unfreeze": "Karte entsperren",
+      "freezeSuccess": "Karte gesperrt",
+      "unfreezeSuccess": "Karte entsperrt",
+      "cancelSuccess": "Karte gekündigt",
+      "edit": "Karte bearbeiten",
+      "testPurchase": "Testkauf ausprobieren",
+      "cancel": "Karte kündigen",
+      "recentActivity": "Letzte Kartenaktivitäten",
+      "noActivity": "Noch keine Kartenzahlungen.",
+      "empty": "Du hast noch keine Karte",
+      "requestTitle": "Virtuelle Karte beantragen",
+      "requestDescription": "Wähle ein aktives Konto für diese virtuelle Debitkarte.",
+      "maximumReached": "Du hast das Maximum von drei aktiven Karten erreicht.",
+      "chooseAccount": "Verknüpftes Konto",
+      "nickname": "Kartenname",
+      "editTitle": "Kartendaten bearbeiten",
+      "dailyLimit": "Tageslimit in Dollar",
+      "limitInvalid": "Gib einen gültigen Betrag innerhalb des Kartenlimits ein.",
+      "limitMax": "Maximum: {{amount}}",
+      "save": "Änderungen speichern",
+      "cancelTitle": "Diese Karte kündigen?",
+      "cancelWarning": "Die Karte wird dauerhaft gekündigt. Alle zukünftigen Käufe werden abgelehnt.",
+      "typeToConfirm": "Gib KÜNDIGEN ein, um fortzufahren",
+      "confirmWord": "KÜNDIGEN",
+      "purchaseTitle": "Testkauf ausprobieren",
+      "purchaseDemoNote": "Dies simuliert eine Kartenzahlung in der Demo. Es wird kein echtes Geld verwendet.",
+      "merchant": "Händler",
+      "amountLabel": "Betrag in Dollar",
+      "purchaseInvalid": "Gib einen Händler und einen Betrag von 0,01 bis 10.000,00 $ ein.",
+      "approved": "Genehmigt. Neuer Kontostand:",
+      "declined": "Abgelehnt",
+      "purchaseRetry": "Das Ergebnis konnte nicht bestätigt werden. Wiederhole denselben Kauf sicher.",
+      "processing": "Wird verarbeitet…",
+      "submitPurchase": "Testkauf senden",
+      "amount": "Betrag in Dollar"
+    },
+    "insights": {
+      "eyebrow": "Deine Finanzen im Überblick",
+      "title": "Einblicke",
+      "na": "k. A.",
+      "change": "Änderung: {{value}}",
+      "previousMonth": "Vormonat",
+      "dailyAccessible": "Tägliche Ausgaben für jeden Tag des ausgewählten Monats. Die Werte stehen auch in der folgenden Tabelle.",
+      "dailyTitle": "Tägliche Ausgaben",
+      "categoryAccessible": "Ausgaben nach Kategorie in diesem und im vorherigen Monat. Die Werte stehen auch in der folgenden Tabelle.",
+      "categoryTitle": "Kategorienvergleich",
+      "date": "Datum",
+      "monthSelector": "Analysemonat auswählen",
+      "previous": "Vormonat",
+      "next": "Nächster Monat",
+      "headlines": "Monatssummen",
+      "savingsRate": "Sparquote",
+      "empty": "In diesem Monat wurden keine Einnahmen oder Ausgaben erfasst.",
+      "highlights": "Monatliche Erkenntnisse",
+      "trends": {
+        "up": "Die Ausgaben betrugen {{amount}} und stiegen gegenüber {{previous}} im Vormonat.",
+        "down": "Die Ausgaben betrugen {{amount}} und sanken gegenüber {{previous}} im Vormonat.",
+        "same": "Die Ausgaben lagen mit {{amount}} etwa auf dem Niveau des Vormonats.",
+        "noData": "Du hast {{amount}} ausgegeben; im Vormonat gab es keine Ausgaben zum Vergleich."
+      },
+      "topCategory": "{{category}} war mit {{share}} % deiner Ausgaben die wichtigste Kategorie.",
+      "noCategory": "Diesen Monat gibt es keine Kategorieausgaben hervorzuheben.",
+      "largestExpense": "Deine größte Ausgabe war {{name}} mit {{amount}}.",
+      "noLargest": "Diesen Monat gibt es keine Ausgaben hervorzuheben.",
+      "averageAndSavings": "Die durchschnittlichen Tagesausgaben betrugen {{amount}}. Sparquote: {{savings}}.",
+      "charts": "Ausgabendiagramme",
+      "topMerchants": "Häufigste Händler",
+      "purchaseCount_one": "{{count}} Kauf",
+      "purchaseCount_other": "{{count}} Käufe",
+      "noMerchants": "Diesen Monat gibt es keine Händler-Rangliste.",
+      "largestTransactions": "Größte Ausgaben"
+    },
     "description": "Übersicht über Ihr Westbridge-Demokonto.",
     "overview": "Übersicht",
     "greeting": {
@@ -334,6 +529,7 @@
       "overview": "Übersicht",
       "transactions": "Transaktionen",
       "transfers": "Überweisungen",
+      "bills": "Rechnungen",
       "cards": "Karten",
       "settings": "Einstellungen",
       "comingSoon": "Demnächst verfügbar",
@@ -436,6 +632,180 @@
       "clearFilters": "Filter löschen",
       "tableCaption": "Kontotransaktionen. Wählen Sie eine Zeile aus, um Details anzuzeigen."
     },
+    "transfers": {
+      "title": "Überweisungen",
+      "limitRemaining": "Verbleibendes Tageslimit:",
+      "progress": "Überweisungsfortschritt",
+      "notProvided": "Nicht angegeben",
+      "leaveConfirm": "Überweisung verlassen? Nicht gespeicherte Angaben gehen verloren.",
+      "amountInvalid": "Gib einen gültigen Betrag größer als null ein.",
+      "limitOrBalanceHint": "Der Betrag übersteigt dein Guthaben oder Tageslimit. Prüfe Betrag oder Konto.",
+      "sameAccount": "Wähle ein anderes Empfängerkonto.",
+      "tabs": {
+        "label": "Überweisungsbereiche",
+        "move": "Geld überweisen",
+        "recipients": "Empfänger",
+        "history": "Verlauf"
+      },
+      "steps": {
+        "details": "Angaben",
+        "review": "Prüfen",
+        "receipt": "Beleg"
+      },
+      "details": {
+        "from": "Quellkonto",
+        "to": "An",
+        "destinations": {
+          "own": "Meine Konten",
+          "beneficiary": "Gespeicherter Empfänger",
+          "new": "Neuer Empfänger"
+        },
+        "myAccount": "Eigenes Konto auswählen",
+        "savedRecipient": "Gespeicherter Empfänger",
+        "accountNumber": "10-stellige Kontonummer",
+        "amount": "Betrag in Dollar",
+        "useBalance": "Gesamtes Guthaben verwenden",
+        "overBalance": "Dieser Betrag übersteigt das verfügbare Guthaben.",
+        "overLimit": "Dieser Betrag übersteigt das verbleibende Tageslimit.",
+        "memo": "Verwendungszweck (optional)"
+      },
+      "lookup": {
+        "check": "Prüfen",
+        "checking": "Konto wird geprüft…",
+        "numberInvalid": "Gib eine 10-stellige Kontonummer ein.",
+        "result": "Bestätigter Kontoinhaber: {{name}}",
+        "confirm": "Meinst du diese Person: {{name}}?",
+        "confirmRequired": "Bestätige den Empfänger, bevor du fortfährst."
+      },
+      "review": {
+        "from": "Von",
+        "to": "An",
+        "amount": "Betrag",
+        "memo": "Verwendungszweck",
+        "fee": "Gebühr",
+        "newBalance": "Neuer Kontostand"
+      },
+      "actions": {
+        "review": "Überweisung prüfen",
+        "back": "Zurück",
+        "confirm": "Überweisung bestätigen",
+        "sending": "Wird gesendet…",
+        "retryHint": "Deine Angaben sind noch vorhanden. Versuche es erneut.",
+        "retry": "Erneut versuchen"
+      },
+      "receipt": {
+        "success": "Überweisung abgeschlossen",
+        "reference": "Referenz",
+        "copyReference": "Referenz kopieren",
+        "date": "Datum und Uhrzeit",
+        "newBalance": "Neuer Kontostand",
+        "saveRecipient": "Als Empfänger speichern",
+        "another": "Weitere Überweisung",
+        "transactions": "Transaktionen ansehen",
+        "print": "Beleg drucken"
+      },
+      "recipients": {
+        "title": "Gespeicherte Empfänger",
+        "addTitle": "Empfänger hinzufügen",
+        "empty": "Noch keine Empfänger gespeichert.",
+        "maximum": "Du hast die Höchstzahl von 50 Empfängern erreicht.",
+        "count": "{{count}} von 50",
+        "nickname": "Spitzname (optional)",
+        "add": "Empfänger hinzufügen",
+        "added": "Empfänger gespeichert.",
+        "send": "Geld senden",
+        "selectRecipient": "Empfänger auswählen.",
+        "deleteLabel": "{{name}} löschen",
+        "deleteConfirm": "{{name}} aus deinen Empfängern löschen?",
+        "numberInvalid": "Gib eine 10-stellige Kontonummer ein."
+      },
+      "history": {
+        "direction": "Überweisungsart",
+        "all": "Alle",
+        "sent": "Gesendet",
+        "received": "Empfangen",
+        "own": "Zwischen meinen Konten",
+        "dateFrom": "Von Datum",
+        "dateTo": "Bis Datum",
+        "empty": "Keine Überweisungen entsprechen diesen Filtern.",
+        "pagination": "Überweisungsseiten",
+        "openDetail": "Überweisungsdetails öffnen",
+        "detailTitle": "Überweisungsdetails",
+        "detailDescription": "Belegdaten dieser Überweisung."
+      }
+    },
+    "bills": {
+      "title": "Rechnungen bezahlen",
+      "progress": "Zahlungsfortschritt",
+      "limitRemaining": "Verbleibendes Tageslimit:",
+      "leaveConfirm": "Zahlung verlassen? Nicht gespeicherte Angaben gehen verloren.",
+      "limitOrBalanceHint": "Der Betrag übersteigt dein Guthaben oder Tageslimit. Prüfe Betrag oder Konto.",
+      "steps": {
+        "details": "Angaben",
+        "review": "Prüfen",
+        "receipt": "Beleg"
+      },
+      "details": {
+        "title": "Anbieter auswählen",
+        "chooseBiller": "Anbieter auswählen",
+        "search": "Anbieter suchen",
+        "noResults": "Keine Anbieter entsprechen deiner Suche.",
+        "paymentDetails": "Zahlungsdetails",
+        "from": "Quellkonto",
+        "reference": "Referenznummer",
+        "amount": "Betrag in Dollar",
+        "referenceHint": "Gib die Referenz genau wie auf der Rechnung ein. Sie wird beim Senden geprüft.",
+        "useBalance": "Gesamtes Guthaben verwenden"
+      },
+      "categories": {
+        "electricity": "Strom",
+        "water": "Wasser",
+        "internet": "Internetzugang",
+        "mobile": "Mobilfunk",
+        "insurance": "Versicherung",
+        "credit_card": "Kreditkarte",
+        "tv": "Fernsehen",
+        "tax": "Steuern"
+      },
+      "validation": {
+        "chooseBiller": "Wähle einen Anbieter aus, um fortzufahren.",
+        "chooseAccount": "Wähle ein aktives Konto aus.",
+        "reference": "Gib eine Referenz mit 1 bis 40 Zeichen ein.",
+        "amount": "Gib einen gültigen Betrag größer als null ein."
+      },
+      "review": {
+        "from": "Von",
+        "biller": "Anbieter",
+        "reference": "Referenznummer",
+        "amount": "Betrag",
+        "fee": "Gebühr",
+        "newBalance": "Neuer Kontostand"
+      },
+      "actions": {
+        "review": "Zahlung prüfen",
+        "back": "Zurück",
+        "confirm": "Zahlung bestätigen",
+        "sending": "Wird bezahlt…",
+        "retryHint": "Deine Angaben sind noch vorhanden. Versuche es erneut."
+      },
+      "receipt": {
+        "success": "Zahlung abgeschlossen",
+        "transactionReference": "Transaktionsreferenz",
+        "date": "Datum und Uhrzeit",
+        "newBalance": "Neuer Kontostand",
+        "another": "Weitere Zahlung",
+        "transactions": "Transaktionen ansehen",
+        "print": "Beleg drucken"
+      },
+      "recent": {
+        "title": "Letzte Zahlungen",
+        "empty": "Noch keine Rechnungszahlungen.",
+        "pagination": "Zahlungsseiten",
+        "previousPage": "Vorherige Zahlungsseite",
+        "nextPage": "Nächste Zahlungsseite",
+        "payAgain": "Erneut bezahlen"
+      }
+    },
     "eyebrow": "Ihr Westbridge",
     "welcome": "Willkommen, {{name}}",
     "signedInAs": "Angemeldet als {{email}}",
@@ -468,6 +838,75 @@
       "fee": "Gebühr",
       "interest": "Zinsen",
       "other": "Sonstiges"
+    }
+  },
+  "notifications": {
+    "bellLabel_zero": "Benachrichtigungen",
+    "bellLabel_one": "{{count}} ungelesene Benachrichtigung",
+    "bellLabel_other": "{{count}} ungelesene Benachrichtigungen",
+    "popoverTitle": "Benachrichtigungen",
+    "eyebrow": "Kontoaktivitäten",
+    "title": "Benachrichtigungen",
+    "markAll": "Alle als gelesen markieren",
+    "markRead": "Als gelesen markieren",
+    "unreadOnly": "Nur ungelesene",
+    "delete": "Benachrichtigung löschen",
+    "viewAll": "Alle Benachrichtigungen ansehen",
+    "openRelated": "Zugehörige Aktivität öffnen",
+    "unread": "Ungelesen",
+    "empty": "Alles erledigt.",
+    "loadError": "Benachrichtigungen konnten nicht geladen werden.",
+    "generic": {
+      "title": "Kontoaktualisierung",
+      "body": "Es gibt eine neue Aktualisierung zu deinem Konto."
+    },
+    "transfer_sent": {
+      "title": "Überweisung gesendet",
+      "body": "Du hast {{amount_cents}} an {{to_masked}} gesendet."
+    },
+    "transfer_received": {
+      "title": "Überweisung erhalten",
+      "body": "Du hast {{amount_cents}} von {{from_masked}} erhalten."
+    },
+    "bill_paid": {
+      "title": "Rechnung bezahlt",
+      "body": "Du hast {{amount_cents}} an {{biller_name}} bezahlt."
+    },
+    "card_purchase": {
+      "title": "Kartenzahlung",
+      "body": "{{merchant}} hat {{amount_cents}} von der Karte mit Endziffern {{last4}} abgebucht."
+    },
+    "card_frozen": {
+      "title": "Karte gesperrt",
+      "body": "Die Karte mit Endziffern {{last4}} wurde gesperrt."
+    },
+    "card_unfrozen": {
+      "title": "Karte entsperrt",
+      "body": "Die Karte mit Endziffern {{last4}} ist wieder aktiv."
+    },
+    "card_issued": {
+      "title": "Karte ausgestellt",
+      "body": "Eine virtuelle Karte mit Endziffern {{last4}} wurde ausgestellt."
+    },
+    "card_cancelled": {
+      "title": "Karte gekündigt",
+      "body": "Die Karte mit Endziffern {{last4}} wurde gekündigt."
+    },
+    "password_changed": {
+      "title": "Passwort geändert",
+      "body": "Das Passwort deines Kontos wurde geändert."
+    },
+    "session_revoked": {
+      "title": "Gerät abgemeldet",
+      "body": "Eine Sitzung deines Kontos wurde abgemeldet."
+    },
+    "low_balance": {
+      "title": "Niedriger Kontostand",
+      "body": "Dein {{account_type}}-Kontostand beträgt {{balance_cents}} und liegt unter dem Warnwert {{threshold_cents}}."
+    },
+    "welcome": {
+      "title": "Willkommen",
+      "body": "Dein Westbridge-Demokonto ist bereit."
     }
   },
   "notFound": {

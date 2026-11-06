@@ -8,7 +8,7 @@ export const landingContent = {
     secondaryCtaHref: '#how-it-works',
     card: {
       bankName: 'WESTBRIDGE NATIONAL BANK',
-      number: '6248 0000 0000 2105',
+      last4: '2105',
       holder: '',
       expires: '******',
     },

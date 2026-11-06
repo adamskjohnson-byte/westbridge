@@ -69,6 +69,16 @@ describe('TransactionsPage', () => {
     expect(search.get('q')).toBe('groc')
   })
 
+  it('renders category filter chips without React key warnings', async () => {
+    getDashboardSummary.mockResolvedValue(summary)
+    getAccountTransactions.mockResolvedValue(transactionPage())
+    const consoleError = vi.spyOn(console, 'error').mockImplementation(() => undefined)
+    renderTransactions('?category=card&category=deposit')
+
+    expect(await screen.findAllByRole('button', { name: /Remove filter/ })).toHaveLength(2)
+    expect(consoleError).not.toHaveBeenCalledWith(expect.stringContaining('Each child in a list should have a unique "key" prop'))
+  })
+
   it('renders signed credit and debit amounts and opens details with Enter', async () => {
     getDashboardSummary.mockResolvedValue(summary)
     getAccountTransactions.mockResolvedValue(transactionPage())

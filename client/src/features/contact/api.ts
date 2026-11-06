@@ -6,6 +6,7 @@ export type ContactFormValues = {
   subject: string
   message: string
   website: string
+  turnstile_token?: string
 }
 
 export type ContactSubmissionResponse = {

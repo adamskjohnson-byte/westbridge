@@ -1,0 +1,12 @@
+{
+  "hashes": [
+    {
+      "hash": "sha256-47DEQpj8HBSa+/TImW+5JCeuQeRkm5NMpJWZG3hSuFU=",
+      "source": "sonner 2.0.8 runtime-injected empty style element"
+    },
+    {
+      "hash": "sha256-StEaX+se6YS7pqjzrzMIA0KaX9zF/8zAhvQXZAe5epY=",
+      "source": "sonner 2.0.8 runtime-injected bundled stylesheet"
+    }
+  ]
+}

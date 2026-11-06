@@ -2,7 +2,7 @@ import { createContext, useContext, useEffect, type ReactNode } from 'react'
 import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { ApiError, setUnauthorizedHandler } from '@/lib/api'
 import * as authApi from './api'
-import type { AppConfig, AuthUser, LoginPayload, RegisterPayload } from './api'
+import type { AppConfig, AuthUser, LoginPayload, LoginResult, RegisterPayload } from './api'
 
 const meKey = ['me'] as const
 const appConfigKey = ['app-config'] as const
@@ -11,7 +11,8 @@ type AuthContextValue = {
   user: AuthUser | null
   isLoading: boolean
   isAuthenticated: boolean
-  login: (payload: LoginPayload) => Promise<AuthUser>
+  login: (payload: LoginPayload) => Promise<LoginResult>
+  verifyTwoFactor: (challengeId: string, code: string) => Promise<AuthUser>
   register: (payload: RegisterPayload) => Promise<AuthUser>
   logout: () => Promise<void>
 }
@@ -42,8 +43,14 @@ export function AuthProvider({ children }: { children: ReactNode }) {
     return () => setUnauthorizedHandler(null)
   }, [queryClient])
 
-  async function login(payload: LoginPayload): Promise<AuthUser> {
-    const user = await authApi.login(payload)
+  async function login(payload: LoginPayload): Promise<LoginResult> {
+    const result = await authApi.login(payload)
+    if (result.kind === 'authenticated') queryClient.setQueryData(meKey, result.user)
+    return result
+  }
+
+  async function verifyTwoFactor(challengeId: string, code: string): Promise<AuthUser> {
+    const user = await authApi.verifyLoginChallenge(challengeId, code)
     queryClient.setQueryData(meKey, user)
     return user
   }
@@ -70,6 +77,7 @@ export function AuthProvider({ children }: { children: ReactNode }) {
       isLoading: meQuery.isPending,
       isAuthenticated: user !== null,
       login,
+      verifyTwoFactor,
       register,
       logout,
     }}>
@@ -78,10 +86,11 @@ export function AuthProvider({ children }: { children: ReactNode }) {
   )
 }
 
-export function useAppConfig() {
+export function useAppConfig(enabled = true) {
   return useQuery<AppConfig>({
     queryKey: appConfigKey,
     queryFn: authApi.getConfig,
+    enabled,
     staleTime: 5 * 60 * 1000,
     retry: false,
   })

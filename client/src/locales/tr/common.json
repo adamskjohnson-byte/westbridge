@@ -133,6 +133,7 @@
     "noResults": "Dil bulunamadı."
   },
   "theme": {
+    "label": "Tema",
     "toggleLabel": "Geçerli tema: {{current}}. {{next}} temaya geçin",
     "names": {
       "system": "sistem",
@@ -257,6 +258,24 @@
     "passwordStrength_other": "Parola gücü: {{total}} koşuldan {{count}} tanesi karşılandı",
     "loadingAccount": "Hesabınız yükleniyor",
     "checkingSession": "Oturumunuz kontrol ediliyor…",
+    "turnstile": {
+      "label": "Security check",
+      "configError": "Security check is unavailable right now.",
+      "verifyingHint": "Checking that you are human…",
+      "loadError": "The security check could not load.",
+      "retry": "Retry check",
+      "accessibleStatus": "Security check status"
+    },
+    "twoFactor": {
+      "checkEmail": "Check your email",
+      "sentTo": "We sent a one-time code to {{email}}.",
+      "codeLabel": "One-time code",
+      "resendCountdown": "Resend available in {{count}}s",
+      "codeExpiry": "Code expires in about {{count}} minutes",
+      "resending": "Sending…",
+      "resend": "Resend code",
+      "differentAccount": "Use a different account"
+    },
     "errors": {
       "accountSuspended": "Bu hesap şu anda kullanıma kapalı. Yardım için lütfen destek ekibiyle iletişime geçin.",
       "rateLimit": "Çok fazla deneme yapıldı. Lütfen biraz bekleyip tekrar deneyin.",
@@ -268,12 +287,19 @@
       "resetPassword": "Parolanız sıfırlanamadı. Lütfen tekrar deneyin.",
       "waitBeforeResend": "Yeni bir bağlantı istemeden önce lütfen bekleyin.",
       "resendVerification": "Bağlantı yeniden gönderilemedi. Lütfen biraz sonra tekrar deneyin.",
-      "verifyEmail": "E-posta adresi doğrulanamadı. Lütfen yeni bir bağlantı isteyin."
+      "verifyEmail": "E-posta adresi doğrulanamadı. Lütfen yeni bir bağlantı isteyin.",
+      "captcha": "Please complete the security check."
     }
   },
   "apiErrors": {
+    "card_frozen": "Bu kart dondurulmuş. Yeniden denemeden önce kartı açın.",
+    "card_cancelled": "Bu kart iptal edildi ve kullanılamaz.",
+    "card_limit_exceeded": "Bu alışveriş kartın günlük limitini aşıyor.",
+    "current_password_invalid": "The current password is incorrect.",
+    "password_unchanged": "Choose a password different from your current one.",
+    "cannot_revoke_current": "You cannot revoke the device you are using now.",
     "generic": "Bir hata oluştu. Lütfen tekrar deneyin.",
-    "network_error": "Bağlantı kurulamıyor. Bağlantınızı kontrol edip tekrar deneyin.",
+    "network_error": "Bağlantı kurulamadı. Bağlantınızı kontrol edip tekrar deneyin.",
     "unauthenticated": "Oturumunuz sona erdi. Lütfen yeniden giriş yapın.",
     "forbidden": "Bu işlemi yapma izniniz yok.",
     "account_suspended": "Bu hesap askıya alındı. Lütfen destek ekibiyle iletişime geçin.",
@@ -283,9 +309,20 @@
     "not_found": "Bu sayfa veya öğe bulunamadı.",
     "csrf_mismatch": "Oturumunuzun yenilenmesi gerekiyor. Lütfen tekrar deneyin.",
     "validation_failed": "Bilgileri kontrol edip tekrar deneyin.",
-    "too_many_requests": "Çok fazla istek gönderildi. Lütfen bekleyip tekrar deneyin.",
+    "too_many_requests": "Çok fazla istek. Bekleyip tekrar deneyin.",
     "server_error": "Bir sunucu hatası oluştu. Lütfen biraz sonra tekrar deneyin.",
     "http_error": "İstek tamamlanamadı. Lütfen tekrar deneyin.",
+    "idempotency_key_reused": "Bu istek önceki bir istekle çakışıyor.",
+    "insufficient_funds": "Bu hesapta yeterli bakiye yok. Daha düşük bir tutar veya başka bir hesap seçin.",
+    "daily_limit_exceeded": "Bu ödeme kalan günlük limitinizi aşıyor.",
+    "account_frozen": "Bu hesap dondurulmuş ve para gönderemez.",
+    "account_closed": "Bu hesap kapalı ve para gönderemez. Başka bir etkin hesap seçin.",
+    "same_account": "Farklı bir alıcı hesap seçin.",
+    "currency_mismatch": "Bu hesaplar farklı para birimleri kullanıyor ve bu transferde birlikte kullanılamaz.",
+    "recipient_not_found": "Etkin bir alıcı doğrulanamadı.",
+    "amount_invalid": "İzin verilen aralıkta bir tutar girin.",
+    "biller_not_found": "Bu fatura sağlayıcısı artık kullanılamıyor.",
+    "reference_invalid": "Referans numarası sağlayıcının biçimiyle eşleşmiyor.",
     "validation": {
       "email_required": "E-posta adresinizi girin.",
       "email_invalid": "Geçerli bir e-posta adresi girin.",
@@ -316,10 +353,168 @@
       "remember_invalid": "Oturumu hatırlamak için geçerli bir seçenek belirleyin.",
       "credentials_invalid": "E-posta adresi veya şifre yanlış.",
       "reset_token_required": "Şifre sıfırlama belirteci gereklidir.",
-      "reset_token_invalid": "Bu sıfırlama bağlantısı geçersiz veya süresi dolmuş. Yeni bir bağlantı isteyin."
+      "reset_token_invalid": "Bu sıfırlama bağlantısı geçersiz veya süresi dolmuş. Yeni bir bağlantı isteyin.",
+      "current_password_invalid": "Mevcut parola yanlış.",
+      "password_unchanged": "Mevcut parolanızdan farklı bir parola seçin.",
+      "cannot_revoke_current": "Şu anda kullandığınız cihazın oturumunu iptal edemezsiniz."
     }
   },
   "dashboard": {
+    "settings": {
+      "eyebrow": "Hesabınız",
+      "title": "Ayarlar",
+      "tabs": {
+        "label": "Ayar bölümleri",
+        "profile": "Profil",
+        "security": "Güvenlik",
+        "preferences": "Tercihler"
+      },
+      "phone": "Telefon numarası",
+      "emailReadOnly": "E-posta adresini değiştirme henüz kullanılamıyor.",
+      "unsavedConfirm": "Değişiklikleri kaydetmeden ayarlardan çıkılsın mı?",
+      "saveChanges": "Değişiklikleri kaydet",
+      "profileSaved": "Profil değişiklikleri kaydedildi.",
+      "changePassword": "Parolayı değiştir",
+      "currentPassword": "Mevcut parola",
+      "updatePassword": "Parolayı güncelle",
+      "passwordSaved": "Parola değiştirildi. Diğer cihazların oturumu kapatıldı.",
+      "sessionsTitle": "Oturum açılan cihazlar",
+      "revokeOthers": "Diğer tüm cihazlardan çıkış yap",
+      "revokeOthersConfirm": "Diğer tüm cihazlardan çıkış yapılsın mı?",
+      "revokeConfirm": "Bu cihazdan çıkış yapılsın mı?",
+      "revokeSession": "Oturumu iptal et",
+      "thisDevice": "Bu cihaz",
+      "sessionDevice": "{{device}} · {{platform}} üzerinde {{browser}}",
+      "sessionRevoked": "Oturum kapatıldı.",
+      "othersRevoked": "Diğer cihazların oturumu kapatıldı.",
+      "device": {
+        "desktop": "Masaüstü",
+        "mobile": "Mobil",
+        "tablet": "Tablet",
+        "unknown": "Bilinmeyen cihaz"
+      },
+      "preferencesSaved": "Tercihler kaydedildi.",
+      "preferenceSaveError": "Tercih kaydedilemedi. Yeniden deneyin.",
+      "savePreferences": "Tercihleri kaydet",
+      "emailActivity": "Hesap etkinliği e-postalarını al",
+      "securityEmailsAlways": "Güvenlik e-postaları her zaman gönderilir.",
+      "lowBalance": "Düşük bakiye uyarısı",
+      "lowBalanceOff": "Kapalı",
+      "lowBalanceAmount": "{{amount}} altı için uyar",
+      "thresholdInvalid": "Geçerli bir uyarı tutarı girin.",
+      "twoFactor": {
+        "title": "Two-factor authentication",
+        "enabled": "Two-factor authentication is enabled.",
+        "disabled": "Two-factor authentication is off.",
+        "requiredAdmin": "Required for admins",
+        "enable": "Enable",
+        "disable": "Disable",
+        "enabledToast": "Two-factor authentication enabled.",
+        "disabledToast": "Two-factor authentication disabled.",
+        "confirmPassword": "Confirm your password",
+        "enterCode": "Enter the code",
+        "sentTo": "We sent a code to {{email}}.",
+        "code": "One-time code",
+        "confirm": "Confirm",
+        "sendCode": "Send code",
+        "close": "Close",
+        "enableDescription": "You will need a verification code before signing in.",
+        "disableDescription": "Enter your current password to disable this security step."
+      }
+    },
+    "cards": {
+      "eyebrow": "Ödeme kartları",
+      "title": "Kartlar",
+      "request": "Sanal kart iste",
+      "close": "Pencereyi kapat",
+      "visualLabel": "{{nickname}} kartı, sonu {{last4}}, {{status}}",
+      "cardholder": "KART SAHİBİ",
+      "expiry": "SON KULLANMA",
+      "frozen": "Donduruldu",
+      "cancelled": "İptal edildi",
+      "switcher": "Kartlarınız",
+      "status": {
+        "active": "Etkin",
+        "frozen": "Donduruldu",
+        "cancelled": "İptal edildi"
+      },
+      "linkedAccount": "Bağlı hesap",
+      "spentToday": "Kullanılan günlük limit",
+      "of": "/",
+      "spendingProgress": "Kartın günlük harcaması",
+      "freeze": "Kartı dondur",
+      "unfreeze": "Kartı aç",
+      "freezeSuccess": "Kart donduruldu",
+      "unfreezeSuccess": "Kart açıldı",
+      "cancelSuccess": "Kart iptal edildi",
+      "edit": "Kartı düzenle",
+      "testPurchase": "Test alışverişi dene",
+      "cancel": "Kartı iptal et",
+      "recentActivity": "Son kart hareketleri",
+      "noActivity": "Henüz kart alışverişi yok.",
+      "empty": "Henüz bir kartınız yok",
+      "requestTitle": "Sanal kart iste",
+      "requestDescription": "Bu sanal banka kartı için etkin bir hesap seçin.",
+      "maximumReached": "En fazla üç etkin kartınız olabilir.",
+      "chooseAccount": "Bağlı hesap",
+      "nickname": "Kart adı",
+      "editTitle": "Kart bilgilerini düzenle",
+      "dailyLimit": "Dolar cinsinden günlük limit",
+      "limitInvalid": "Kart limiti içinde geçerli bir tutar girin.",
+      "limitMax": "En fazla: {{amount}}",
+      "save": "Değişiklikleri kaydet",
+      "cancelTitle": "Bu kart iptal edilsin mi?",
+      "cancelWarning": "Kart kalıcı olarak iptal edilir ve sonraki tüm alışverişler reddedilir.",
+      "typeToConfirm": "Devam etmek için İPTAL yazın",
+      "confirmWord": "İPTAL",
+      "purchaseTitle": "Test alışverişi dene",
+      "purchaseDemoNote": "Bu işlem demoda kart ödemesini simüle eder. Gerçek para kullanılmaz.",
+      "merchant": "İş yeri",
+      "amountLabel": "Dolar cinsinden tutar",
+      "purchaseInvalid": "Bir iş yeri ve $0,01 ile $10.000,00 arasında tutar girin.",
+      "approved": "Onaylandı. Yeni bakiye:",
+      "declined": "Reddedildi",
+      "purchaseRetry": "Sonuç doğrulanamadı. Aynı alışverişi güvenle kontrol etmek için tekrar deneyin.",
+      "processing": "İşleniyor…",
+      "submitPurchase": "Test alışverişini gönder",
+      "amount": "Dolar cinsinden tutar"
+    },
+    "insights": {
+      "eyebrow": "Paranızın aylık görünümü",
+      "title": "Analizler",
+      "na": "Yok",
+      "change": "Değişim: {{value}}",
+      "previousMonth": "Önceki ay",
+      "dailyAccessible": "Seçilen ayın her günü için harcama. Değerler sonraki tabloda da yer alır.",
+      "dailyTitle": "Günlük harcama",
+      "categoryAccessible": "Bu ay ve önceki ay kategori harcamaları. Değerler sonraki tabloda da yer alır.",
+      "categoryTitle": "Kategori karşılaştırması",
+      "date": "Tarih",
+      "monthSelector": "Analiz ayını seçin",
+      "previous": "Önceki ay",
+      "next": "Sonraki ay",
+      "headlines": "Aylık toplamlar",
+      "savingsRate": "Tasarruf oranı",
+      "empty": "Bu ay gelir veya harcama kaydedilmedi.",
+      "highlights": "Ayın öne çıkanları",
+      "trends": {
+        "up": "Harcama {{amount}} oldu; geçen ayki {{previous}} tutarından yüksek.",
+        "down": "Harcama {{amount}} oldu; geçen ayki {{previous}} tutarından düşük.",
+        "same": "Harcama geçen aya benzer şekilde {{amount}} oldu.",
+        "noData": "{{amount}} harcadınız; karşılaştırılacak geçen ay harcaması yok."
+      },
+      "topCategory": "Harcamaların {{share}}% oranıyla en yüksek kategorisi {{category}} oldu.",
+      "noCategory": "Bu ay öne çıkarılacak kategori harcaması yok.",
+      "largestExpense": "En büyük harcamanız {{name}}: {{amount}}.",
+      "noLargest": "Bu ay öne çıkarılacak harcama yok.",
+      "averageAndSavings": "Günlük ortalama harcama {{amount}} oldu. Tasarruf oranı: {{savings}}.",
+      "charts": "Harcama grafikleri",
+      "topMerchants": "En çok harcama yapılan iş yerleri",
+      "purchaseCount_one": "{{count}} alışveriş",
+      "purchaseCount_other": "{{count}} alışveriş",
+      "noMerchants": "Bu ay sıralanacak iş yeri yok.",
+      "largestTransactions": "En büyük harcamalar"
+    },
     "description": "Westbridge demo hesabınıza genel bakış.",
     "overview": "Genel bakış",
     "greeting": {
@@ -334,6 +529,7 @@
       "overview": "Genel bakış",
       "transactions": "İşlemler",
       "transfers": "Transferler",
+      "bills": "Faturalar",
       "cards": "Kartlar",
       "settings": "Ayarlar",
       "comingSoon": "Yakında",
@@ -436,6 +632,180 @@
       "clearFilters": "Filtreleri temizle",
       "tableCaption": "Hesap işlemleri. Ayrıntıları görmek için bir satır seçin."
     },
+    "transfers": {
+      "title": "Transferler",
+      "limitRemaining": "Kalan günlük limit:",
+      "progress": "Transfer ilerlemesi",
+      "notProvided": "Belirtilmedi",
+      "leaveConfirm": "Bu transferden çıkılsın mı? Kaydedilmemiş bilgiler silinecek.",
+      "amountInvalid": "Sıfırdan büyük geçerli bir tutar girin.",
+      "limitOrBalanceHint": "Tutar bakiyenizi veya kalan günlük limitinizi aşıyor. Tutarı ya da hesabı kontrol edin.",
+      "sameAccount": "Farklı bir alıcı hesap seçin.",
+      "tabs": {
+        "label": "Transfer bölümleri",
+        "move": "Para gönder",
+        "recipients": "Alıcılar",
+        "history": "Geçmiş"
+      },
+      "steps": {
+        "details": "Bilgiler",
+        "review": "İncele",
+        "receipt": "Makbuz"
+      },
+      "details": {
+        "from": "Gönderen hesap",
+        "to": "Alıcı",
+        "destinations": {
+          "own": "Hesaplarım",
+          "beneficiary": "Kayıtlı alıcı",
+          "new": "Yeni alıcı"
+        },
+        "myAccount": "Hesabımı seçin",
+        "savedRecipient": "Kayıtlı alıcı",
+        "accountNumber": "10 haneli hesap numarası",
+        "amount": "Dolar tutarı",
+        "useBalance": "Bakiyenin tamamını kullan",
+        "overBalance": "Bu tutar kullanılabilir bakiyeden fazla.",
+        "overLimit": "Bu tutar kalan günlük limitten fazla.",
+        "memo": "Açıklama (isteğe bağlı)"
+      },
+      "lookup": {
+        "check": "Kontrol et",
+        "checking": "Hesap kontrol ediliyor…",
+        "numberInvalid": "10 haneli hesap numarası girin.",
+        "result": "Doğrulanan hesap sahibi: {{name}}",
+        "confirm": "Aradığınız kişi bu mu: {{name}}?",
+        "confirmRequired": "Devam etmeden önce alıcıyı onaylayın."
+      },
+      "review": {
+        "from": "Gönderen",
+        "to": "Alıcı",
+        "amount": "Tutar",
+        "memo": "Açıklama",
+        "fee": "Ücret",
+        "newBalance": "Yeni bakiye"
+      },
+      "actions": {
+        "review": "Transferi incele",
+        "back": "Geri",
+        "confirm": "Transferi onayla",
+        "sending": "Gönderiliyor…",
+        "retryHint": "Bilgileriniz korunuyor. Hazır olduğunuzda tekrar deneyin.",
+        "retry": "Tekrar dene"
+      },
+      "receipt": {
+        "success": "Transfer tamamlandı",
+        "reference": "Referans",
+        "copyReference": "Referansı kopyala",
+        "date": "Tarih ve saat",
+        "newBalance": "Yeni bakiye",
+        "saveRecipient": "Alıcı olarak kaydet",
+        "another": "Yeni transfer yap",
+        "transactions": "İşlemleri görüntüle",
+        "print": "Makbuzu yazdır"
+      },
+      "recipients": {
+        "title": "Kayıtlı alıcılar",
+        "addTitle": "Alıcı ekle",
+        "empty": "Henüz kayıtlı alıcı yok.",
+        "maximum": "En fazla 50 alıcı sınırına ulaştınız.",
+        "count": "50 üzerinden {{count}}",
+        "nickname": "Takma ad (isteğe bağlı)",
+        "add": "Alıcı ekle",
+        "added": "Alıcı kaydedildi.",
+        "send": "Para gönder",
+        "selectRecipient": "Bir alıcı seçin.",
+        "deleteLabel": "{{name}} kişisini sil",
+        "deleteConfirm": "{{name}} alıcılardan silinsin mi?",
+        "numberInvalid": "10 haneli hesap numarası girin."
+      },
+      "history": {
+        "direction": "Transfer türü",
+        "all": "Tümü",
+        "sent": "Gönderilen",
+        "received": "Alınan",
+        "own": "Hesaplarım arasında",
+        "dateFrom": "Başlangıç tarihi",
+        "dateTo": "Bitiş tarihi",
+        "empty": "Bu filtrelerle eşleşen transfer yok.",
+        "pagination": "Transfer sayfaları",
+        "openDetail": "Transfer ayrıntılarını aç",
+        "detailTitle": "Transfer ayrıntıları",
+        "detailDescription": "Bu transferin makbuz ayrıntıları."
+      }
+    },
+    "bills": {
+      "title": "Fatura ödemeleri",
+      "progress": "Fatura ödeme ilerlemesi",
+      "limitRemaining": "Kalan günlük limit:",
+      "leaveConfirm": "Bu ödemeden çıkılsın mı? Kaydedilmemiş bilgiler silinecek.",
+      "limitOrBalanceHint": "Tutar bakiyenizi veya kalan günlük limitinizi aşıyor. Tutarı ya da hesabı kontrol edin.",
+      "steps": {
+        "details": "Bilgiler",
+        "review": "İncele",
+        "receipt": "Makbuz"
+      },
+      "details": {
+        "title": "Fatura sağlayıcısı seçin",
+        "chooseBiller": "Fatura sağlayıcısı seç",
+        "search": "Sağlayıcı ara",
+        "noResults": "Aramanızla eşleşen sağlayıcı yok.",
+        "paymentDetails": "Ödeme bilgileri",
+        "from": "Gönderen hesap",
+        "reference": "Referans numarası",
+        "amount": "Dolar tutarı",
+        "referenceHint": "Referansı faturanızda göründüğü gibi girin. Gönderirken doğrulanır.",
+        "useBalance": "Bakiyenin tamamını kullan"
+      },
+      "categories": {
+        "electricity": "Elektrik",
+        "water": "Su",
+        "internet": "İnternet",
+        "mobile": "Mobil",
+        "insurance": "Sigorta",
+        "credit_card": "Kredi kartı",
+        "tv": "Televizyon",
+        "tax": "Vergi"
+      },
+      "validation": {
+        "chooseBiller": "Devam etmek için bir sağlayıcı seçin.",
+        "chooseAccount": "Etkin bir hesap seçin.",
+        "reference": "1 ile 40 karakter arasında referans girin.",
+        "amount": "Sıfırdan büyük geçerli bir tutar girin."
+      },
+      "review": {
+        "from": "Gönderen",
+        "biller": "Fatura sağlayıcısı",
+        "reference": "Referans numarası",
+        "amount": "Tutar",
+        "fee": "Ücret",
+        "newBalance": "Yeni bakiye"
+      },
+      "actions": {
+        "review": "Ödemeyi incele",
+        "back": "Geri",
+        "confirm": "Ödemeyi onayla",
+        "sending": "Ödeniyor…",
+        "retryHint": "Bilgileriniz korunuyor. Hazır olduğunuzda tekrar deneyin."
+      },
+      "receipt": {
+        "success": "Ödeme tamamlandı",
+        "transactionReference": "İşlem referansı",
+        "date": "Tarih ve saat",
+        "newBalance": "Yeni bakiye",
+        "another": "Yeni ödeme yap",
+        "transactions": "İşlemleri görüntüle",
+        "print": "Makbuzu yazdır"
+      },
+      "recent": {
+        "title": "Son ödemeler",
+        "empty": "Henüz fatura ödemesi yok.",
+        "pagination": "Ödeme sayfaları",
+        "previousPage": "Önceki ödeme sayfası",
+        "nextPage": "Sonraki ödeme sayfası",
+        "payAgain": "Tekrar öde"
+      }
+    },
     "eyebrow": "Westbridge hesabınız",
     "welcome": "Hoş geldiniz, {{name}}",
     "signedInAs": "{{email}} olarak oturum açıldı",
@@ -468,6 +838,75 @@
       "fee": "Ücret",
       "interest": "Faiz",
       "other": "Diğer"
+    }
+  },
+  "notifications": {
+    "bellLabel_zero": "Bildirimler",
+    "bellLabel_one": "{{count}} okunmamış bildirim",
+    "bellLabel_other": "{{count}} okunmamış bildirim",
+    "popoverTitle": "Bildirimler",
+    "eyebrow": "Hesap etkinlikleriniz",
+    "title": "Bildirimler",
+    "markAll": "Tümünü okundu işaretle",
+    "markRead": "Okundu işaretle",
+    "unreadOnly": "Yalnızca okunmamışlar",
+    "delete": "Bildirimi sil",
+    "viewAll": "Tüm bildirimleri gör",
+    "openRelated": "İlgili etkinliği aç",
+    "unread": "Okunmadı",
+    "empty": "Hepsini gördünüz.",
+    "loadError": "Bildirimler yüklenemedi.",
+    "generic": {
+      "title": "Hesap güncellemesi",
+      "body": "Hesabınızda yeni bir güncelleme var."
+    },
+    "transfer_sent": {
+      "title": "Transfer gönderildi",
+      "body": "{{to_masked}} kişisine {{amount_cents}} gönderdiniz."
+    },
+    "transfer_received": {
+      "title": "Transfer alındı",
+      "body": "{{from_masked}} kişisinden {{amount_cents}} aldınız."
+    },
+    "bill_paid": {
+      "title": "Fatura ödendi",
+      "body": "{{biller_name}} için {{amount_cents}} ödediniz."
+    },
+    "card_purchase": {
+      "title": "Kart alışverişi",
+      "body": "{{merchant}}, sonu {{last4}} olan karttan {{amount_cents}} tahsil etti."
+    },
+    "card_frozen": {
+      "title": "Kart donduruldu",
+      "body": "Sonu {{last4}} olan kart donduruldu."
+    },
+    "card_unfrozen": {
+      "title": "Kart açıldı",
+      "body": "Sonu {{last4}} olan kart yeniden etkin."
+    },
+    "card_issued": {
+      "title": "Kart oluşturuldu",
+      "body": "Sonu {{last4}} olan sanal kart oluşturuldu."
+    },
+    "card_cancelled": {
+      "title": "Kart iptal edildi",
+      "body": "Sonu {{last4}} olan kart iptal edildi."
+    },
+    "password_changed": {
+      "title": "Parola değiştirildi",
+      "body": "Hesap parolanız değiştirildi."
+    },
+    "session_revoked": {
+      "title": "Cihazdan çıkış yapıldı",
+      "body": "Hesabınızdaki bir oturum kapatıldı."
+    },
+    "low_balance": {
+      "title": "Düşük bakiye",
+      "body": "{{account_type}} bakiyeniz {{balance_cents}}; {{threshold_cents}} uyarı eşiğinin altında."
+    },
+    "welcome": {
+      "title": "Hoş geldiniz",
+      "body": "Westbridge demo hesabınız hazır."
     }
   },
   "notFound": {

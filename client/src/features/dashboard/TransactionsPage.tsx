@@ -230,14 +230,14 @@ export function TransactionsPage() {
   const result = transactionQuery.data
   const visibleFrom = result && result.meta.total ? (result.meta.page - 1) * result.meta.per_page + 1 : 0
   const visibleTo = result ? Math.min(result.meta.page * result.meta.per_page, result.meta.total) : 0
-  const hasFilters = Boolean(filters.q || filters.direction || filters.category?.length || filters.date_from || filters.date_to || filters.min_amount_cents !== undefined || filters.max_amount_cents !== undefined || filters.sort || filters.order)
+  const hasFilters = Boolean(filters.q || filters.direction || filters.category?.length || filters.date_from || filters.date_to || filters.min_amount_cents !== undefined || filters.max_amount_cents !== undefined || filters.card_id !== undefined || filters.sort || filters.order)
   const datePreset = filters.range ?? (filters.date_from || filters.date_to ? 'custom' : '')
   const isRtl = i18n.dir() === 'rtl'
   const categoriesSelected = filters.category ?? []
   const categoryLabel = categoriesSelected.length ? t('dashboard.transactions.categoriesSelected', { count: categoriesSelected.length }) : t('dashboard.transactions.categoryLabel')
 
-  function chip(label: string, key: string, value?: string) {
-    return <span className="inline-flex max-w-full items-center gap-1 rounded-full border border-border bg-muted px-2.5 py-1 text-xs"><span className="truncate">{label}</span><button aria-label={t('dashboard.transactions.removeFilter', { filter: label })} className="grid size-5 shrink-0 place-items-center rounded-full hover:bg-background" onClick={() => {
+  function chip(label: string, key: string, value?: string, itemKey = key) {
+    return <span className="inline-flex max-w-full items-center gap-1 rounded-full border border-border bg-muted px-2.5 py-1 text-xs" key={itemKey}><span className="truncate">{label}</span><button aria-label={t('dashboard.transactions.removeFilter', { filter: label })} className="grid size-5 shrink-0 place-items-center rounded-full hover:bg-background" onClick={() => {
       if (key === 'category' && value) updateParams({ category: categoriesSelected.filter((item) => item !== value) })
       else if (key === dateRangeFilter) updateParams({ date_from: null, date_to: null, range: null })
       else updateParams({ [key]: null })
@@ -281,7 +281,7 @@ export function TransactionsPage() {
         </div>
       </div>
 
-      {hasFilters && <div className="flex flex-wrap items-center gap-2">{filters.q && chip(`${t('dashboard.transactions.search')}: ${filters.q}`, 'q')}{filters.direction && chip(t(`dashboard.transactions.${filters.direction === 'credit' ? 'credits' : 'debits'}`), 'direction')}{categoriesSelected.map((category) => chip(t(`dashboard.category.${category}`), 'category', category))}{(filters.date_from || filters.date_to) && chip(`${filters.date_from ?? '…'} – ${filters.date_to ?? '…'}`, dateRangeFilter)}{filters.min_amount_cents !== undefined && chip(`${t('dashboard.transactions.minAmount')}: ${formatMoneyFromCents(filters.min_amount_cents)}`, minAmountFilter)}{filters.max_amount_cents !== undefined && chip(`${t('dashboard.transactions.maxAmount')}: ${formatMoneyFromCents(filters.max_amount_cents)}`, maxAmountFilter)}{filters.sort && chip(t(`dashboard.transactions.${filters.sort === amountSort ? 'sortAmount' : 'sortDate'}`), 'sort')}<Button className="h-8 px-2 text-xs" onClick={clearFilters} variant="ghost">{t('dashboard.transactions.clearAll')}</Button></div>}
+      {hasFilters && <div className="flex flex-wrap items-center gap-2">{filters.q && chip(`${t('dashboard.transactions.search')}: ${filters.q}`, 'q')}{filters.direction && chip(t(`dashboard.transactions.${filters.direction === 'credit' ? 'credits' : 'debits'}`), 'direction')}{categoriesSelected.map((category) => chip(t(`dashboard.category.${category}`), 'category', category, category))}{(filters.date_from || filters.date_to) && chip(`${filters.date_from ?? '…'} – ${filters.date_to ?? '…'}`, dateRangeFilter)}{filters.min_amount_cents !== undefined && chip(`${t('dashboard.transactions.minAmount')}: ${formatMoneyFromCents(filters.min_amount_cents)}`, minAmountFilter)}{filters.max_amount_cents !== undefined && chip(`${t('dashboard.transactions.maxAmount')}: ${formatMoneyFromCents(filters.max_amount_cents)}`, maxAmountFilter)}{filters.sort && chip(t(`dashboard.transactions.${filters.sort === amountSort ? 'sortAmount' : 'sortDate'}`), 'sort')}<Button className="h-8 px-2 text-xs" onClick={clearFilters} variant="ghost">{t('dashboard.transactions.clearAll')}</Button></div>}
     </section>
 
     <div aria-live="polite" className="text-sm text-muted-foreground" role="status">{result ? t('dashboard.transactions.showing', { from: visibleFrom, to: visibleTo, total: result.meta.total }) : t('dashboard.loading')}</div>

@@ -1,9 +1,11 @@
 // @vitest-environment jsdom
 
 import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react'
-import { afterEach, describe, expect, it } from 'vitest'
+import { afterEach, describe, expect, it, vi } from 'vitest'
 import { i18n, i18nReady } from '@/i18n'
 import { LanguageSwitcher } from './LanguageSwitcher'
+
+vi.mock('@/features/auth/auth-provider', () => ({ useAuth: () => ({ isAuthenticated: false }) }))
 
 afterEach(async () => {
   cleanup()

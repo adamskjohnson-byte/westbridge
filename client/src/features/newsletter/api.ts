@@ -2,6 +2,7 @@ import { api } from '@/lib/api'
 
 export type NewsletterSignupValues = {
   email: string
+  turnstile_token?: string
 }
 
 export type NewsletterSignupResponse = {

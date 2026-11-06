@@ -20,9 +20,9 @@ use App\Models\Transaction;
 use App\Models\User;
 use App\Services\LedgerService;
 use Database\Seeders\DatabaseSeeder;
-use Illuminate\Database\QueryException;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Event;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Str;
 use LogicException;
@@ -163,8 +163,9 @@ class LedgerServiceTest extends TestCase
     {
         config(['bank.daily_transfer_limit_cents' => 1000]);
         $user = User::factory()->create();
+        $recipient = User::factory()->create();
         $from = $this->fundedAccount($user, 5000);
-        $to = $this->fundedAccount($user, 0);
+        $to = $this->fundedAccount($recipient, 0);
         $service = app(LedgerService::class);
         $service->transfer($user, $from, $to, 700, null, 'under-limit');
 
@@ -216,19 +217,29 @@ class LedgerServiceTest extends TestCase
         $to = $this->fundedAccount($user, 500);
         $originalTransactions = Transaction::query()->count();
 
-        DB::unprepared("CREATE TRIGGER fail_credit_insert BEFORE INSERT ON transactions WHEN NEW.direction = 'credit' BEGIN SELECT RAISE(ABORT, 'injected credit failure'); END");
+        $event = 'eloquent.creating: '.Transaction::class;
+        Event::listen($event, static function (Transaction $transaction): void {
+            if ($transaction->direction === TransactionDirection::Credit) {
+                throw new \RuntimeException('injected credit failure');
+            }
+        });
 
         try {
-            app(LedgerService::class)->transfer($user, $from, $to, 1000, null, 'rollback-key');
-            $this->fail('Expected the injected credit insertion failure.');
-        } catch (QueryException) {
-            $from->refresh();
-            $to->refresh();
-            $this->assertSame(3000, $from->balance_cents);
-            $this->assertSame(500, $to->balance_cents);
-            $this->assertSame($originalTransactions, Transaction::query()->count());
-            $this->assertDatabaseCount('transfers', 0);
-            $this->assertDatabaseCount('audit_logs', 0);
+            try {
+                app(LedgerService::class)->transfer($user, $from, $to, 1000, null, 'rollback-key');
+                $this->fail('Expected the injected credit insertion failure.');
+            } catch (\RuntimeException $exception) {
+                $this->assertSame('injected credit failure', $exception->getMessage());
+                $from->refresh();
+                $to->refresh();
+                $this->assertSame(3000, $from->balance_cents);
+                $this->assertSame(500, $to->balance_cents);
+                $this->assertSame($originalTransactions, Transaction::query()->count());
+                $this->assertDatabaseCount('transfers', 0);
+                $this->assertDatabaseCount('audit_logs', 0);
+            }
+        } finally {
+            Event::forget($event);
         }
     }
 

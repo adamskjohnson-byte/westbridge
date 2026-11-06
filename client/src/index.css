@@ -679,6 +679,15 @@ html:dir(rtl) .btn-gradient:hover svg {
   perspective: 900px;
 }
 
+.card-visual-stage { overflow: visible; }
+.card-visual-sm { max-width: 190px; }
+.card-visual-md { max-width: 310px; }
+.card-visual-lg { max-width: 460px; }
+.card-visual-frozen .hero-card-face { filter: grayscale(0.75); }
+.card-visual-frozen .hero-card-face::before { position: absolute; z-index: 2; inset: 0; background: color-mix(in srgb, var(--brand-cream) 18%, transparent); content: ''; backdrop-filter: blur(1px); }
+.card-visual-cancelled .hero-card-face { filter: grayscale(1); opacity: 0.72; }
+.card-visual-status { position: absolute; z-index: 4; inset-inline-start: 8%; top: 8%; display: inline-flex; align-items: center; gap: 0.35rem; border: 1px solid rgb(255 255 255 / 55%); border-radius: 999px; background: rgb(42 35 39 / 75%); padding: 0.25rem 0.55rem; color: white; font-size: 0.72rem; font-weight: 700; }
+
 .hero-card-float {
   position: absolute;
   inset: 3cqw;
@@ -694,7 +703,7 @@ html:dir(rtl) .btn-gradient:hover svg {
 
 .hero-card-back {
   top: 16%;
-  left: 7%;
+  inset-inline-start: 7%;
   transform: rotate(4deg);
   background: linear-gradient(135deg, var(--card-back-from), var(--card-back-to));
   box-shadow: 0 2cqw 5cqw rgb(42 35 39 / 16%);
@@ -702,7 +711,7 @@ html:dir(rtl) .btn-gradient:hover svg {
 
 .hero-card-front {
   top: 1%;
-  left: 1%;
+  inset-inline-start: 1%;
   transform-style: preserve-3d;
 }
 
@@ -814,7 +823,7 @@ html:dir(rtl) .btn-gradient:hover svg {
 .hero-card-bank {
   font-size: 3cqw;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0;
   opacity: 0.85;
 }
 
@@ -823,7 +832,7 @@ html:dir(rtl) .btn-gradient:hover svg {
   font-size: 4.15cqw;
   font-weight: 700;
   font-variant-numeric: tabular-nums;
-  letter-spacing: 0.105em;
+  letter-spacing: 0;
   white-space: nowrap;
 }
 
@@ -838,7 +847,7 @@ html:dir(rtl) .btn-gradient:hover svg {
 .hero-card-label {
   font-size: 2.25cqw;
   font-weight: 600;
-  letter-spacing: 0.15em;
+  letter-spacing: 0;
   opacity: 0.75;
   text-transform: uppercase;
 }
@@ -847,7 +856,7 @@ html:dir(rtl) .btn-gradient:hover svg {
   margin-top: 1.15cqw;
   font-size: 3.05cqw;
   font-weight: 600;
-  letter-spacing: 0.045em;
+  letter-spacing: 0;
   white-space: nowrap;
 }
 
@@ -878,6 +887,24 @@ html:dir(rtl) .btn-gradient:hover svg {
 @media (max-width: 360px) {
   .hero-card-stage {
     padding: 4cqw;
+  }
+}
+
+@media print {
+  body * {
+    visibility: hidden !important;
+  }
+
+  .transfer-print-root,
+  .transfer-print-root * {
+    visibility: visible !important;
+  }
+
+  .transfer-print-root {
+    position: absolute;
+    inset-block-start: 0;
+    inset-inline-start: 0;
+    width: 100%;
   }
 }
 

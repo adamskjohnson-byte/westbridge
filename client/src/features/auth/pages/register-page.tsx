@@ -15,7 +15,8 @@ import { FieldError } from '../components/field-error'
 import { PasswordInput } from '../components/password-input'
 import { PasswordStrength } from '../components/password-strength'
 import { createAuthSchemas, type RegisterFormValues } from '../schemas'
-import { useState } from 'react'
+import { useRef, useState } from 'react'
+import { TurnstileWidget, type TurnstileHandle } from '@/components/security/TurnstileWidget'
 
 export function RegisterPage() {
   const { t } = useTranslation('common')
@@ -24,6 +25,8 @@ export function RegisterPage() {
   const appConfig = useAppConfig()
   const navigate = useNavigate()
   const [serverError, setServerError] = useState<string | null>(null)
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const turnstileWidget = useRef<TurnstileHandle>(null)
   const registerSchema = createAuthSchemas(t).register
   const form = useForm<RegisterFormValues>({
     resolver: zodResolver(registerSchema),
@@ -42,8 +45,10 @@ export function RegisterPage() {
   async function submit(values: RegisterFormValues): Promise<void> {
     setServerError(null)
     try {
-      await mutation.mutateAsync(values)
+      await mutation.mutateAsync({ ...values, ...(appConfig.data?.turnstile.enabled ? { turnstile_token: turnstileToken } : {}) })
     } catch (error) {
+      turnstileWidget.current?.reset()
+      setTurnstileToken('')
       if (error instanceof ApiError) {
         const fields = ['email', 'first_name', 'last_name', 'password', 'password_confirmation', 'accept_terms'] as const
         let hasFieldErrors = false
@@ -69,6 +74,7 @@ export function RegisterPage() {
       <p className="mt-2 text-sm text-muted-foreground">{t('auth.registerDescription')}</p>
       {serverError && <p aria-live="polite" className="mt-4 rounded-md border border-destructive/40 bg-destructive/5 p-3 text-sm text-destructive" role="alert">{serverError}</p>}
       <form className="mt-6 space-y-3" noValidate onSubmit={form.handleSubmit(submit)}>
+        {appConfig.isError && <p className="text-sm text-destructive" role="alert">{t('auth.turnstile.configError')}</p>}
         <div className="grid gap-3 sm:grid-cols-2">
           <div>
             <Label htmlFor="first-name">{t('forms.firstName')}</Label>
@@ -104,7 +110,9 @@ export function RegisterPage() {
           </label>
           <FieldError id="terms-error" message={errors.accept_terms?.message} />
         </div>
-        <Button className="w-full" disabled={mutation.isPending || appConfig.isPending} type="submit">
+        <TurnstileWidget action="register" enabled={appConfig.data?.turnstile.enabled ?? false} onError={() => setTurnstileToken('')} onExpire={() => setTurnstileToken('')} onToken={setTurnstileToken} ref={turnstileWidget} sitekey={appConfig.data?.turnstile.sitekey ?? ''}/>
+        {appConfig.data?.turnstile.enabled && !turnstileToken && <p className="text-xs text-muted-foreground">{t('auth.turnstile.verifyingHint')}</p>}
+        <Button className="w-full" disabled={mutation.isPending || appConfig.isPending || appConfig.isError || Boolean(appConfig.data?.turnstile.enabled && !turnstileToken)} type="submit">
           {mutation.isPending ? t('auth.creatingAccount') : t('auth.createAccount')}
         </Button>
       </form>

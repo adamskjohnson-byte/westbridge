@@ -19,6 +19,7 @@ class Transaction extends Model
 
     protected $fillable = [
         'account_id',
+        'card_id',
         'transfer_id',
         'direction',
         'amount_cents',
@@ -78,6 +79,11 @@ class Transaction extends Model
     public function transfer(): BelongsTo
     {
         return $this->belongsTo(Transfer::class);
+    }
+
+    public function card(): BelongsTo
+    {
+        return $this->belongsTo(Card::class);
     }
 
     public function scopeForAccount(Builder $query, Account|int $account): Builder

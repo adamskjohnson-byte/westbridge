@@ -12,8 +12,8 @@ describe('transaction filter URL parsing', () => {
   })
 
   it('keeps only server-supported parameters for requests and exports', () => {
-    const parsed = parseTransactionFilters(new URLSearchParams('page=3&per_page=25&range=30&category=card'))
-    expect(filtersToApi(parsed)).toEqual({ page: 3, per_page: 25, category: ['card'] })
+    const parsed = parseTransactionFilters(new URLSearchParams('page=3&per_page=25&range=30&category=card&card_id=17'))
+    expect(filtersToApi(parsed)).toEqual({ page: 3, per_page: 25, category: ['card'], card_id: 17 })
   })
 })
 
@@ -22,7 +22,7 @@ describe('dollarsToCents', () => {
     expect(dollarsToCents(value)).toBe(cents)
   })
 
-  it.each(['1.001', '-2', '1,00.50', 'not-money'])('rejects invalid amount %s', (value) => {
+  it.each(['', 'abc', '1.001', '-2', '1,00.50', 'not-money'])('rejects invalid amount %s', (value) => {
     expect(dollarsToCents(value)).toBeNull()
   })
 })

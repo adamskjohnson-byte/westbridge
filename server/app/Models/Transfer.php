@@ -22,12 +22,17 @@ class Transfer extends Model
         'initiated_by_user_id',
         'from_account_id',
         'to_account_id',
+        'destination_type',
+        'destination_name',
+        'destination_number_masked',
+        'destination_holder_masked',
         'amount_cents',
         'currency',
         'memo',
         'status',
         'failure_reason',
         'idempotency_key',
+        'request_hash',
     ];
 
     protected function casts(): array

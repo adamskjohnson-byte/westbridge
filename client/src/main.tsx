@@ -10,8 +10,11 @@ import { router } from '@/routes/router'
 import { startAppLoader } from '@/lib/app-loader'
 import { i18n, i18nReady } from '@/i18n'
 import { resolveLanguage } from '@/i18n/languages'
+import { z } from 'zod'
 import { I18nextProvider } from 'react-i18next'
 import './index.css'
+
+z.config({ jitless: true })
 
 const queryClient = new QueryClient()
 const root = createRoot(document.getElementById('root')!)

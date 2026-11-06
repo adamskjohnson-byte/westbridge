@@ -5,6 +5,9 @@ namespace Tests\Feature;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Http\Exceptions\ThrottleRequestsException;
+use Illuminate\Http\Request;
+use Illuminate\Http\Response;
+use App\Http\Middleware\SecurityHeaders;
 use Illuminate\Session\TokenMismatchException;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Validation\ValidationException;
@@ -107,9 +110,23 @@ class HealthTest extends TestCase
             ->assertHeader('X-Content-Type-Options', 'nosniff')
             ->assertHeader('X-Frame-Options', 'DENY')
             ->assertHeader('Referrer-Policy', 'no-referrer')
+            ->assertHeader('Permissions-Policy', 'camera=(), microphone=(), geolocation=(), payment=()')
+            ->assertHeader('Cross-Origin-Opener-Policy', 'same-origin')
+            ->assertHeader('Cross-Origin-Resource-Policy', 'same-site')
+            ->assertHeader('X-Permitted-Cross-Domain-Policies', 'none')
+            ->assertHeader('Content-Security-Policy', "default-src 'none'; frame-ancestors 'none'")
             ->assertHeaderContains('Cache-Control', 'no-store');
 
         $this->assertMatchesRegularExpression('/^[0-9A-HJKMNP-TV-Z]{26}$/', $response->headers->get('X-Request-Id'));
+    }
+
+    public function test_hsts_is_only_sent_for_secure_production_api_requests(): void
+    {
+        $plain = SecurityHeaders::apply(new Response, Request::create('http://api.example.test/api/health'));
+        $this->assertFalse($plain->headers->has('Strict-Transport-Security'));
+        app()->instance('env', 'production');
+        $secure = SecurityHeaders::apply(new Response, Request::create('https://api.example.test/api/health'));
+        $this->assertSame('max-age=31536000; includeSubDomains', $secure->headers->get('Strict-Transport-Security'));
     }
 
     public function test_request_id_header_is_preserved(): void

@@ -13,6 +13,38 @@ afterEach(() => {
 })
 
 describe('RequireVerified', () => {
+  it('does not fetch verification policy for an already verified user', async () => {
+    const user = {
+      id: 8,
+      first_name: 'Jamie',
+      last_name: 'River',
+      email: 'jamie@example.test',
+      role: 'customer',
+      email_verified: true,
+      created_at: '2026-01-01T00:00:00Z',
+    }
+    const requestedUrls: string[] = []
+    const fetchMock = vi.fn(async (input: RequestInfo | URL) => {
+      requestedUrls.push(String(input))
+      return new Response(JSON.stringify({ data: user }), { status: 200 })
+    })
+    vi.stubGlobal('fetch', fetchMock)
+
+    const queryClient = new QueryClient({ defaultOptions: { queries: { retry: false } } })
+    render(
+      <QueryClientProvider client={queryClient}>
+        <AuthProvider>
+          <MemoryRouter initialEntries={['/dashboard']}>
+            <RequireVerified><p>Protected dashboard</p></RequireVerified>
+          </MemoryRouter>
+        </AuthProvider>
+      </QueryClientProvider>,
+    )
+
+    expect(await screen.findByText('Protected dashboard')).toBeTruthy()
+    expect(requestedUrls.some((url) => url.endsWith('/v1/config'))).toBe(false)
+  })
+
   it('does not redirect an unverified user when verification is not required', async () => {
     const user = {
       id: 8,

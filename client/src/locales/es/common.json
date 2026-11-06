@@ -133,6 +133,7 @@
     "noResults": "No se encontraron idiomas."
   },
   "theme": {
+    "label": "Tema",
     "toggleLabel": "Tema actual: {{current}}. Cambiar al tema {{next}}",
     "names": {
       "system": "sistema",
@@ -204,7 +205,7 @@
     "signIn": "Iniciar sesión",
     "signInHeading": "Inicia sesión en tu cuenta",
     "loginDescription": "Usa los datos de tu cuenta de demostración de Westbridge.",
-    "welcomeBack": "Te damos la bienvenida",
+    "welcomeBack": "Te damos la bienvenida de nuevo",
     "newToWestbridge": "¿Es tu primera vez en Westbridge?",
     "forgotPassword": "¿Olvidaste tu contraseña?",
     "rememberMe": "Recordarme en este dispositivo",
@@ -251,12 +252,30 @@
       "length": "Al menos 10 caracteres",
       "uppercase": "Una letra mayúscula",
       "lowercase": "Una letra minúscula",
-      "number": "One number"
+      "number": "Un número"
     },
     "passwordStrength_one": "Seguridad de la contraseña: {{count}} de {{total}} requisitos cumplidos",
     "passwordStrength_other": "Seguridad de la contraseña: {{count}} de {{total}} requisitos cumplidos",
     "loadingAccount": "Cargando tu cuenta",
     "checkingSession": "Verificando tu sesión…",
+    "turnstile": {
+      "label": "Security check",
+      "configError": "Security check is unavailable right now.",
+      "verifyingHint": "Checking that you are human…",
+      "loadError": "The security check could not load.",
+      "retry": "Retry check",
+      "accessibleStatus": "Security check status"
+    },
+    "twoFactor": {
+      "checkEmail": "Check your email",
+      "sentTo": "We sent a one-time code to {{email}}.",
+      "codeLabel": "One-time code",
+      "resendCountdown": "Resend available in {{count}}s",
+      "codeExpiry": "Code expires in about {{count}} minutes",
+      "resending": "Sending…",
+      "resend": "Resend code",
+      "differentAccount": "Use a different account"
+    },
     "errors": {
       "accountSuspended": "Esta cuenta está pausada actualmente. Comunícate con el equipo de ayuda.",
       "rateLimit": "Demasiados intentos. Espera un momento e inténtalo de nuevo.",
@@ -268,10 +287,17 @@
       "resetPassword": "No pudimos restablecer tu contraseña. Inténtalo de nuevo.",
       "waitBeforeResend": "Espera antes de solicitar otro enlace.",
       "resendVerification": "No pudimos reenviar el enlace. Vuelve a intentarlo en breve.",
-      "verifyEmail": "No pudimos verificar este correo electrónico. Solicita un enlace nuevo."
+      "verifyEmail": "No pudimos verificar este correo electrónico. Solicita un enlace nuevo.",
+      "captcha": "Please complete the security check."
     }
   },
   "apiErrors": {
+    "card_frozen": "Esta tarjeta está congelada. Descongélala antes de volver a intentarlo.",
+    "card_cancelled": "Esta tarjeta se canceló y no se puede usar.",
+    "card_limit_exceeded": "Esta compra supera el límite diario de la tarjeta.",
+    "current_password_invalid": "The current password is incorrect.",
+    "password_unchanged": "Choose a password different from your current one.",
+    "cannot_revoke_current": "You cannot revoke the device you are using now.",
     "generic": "Se produjo un error. Inténtalo de nuevo.",
     "network_error": "No se pudo conectar. Comprueba tu conexión e inténtalo de nuevo.",
     "unauthenticated": "Tu sesión ha terminado. Inicia sesión de nuevo.",
@@ -283,9 +309,20 @@
     "not_found": "No se pudo encontrar esa página o ese elemento.",
     "csrf_mismatch": "Es necesario actualizar tu sesión. Inténtalo de nuevo.",
     "validation_failed": "Revisa la información e inténtalo de nuevo.",
-    "too_many_requests": "Has realizado demasiadas solicitudes. Espera e inténtalo de nuevo.",
+    "too_many_requests": "Demasiadas solicitudes. Espera e inténtalo de nuevo.",
     "server_error": "Se produjo un error del servidor. Inténtalo de nuevo pronto.",
     "http_error": "No se pudo completar la solicitud. Inténtalo de nuevo.",
+    "idempotency_key_reused": "Esta solicitud entra en conflicto con una anterior. Revisa los datos.",
+    "insufficient_funds": "La cuenta no tiene fondos suficientes. Elige un importe menor u otra cuenta.",
+    "daily_limit_exceeded": "Este pago supera tu límite diario restante.",
+    "account_frozen": "La cuenta está bloqueada y no puede enviar dinero.",
+    "account_closed": "Esta cuenta está cerrada y no puede enviar dinero. Elige otra cuenta activa.",
+    "same_account": "Elige una cuenta de destino diferente.",
+    "currency_mismatch": "Las cuentas usan monedas distintas y no se pueden usar para esta transferencia.",
+    "recipient_not_found": "No pudimos verificar un destinatario activo.",
+    "amount_invalid": "Introduce un importe dentro del límite permitido.",
+    "biller_not_found": "Esta empresa ya no está disponible.",
+    "reference_invalid": "La referencia no coincide con el formato de la empresa.",
     "validation": {
       "email_required": "Introduce tu correo electrónico.",
       "email_invalid": "Introduce un correo electrónico válido.",
@@ -316,10 +353,168 @@
       "remember_invalid": "Elige una opción válida para recordar la sesión.",
       "credentials_invalid": "El correo electrónico o la contraseña no son correctos.",
       "reset_token_required": "Se necesita el código para restablecer la contraseña.",
-      "reset_token_invalid": "Este enlace para restablecer la contraseña no es válido o ha caducado. Solicita otro."
+      "reset_token_invalid": "Este enlace para restablecer la contraseña no es válido o ha caducado. Solicita otro.",
+      "current_password_invalid": "La contraseña actual es incorrecta.",
+      "password_unchanged": "Elige una contraseña distinta de la actual.",
+      "cannot_revoke_current": "No puedes revocar el dispositivo que estás usando."
     }
   },
   "dashboard": {
+    "settings": {
+      "eyebrow": "Tu cuenta",
+      "title": "Configuración",
+      "tabs": {
+        "label": "Secciones de configuración",
+        "profile": "Perfil",
+        "security": "Seguridad",
+        "preferences": "Preferencias"
+      },
+      "phone": "Teléfono",
+      "emailReadOnly": "Cambiar el correo todavía no está disponible.",
+      "unsavedConfirm": "¿Salir de la configuración sin guardar los cambios?",
+      "saveChanges": "Guardar cambios",
+      "profileSaved": "Cambios del perfil guardados.",
+      "changePassword": "Cambiar contraseña",
+      "currentPassword": "Contraseña actual",
+      "updatePassword": "Actualizar contraseña",
+      "passwordSaved": "Contraseña cambiada. Se cerraron las otras sesiones.",
+      "sessionsTitle": "Dispositivos con sesión iniciada",
+      "revokeOthers": "Cerrar sesión en los demás dispositivos",
+      "revokeOthersConfirm": "¿Cerrar sesión en todos los demás dispositivos?",
+      "revokeConfirm": "¿Cerrar sesión en este dispositivo?",
+      "revokeSession": "Revocar sesión",
+      "thisDevice": "Este dispositivo",
+      "sessionDevice": "{{device}} · {{browser}} en {{platform}}",
+      "sessionRevoked": "Sesión cerrada.",
+      "othersRevoked": "Se cerraron las otras sesiones.",
+      "device": {
+        "desktop": "Ordenador",
+        "mobile": "Móvil",
+        "tablet": "Tableta",
+        "unknown": "Dispositivo desconocido"
+      },
+      "preferencesSaved": "Preferencias guardadas.",
+      "preferenceSaveError": "No se pudo guardar la preferencia. Inténtalo de nuevo.",
+      "savePreferences": "Guardar preferencias",
+      "emailActivity": "Enviarme correos sobre la actividad de la cuenta",
+      "securityEmailsAlways": "Los correos de seguridad siempre se envían.",
+      "lowBalance": "Alerta de saldo bajo",
+      "lowBalanceOff": "Desactivada",
+      "lowBalanceAmount": "Avisar por debajo de {{amount}}",
+      "thresholdInvalid": "Introduce un importe de alerta válido.",
+      "twoFactor": {
+        "title": "Two-factor authentication",
+        "enabled": "Two-factor authentication is enabled.",
+        "disabled": "Two-factor authentication is off.",
+        "requiredAdmin": "Required for admins",
+        "enable": "Enable",
+        "disable": "Disable",
+        "enabledToast": "Two-factor authentication enabled.",
+        "disabledToast": "Two-factor authentication disabled.",
+        "confirmPassword": "Confirm your password",
+        "enterCode": "Enter the code",
+        "sentTo": "We sent a code to {{email}}.",
+        "code": "One-time code",
+        "confirm": "Confirm",
+        "sendCode": "Send code",
+        "close": "Close",
+        "enableDescription": "You will need a verification code before signing in.",
+        "disableDescription": "Enter your current password to disable this security step."
+      }
+    },
+    "cards": {
+      "eyebrow": "Tarjetas de pago",
+      "title": "Tarjetas",
+      "request": "Solicitar tarjeta virtual",
+      "close": "Cerrar diálogo",
+      "visualLabel": "Tarjeta {{nickname}} terminada en {{last4}}, {{status}}",
+      "cardholder": "TITULAR",
+      "expiry": "VENCE",
+      "frozen": "Congelada",
+      "cancelled": "Cancelada",
+      "switcher": "Tus tarjetas",
+      "status": {
+        "active": "Activa",
+        "frozen": "Congelada",
+        "cancelled": "Cancelada"
+      },
+      "linkedAccount": "Cuenta vinculada",
+      "spentToday": "Límite diario usado",
+      "of": "de",
+      "spendingProgress": "Gastos diarios de la tarjeta",
+      "freeze": "Congelar tarjeta",
+      "unfreeze": "Descongelar tarjeta",
+      "freezeSuccess": "Tarjeta congelada",
+      "unfreezeSuccess": "Tarjeta descongelada",
+      "cancelSuccess": "Tarjeta cancelada",
+      "edit": "Editar tarjeta",
+      "testPurchase": "Probar una compra",
+      "cancel": "Cancelar tarjeta",
+      "recentActivity": "Actividad reciente de la tarjeta",
+      "noActivity": "Aún no hay compras con esta tarjeta.",
+      "empty": "Aún no tienes una tarjeta",
+      "requestTitle": "Solicitar una tarjeta virtual",
+      "requestDescription": "Elige una cuenta activa para esta tarjeta de débito virtual.",
+      "maximumReached": "Has alcanzado el máximo de tres tarjetas activas.",
+      "chooseAccount": "Cuenta vinculada",
+      "nickname": "Nombre de la tarjeta",
+      "editTitle": "Editar datos de la tarjeta",
+      "dailyLimit": "Límite diario en dólares",
+      "limitInvalid": "Introduce un importe válido dentro del límite.",
+      "limitMax": "Máximo: {{amount}}",
+      "save": "Guardar cambios",
+      "cancelTitle": "¿Cancelar esta tarjeta?",
+      "cancelWarning": "La tarjeta se cancelará permanentemente y se rechazará cualquier compra futura.",
+      "typeToConfirm": "Escribe CANCELAR para continuar",
+      "confirmWord": "CANCELAR",
+      "purchaseTitle": "Probar una compra",
+      "purchaseDemoNote": "Esto simula un pago con tarjeta para la demostración. No se usa dinero real.",
+      "merchant": "Comercio",
+      "amountLabel": "Importe en dólares",
+      "purchaseInvalid": "Introduce un comercio y un importe entre $0.01 y $10,000.00.",
+      "approved": "Aprobada. Nuevo saldo:",
+      "declined": "Rechazada",
+      "purchaseRetry": "No se pudo confirmar el resultado. Reintenta para comprobar la misma compra de forma segura.",
+      "processing": "Procesando…",
+      "submitPurchase": "Enviar compra de prueba",
+      "amount": "Importe en dólares"
+    },
+    "insights": {
+      "eyebrow": "Tu dinero, en contexto",
+      "title": "Análisis",
+      "na": "No disponible",
+      "change": "Cambio: {{value}}",
+      "previousMonth": "Mes anterior",
+      "dailyAccessible": "Gastos diarios del mes seleccionado. Los datos también están en la tabla siguiente.",
+      "dailyTitle": "Gastos diarios",
+      "categoryAccessible": "Gastos por categoría de este mes y del anterior. Los datos también están en la tabla siguiente.",
+      "categoryTitle": "Comparación por categoría",
+      "date": "Fecha",
+      "monthSelector": "Seleccionar mes de análisis",
+      "previous": "Mes anterior",
+      "next": "Mes siguiente",
+      "headlines": "Totales mensuales",
+      "savingsRate": "Tasa de ahorro",
+      "empty": "Este mes no se registraron ingresos ni gastos.",
+      "highlights": "Resumen del mes",
+      "trends": {
+        "up": "Los gastos fueron {{amount}}, más que los {{previous}} del mes pasado.",
+        "down": "Los gastos fueron {{amount}}, menos que los {{previous}} del mes pasado.",
+        "same": "Los gastos fueron similares a los del mes pasado: {{amount}}.",
+        "noData": "Gastaste {{amount}}; el mes pasado no hubo gastos para comparar."
+      },
+      "topCategory": "{{category}} fue tu categoría principal, con un {{share}}% de los gastos.",
+      "noCategory": "No hay gastos por categoría que destacar este mes.",
+      "largestExpense": "Tu mayor gasto fue {{name}}: {{amount}}.",
+      "noLargest": "No hay gastos que destacar este mes.",
+      "averageAndSavings": "El gasto diario promedio fue {{amount}}. Tasa de ahorro: {{savings}}.",
+      "charts": "Gráficos de gastos",
+      "topMerchants": "Comercios principales",
+      "purchaseCount_one": "{{count}} compra",
+      "purchaseCount_other": "{{count}} compras",
+      "noMerchants": "No hay comercios para clasificar este mes.",
+      "largestTransactions": "Gastos más grandes"
+    },
     "description": "Resumen de tu cuenta de demostración de Westbridge.",
     "overview": "Resumen",
     "greeting": {
@@ -334,6 +529,7 @@
       "overview": "Resumen",
       "transactions": "Transacciones",
       "transfers": "Transferencias",
+      "bills": "Facturas",
       "cards": "Tarjetas",
       "settings": "Configuración",
       "comingSoon": "Próximamente",
@@ -404,7 +600,7 @@
       "filters": "Filtros de transacciones",
       "search": "Buscar",
       "searchPlaceholder": "Descripción o beneficiario",
-      "direction": "Dirección",
+      "direction": "Tipo",
       "allDirections": "Todas",
       "credits": "Abonos",
       "debits": "Cargos",
@@ -435,6 +631,180 @@
       "noMatches": "Ninguna transacción coincide con los filtros",
       "clearFilters": "Borrar filtros",
       "tableCaption": "Transacciones de la cuenta. Selecciona una fila para ver sus detalles."
+    },
+    "transfers": {
+      "title": "Transferencias",
+      "limitRemaining": "Límite diario restante:",
+      "progress": "Progreso de la transferencia",
+      "notProvided": "Sin especificar",
+      "leaveConfirm": "¿Salir de esta transferencia? Se perderán los datos sin guardar.",
+      "amountInvalid": "Introduce un importe válido mayor que cero.",
+      "limitOrBalanceHint": "El importe supera tu saldo o el límite diario restante. Revisa el importe o la cuenta.",
+      "sameAccount": "Elige otra cuenta para recibir esta transferencia.",
+      "tabs": {
+        "label": "Secciones de transferencias",
+        "move": "Mover dinero",
+        "recipients": "Destinatarios",
+        "history": "Historial"
+      },
+      "steps": {
+        "details": "Datos",
+        "review": "Revisar",
+        "receipt": "Recibo"
+      },
+      "details": {
+        "from": "Desde la cuenta",
+        "to": "A",
+        "destinations": {
+          "own": "Mis cuentas",
+          "beneficiary": "Destinatario guardado",
+          "new": "Nuevo destinatario"
+        },
+        "myAccount": "Elige mi cuenta",
+        "savedRecipient": "Destinatario guardado",
+        "accountNumber": "Número de cuenta de 10 dígitos",
+        "amount": "Importe en dólares",
+        "useBalance": "Usar saldo completo",
+        "overBalance": "Este importe supera el saldo disponible.",
+        "overLimit": "Este importe supera el límite diario restante.",
+        "memo": "Concepto (opcional)"
+      },
+      "lookup": {
+        "check": "Comprobar",
+        "checking": "Comprobando la cuenta…",
+        "numberInvalid": "Introduce un número de cuenta de 10 dígitos.",
+        "result": "Titular verificado: {{name}}",
+        "confirm": "¿Es esta la persona correcta: {{name}}?",
+        "confirmRequired": "Confirma que el destinatario es correcto para continuar."
+      },
+      "review": {
+        "from": "Desde",
+        "to": "Para",
+        "amount": "Importe",
+        "memo": "Concepto",
+        "fee": "Comisión",
+        "newBalance": "Nuevo saldo"
+      },
+      "actions": {
+        "review": "Revisar transferencia",
+        "back": "Atrás",
+        "confirm": "Confirmar transferencia",
+        "sending": "Enviando…",
+        "retryHint": "Tus datos siguen aquí. Vuelve a intentarlo cuando quieras.",
+        "retry": "Reintentar"
+      },
+      "receipt": {
+        "success": "Transferencia completada",
+        "reference": "Referencia",
+        "copyReference": "Copiar referencia",
+        "date": "Fecha y hora",
+        "newBalance": "Nuevo saldo",
+        "saveRecipient": "Guardar como destinatario",
+        "another": "Hacer otra transferencia",
+        "transactions": "Ver transacciones",
+        "print": "Imprimir recibo"
+      },
+      "recipients": {
+        "title": "Destinatarios guardados",
+        "addTitle": "Añadir destinatario",
+        "empty": "Todavía no tienes destinatarios guardados.",
+        "maximum": "Has alcanzado el máximo de 50 destinatarios.",
+        "count": "{{count}} de 50",
+        "nickname": "Alias (opcional)",
+        "add": "Añadir destinatario",
+        "added": "Destinatario guardado.",
+        "send": "Enviar dinero",
+        "selectRecipient": "Elige un destinatario.",
+        "deleteLabel": "Eliminar {{name}}",
+        "deleteConfirm": "¿Eliminar a {{name}} de tus destinatarios?",
+        "numberInvalid": "Introduce un número de cuenta de 10 dígitos."
+      },
+      "history": {
+        "direction": "Tipo de transferencia",
+        "all": "Todas",
+        "sent": "Enviadas",
+        "received": "Recibidas",
+        "own": "Entre mis cuentas",
+        "dateFrom": "Desde",
+        "dateTo": "Hasta",
+        "empty": "Ninguna transferencia coincide con estos filtros.",
+        "pagination": "Páginas de transferencias",
+        "openDetail": "Abrir detalles de la transferencia",
+        "detailTitle": "Detalles de la transferencia",
+        "detailDescription": "Datos del recibo de esta transferencia."
+      }
+    },
+    "bills": {
+      "title": "Pagos de facturas",
+      "progress": "Progreso del pago",
+      "limitRemaining": "Límite diario restante:",
+      "leaveConfirm": "¿Salir de este pago? Se perderán los datos sin guardar.",
+      "limitOrBalanceHint": "El importe supera tu saldo o el límite diario restante. Revisa el importe o la cuenta.",
+      "steps": {
+        "details": "Datos",
+        "review": "Revisar",
+        "receipt": "Recibo"
+      },
+      "details": {
+        "title": "Elige una empresa",
+        "chooseBiller": "Elige una empresa",
+        "search": "Buscar empresas",
+        "noResults": "No hay empresas que coincidan con la búsqueda.",
+        "paymentDetails": "Datos del pago",
+        "from": "Desde la cuenta",
+        "reference": "Número de referencia",
+        "amount": "Importe en dólares",
+        "referenceHint": "Introduce la referencia tal como aparece en la factura. Se comprobará al enviar.",
+        "useBalance": "Usar saldo completo"
+      },
+      "categories": {
+        "electricity": "Electricidad",
+        "water": "Agua",
+        "internet": "Servicio de internet",
+        "mobile": "Móvil",
+        "insurance": "Seguro",
+        "credit_card": "Tarjeta de crédito",
+        "tv": "Televisión",
+        "tax": "Impuestos"
+      },
+      "validation": {
+        "chooseBiller": "Elige una empresa para continuar.",
+        "chooseAccount": "Elige una cuenta activa.",
+        "reference": "Introduce una referencia de 1 a 40 caracteres.",
+        "amount": "Introduce un importe válido mayor que cero."
+      },
+      "review": {
+        "from": "Desde",
+        "biller": "Empresa",
+        "reference": "Número de referencia",
+        "amount": "Importe",
+        "fee": "Comisión",
+        "newBalance": "Nuevo saldo"
+      },
+      "actions": {
+        "review": "Revisar pago",
+        "back": "Atrás",
+        "confirm": "Confirmar pago",
+        "sending": "Pagando…",
+        "retryHint": "Tus datos siguen aquí. Vuelve a intentarlo cuando quieras."
+      },
+      "receipt": {
+        "success": "Pago completado",
+        "transactionReference": "Referencia de la transacción",
+        "date": "Fecha y hora",
+        "newBalance": "Nuevo saldo",
+        "another": "Hacer otro pago",
+        "transactions": "Ver transacciones",
+        "print": "Imprimir recibo"
+      },
+      "recent": {
+        "title": "Pagos recientes",
+        "empty": "Todavía no hay pagos de facturas.",
+        "pagination": "Páginas de pagos",
+        "previousPage": "Página de pagos anterior",
+        "nextPage": "Página de pagos siguiente",
+        "payAgain": "Pagar de nuevo"
+      }
     },
     "eyebrow": "Tu Westbridge",
     "welcome": "Te damos la bienvenida, {{name}}",
@@ -468,6 +838,75 @@
       "fee": "Comisión",
       "interest": "Intereses",
       "other": "Otro"
+    }
+  },
+  "notifications": {
+    "bellLabel_zero": "Notificaciones",
+    "bellLabel_one": "{{count}} notificación sin leer",
+    "bellLabel_other": "{{count}} notificaciones sin leer",
+    "popoverTitle": "Notificaciones",
+    "eyebrow": "Actividad de tu cuenta",
+    "title": "Notificaciones",
+    "markAll": "Marcar todo como leído",
+    "markRead": "Marcar como leído",
+    "unreadOnly": "Solo sin leer",
+    "delete": "Eliminar notificación",
+    "viewAll": "Ver todas las notificaciones",
+    "openRelated": "Abrir actividad relacionada",
+    "unread": "Sin leer",
+    "empty": "Estás al día.",
+    "loadError": "No se pudieron cargar las notificaciones.",
+    "generic": {
+      "title": "Actualización de la cuenta",
+      "body": "Hay una nueva actualización en tu cuenta."
+    },
+    "transfer_sent": {
+      "title": "Transferencia enviada",
+      "body": "Enviaste {{amount_cents}} a {{to_masked}}."
+    },
+    "transfer_received": {
+      "title": "Transferencia recibida",
+      "body": "Recibiste {{amount_cents}} de {{from_masked}}."
+    },
+    "bill_paid": {
+      "title": "Factura pagada",
+      "body": "Pagaste {{amount_cents}} a {{biller_name}}."
+    },
+    "card_purchase": {
+      "title": "Compra con tarjeta",
+      "body": "{{merchant}} cobró {{amount_cents}} a la tarjeta terminada en {{last4}}."
+    },
+    "card_frozen": {
+      "title": "Tarjeta congelada",
+      "body": "Se congeló la tarjeta terminada en {{last4}}."
+    },
+    "card_unfrozen": {
+      "title": "Tarjeta descongelada",
+      "body": "La tarjeta terminada en {{last4}} vuelve a estar activa."
+    },
+    "card_issued": {
+      "title": "Tarjeta emitida",
+      "body": "Se emitió una tarjeta virtual terminada en {{last4}}."
+    },
+    "card_cancelled": {
+      "title": "Tarjeta cancelada",
+      "body": "Se canceló la tarjeta terminada en {{last4}}."
+    },
+    "password_changed": {
+      "title": "Contraseña cambiada",
+      "body": "Se cambió la contraseña de tu cuenta."
+    },
+    "session_revoked": {
+      "title": "Dispositivo desconectado",
+      "body": "Se cerró una sesión de tu cuenta."
+    },
+    "low_balance": {
+      "title": "Saldo bajo",
+      "body": "El saldo de tu cuenta {{account_type}} es {{balance_cents}}, por debajo de la alerta de {{threshold_cents}}."
+    },
+    "welcome": {
+      "title": "Te damos la bienvenida",
+      "body": "Tu cuenta de demostración de Westbridge está lista."
     }
   },
   "notFound": {

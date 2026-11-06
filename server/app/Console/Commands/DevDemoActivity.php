@@ -242,10 +242,6 @@ class DevDemoActivity extends Command
             $this->writeTransaction($lockedSavings->getKey(), $secondTransfer->getKey(), TransactionDirection::Debit, TransactionCategory::Transfer, $roundTripAmount, $liveBalances, $secondEvent);
             $this->writeTransaction($lockedChecking->getKey(), $secondTransfer->getKey(), TransactionDirection::Credit, TransactionCategory::Transfer, $roundTripAmount, $liveBalances, $secondEvent);
 
-            foreach ([$lockedChecking, $lockedSavings] as $account) {
-                $account->balance_cents = $liveBalances[$account->getKey()];
-                $account->save();
-            }
         }, 3);
 
         $this->info('Generated ledger activity for '.$user->email.' over '.$days.' day(s).');

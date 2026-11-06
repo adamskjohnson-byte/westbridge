@@ -7,6 +7,7 @@ build/
 client/.env.local
 client/scripts/.cache/
 qa-screenshots/
+qa-e2e/
 
 # Local secrets and environment overrides
 .env
@@ -25,3 +26,5 @@ Thumbs.db
 server/storage/*.key
 server/bootstrap/cache/*.php
 server/database/*.sqlite
+server/westbridge_e2e
+.qodo/

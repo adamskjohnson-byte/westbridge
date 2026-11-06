@@ -40,6 +40,7 @@ class TransactionFilterRequest extends FormRequest
         return [
             'page' => ['sometimes', 'integer', 'min:1'],
             'per_page' => ['sometimes', 'integer', 'min:1', 'max:50'],
+            'card_id' => ['sometimes', 'integer', 'min:1'],
             'q' => ['sometimes', 'string', 'max:100'],
             'direction' => ['sometimes', Rule::in(['credit', 'debit'])],
             'category' => ['sometimes', 'array', 'min:1', 'max:8', static function (string $attribute, mixed $value, \Closure $fail): void {

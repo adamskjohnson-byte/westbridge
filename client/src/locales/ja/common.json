@@ -133,6 +133,7 @@
     "noResults": "No languages found."
   },
   "theme": {
+    "label": "Theme",
     "toggleLabel": "Current theme: {{current}}. Switch to {{next}} theme",
     "names": {
       "system": "system",
@@ -257,6 +258,24 @@
     "passwordStrength_other": "Password strength: {{count}} of {{total}} requirements met",
     "loadingAccount": "Loading your account",
     "checkingSession": "Checking your session…",
+    "turnstile": {
+      "label": "Security check",
+      "configError": "Security check is unavailable right now.",
+      "verifyingHint": "Checking that you are human…",
+      "loadError": "The security check could not load.",
+      "retry": "Retry check",
+      "accessibleStatus": "Security check status"
+    },
+    "twoFactor": {
+      "checkEmail": "Check your email",
+      "sentTo": "We sent a one-time code to {{email}}.",
+      "codeLabel": "One-time code",
+      "resendCountdown": "Resend available in {{count}}s",
+      "codeExpiry": "Code expires in about {{count}} minutes",
+      "resending": "Sending…",
+      "resend": "Resend code",
+      "differentAccount": "Use a different account"
+    },
     "errors": {
       "accountSuspended": "This account is currently paused. Please contact support for help.",
       "rateLimit": "Too many attempts. Please wait a moment and try again.",
@@ -268,10 +287,17 @@
       "resetPassword": "We could not reset your password. Please try again.",
       "waitBeforeResend": "Please wait before requesting another link.",
       "resendVerification": "We could not resend the link. Please try again shortly.",
-      "verifyEmail": "We could not verify this email address. Please request a fresh link."
+      "verifyEmail": "We could not verify this email address. Please request a fresh link.",
+      "captcha": "Please complete the security check."
     }
   },
   "apiErrors": {
+    "card_frozen": "This card is frozen. Unfreeze it before trying again.",
+    "card_cancelled": "This card has been cancelled and cannot be used.",
+    "card_limit_exceeded": "This purchase exceeds this card's daily limit.",
+    "current_password_invalid": "The current password is incorrect.",
+    "password_unchanged": "Choose a password different from your current one.",
+    "cannot_revoke_current": "You cannot revoke the device you are using now.",
     "generic": "Something went wrong. Please try again.",
     "network_error": "Unable to connect. Check your connection and try again.",
     "unauthenticated": "Your session has ended. Please sign in again.",
@@ -286,6 +312,17 @@
     "too_many_requests": "Too many requests. Please wait and try again.",
     "server_error": "A server error occurred. Please try again shortly.",
     "http_error": "The request could not be completed. Please try again.",
+    "idempotency_key_reused": "This attempt conflicts with an earlier request. Review the details before trying again.",
+    "insufficient_funds": "This account does not have enough available funds. Choose a smaller amount or another account.",
+    "daily_limit_exceeded": "This payment exceeds your remaining daily limit. Lower the amount or try after the limit resets.",
+    "account_frozen": "This account is frozen and cannot send money. Choose another active account.",
+    "account_closed": "This account is closed and cannot send money. Choose another active account.",
+    "same_account": "Choose a different destination account.",
+    "currency_mismatch": "These accounts use different currencies and cannot be used for this transfer.",
+    "recipient_not_found": "We could not verify an active recipient. Check the number and try again.",
+    "amount_invalid": "Enter an amount within the allowed range.",
+    "biller_not_found": "That biller is no longer available. Choose another biller.",
+    "reference_invalid": "The reference number does not match this biller's format. Check it and try again.",
     "validation": {
       "email_required": "Enter your email address.",
       "email_invalid": "Enter a valid email address.",
@@ -316,10 +353,167 @@
       "remember_invalid": "Choose a valid remember-me setting.",
       "credentials_invalid": "The email address or password is incorrect.",
       "reset_token_required": "The reset token is required.",
-      "reset_token_invalid": "This reset link is invalid or has expired. Request a new one."
+      "reset_token_invalid": "This reset link is invalid or has expired. Request a new one.",
+      "current_password_invalid": "The current password is incorrect.",
+      "password_unchanged": "Choose a password different from your current one.",
+      "cannot_revoke_current": "You cannot revoke the device you are using now."
     }
   },
   "dashboard": {
+    "settings": {
+      "eyebrow": "Your account",
+      "title": "Settings",
+      "tabs": {
+        "label": "Settings sections",
+        "profile": "Profile",
+        "security": "Security",
+        "preferences": "Preferences"
+      },
+      "phone": "Phone number",
+      "emailReadOnly": "Changing your email address is not available yet.",
+      "unsavedConfirm": "Leave settings without saving your changes?",
+      "saveChanges": "Save changes",
+      "profileSaved": "Profile changes saved.",
+      "changePassword": "Change password",
+      "currentPassword": "Current password",
+      "updatePassword": "Update password",
+      "passwordSaved": "Password changed. Other devices were signed out.",
+      "sessionsTitle": "Where you're signed in",
+      "revokeOthers": "Sign out of all other devices",
+      "revokeOthersConfirm": "Sign out of all other devices?",
+      "revokeConfirm": "Sign out this device?",
+      "revokeSession": "Revoke session",
+      "thisDevice": "This device",
+      "sessionDevice": "{{device}} · {{browser}} on {{platform}}",
+      "sessionRevoked": "Session signed out.",
+      "othersRevoked": "Other devices signed out.",
+      "device": {
+        "desktop": "Desktop",
+        "mobile": "Mobile",
+        "tablet": "Tablet",
+        "unknown": "Unknown device"
+      },
+      "preferencesSaved": "Preferences saved.",
+      "preferenceSaveError": "Your preference could not be saved. Try again.",
+      "savePreferences": "Save preferences",
+      "emailActivity": "Email me about account activity",
+      "securityEmailsAlways": "Security emails are always sent.",
+      "lowBalance": "Low balance alert",
+      "lowBalanceOff": "Off",
+      "lowBalanceAmount": "Alert below {{amount}}",
+      "thresholdInvalid": "Enter a valid alert amount.",
+      "twoFactor": {
+        "title": "Two-factor authentication",
+        "enabled": "Two-factor authentication is enabled.",
+        "disabled": "Two-factor authentication is off.",
+        "requiredAdmin": "Required for admins",
+        "enable": "Enable",
+        "disable": "Disable",
+        "enabledToast": "Two-factor authentication enabled.",
+        "disabledToast": "Two-factor authentication disabled.",
+        "confirmPassword": "Confirm your password",
+        "enterCode": "Enter the code",
+        "sentTo": "We sent a code to {{email}}.",
+        "code": "One-time code",
+        "confirm": "Confirm",
+        "sendCode": "Send code",
+        "close": "Close",
+        "enableDescription": "You will need a verification code before signing in.",
+        "disableDescription": "Enter your current password to disable this security step."
+      }
+    },
+    "cards": {
+      "eyebrow": "Payment cards",
+      "title": "Cards",
+      "request": "Request virtual card",
+      "close": "Close dialog",
+      "visualLabel": "{{nickname}} card ending in {{last4}}, {{status}}",
+      "cardholder": "CARDHOLDER",
+      "expiry": "EXPIRES",
+      "frozen": "Frozen",
+      "cancelled": "Cancelled",
+      "switcher": "Your cards",
+      "status": {
+        "active": "Active",
+        "frozen": "Frozen",
+        "cancelled": "Cancelled"
+      },
+      "linkedAccount": "Linked account",
+      "spentToday": "Daily limit used",
+      "of": "of",
+      "spendingProgress": "Daily card spending",
+      "freeze": "Freeze card",
+      "unfreeze": "Unfreeze card",
+      "freezeSuccess": "Card frozen",
+      "unfreezeSuccess": "Card unfrozen",
+      "cancelSuccess": "Card cancelled",
+      "edit": "Edit card",
+      "testPurchase": "Try a test purchase",
+      "cancel": "Cancel card",
+      "recentActivity": "Recent card activity",
+      "noActivity": "No card purchases yet.",
+      "empty": "You don't have a card yet",
+      "requestTitle": "Request a virtual card",
+      "requestDescription": "Choose an active account for this virtual debit card.",
+      "maximumReached": "You have reached the maximum of three active cards.",
+      "chooseAccount": "Linked account",
+      "nickname": "Card nickname",
+      "editTitle": "Edit card details",
+      "dailyLimit": "Daily limit in dollars",
+      "limitInvalid": "Enter a whole-cent amount within the card limit.",
+      "limitMax": "Maximum: {{amount}}",
+      "save": "Save changes",
+      "cancelTitle": "Cancel this card?",
+      "cancelWarning": "This card will be cancelled permanently and every future purchase will be declined.",
+      "typeToConfirm": "Type CANCEL to continue",
+      "confirmWord": "CANCEL",
+      "purchaseTitle": "Try a test purchase",
+      "purchaseDemoNote": "This simulates a card payment for the demo. No real money is used.",
+      "merchant": "Merchant",
+      "amountLabel": "Amount in dollars",
+      "purchaseInvalid": "Enter a merchant and an amount from $0.01 to $10,000.00.",
+      "approved": "Approved. New balance:",
+      "declined": "Declined",
+      "purchaseRetry": "The result could not be confirmed. Retry to safely check the same purchase.",
+      "processing": "Processing…",
+      "submitPurchase": "Submit test purchase"
+    },
+    "insights": {
+      "eyebrow": "Your money, in context",
+      "title": "Insights",
+      "na": "N/A",
+      "change": "Change: {{value}}",
+      "previousMonth": "Previous month",
+      "dailyAccessible": "Daily spending for each day of the selected month. The values are also in the following table.",
+      "dailyTitle": "Daily spending",
+      "categoryAccessible": "This month's and previous month's spending by category. The values are also in the following table.",
+      "categoryTitle": "Category comparison",
+      "date": "Date",
+      "monthSelector": "Select insights month",
+      "previous": "Previous month",
+      "next": "Next month",
+      "headlines": "Monthly totals",
+      "savingsRate": "Savings rate",
+      "empty": "No income or spending was recorded this month.",
+      "highlights": "Monthly highlights",
+      "trends": {
+        "up": "Spending was {{amount}}, up from {{previous}} last month.",
+        "down": "Spending was {{amount}}, down from {{previous}} last month.",
+        "same": "Spending was about the same as last month at {{amount}}.",
+        "noData": "You spent {{amount}}; there was no spending last month to compare."
+      },
+      "topCategory": "{{category}} was your top category at {{share}}% of spending.",
+      "noCategory": "No category spending to highlight this month.",
+      "largestExpense": "Your largest expense was {{name}} at {{amount}}.",
+      "noLargest": "No expenses to highlight this month.",
+      "averageAndSavings": "Average daily spending was {{amount}}. Savings rate: {{savings}}.",
+      "charts": "Spending charts",
+      "topMerchants": "Top merchants",
+      "purchaseCount_one": "{{count}} purchase",
+      "purchaseCount_other": "{{count}} purchases",
+      "noMerchants": "No merchants to rank this month.",
+      "largestTransactions": "Largest expenses"
+    },
     "description": "Your Westbridge demo account overview.",
     "overview": "Overview",
     "greeting": {
@@ -334,6 +528,7 @@
       "overview": "Overview",
       "transactions": "Transactions",
       "transfers": "Transfers",
+      "bills": "Bills",
       "cards": "Cards",
       "settings": "Settings",
       "comingSoon": "Coming soon",
@@ -436,6 +631,180 @@
       "clearFilters": "Clear filters",
       "tableCaption": "Account transactions. Select a row to view its details."
     },
+    "transfers": {
+      "title": "Transfers",
+      "limitRemaining": "Daily limit remaining:",
+      "progress": "Transfer progress",
+      "notProvided": "Not provided",
+      "leaveConfirm": "Leave this transfer? Your unsaved details will be lost.",
+      "amountInvalid": "Enter a valid amount greater than zero.",
+      "limitOrBalanceHint": "The amount exceeds your balance or remaining daily limit. Review the amount or account.",
+      "sameAccount": "Choose a different account to receive this transfer.",
+      "tabs": {
+        "label": "Transfer sections",
+        "move": "Move money",
+        "recipients": "Recipients",
+        "history": "History"
+      },
+      "steps": {
+        "details": "Details",
+        "review": "Review",
+        "receipt": "Receipt"
+      },
+      "details": {
+        "from": "From account",
+        "to": "To",
+        "destinations": {
+          "own": "My accounts",
+          "beneficiary": "Saved recipient",
+          "new": "New recipient"
+        },
+        "myAccount": "Choose my account",
+        "savedRecipient": "Saved recipient",
+        "accountNumber": "10-digit account number",
+        "amount": "Amount in dollars",
+        "useBalance": "Use full balance",
+        "overBalance": "This amount is more than the available balance.",
+        "overLimit": "This amount is more than the remaining daily limit.",
+        "memo": "Memo (optional)"
+      },
+      "lookup": {
+        "check": "Check",
+        "checking": "Checking account…",
+        "numberInvalid": "Enter a 10-digit account number.",
+        "result": "Verified account holder: {{name}}",
+        "confirm": "Is this who you mean: {{name}}?",
+        "confirmRequired": "Check the recipient confirmation before continuing."
+      },
+      "review": {
+        "from": "From",
+        "to": "To",
+        "amount": "Amount",
+        "memo": "Memo",
+        "fee": "Fee",
+        "newBalance": "New balance"
+      },
+      "actions": {
+        "review": "Review transfer",
+        "back": "Back",
+        "confirm": "Confirm transfer",
+        "sending": "Sending…",
+        "retryHint": "Your details are still here. Retry when ready.",
+        "retry": "Try again"
+      },
+      "receipt": {
+        "success": "Transfer complete",
+        "reference": "Reference",
+        "copyReference": "Copy reference",
+        "date": "Date and time",
+        "newBalance": "New balance",
+        "saveRecipient": "Save as recipient",
+        "another": "Make another transfer",
+        "transactions": "View transactions",
+        "print": "Print receipt"
+      },
+      "recipients": {
+        "title": "Saved recipients",
+        "addTitle": "Add recipient",
+        "empty": "No saved recipients yet.",
+        "maximum": "You have reached the maximum of 50 recipients.",
+        "count": "{{count}} of 50",
+        "nickname": "Nickname (optional)",
+        "add": "Add recipient",
+        "added": "Recipient saved.",
+        "send": "Send money",
+        "selectRecipient": "Choose a recipient",
+        "deleteLabel": "Delete {{name}}",
+        "deleteConfirm": "Delete {{name}} from your recipients?",
+        "numberInvalid": "Enter a 10-digit account number."
+      },
+      "history": {
+        "direction": "Transfer type",
+        "all": "All transfers",
+        "sent": "Sent",
+        "received": "Received",
+        "own": "Between my accounts",
+        "dateFrom": "From date",
+        "dateTo": "To date",
+        "empty": "No transfers match these filters.",
+        "pagination": "Transfer pages",
+        "openDetail": "Open transfer details",
+        "detailTitle": "Transfer details",
+        "detailDescription": "Receipt details for this transfer."
+      }
+    },
+    "bills": {
+      "title": "Bill payments",
+      "progress": "Bill payment progress",
+      "limitRemaining": "Daily limit remaining:",
+      "leaveConfirm": "Leave this payment? Your unsaved details will be lost.",
+      "limitOrBalanceHint": "The amount exceeds your balance or remaining daily limit. Review the amount or account.",
+      "steps": {
+        "details": "Details",
+        "review": "Review",
+        "receipt": "Receipt"
+      },
+      "details": {
+        "title": "Choose a biller",
+        "chooseBiller": "Choose a biller",
+        "search": "Search billers",
+        "noResults": "No billers match your search.",
+        "paymentDetails": "Payment details",
+        "from": "From account",
+        "reference": "Reference number",
+        "amount": "Amount in dollars",
+        "referenceHint": "Enter the reference exactly as shown on your bill. It will be checked when you submit.",
+        "useBalance": "Use full balance"
+      },
+      "categories": {
+        "electricity": "Electricity",
+        "water": "Water",
+        "internet": "Internet",
+        "mobile": "Mobile",
+        "insurance": "Insurance",
+        "credit_card": "Credit card",
+        "tv": "TV",
+        "tax": "Tax"
+      },
+      "validation": {
+        "chooseBiller": "Choose a biller to continue.",
+        "chooseAccount": "Choose an active account.",
+        "reference": "Enter a reference number of 1 to 40 characters.",
+        "amount": "Enter a valid amount greater than zero."
+      },
+      "review": {
+        "from": "From",
+        "biller": "Biller",
+        "reference": "Reference number",
+        "amount": "Amount",
+        "fee": "Fee",
+        "newBalance": "New balance"
+      },
+      "actions": {
+        "review": "Review payment",
+        "back": "Back",
+        "confirm": "Confirm payment",
+        "sending": "Paying…",
+        "retryHint": "Your details are still here. Retry when ready."
+      },
+      "receipt": {
+        "success": "Payment complete",
+        "transactionReference": "Transaction reference",
+        "date": "Date and time",
+        "newBalance": "New balance",
+        "another": "Make another payment",
+        "transactions": "View transactions",
+        "print": "Print receipt"
+      },
+      "recent": {
+        "title": "Recent payments",
+        "empty": "No bill payments yet.",
+        "pagination": "Payment pages",
+        "previousPage": "Previous payment page",
+        "nextPage": "Next payment page",
+        "payAgain": "Pay again"
+      }
+    },
     "eyebrow": "Your Westbridge",
     "welcome": "Welcome, {{name}}",
     "signedInAs": "Signed in as {{email}}",
@@ -471,6 +840,75 @@
     },
     "accountEnding": "Account ending in {{digits}}",
     "comingNext": "Your banking dashboard is coming in the next phase."
+  },
+  "notifications": {
+    "bellLabel_zero": "Notifications",
+    "bellLabel_one": "{{count}} unread notification",
+    "bellLabel_other": "{{count}} unread notifications",
+    "popoverTitle": "Notifications",
+    "eyebrow": "Your account activity",
+    "title": "Notifications",
+    "markAll": "Mark all as read",
+    "markRead": "Mark as read",
+    "unreadOnly": "Unread only",
+    "delete": "Delete notification",
+    "viewAll": "View all notifications",
+    "openRelated": "Open related activity",
+    "unread": "Unread",
+    "empty": "You're all caught up.",
+    "loadError": "Notifications could not be loaded.",
+    "generic": {
+      "title": "Account update",
+      "body": "There's a new update on your account."
+    },
+    "transfer_sent": {
+      "title": "Transfer sent",
+      "body": "You sent {{amount_cents}} cents to {{to_masked}}."
+    },
+    "transfer_received": {
+      "title": "Transfer received",
+      "body": "You received {{amount_cents}} cents from {{from_masked}}."
+    },
+    "bill_paid": {
+      "title": "Bill paid",
+      "body": "You paid {{amount_cents}} cents to {{biller_name}}."
+    },
+    "card_purchase": {
+      "title": "Card purchase",
+      "body": "{{merchant}} charged {{amount_cents}} cents to card ending in {{last4}}."
+    },
+    "card_frozen": {
+      "title": "Card frozen",
+      "body": "The card ending in {{last4}} was frozen."
+    },
+    "card_unfrozen": {
+      "title": "Card unfrozen",
+      "body": "The card ending in {{last4}} is active again."
+    },
+    "card_issued": {
+      "title": "Card issued",
+      "body": "A virtual card ending in {{last4}} was issued."
+    },
+    "card_cancelled": {
+      "title": "Card cancelled",
+      "body": "The card ending in {{last4}} was cancelled."
+    },
+    "password_changed": {
+      "title": "Password changed",
+      "body": "Your account password was changed."
+    },
+    "session_revoked": {
+      "title": "Device signed out",
+      "body": "A session on your account was signed out."
+    },
+    "low_balance": {
+      "title": "Low balance",
+      "body": "Your {{account_type}} balance is {{balance_cents}} cents, below your {{threshold_cents}} cent alert."
+    },
+    "welcome": {
+      "title": "Welcome",
+      "body": "Your Westbridge demo account is ready."
+    }
   },
   "notFound": {
     "title": "Page not found",

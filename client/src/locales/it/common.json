@@ -133,6 +133,7 @@
     "noResults": "Nessuna lingua trovata."
   },
   "theme": {
+    "label": "Tema",
     "toggleLabel": "Tema attuale: {{current}}. Passa al tema {{next}}",
     "names": {
       "system": "di sistema",
@@ -257,6 +258,24 @@
     "passwordStrength_other": "Sicurezza della password: {{count}} requisiti soddisfatti su {{total}}",
     "loadingAccount": "Caricamento del conto in corso",
     "checkingSession": "Verifica della sessione in corso…",
+    "turnstile": {
+      "label": "Security check",
+      "configError": "Security check is unavailable right now.",
+      "verifyingHint": "Checking that you are human…",
+      "loadError": "The security check could not load.",
+      "retry": "Retry check",
+      "accessibleStatus": "Security check status"
+    },
+    "twoFactor": {
+      "checkEmail": "Check your email",
+      "sentTo": "We sent a one-time code to {{email}}.",
+      "codeLabel": "One-time code",
+      "resendCountdown": "Resend available in {{count}}s",
+      "codeExpiry": "Code expires in about {{count}} minutes",
+      "resending": "Sending…",
+      "resend": "Resend code",
+      "differentAccount": "Use a different account"
+    },
     "errors": {
       "accountSuspended": "Questo conto è temporaneamente sospeso. Contatta l'assistenza per ricevere aiuto.",
       "rateLimit": "Troppi tentativi. Attendi qualche istante e riprova.",
@@ -268,12 +287,19 @@
       "resetPassword": "Non è stato possibile reimpostare la password. Riprova.",
       "waitBeforeResend": "Attendi prima di richiedere un altro link.",
       "resendVerification": "Non è stato possibile inviare di nuovo il link. Riprova tra poco.",
-      "verifyEmail": "Non è stato possibile verificare questo indirizzo e-mail. Richiedi un nuovo link."
+      "verifyEmail": "Non è stato possibile verificare questo indirizzo e-mail. Richiedi un nuovo link.",
+      "captcha": "Please complete the security check."
     }
   },
   "apiErrors": {
+    "card_frozen": "Questa carta è bloccata. Sbloccala prima di riprovare.",
+    "card_cancelled": "Questa carta è stata annullata e non può essere usata.",
+    "card_limit_exceeded": "Questo acquisto supera il limite giornaliero della carta.",
+    "current_password_invalid": "The current password is incorrect.",
+    "password_unchanged": "Choose a password different from your current one.",
+    "cannot_revoke_current": "You cannot revoke the device you are using now.",
     "generic": "Si è verificato un errore. Riprova.",
-    "network_error": "Impossibile connettersi. Controlla la connessione e riprova.",
+    "network_error": "Connessione non riuscita. Controlla la connessione e riprova.",
     "unauthenticated": "La sessione è terminata. Accedi di nuovo.",
     "forbidden": "Non hai l’autorizzazione per eseguire questa operazione.",
     "account_suspended": "Questo account è sospeso. Contatta l’assistenza.",
@@ -286,6 +312,17 @@
     "too_many_requests": "Troppe richieste. Attendi e riprova.",
     "server_error": "Si è verificato un errore del server. Riprova a breve.",
     "http_error": "Impossibile completare la richiesta. Riprova.",
+    "idempotency_key_reused": "Questa richiesta è in conflitto con una richiesta precedente.",
+    "insufficient_funds": "Il conto non dispone di fondi sufficienti. Scegli un importo inferiore o un altro conto.",
+    "daily_limit_exceeded": "Questo pagamento supera il limite giornaliero residuo.",
+    "account_frozen": "Questo conto è bloccato e non può inviare denaro.",
+    "account_closed": "Questo conto è chiuso e non può inviare denaro. Scegli un altro conto attivo.",
+    "same_account": "Scegli un conto di destinazione diverso.",
+    "currency_mismatch": "Questi conti usano valute diverse e non possono essere usati per questo bonifico.",
+    "recipient_not_found": "Impossibile verificare un destinatario attivo.",
+    "amount_invalid": "Inserisci un importo entro i limiti consentiti.",
+    "biller_not_found": "Questo fornitore non è più disponibile.",
+    "reference_invalid": "Il riferimento non corrisponde al formato del fornitore.",
     "validation": {
       "email_required": "Inserisci il tuo indirizzo e-mail.",
       "email_invalid": "Inserisci un indirizzo e-mail valido.",
@@ -316,10 +353,168 @@
       "remember_invalid": "Scegli un’impostazione valida per ricordare l’accesso.",
       "credentials_invalid": "L’indirizzo e-mail o la password non sono corretti.",
       "reset_token_required": "Il token di reimpostazione è obbligatorio.",
-      "reset_token_invalid": "Questo link di reimpostazione non è valido o è scaduto. Richiedine uno nuovo."
+      "reset_token_invalid": "Questo link di reimpostazione non è valido o è scaduto. Richiedine uno nuovo.",
+      "current_password_invalid": "La password attuale non è corretta.",
+      "password_unchanged": "Scegli una password diversa da quella attuale.",
+      "cannot_revoke_current": "Non puoi revocare il dispositivo che stai usando."
     }
   },
   "dashboard": {
+    "settings": {
+      "eyebrow": "Il tuo account",
+      "title": "Impostazioni",
+      "tabs": {
+        "label": "Sezioni delle impostazioni",
+        "profile": "Profilo",
+        "security": "Sicurezza",
+        "preferences": "Preferenze"
+      },
+      "phone": "Telefono",
+      "emailReadOnly": "La modifica dell’indirizzo e-mail non è ancora disponibile.",
+      "unsavedConfirm": "Uscire dalle impostazioni senza salvare le modifiche?",
+      "saveChanges": "Salva modifiche",
+      "profileSaved": "Profilo aggiornato.",
+      "changePassword": "Cambia password",
+      "currentPassword": "Password attuale",
+      "updatePassword": "Aggiorna password",
+      "passwordSaved": "Password modificata. Gli altri dispositivi sono stati disconnessi.",
+      "sessionsTitle": "Dispositivi connessi",
+      "revokeOthers": "Disconnetti tutti gli altri dispositivi",
+      "revokeOthersConfirm": "Disconnettere tutti gli altri dispositivi?",
+      "revokeConfirm": "Disconnettere questo dispositivo?",
+      "revokeSession": "Revoca sessione",
+      "thisDevice": "Questo dispositivo",
+      "sessionDevice": "{{device}} · {{browser}} su {{platform}}",
+      "sessionRevoked": "Sessione disconnessa.",
+      "othersRevoked": "Altri dispositivi disconnessi.",
+      "device": {
+        "desktop": "Computer",
+        "mobile": "Cellulare",
+        "tablet": "Tablet",
+        "unknown": "Dispositivo sconosciuto"
+      },
+      "preferencesSaved": "Preferenze salvate.",
+      "preferenceSaveError": "Impossibile salvare la preferenza. Riprova.",
+      "savePreferences": "Salva preferenze",
+      "emailActivity": "Inviami e-mail sulle attività del conto",
+      "securityEmailsAlways": "Le e-mail di sicurezza vengono sempre inviate.",
+      "lowBalance": "Avviso saldo basso",
+      "lowBalanceOff": "Disattivato",
+      "lowBalanceAmount": "Avviso sotto {{amount}}",
+      "thresholdInvalid": "Inserisci un importo di avviso valido.",
+      "twoFactor": {
+        "title": "Two-factor authentication",
+        "enabled": "Two-factor authentication is enabled.",
+        "disabled": "Two-factor authentication is off.",
+        "requiredAdmin": "Required for admins",
+        "enable": "Enable",
+        "disable": "Disable",
+        "enabledToast": "Two-factor authentication enabled.",
+        "disabledToast": "Two-factor authentication disabled.",
+        "confirmPassword": "Confirm your password",
+        "enterCode": "Enter the code",
+        "sentTo": "We sent a code to {{email}}.",
+        "code": "One-time code",
+        "confirm": "Confirm",
+        "sendCode": "Send code",
+        "close": "Close",
+        "enableDescription": "You will need a verification code before signing in.",
+        "disableDescription": "Enter your current password to disable this security step."
+      }
+    },
+    "cards": {
+      "eyebrow": "Carte di pagamento",
+      "title": "Carte",
+      "request": "Richiedi una carta virtuale",
+      "close": "Chiudi finestra",
+      "visualLabel": "Carta {{nickname}} che termina con {{last4}}, {{status}}",
+      "cardholder": "INTESTATARIO",
+      "expiry": "SCADENZA",
+      "frozen": "Bloccata",
+      "cancelled": "Annullata",
+      "switcher": "Le tue carte",
+      "status": {
+        "active": "Attiva",
+        "frozen": "Bloccata",
+        "cancelled": "Annullata"
+      },
+      "linkedAccount": "Conto collegato",
+      "spentToday": "Limite giornaliero utilizzato",
+      "of": "di",
+      "spendingProgress": "Spese giornaliere della carta",
+      "freeze": "Blocca carta",
+      "unfreeze": "Sblocca carta",
+      "freezeSuccess": "Carta bloccata",
+      "unfreezeSuccess": "Carta sbloccata",
+      "cancelSuccess": "Carta annullata",
+      "edit": "Modifica carta",
+      "testPurchase": "Prova un acquisto",
+      "cancel": "Annulla carta",
+      "recentActivity": "Attività recente della carta",
+      "noActivity": "Nessun acquisto con carta finora.",
+      "empty": "Non hai ancora una carta",
+      "requestTitle": "Richiedi una carta virtuale",
+      "requestDescription": "Scegli un conto attivo per questa carta di debito virtuale.",
+      "maximumReached": "Hai raggiunto il massimo di tre carte attive.",
+      "chooseAccount": "Conto collegato",
+      "nickname": "Nome della carta",
+      "editTitle": "Modifica dettagli carta",
+      "dailyLimit": "Limite giornaliero in dollari",
+      "limitInvalid": "Inserisci un importo valido entro il limite della carta.",
+      "limitMax": "Massimo: {{amount}}",
+      "save": "Salva modifiche",
+      "cancelTitle": "Annullare questa carta?",
+      "cancelWarning": "La carta verrà annullata definitivamente e tutti gli acquisti futuri saranno rifiutati.",
+      "typeToConfirm": "Scrivi ANNULLA per continuare",
+      "confirmWord": "ANNULLA",
+      "purchaseTitle": "Prova un acquisto",
+      "purchaseDemoNote": "Questa azione simula un pagamento con carta nella demo. Non viene usato denaro reale.",
+      "merchant": "Esercente",
+      "amountLabel": "Importo in dollari",
+      "purchaseInvalid": "Inserisci un esercente e un importo da $0,01 a $10.000,00.",
+      "approved": "Approvato. Nuovo saldo:",
+      "declined": "Rifiutato",
+      "purchaseRetry": "Impossibile confermare l'esito. Riprova per verificare in sicurezza lo stesso acquisto.",
+      "processing": "Elaborazione…",
+      "submitPurchase": "Invia acquisto di prova",
+      "amount": "Importo in dollari"
+    },
+    "insights": {
+      "eyebrow": "Il tuo denaro, nel contesto",
+      "title": "Analisi",
+      "na": "N/D",
+      "change": "Variazione: {{value}}",
+      "previousMonth": "Mese precedente",
+      "dailyAccessible": "Spese giornaliere per ogni giorno del mese selezionato. I valori sono disponibili anche nella tabella seguente.",
+      "dailyTitle": "Spese giornaliere",
+      "categoryAccessible": "Spese per categoria di questo mese e del mese scorso. I valori sono disponibili anche nella tabella seguente.",
+      "categoryTitle": "Confronto per categoria",
+      "date": "Data",
+      "monthSelector": "Seleziona il mese di analisi",
+      "previous": "Mese precedente",
+      "next": "Mese successivo",
+      "headlines": "Totali mensili",
+      "savingsRate": "Tasso di risparmio",
+      "empty": "Questo mese non sono state registrate entrate o spese.",
+      "highlights": "Riepilogo del mese",
+      "trends": {
+        "up": "Le spese sono state {{amount}}, in aumento rispetto a {{previous}} del mese scorso.",
+        "down": "Le spese sono state {{amount}}, in calo rispetto a {{previous}} del mese scorso.",
+        "same": "Le spese sono rimaste simili al mese scorso: {{amount}}.",
+        "noData": "Hai speso {{amount}}; il mese scorso non ci sono spese da confrontare."
+      },
+      "topCategory": "{{category}} è la categoria principale con il {{share}}% delle spese.",
+      "noCategory": "Nessuna spesa per categoria da evidenziare questo mese.",
+      "largestExpense": "La spesa maggiore è stata {{name}}: {{amount}}.",
+      "noLargest": "Nessuna spesa da evidenziare questo mese.",
+      "averageAndSavings": "La spesa media giornaliera è stata {{amount}}. Tasso di risparmio: {{savings}}.",
+      "charts": "Grafici delle spese",
+      "topMerchants": "Esercenti principali",
+      "purchaseCount_one": "{{count}} acquisto",
+      "purchaseCount_other": "{{count}} acquisti",
+      "noMerchants": "Nessun esercente da classificare questo mese.",
+      "largestTransactions": "Spese maggiori"
+    },
     "description": "Panoramica del tuo conto demo Westbridge.",
     "overview": "Panoramica",
     "greeting": {
@@ -334,6 +529,7 @@
       "overview": "Panoramica",
       "transactions": "Transazioni",
       "transfers": "Trasferimenti",
+      "bills": "Bollette",
       "cards": "Carte",
       "settings": "Impostazioni",
       "comingSoon": "In arrivo",
@@ -436,6 +632,180 @@
       "clearFilters": "Cancella filtri",
       "tableCaption": "Transazioni del conto. Seleziona una riga per visualizzarne i dettagli."
     },
+    "transfers": {
+      "title": "Bonifici",
+      "limitRemaining": "Limite giornaliero residuo:",
+      "progress": "Avanzamento del bonifico",
+      "notProvided": "Non specificato",
+      "leaveConfirm": "Uscire da questo bonifico? I dati non salvati andranno persi.",
+      "amountInvalid": "Inserisci un importo valido maggiore di zero.",
+      "limitOrBalanceHint": "L’importo supera il saldo o il limite giornaliero residuo. Controlla importo o conto.",
+      "sameAccount": "Scegli un altro conto di destinazione.",
+      "tabs": {
+        "label": "Sezioni bonifici",
+        "move": "Invia denaro",
+        "recipients": "Destinatari",
+        "history": "Cronologia"
+      },
+      "steps": {
+        "details": "Dettagli",
+        "review": "Riepilogo",
+        "receipt": "Ricevuta"
+      },
+      "details": {
+        "from": "Conto di origine",
+        "to": "A",
+        "destinations": {
+          "own": "I miei conti",
+          "beneficiary": "Destinatario salvato",
+          "new": "Nuovo destinatario"
+        },
+        "myAccount": "Scegli il mio conto",
+        "savedRecipient": "Destinatario salvato",
+        "accountNumber": "Numero di conto a 10 cifre",
+        "amount": "Importo in dollari",
+        "useBalance": "Usa tutto il saldo",
+        "overBalance": "L’importo supera il saldo disponibile.",
+        "overLimit": "L’importo supera il limite giornaliero residuo.",
+        "memo": "Causale (facoltativa)"
+      },
+      "lookup": {
+        "check": "Verifica",
+        "checking": "Verifica del conto…",
+        "numberInvalid": "Inserisci un numero di conto a 10 cifre.",
+        "result": "Titolare verificato: {{name}}",
+        "confirm": "È questa la persona che intendi: {{name}}?",
+        "confirmRequired": "Conferma il destinatario prima di continuare."
+      },
+      "review": {
+        "from": "Da",
+        "to": "A",
+        "amount": "Importo",
+        "memo": "Causale",
+        "fee": "Commissione",
+        "newBalance": "Nuovo saldo"
+      },
+      "actions": {
+        "review": "Riepilogo bonifico",
+        "back": "Indietro",
+        "confirm": "Conferma bonifico",
+        "sending": "Invio…",
+        "retryHint": "I dati sono ancora disponibili. Riprova quando vuoi.",
+        "retry": "Riprova"
+      },
+      "receipt": {
+        "success": "Bonifico completato",
+        "reference": "Riferimento",
+        "copyReference": "Copia riferimento",
+        "date": "Data e ora",
+        "newBalance": "Nuovo saldo",
+        "saveRecipient": "Salva come destinatario",
+        "another": "Effettua un altro bonifico",
+        "transactions": "Vedi transazioni",
+        "print": "Stampa ricevuta"
+      },
+      "recipients": {
+        "title": "Destinatari salvati",
+        "addTitle": "Aggiungi destinatario",
+        "empty": "Non hai ancora salvato destinatari.",
+        "maximum": "Hai raggiunto il limite di 50 destinatari.",
+        "count": "{{count}} di 50",
+        "nickname": "Soprannome (facoltativo)",
+        "add": "Aggiungi destinatario",
+        "added": "Destinatario salvato.",
+        "send": "Invia denaro",
+        "selectRecipient": "Scegli un destinatario.",
+        "deleteLabel": "Elimina {{name}}",
+        "deleteConfirm": "Eliminare {{name}} dai destinatari?",
+        "numberInvalid": "Inserisci un numero di conto a 10 cifre."
+      },
+      "history": {
+        "direction": "Tipo di bonifico",
+        "all": "Tutti",
+        "sent": "Inviati",
+        "received": "Ricevuti",
+        "own": "Tra i miei conti",
+        "dateFrom": "Data iniziale",
+        "dateTo": "Data finale",
+        "empty": "Nessun bonifico corrisponde a questi filtri.",
+        "pagination": "Pagine bonifici",
+        "openDetail": "Apri i dettagli del bonifico",
+        "detailTitle": "Dettagli del bonifico",
+        "detailDescription": "Dettagli della ricevuta del bonifico."
+      }
+    },
+    "bills": {
+      "title": "Pagamento bollette",
+      "progress": "Avanzamento del pagamento",
+      "limitRemaining": "Limite giornaliero residuo:",
+      "leaveConfirm": "Uscire da questo pagamento? I dati non salvati andranno persi.",
+      "limitOrBalanceHint": "L’importo supera il saldo o il limite giornaliero residuo. Controlla importo o conto.",
+      "steps": {
+        "details": "Dettagli",
+        "review": "Riepilogo",
+        "receipt": "Ricevuta"
+      },
+      "details": {
+        "title": "Scegli un fornitore",
+        "chooseBiller": "Scegli un fornitore",
+        "search": "Cerca fornitori",
+        "noResults": "Nessun fornitore corrisponde alla ricerca.",
+        "paymentDetails": "Dettagli del pagamento",
+        "from": "Conto di origine",
+        "reference": "Numero di riferimento",
+        "amount": "Importo in dollari",
+        "referenceHint": "Inserisci il riferimento come appare sulla bolletta. Sarà verificato all’invio.",
+        "useBalance": "Usa tutto il saldo"
+      },
+      "categories": {
+        "electricity": "Elettricità",
+        "water": "Acqua",
+        "internet": "Servizio internet",
+        "mobile": "Cellulare",
+        "insurance": "Seguro",
+        "credit_card": "Carta di credito",
+        "tv": "Televisione",
+        "tax": "Tasse"
+      },
+      "validation": {
+        "chooseBiller": "Scegli un fornitore per continuare.",
+        "chooseAccount": "Scegli un conto attivo.",
+        "reference": "Inserisci un riferimento da 1 a 40 caratteri.",
+        "amount": "Inserisci un importo valido maggiore di zero."
+      },
+      "review": {
+        "from": "Da",
+        "biller": "Fornitore",
+        "reference": "Numero di riferimento",
+        "amount": "Importo",
+        "fee": "Commissione",
+        "newBalance": "Nuovo saldo"
+      },
+      "actions": {
+        "review": "Riepilogo pagamento",
+        "back": "Indietro",
+        "confirm": "Conferma pagamento",
+        "sending": "Pagamento…",
+        "retryHint": "I dati sono ancora disponibili. Riprova quando vuoi."
+      },
+      "receipt": {
+        "success": "Pagamento completato",
+        "transactionReference": "Riferimento della transazione",
+        "date": "Data e ora",
+        "newBalance": "Nuovo saldo",
+        "another": "Effettua un altro pagamento",
+        "transactions": "Vedi transazioni",
+        "print": "Stampa ricevuta"
+      },
+      "recent": {
+        "title": "Pagamenti recenti",
+        "empty": "Non ci sono ancora pagamenti di bollette.",
+        "pagination": "Pagine dei pagamenti",
+        "previousPage": "Pagina pagamenti precedente",
+        "nextPage": "Pagina pagamenti successiva",
+        "payAgain": "Paga di nuovo"
+      }
+    },
     "eyebrow": "Il tuo conto Westbridge",
     "welcome": "Ti diamo il benvenuto, {{name}}",
     "signedInAs": "Hai effettuato l'accesso come {{email}}",
@@ -470,6 +840,75 @@
       "other": "Altro"
     },
     "accountEnding": "Conto che termina con {{digits}}"
+  },
+  "notifications": {
+    "bellLabel_zero": "Notifiche",
+    "bellLabel_one": "{{count}} notifica non letta",
+    "bellLabel_other": "{{count}} notifiche non lette",
+    "popoverTitle": "Notifiche",
+    "eyebrow": "Attività del conto",
+    "title": "Notifiche",
+    "markAll": "Segna tutte come lette",
+    "markRead": "Segna come letta",
+    "unreadOnly": "Solo non lette",
+    "delete": "Elimina notifica",
+    "viewAll": "Visualizza tutte le notifiche",
+    "openRelated": "Apri attività collegata",
+    "unread": "Non letta",
+    "empty": "Hai visto tutto.",
+    "loadError": "Impossibile caricare le notifiche.",
+    "generic": {
+      "title": "Aggiornamento del conto",
+      "body": "C’è un nuovo aggiornamento sul tuo conto."
+    },
+    "transfer_sent": {
+      "title": "Bonifico inviato",
+      "body": "Hai inviato {{amount_cents}} a {{to_masked}}."
+    },
+    "transfer_received": {
+      "title": "Bonifico ricevuto",
+      "body": "Hai ricevuto {{amount_cents}} da {{from_masked}}."
+    },
+    "bill_paid": {
+      "title": "Bolletta pagata",
+      "body": "Hai pagato {{amount_cents}} a {{biller_name}}."
+    },
+    "card_purchase": {
+      "title": "Acquisto con carta",
+      "body": "{{merchant}} ha addebitato {{amount_cents}} sulla carta finale {{last4}}."
+    },
+    "card_frozen": {
+      "title": "Carta bloccata",
+      "body": "La carta finale {{last4}} è stata bloccata."
+    },
+    "card_unfrozen": {
+      "title": "Carta sbloccata",
+      "body": "La carta finale {{last4}} è di nuovo attiva."
+    },
+    "card_issued": {
+      "title": "Carta emessa",
+      "body": "È stata emessa una carta virtuale finale {{last4}}."
+    },
+    "card_cancelled": {
+      "title": "Carta annullata",
+      "body": "La carta finale {{last4}} è stata annullata."
+    },
+    "password_changed": {
+      "title": "Password modificata",
+      "body": "La password del tuo conto è stata modificata."
+    },
+    "session_revoked": {
+      "title": "Dispositivo disconnesso",
+      "body": "Una sessione del tuo conto è stata disconnessa."
+    },
+    "low_balance": {
+      "title": "Saldo basso",
+      "body": "Il saldo del conto {{account_type}} è {{balance_cents}}, sotto la soglia di {{threshold_cents}}."
+    },
+    "welcome": {
+      "title": "Benvenuto",
+      "body": "Il tuo conto demo Westbridge è pronto."
+    }
   },
   "notFound": {
     "title": "Pagina non trovata",

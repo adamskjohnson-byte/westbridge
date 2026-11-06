@@ -1,7 +1,8 @@
-import { useEffect, useRef, useState } from 'react'
+import { startTransition, useEffect, useRef, useState } from 'react'
+import { useQuery } from '@tanstack/react-query'
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { ArrowDownLeft, ArrowLeftRight, CircleHelp, CreditCard, LayoutDashboard, LogOut, MoreHorizontal, Settings } from 'lucide-react'
+import { ArrowDownLeft, ArrowLeftRight, ChartNoAxesCombined, CircleHelp, CreditCard, LayoutDashboard, LogOut, MoreHorizontal, Receipt, Settings } from 'lucide-react'
 import { Button } from '@/components/ui/button'
 import { LanguageSwitcher } from '@/components/layout/LanguageSwitcher'
 import { Logo } from '@/components/layout/logo'
@@ -10,35 +11,77 @@ import { Sheet, SheetContent, SheetHeader, SheetTitle, SheetTrigger } from '@/co
 import { useAuth } from '@/features/auth/auth-provider'
 import { usePageTitle } from '@/hooks/use-page-title'
 import { cn } from '@/lib/utils'
+import { NotificationBell } from './NotificationBell'
+import { getSettings } from './settings-api'
+import { i18n } from '@/i18n'
+import { useTheme } from '@/hooks/use-theme'
 
 const liveItems = [
   { to: '/dashboard', key: 'overview', icon: LayoutDashboard, end: true },
   { to: '/dashboard/transactions', key: 'transactions', icon: ArrowDownLeft, end: false },
-] as const
-const upcomingItems = [
-  { key: 'transfers', icon: ArrowLeftRight },
-  { key: 'cards', icon: CreditCard },
-  { key: 'settings', icon: Settings },
+  { to: '/dashboard/transfers', key: 'transfers', icon: ArrowLeftRight, end: false },
+  { to: '/dashboard/bills', key: 'bills', icon: Receipt, end: false },
+  { to: '/dashboard/cards', key: 'cards', icon: CreditCard, end: false },
+  { to: '/dashboard/insights', key: 'insights', icon: ChartNoAxesCombined, end: false },
+  { to: '/dashboard/settings', key: 'settings', icon: Settings, end: false },
 ] as const
 
 export function DashboardLayout() {
   const { t } = useTranslation('common')
+  const { t: adminT } = useTranslation('admin')
   const { user, logout } = useAuth()
+  const { setTheme } = useTheme()
+  const preferencesQuery = useQuery({ queryKey: ['dashboard', 'settings'], queryFn: getSettings, enabled: Boolean(user), staleTime: 60_000 })
+  const [preferencesReady, setPreferencesReady] = useState(false)
   const navigate = useNavigate()
   const location = useLocation()
   const mainRef = useRef<HTMLElement>(null)
   const [moreOpen, setMoreOpen] = useState(false)
   const isTransactions = location.pathname.includes('/transactions')
-  const pageTitle = t(isTransactions ? 'dashboard.transactions.title' : 'dashboard.overview')
+  const pageTitle = isTransactions
+    ? t('dashboard.transactions.title')
+    : location.pathname.includes('/transfers')
+      ? t('dashboard.transfers.title')
+      : location.pathname.includes('/bills')
+        ? t('dashboard.bills.title')
+        : location.pathname.includes('/cards')
+          ? t('dashboard.cards.title')
+          : location.pathname.includes('/insights')
+            ? t('dashboard.insights.title')
+            : location.pathname.includes('/settings')
+              ? t('dashboard.settings.title')
+        : t('dashboard.overview')
   usePageTitle(pageTitle, t('dashboard.description'))
 
   useEffect(() => {
     mainRef.current?.focus()
   }, [location.pathname])
 
+  useEffect(() => {
+    if (!user || preferencesQuery.isPending) return
+    let active = true
+    async function applyPreferences() {
+      if (preferencesQuery.data) {
+      const { locale, theme } = preferencesQuery.data.preferences
+      if (locale) {
+        await i18n.changeLanguage(locale)
+        try { window.localStorage.setItem('westbridge.lang', locale) } catch { /* Local preference is optional. */ }
+      }
+      startTransition(() => setTheme(theme))
+      }
+      if (active) startTransition(() => setPreferencesReady(true))
+    }
+    void applyPreferences()
+    return () => { active = false }
+  }, [preferencesQuery.data, preferencesQuery.isPending, setTheme, user])
+
   async function handleLogout() {
     await logout()
     navigate('/login', { replace: true })
+  }
+
+  if (!preferencesReady) {
+    return <main aria-busy="true" className="min-h-screen animate-pulse space-y-4 bg-background p-6"><div className="h-10 w-48 bg-muted"/><div className="h-64 bg-muted"/></main>
   }
 
   return (
@@ -63,17 +106,10 @@ export function DashboardLayout() {
                 >
                   <Icon aria-hidden="true" className="size-[1.125rem] shrink-0" />
                   <span className="hidden xl:block">{t(`dashboard.shell.${key}`)}</span>
-                  {key === 'transactions' && <span className="sr-only">{t('dashboard.shell.live')}</span>}
+                  {key !== 'overview' && <span className="sr-only">{t('dashboard.shell.live')}</span>}
                 </NavLink>
               ))}
               <div className="my-3 hidden border-t border-border xl:block" />
-              {upcomingItems.map(({ key, icon: Icon }) => (
-                <div aria-disabled="true" className="flex min-h-11 cursor-not-allowed items-center justify-center gap-3 rounded-md px-2 text-sm font-medium text-muted-foreground/70 xl:justify-start xl:px-3" key={key} title={t('dashboard.shell.comingSoon')}>
-                  <Icon aria-hidden="true" className="size-[1.125rem] shrink-0" />
-                  <span className="hidden flex-1 xl:block">{t(`dashboard.shell.${key}`)}</span>
-                  <span className="hidden rounded-sm border border-border px-1.5 py-0.5 text-[0.6rem] xl:block">{t('dashboard.shell.comingSoon')}</span>
-                </div>
-              ))}
             </div>
           </nav>
           <div className="border-t border-border p-3">
@@ -88,6 +124,7 @@ export function DashboardLayout() {
             <div className="flex shrink-0 items-center gap-1 sm:gap-2">
               <LanguageSwitcher />
               <ThemeToggle />
+              <NotificationBell />
               <details className="relative ms-1">
                 <summary aria-label={t('navbar.accountMenuLabel', { name: user?.first_name ?? '' })} className="grid size-10 cursor-pointer list-none place-items-center rounded-full border border-border bg-muted text-sm font-bold focus-visible:outline focus-visible:outline-2 focus-visible:outline-ring">
                   {(user?.first_name?.[0] ?? 'W').toLocaleUpperCase()}
@@ -96,6 +133,7 @@ export function DashboardLayout() {
                   <p className="truncate px-3 py-2 text-sm font-semibold">{user?.first_name} {user?.last_name}</p>
                   <p className="truncate px-3 pb-2 text-xs text-muted-foreground">{user?.email}</p>
                   <div className="border-t border-border pt-2">
+                    {user?.role === 'admin' && <NavLink className="flex min-h-10 items-center rounded-md px-3 text-sm font-medium hover:bg-accent" to="/admin">{adminT('nav.panel')}</NavLink>}
                     <Button className="w-full justify-start" onClick={handleLogout} variant="ghost"><LogOut aria-hidden="true" />{t('navbar.logOut')}</Button>
                   </div>
                 </div>
@@ -117,7 +155,7 @@ export function DashboardLayout() {
               <SheetContent aria-describedby={undefined} className="pb-[calc(1.5rem+env(safe-area-inset-bottom))]" side="bottom">
                 <SheetHeader><SheetTitle>{t('dashboard.shell.more')}</SheetTitle></SheetHeader>
                 <div className="mt-5 grid gap-2">
-                  {upcomingItems.map(({ key, icon: Icon }) => <div aria-disabled="true" className="flex min-h-12 items-center gap-3 rounded-md border border-border px-3 text-sm text-muted-foreground" key={key}><Icon aria-hidden="true" className="size-4" /><span className="flex-1">{t(`dashboard.shell.${key}`)}</span><span className="text-xs">{t('dashboard.shell.comingSoon')}</span></div>)}
+                  {liveItems.filter(({ key }) => key !== 'overview' && key !== 'transactions').map(({ to, key, icon: Icon }) => <NavLink className="flex min-h-12 items-center gap-3 rounded-md border border-border px-3 text-sm font-medium" key={key} onClick={() => setMoreOpen(false)} to={to}><Icon aria-hidden="true" className="size-4" /><span>{t(`dashboard.shell.${key}`)}</span></NavLink>)}
                   <Button className="mt-2 justify-start" onClick={handleLogout} variant="outline"><LogOut aria-hidden="true" />{t('navbar.logOut')}</Button>
                 </div>
               </SheetContent>

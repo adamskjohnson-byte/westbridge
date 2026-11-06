@@ -4,18 +4,20 @@ namespace App\Services;
 
 use App\Enums\AccountStatus;
 use App\Enums\AccountType;
-use App\Enums\UserRole;
 use App\Enums\UserStatus;
+use App\Enums\UserRole;
 use App\Exceptions\Auth\AccountSuspendedException;
 use App\Models\Account;
 use App\Models\AuditLog;
 use App\Models\User;
+use App\Notifications\WelcomeNotification;
 use Illuminate\Auth\Events\Registered;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Validation\ValidationException;
+use App\Services\TwoFactorService;
 
 class AuthService
 {
@@ -70,6 +72,7 @@ class AuthService
             return $user;
         }, 3);
 
+        $user->notify(new WelcomeNotification);
         if ($requireEmailVerification) {
             event(new Registered($user));
         }
@@ -81,7 +84,7 @@ class AuthService
         return $user;
     }
 
-    public function login(string $email, string $password, bool $remember, Request $request): User
+    public function login(string $email, string $password, bool $remember, Request $request): User|array
     {
         $email = strtolower(trim($email));
         $emailHash = hash('sha256', $email);
@@ -90,7 +93,14 @@ class AuthService
             $user = User::query()->where('email', $email)->first();
 
             // Audit login attempts without storing the submitted email or password in failure records.
-            if ($user === null || ! Hash::check($password, $user->password)) {
+            $dummyHash = '$2y$12$'.str_repeat('A', 53);
+            if ($user === null) {
+                Hash::check($password, $dummyHash);
+                $this->writeFailedLoginAudit(null, $request, $emailHash);
+
+                return ['failure' => 'credentials'];
+            }
+            if (! Hash::check($password, $user->password)) {
                 $this->writeFailedLoginAudit($user, $request, $emailHash);
 
                 return ['failure' => 'credentials'];
@@ -117,7 +127,11 @@ class AuthService
 
         /** @var User $user */
         $user = $result['user'];
+        if (app(TwoFactorService::class)->requiredFor($user)) {
+            return app(TwoFactorService::class)->start($user, 'login', $request);
+        }
         Auth::guard('web')->login($user, $remember);
+        $user->forceFill(['last_login_at' => now()])->save();
 
         // Regenerate the session ID after authentication to prevent session fixation.
         $request->session()->regenerate();

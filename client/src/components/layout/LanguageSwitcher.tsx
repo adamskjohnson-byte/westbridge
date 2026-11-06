@@ -5,9 +5,13 @@ import { Button } from '@/components/ui/button'
 import { Input } from '@/components/ui/input'
 import { cn } from '@/lib/utils'
 import { languages, resolveLanguage } from '@/i18n/languages'
+import { useAuth } from '@/features/auth/auth-provider'
+import { updatePreferences } from '@/features/dashboard/settings-api'
+import { toast } from 'sonner'
 
 export function LanguageSwitcher() {
   const { i18n, t } = useTranslation('common')
+  const { isAuthenticated } = useAuth()
   const [open, setOpen] = useState(false)
   const [query, setQuery] = useState('')
   const [activeIndex, setActiveIndex] = useState(0)
@@ -55,6 +59,9 @@ export function LanguageSwitcher() {
 
   async function selectLanguage(code: string) {
     await i18n.changeLanguage(code)
+    if (isAuthenticated) {
+      void updatePreferences({ locale: code }).catch(() => toast.error(t('dashboard.settings.preferenceSaveError')))
+    }
     setQuery('')
     setOpen(false)
     triggerRef.current?.focus()

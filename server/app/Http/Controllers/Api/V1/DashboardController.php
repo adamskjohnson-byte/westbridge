@@ -9,6 +9,7 @@ use App\Http\Resources\AccountResource;
 use App\Http\Resources\DashboardSummaryResource;
 use App\Http\Resources\TransactionResource;
 use App\Models\Account;
+use App\Models\Card;
 use App\Services\DashboardReadService;
 use App\Services\TransactionExportService;
 use App\Services\TransactionReadService;
@@ -45,7 +46,11 @@ class DashboardController extends Controller
         $user = $request->user();
         $ownedAccount = $this->dashboardReadService->account($user, $account);
         Gate::authorize('view', $ownedAccount);
-        $paginator = $this->transactionReadService->paginate($user, $ownedAccount, $request->filters());
+        $filters = $request->filters();
+        if (isset($filters['card_id']) && ! Card::query()->whereKey($filters['card_id'])->where('user_id', $user->getKey())->exists()) {
+            abort(404);
+        }
+        $paginator = $this->transactionReadService->paginate($user, $ownedAccount, $filters);
 
         return response()->json([
             'data' => TransactionResource::collection($paginator->getCollection())->resolve($request),

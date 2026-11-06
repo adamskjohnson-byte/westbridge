@@ -3,11 +3,15 @@
 use App\Exceptions\Auth\AccountSuspendedException;
 use App\Exceptions\Auth\InvalidVerificationLinkException;
 use App\Exceptions\Bank\BankException;
+use App\Exceptions\Bank\IdempotencyKeyReusedException;
+use App\Exceptions\Bank\RecipientNotFoundException;
 use App\Http\Middleware\EnsureEmailIsVerified;
 use App\Http\Middleware\EnsureUserIsActive;
 use App\Http\Middleware\EnsureUserRole;
+use App\Http\Middleware\ResolveCloudflareClientIp;
 use App\Http\Middleware\RequestId;
 use App\Http\Middleware\SecurityHeaders;
+use App\Http\Middleware\VerifyTurnstile;
 use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Auth\AuthenticationException;
 use Illuminate\Database\Eloquent\ModelNotFoundException;
@@ -30,14 +34,17 @@ return Application::configure(basePath: dirname(__DIR__))
     ->withCommands()
     ->withMiddleware(function (Middleware $middleware) {
         // Add correlation and security headers globally; each middleware limits itself to API URLs.
-        $middleware->append([RequestId::class, SecurityHeaders::class]);
+        $middleware->append([ResolveCloudflareClientIp::class, RequestId::class, SecurityHeaders::class]);
         $middleware->redirectGuestsTo(fn (Request $request): ?string => $request->is('api/*') ? null : route('login'));
         $middleware->statefulApi();
+        $trustedProxies = trim((string) env('TRUSTED_PROXIES', ''));
+        $middleware->trustProxies(at: $trustedProxies === '' ? null : ($trustedProxies === '*' ? '*' : array_map('trim', explode(',', $trustedProxies))));
         $middleware->api(append: ['throttle:api']);
         $middleware->alias([
             'active' => EnsureUserIsActive::class,
             'verified' => EnsureEmailIsVerified::class,
             'role' => EnsureUserRole::class,
+            'turnstile' => VerifyTurnstile::class,
         ]);
     })
     ->withExceptions(function (Exceptions $exceptions) {
@@ -53,6 +60,8 @@ return Application::configure(basePath: dirname(__DIR__))
 
             $requestId = (string) ($request->attributes->get('request_id') ?? 'unknown');
             $status = match (true) {
+                $exception instanceof RecipientNotFoundException => 404,
+                $exception instanceof IdempotencyKeyReusedException => 409,
                 $exception instanceof BankException => 422,
                 $exception instanceof AccountSuspendedException => 403,
                 $exception instanceof InvalidVerificationLinkException => 403,
@@ -81,6 +90,8 @@ return Application::configure(basePath: dirname(__DIR__))
             };
 
             $code = match (true) {
+                $exception instanceof RecipientNotFoundException => 'recipient_not_found',
+                $exception instanceof IdempotencyKeyReusedException => 'idempotency_key_reused',
                 $exception instanceof BankException => $exception->machineCode(),
                 $exception instanceof AccountSuspendedException => 'account_suspended',
                 $exception instanceof InvalidVerificationLinkException => 'invalid_verification_link',
@@ -127,6 +138,6 @@ return Application::configure(basePath: dirname(__DIR__))
 
             $response->headers->set('X-Request-Id', $requestId);
 
-            return SecurityHeaders::apply($response);
+            return SecurityHeaders::apply($response, $request);
         });
     })->create();

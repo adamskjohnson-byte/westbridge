@@ -34,6 +34,7 @@ class DevLinks extends Command
 
         $records = preg_split('/(?=^\[\d{4}-\d{2}-\d{2}[ T][^\]]+\]\s)/m', $contents, -1, PREG_SPLIT_NO_EMPTY) ?: [];
         $latest = ['verification' => null, 'reset' => null];
+        $latestTwoFactor = null;
 
         foreach ($records as $record) {
             preg_match('/^To:\s*(.+)$/mi', $record, $recipientMatch);
@@ -44,6 +45,10 @@ class DevLinks extends Command
             }
 
             preg_match_all('/https?:\/\/[^\s"\'<>]+/i', html_entity_decode($record, ENT_QUOTES | ENT_HTML5), $urlMatches);
+            if (str_contains($record, 'Your one-time security code is:')) {
+                preg_match('/Your one-time security code is:\s*(?:<[^>]+>\s*)?([0-9]{6})/i', strip_tags($record), $codeMatch);
+                if (isset($codeMatch[1])) $latestTwoFactor = ['email' => $email, 'code' => $codeMatch[1]];
+            }
             foreach ($urlMatches[0] ?? [] as $url) {
                 $url = rtrim($url, '.,);]');
                 $type = match (true) {
@@ -65,6 +70,9 @@ class DevLinks extends Command
 
             $this->line(ucfirst($type).' for '.$link['email'].': '.$link['url']);
         }
+        $this->line($latestTwoFactor === null
+            ? 'Two-factor code: no code found.'
+            : 'Most recent two-factor code for '.$latestTwoFactor['email'].': '.$latestTwoFactor['code']);
 
         return self::SUCCESS;
     }

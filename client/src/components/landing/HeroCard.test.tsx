@@ -5,18 +5,6 @@ import { afterEach, describe, expect, it, vi } from 'vitest'
 import { i18n, i18nReady } from '@/i18n'
 import { HeroCard } from './HeroCard'
 
-function luhnValid(number: string): boolean {
-  const digits = number.replace(/\D/g, '').split('').reverse().map(Number)
-  const sum = digits.reduce((total, digit, index) => {
-    if (index % 2 === 1) {
-      digit *= 2
-      if (digit > 9) digit -= 9
-    }
-    return total + digit
-  }, 0)
-  return sum % 10 === 0
-}
-
 function mockPreferences(reducedMotion: boolean): void {
   Object.defineProperty(window, 'matchMedia', {
     configurable: true,
@@ -53,12 +41,11 @@ describe('HeroCard', () => {
     expect(screen.getAllByText(/^⟦.*⟧$/u).length).toBeGreaterThan(0)
   })
 
-  it('uses the fictional card number which is not valid under Luhn', () => {
+  it('shows only the last four digits of the demo card', () => {
     mockPreferences(true)
     render(<HeroCard />)
 
-    expect(screen.getByText('6248 0000 0000 2105')).toBeTruthy()
-    expect(luhnValid('6248 0000 0000 2105')).toBe(false)
+    expect(screen.getByText('•••• •••• •••• 2105')).toBeTruthy()
   })
 
   it('does not apply motion or tilt handlers when reduced motion is preferred', () => {

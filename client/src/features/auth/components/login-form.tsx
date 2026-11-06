@@ -1,5 +1,6 @@
 import { zodResolver } from '@hookform/resolvers/zod'
 import { useForm } from 'react-hook-form'
+import { useRef, useState } from 'react'
 import { useTranslation } from 'react-i18next'
 import { Link } from 'react-router-dom'
 import { Button } from '@/components/ui/button'
@@ -8,14 +9,17 @@ import { Label } from '@/components/ui/label'
 import { PasswordInput } from './password-input'
 import { FieldError } from './field-error'
 import { createAuthSchemas, type LoginFormValues } from '../schemas'
+import { TurnstileWidget, type TurnstileHandle } from '@/components/security/TurnstileWidget'
+import type { LoginResult } from '../api'
 
 type LoginFormProps = {
-  onSubmit: (values: LoginFormValues) => Promise<void>
+  onSubmit: (values: LoginFormValues & { turnstile_token?: string }) => Promise<LoginResult>
   pending: boolean
   serverError: string | null
+  turnstile: { enabled: boolean; sitekey: string }
 }
 
-export function LoginForm({ onSubmit, pending, serverError }: LoginFormProps) {
+export function LoginForm({ onSubmit, pending, serverError, turnstile }: LoginFormProps) {
   const { t } = useTranslation('common')
   const loginSchema = createAuthSchemas(t).login
   const { register, handleSubmit, formState: { errors } } = useForm<LoginFormValues>({
@@ -23,9 +27,21 @@ export function LoginForm({ onSubmit, pending, serverError }: LoginFormProps) {
     defaultValues: { email: '', password: '', remember: false },
     shouldFocusError: true,
   })
+  const widget = useRef<TurnstileHandle>(null)
+  const [token, setToken] = useState('')
+
+  async function submit(values: LoginFormValues) {
+    try {
+      await onSubmit({ ...values, ...(turnstile.enabled ? { turnstile_token: token } : {}) })
+    } catch (error) {
+      widget.current?.reset()
+      setToken('')
+      throw error
+    }
+  }
 
   return (
-    <form className="space-y-4" noValidate onSubmit={handleSubmit(onSubmit)}>
+    <form className="space-y-4" noValidate onSubmit={handleSubmit(submit)}>
       {serverError && <p aria-live="polite" className="rounded-md border border-destructive/40 bg-destructive/5 p-3 text-sm text-destructive" role="alert">{serverError}</p>}
       <div>
         <Label htmlFor="login-email">{t('forms.emailAddress')}</Label>
@@ -58,7 +74,9 @@ export function LoginForm({ onSubmit, pending, serverError }: LoginFormProps) {
         <input className="size-4 accent-primary" type="checkbox" {...register('remember')} />
         {t('auth.rememberMe')}
       </label>
-      <Button className="w-full" disabled={pending} type="submit">
+      <TurnstileWidget action="login" enabled={turnstile.enabled} onError={() => setToken('')} onExpire={() => setToken('')} onToken={setToken} ref={widget} sitekey={turnstile.sitekey} />
+      {turnstile.enabled && !token && <p className="text-xs text-muted-foreground">{t('auth.turnstile.verifyingHint')}</p>}
+      <Button className="w-full" disabled={pending || (turnstile.enabled && !token)} type="submit">
         {pending ? t('auth.signingIn') : t('auth.signIn')}
       </Button>
     </form>

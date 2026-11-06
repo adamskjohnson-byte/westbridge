@@ -51,6 +51,9 @@ class TransactionReadService
         if (isset($filters['category'])) {
             $query->whereIn('transactions.category', $filters['category']);
         }
+        if (isset($filters['card_id'])) {
+            $query->where('transactions.card_id', (int) $filters['card_id']);
+        }
         if (isset($filters['date_from'])) {
             $dateFrom = CarbonImmutable::createFromFormat('!Y-m-d', $filters['date_from'], 'UTC');
             $query->where('transactions.posted_at', '>=', $dateFrom->startOfDay());

@@ -6,7 +6,6 @@ use App\Exceptions\Auth\InvalidVerificationLinkException;
 use App\Http\Controllers\Controller;
 use App\Models\AuditLog;
 use App\Models\User;
-use App\Notifications\WelcomeNotification;
 use App\Support\ApiResponse;
 use Illuminate\Auth\Events\Verified;
 use Illuminate\Http\JsonResponse;
@@ -42,8 +41,6 @@ class VerifyEmailController extends Controller
         event(new Verified($user));
 
         $this->writeAudit($user, $request, 'auth.email_verified');
-
-        Notification::send($user, new WelcomeNotification);
 
         return ApiResponse::success(null, 'Email verified.');
     }

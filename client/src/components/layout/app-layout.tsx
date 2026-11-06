@@ -12,14 +12,16 @@ export function AppLayout() {
   const { theme } = useTheme()
   const { pathname } = useLocation()
   const isDashboard = pathname.startsWith('/dashboard')
+  const isAdmin = pathname.startsWith('/admin')
+  const isApplication = isDashboard || isAdmin
 
   return (
     <TooltipProvider>
       <ScrollToTop />
-      {!isDashboard && <a className="skip-link" href="#main-content">{t('accessibility.skipToContent')}</a>}
-      {!isDashboard && <Navbar />}
+      {!isApplication && <a className="skip-link" href="#main-content">{t('accessibility.skipToContent')}</a>}
+      {!isApplication && <Navbar />}
       <Outlet />
-      {!isDashboard && <Footer />}
+      {!isApplication && <Footer />}
       <Toaster theme={theme} />
     </TooltipProvider>
   )

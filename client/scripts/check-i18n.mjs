@@ -7,6 +7,9 @@ const localesDir = path.resolve(scriptDir, '../src/locales')
 const sourceDir = path.resolve(scriptDir, '../src')
 const englishDir = path.join(localesDir, 'en')
 const placeholderPattern = /\{\{\s*([^{}]+?)\s*\}\}/g
+const allowlist = JSON.parse(fs.readFileSync(path.join(scriptDir, 'i18n-allowlist.json'), 'utf8'))
+const allowlistedDuplicateValues = new Set(Object.values(allowlist.routes ?? {}).flat())
+const relatedLanguages = new Set(['es', 'pt', 'it', 'fr'])
 
 function flatten(value, prefix = '', result = new Map()) {
   if (value && typeof value === 'object') {
@@ -57,8 +60,8 @@ function collectSourceFiles(directory) {
 function checkSourceKeys(namespaces) {
   const errors = []
   const translationCall = /\bt\(\s*(['"])([\w.-]+)\1/g
-  const translationNamespace = /useTranslation\(\s*['"](common|landing|pages)['"]\s*\)/
-  const explicitNamespace = /\{\s*ns:\s*['"](common|landing|pages)['"]/
+  const translationNamespace = /useTranslation\(\s*['"](common|landing|pages|admin)['"]\s*\)/
+  const explicitNamespace = /\{\s*ns:\s*['"](common|landing|pages|admin)['"]/ 
 
   for (const filePath of collectSourceFiles(sourceDir)) {
     const source = fs.readFileSync(filePath, 'utf8')
@@ -108,11 +111,55 @@ function checkDuplicateTranslations(language, namespaces, locales) {
   })
 }
 
+function isIgnoredCrossLanguageValue(value) {
+  if (allowlistedDuplicateValues.has(value)) return true
+  if (allowlist.patterns.some((pattern) => new RegExp(pattern, 'i').test(value))) return true
+  if (/^(?:Westbridge(?: National Bank)?|National Bank)$/i.test(value)) return true
+  return /^\s*[-+]?\s*(?:[$€£¥₹]\s*)?\d[\d,.]*(?:\s*(?:K\+?|%|USD))?\s*$/i.test(value)
+}
+
+function checkCrossLanguageDuplicates(languages, namespaces, locales) {
+  const grouped = new Map()
+  for (const namespace of namespaces) {
+    const namespaceName = path.basename(namespace, '.json')
+    const englishEntries = flatten(readJson(path.join(englishDir, namespace)))
+    for (const language of languages) {
+      const localeNamespaces = locales[language]
+      const localeEntries = flatten(localeNamespaces[namespaceName])
+      for (const [key, englishValue] of englishEntries) {
+        if (typeof englishValue !== 'string' || isNonTranslatable(namespaceName, key, englishValue)) continue
+        const translatedValue = localeEntries.get(key)
+        if (typeof translatedValue !== 'string') continue
+        const value = translatedValue.normalize('NFC').trim().replace(/\s+/g, ' ')
+        if (Array.from(value).length <= 4 || isIgnoredCrossLanguageValue(value)) continue
+        const entryKey = `${namespaceName}:${key}`
+        const translations = grouped.get(entryKey) ?? new Map()
+        const matchingLanguages = translations.get(value) ?? []
+        matchingLanguages.push(language)
+        translations.set(value, matchingLanguages)
+        grouped.set(entryKey, translations)
+      }
+    }
+  }
+
+  const warnings = []
+  for (const [key, translations] of grouped) {
+    for (const [value, matchingLanguages] of translations) {
+      const hasUnrelatedPair = matchingLanguages.some((language, index) => matchingLanguages.slice(index + 1).some((other) => (
+        !relatedLanguages.has(language) || !relatedLanguages.has(other) || !/^[\p{L}]+$/u.test(value)
+      )))
+      if (hasUnrelatedPair) warnings.push(`same value ${JSON.stringify(value)} at ${key} in ${matchingLanguages.join(', ')}`)
+    }
+  }
+  return warnings
+}
+
 function checkLocales() {
   const namespaces = fs.readdirSync(englishDir).filter((file) => file.endsWith('.json')).sort()
   const languageDirs = fs.readdirSync(localesDir, { withFileTypes: true }).filter((entry) => entry.isDirectory()).map((entry) => entry.name).sort()
   const errors = []
   const warnings = []
+  const allLocaleNamespaces = {}
   const englishNamespaces = Object.fromEntries(namespaces.map((namespace) => [
     path.basename(namespace, '.json'),
     readJson(path.join(englishDir, namespace)),
@@ -132,6 +179,7 @@ function checkLocales() {
       const englishEntries = flatten(readJson(englishFile))
       const localeData = readJson(localeFile)
       localeNamespaces[path.basename(namespace, '.json')] = localeData
+      if (language !== 'en' && path.basename(namespace, '.json') === 'admin') continue
       const localeEntries = flatten(localeData)
       for (const [key, englishValue] of englishEntries) {
         if (isNonTranslatable(path.basename(namespace, '.json'), key, englishValue)) continue
@@ -158,15 +206,17 @@ function checkLocales() {
         }
       }
     }
+    allLocaleNamespaces[language] = localeNamespaces
     warnings.push(...checkDuplicateTranslations(language, namespaces, localeNamespaces))
   }
+  warnings.push(...checkCrossLanguageDuplicates(languageDirs.filter((language) => language !== 'en'), namespaces, allLocaleNamespaces))
 
   return { errors, warnings, languageCount: languageDirs.length, namespaceCount: namespaces.length }
 }
 
 const report = checkLocales()
 if (report.warnings.length) {
-  console.warn(`i18n check warnings (${report.warnings.length} possible duplicate-translation groups):`)
+  console.warn(`i18n check warnings (${report.warnings.length} duplicate-translation and cross-language groups):`)
   for (const warning of report.warnings) console.warn(`- ${warning}`)
 }
 if (report.errors.length) {

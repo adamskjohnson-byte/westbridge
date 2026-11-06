@@ -5,12 +5,14 @@ import { MemoryRouter } from 'react-router-dom'
 import { afterEach, describe, expect, it, vi } from 'vitest'
 import { LoginForm } from './login-form'
 
+vi.mock('@/hooks/use-theme', () => ({ useTheme: () => ({ theme: 'system' }) }))
+
 afterEach(cleanup)
 
 describe('LoginForm', () => {
   it('shows validation errors for empty and invalid input', async () => {
     const onSubmit = vi.fn().mockResolvedValue(undefined)
-    render(<MemoryRouter><LoginForm onSubmit={onSubmit} pending={false} serverError={null} /></MemoryRouter>)
+    render(<MemoryRouter><LoginForm onSubmit={onSubmit} pending={false} serverError={null} turnstile={{ enabled: false, sitekey: '' }} /></MemoryRouter>)
 
     fireEvent.click(screen.getByRole('button', { name: 'Sign in' }))
     expect(await screen.findByText('Enter your email address.')).toBeTruthy()

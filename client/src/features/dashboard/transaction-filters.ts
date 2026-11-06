@@ -54,6 +54,7 @@ export function parseTransactionFilters(params: URLSearchParams): ParsedTransact
   }
   const min_amount_cents = validCents(params.get('min_amount_cents'))
   const max_amount_cents = validCents(params.get('max_amount_cents'))
+  const cardId = validCents(params.get('card_id'))
   const validAmounts = min_amount_cents === undefined || max_amount_cents === undefined || min_amount_cents <= max_amount_cents
   const sortValue = params.get('sort')
   const orderValue = params.get('order')
@@ -68,6 +69,7 @@ export function parseTransactionFilters(params: URLSearchParams): ParsedTransact
     ...(date_to ? { date_to } : {}),
     ...(validAmounts && min_amount_cents !== undefined ? { min_amount_cents } : {}),
     ...(validAmounts && max_amount_cents !== undefined ? { max_amount_cents } : {}),
+    ...(cardId !== undefined && cardId > 0 ? { card_id: cardId } : {}),
     ...(sortValue === 'amount_cents' ? { sort: 'amount_cents' as const } : sortValue === 'posted_at' ? { sort: 'posted_at' as const } : {}),
     ...(orderValue === 'asc' || orderValue === 'desc' ? { order: orderValue } : {}),
     ...(params.get('range') && ['7', '30', '90', 'month', 'custom'].includes(params.get('range')!) ? { range: params.get('range')! } : {}),

@@ -24,7 +24,27 @@
   "routes": {
     "/": [
       "Westbridge National Bank",
-      "Demo only. Westbridge National Bank is not a real bank. No real money is held."
+      "Demo only. Westbridge National Bank is not a real bank. No real money is held.",
+      "App Store",
+      "Google Play",
+      "Portland",
+      "88 Alder Row",
+      "Austin",
+      "24 Cedar Avenue",
+      "Chicago",
+      "410 Elm Plaza",
+      "Boston",
+      "910 Harbor Street"
+    ],
+    "/contact": [
+      "Portland",
+      "88 Alder Row",
+      "Austin",
+      "24 Cedar Avenue",
+      "Chicago",
+      "410 Elm Plaza",
+      "Boston",
+      "910 Harbor Street"
     ]
   }
 }

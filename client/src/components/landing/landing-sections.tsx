@@ -1,5 +1,5 @@
 import { zodResolver } from '@hookform/resolvers/zod'
-import { useMemo, useState, type ReactNode } from 'react'
+import { useMemo, useRef, useState, type ReactNode } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useForm, type FieldPath, type FieldValues, type UseFormSetError } from 'react-hook-form'
 import { z } from 'zod'
@@ -30,6 +30,8 @@ import { TiltCard } from '@/components/motion/TiltCard'
 import { Photo } from '@/components/ui/Photo'
 import { imageSlots } from '@/content/images'
 import { useTranslatedContent } from '@/i18n/use-translated-content'
+import { useAppConfig } from '@/features/auth/auth-provider'
+import { TurnstileWidget, type TurnstileHandle } from '@/components/security/TurnstileWidget'
 
 function useLandingContent() {
   return useTranslatedContent(landingContent, 'landing')
@@ -779,6 +781,9 @@ export function ContactSection({ showHeading = true }: { showHeading?: boolean }
   const { t } = useTranslation('landing')
   const { contact } = useLandingContent()
   const images = useLandingImages()
+  const appConfig = useAppConfig()
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const turnstileWidget = useRef<TurnstileHandle>(null)
   const contactSchema = useMemo(() => createContactSchema((key) => t(key, { ns: 'common' })), [t])
   const {
     register,
@@ -799,10 +804,16 @@ export function ContactSection({ showHeading = true }: { showHeading?: boolean }
 
   const onSubmit = async (values: ContactFormValues) => {
     try {
-      await submitContactMessage(values)
+      await submitContactMessage({ ...values, ...(appConfig.data?.turnstile.enabled ? { turnstile_token: turnstileToken } : {}) })
       toast.success(t('forms.contact.success', { ns: 'common' }))
       reset()
     } catch (error) {
+      turnstileWidget.current?.reset()
+      setTurnstileToken('')
+      if (error instanceof ApiError && error.code === 'captcha_failed') {
+        toast.error(t('forms.errors.submit', { ns: 'common' }))
+        return
+      }
       showPublicFormError<ContactFormValues>(error, ['name', 'email', 'subject', 'message'], setError, (key) => t(key, { ns: 'common' }))
     }
   }
@@ -855,9 +866,14 @@ export function ContactSection({ showHeading = true }: { showHeading?: boolean }
             </div>
 
             <div className="mt-5 flex justify-end">
-              <Button type="submit" disabled={isSubmitting} className="btn-gradient min-w-[10rem]">
+              <div className="grid w-full gap-3">
+              {appConfig.isError && <p className="text-sm text-destructive" role="alert">{t('auth.turnstile.configError', { ns: 'common' })}</p>}
+              <TurnstileWidget action="contact" enabled={appConfig.data?.turnstile.enabled ?? false} onError={() => setTurnstileToken('')} onExpire={() => setTurnstileToken('')} onToken={setTurnstileToken} ref={turnstileWidget} sitekey={appConfig.data?.turnstile.sitekey ?? ''}/>
+              {appConfig.data?.turnstile.enabled && !turnstileToken && <p className="text-xs text-muted-foreground">{t('auth.turnstile.verifyingHint', { ns: 'common' })}</p>}
+              <Button type="submit" disabled={isSubmitting || appConfig.isPending || appConfig.isError || Boolean(appConfig.data?.turnstile.enabled && !turnstileToken)} className="btn-gradient min-w-[10rem]">
                 {isSubmitting ? t('contact.sending') : contact.form.submit}
               </Button>
+              </div>
             </div>
           </form>
 
@@ -925,6 +941,9 @@ export function NewsletterSection() {
   const { t } = useTranslation('landing')
   const { newsletter } = useLandingContent()
   const images = useLandingImages()
+  const appConfig = useAppConfig()
+  const [turnstileToken, setTurnstileToken] = useState('')
+  const turnstileWidget = useRef<TurnstileHandle>(null)
   const newsletterSchema = useMemo(() => createNewsletterSchema((key) => t(key, { ns: 'common' })), [t])
   const {
     register,
@@ -939,10 +958,16 @@ export function NewsletterSection() {
 
   const onSubmit = async (values: NewsletterSignupValues) => {
     try {
-      await submitNewsletterSignup(values)
+      await submitNewsletterSignup({ ...values, ...(appConfig.data?.turnstile.enabled ? { turnstile_token: turnstileToken } : {}) })
       toast.success(t('forms.newsletter.success', { ns: 'common' }))
       reset()
     } catch (error) {
+      turnstileWidget.current?.reset()
+      setTurnstileToken('')
+      if (error instanceof ApiError && error.code === 'captcha_failed') {
+        toast.error(t('forms.errors.submit', { ns: 'common' }))
+        return
+      }
       showPublicFormError<NewsletterSignupValues>(error, ['email'], setError, (key) => t(key, { ns: 'common' }))
     }
   }
@@ -964,6 +989,7 @@ export function NewsletterSection() {
           </div>
 
           <form noValidate onSubmit={handleSubmit(onSubmit)} className="w-full max-w-xl">
+            {appConfig.isError && <p className="mb-3 text-sm text-[var(--brand-cream)]" role="alert">{t('auth.turnstile.configError', { ns: 'common' })}</p>}
             <div className="flex flex-col gap-3 sm:flex-row">
               <div className="flex-1">
                 <Label htmlFor="newsletter-email" className="sr-only">{newsletter.placeholder}</Label>
@@ -978,10 +1004,12 @@ export function NewsletterSection() {
                 />
                 {errors.email && <p id="newsletter-email-error" className="mt-2 text-sm text-[var(--brand-cream)]" role="alert">{errors.email.message}</p>}
               </div>
-              <Button type="submit" variant="secondary" disabled={isSubmitting} className="sm:min-w-[12rem]">
+              <Button type="submit" variant="secondary" disabled={isSubmitting || appConfig.isPending || appConfig.isError || Boolean(appConfig.data?.turnstile.enabled && !turnstileToken)} className="sm:min-w-[12rem]">
                 {isSubmitting ? t('newsletter.joining') : newsletter.cta}
               </Button>
             </div>
+            <TurnstileWidget action="newsletter" enabled={appConfig.data?.turnstile.enabled ?? false} onError={() => setTurnstileToken('')} onExpire={() => setTurnstileToken('')} onToken={setTurnstileToken} ref={turnstileWidget} sitekey={appConfig.data?.turnstile.sitekey ?? ''}/>
+            {appConfig.data?.turnstile.enabled && !turnstileToken && <p className="mt-2 text-xs text-[var(--brand-cream)]">{t('auth.turnstile.verifyingHint', { ns: 'common' })}</p>}
           </form>
         </div>
       </Container>

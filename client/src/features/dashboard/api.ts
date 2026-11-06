@@ -44,6 +44,7 @@ export type TransactionFilters = {
   date_to?: string
   min_amount_cents?: number
   max_amount_cents?: number
+  card_id?: number
   sort?: 'posted_at' | 'amount_cents'
   order?: 'asc' | 'desc'
 }

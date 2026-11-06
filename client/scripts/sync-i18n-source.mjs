@@ -72,6 +72,7 @@ function stripLocaleData(value, parts = []) {
 
   return Object.fromEntries(Object.entries(value).flatMap(([key, child]) => {
     const path = [...parts, key].join('.')
+    const moneyUiText = parts[0] === 'dashboard' && ['transfers', 'bills'].includes(parts[1])
     const designTokenField = parts[0] === 'design' && parts[1] === 'colorTokens' && ['dark', 'light'].includes(key)
     const designOnlyLabel = ['design.colorTokens.6.name', 'design.typographySamples.0.name'].includes(path)
     const rateValue = /^rates\.tabs\.\d+\.rows\.\d+$/.test(parts.join('.')) && key === 'rate'
@@ -80,7 +81,7 @@ function stripLocaleData(value, parts = []) {
     const dashboardAccount = path === 'dashboardPreview.account.account'
     const numericValue = typeof child === 'number' || (typeof child === 'string' && /^\s*[-+]?\s*(?:[$€£]\s*)?\d[\d,.]*(?:\s*(?:K\+?|%|USD))?\s*$/i.test(child))
     const urlValue = typeof child === 'string' && /^(?:https?:\/\/|mailto:|#|\/)/i.test(child)
-    if (nonTranslatableKeys.has(key) || designTokenField || designOnlyLabel || rateValue || cardNumber || stepNumber || dashboardAccount || numericValue || urlValue) return []
+    if ((!moneyUiText && nonTranslatableKeys.has(key)) || designTokenField || designOnlyLabel || rateValue || cardNumber || stepNumber || dashboardAccount || numericValue || urlValue) return []
     return [[key, stripLocaleData(child, [...parts, key])]]
   }))
 }
@@ -121,7 +122,7 @@ const mergedCommon = deepMerge(previousCommon, commonContent)
 mergedCommon.authPitch = previousCommon.authPitch
 fs.writeFileSync(commonFile, `${JSON.stringify(stripLocaleData(mergedCommon), null, 2)}\n`)
 
-const english = Object.fromEntries(['common', 'landing', 'pages'].map((namespace) => [
+const english = Object.fromEntries(['common', 'landing', 'pages', 'admin'].map((namespace) => [
   namespace,
   JSON.parse(fs.readFileSync(path.join(localeRoot, 'en', `${namespace}.json`), 'utf8')),
 ]))
@@ -129,6 +130,11 @@ for (const entry of fs.readdirSync(localeRoot, { withFileTypes: true })) {
   if (!entry.isDirectory() || entry.name === 'en') continue
   for (const namespace of Object.keys(english)) {
     const destination = path.join(localeRoot, entry.name, `${namespace}.json`)
+    if (namespace === 'admin') {
+      fs.mkdirSync(path.dirname(destination), { recursive: true })
+      fs.writeFileSync(destination, '{}\n')
+      continue
+    }
     const locale = fs.existsSync(destination) ? JSON.parse(fs.readFileSync(destination, 'utf8')) : {}
     const merged = deepMerge(english[namespace], locale)
     fs.mkdirSync(path.dirname(destination), { recursive: true })
@@ -136,4 +142,4 @@ for (const entry of fs.readdirSync(localeRoot, { withFileTypes: true })) {
   }
 }
 
-console.log('Synchronized English content namespaces and filled locale placeholders.')
+console.log('Synchronized English content namespaces, filled locale placeholders, and configured admin namespace fallback.')

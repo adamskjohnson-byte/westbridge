@@ -29,10 +29,12 @@ export function RequireGuest({ children }: { children: ReactNode }) {
 
 export function RequireVerified({ children }: { children: ReactNode }) {
   const { user, isLoading } = useAuth()
-  const appConfig = useAppConfig()
+  const appConfig = useAppConfig(Boolean(user && !user.email_verified))
 
-  if (isLoading || appConfig.isPending) return <AuthSkeleton />
-  if (user && appConfig.data?.email_verification_required !== false && !user.email_verified) {
+  if (isLoading) return <AuthSkeleton />
+  if (!user || user.email_verified) return children
+  if (appConfig.isPending) return <AuthSkeleton />
+  if (appConfig.data?.email_verification_required !== false) {
     return <Navigate replace to="/verify-notice" />
   }
   return children
@@ -43,7 +45,7 @@ export function RequireRole({ role, children }: { role: AuthUserRole; children: 
 
   if (isLoading) return <AuthSkeleton />
   if (!user) return <Navigate replace to="/login" />
-  if (user.role !== role) return <Navigate replace to="/dashboard" />
+  if (user.role !== role) return <Navigate replace to={role === 'admin' ? '/__not-found' : '/dashboard'} />
   return children
 }
 

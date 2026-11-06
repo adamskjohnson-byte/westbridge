@@ -1,10 +1,18 @@
 import { createBrowserRouter, type RouteObject } from 'react-router-dom'
 import { AppLayout } from '@/components/layout/app-layout'
 import { AuthLayout } from '@/features/auth/auth-layout'
-import { RequireAuth, RequireGuest, RequireVerified } from '@/features/auth/guards'
+import { RequireAuth, RequireGuest, RequireRole, RequireVerified } from '@/features/auth/guards'
 import { DashboardLayout } from '@/features/dashboard/DashboardLayout'
 import { OverviewPage } from '@/features/dashboard/OverviewPage'
 import { TransactionsPage } from '@/features/dashboard/TransactionsPage'
+import { TransfersPage } from '@/features/dashboard/TransfersPage'
+import { BillsPage } from '@/features/dashboard/BillsPage'
+import { CardsPage } from '@/features/dashboard/CardsPage'
+import { InsightsPage } from '@/features/dashboard/InsightsPage'
+import { NotificationsPage } from '@/features/dashboard/NotificationsPage'
+import { SettingsPage } from '@/features/dashboard/SettingsPage'
+import { AdminLayout } from '@/features/admin/AdminLayout'
+import { AdminAuditPage, AdminOverviewPage, AdminSupportPage, AdminTransactionPage, AdminUserDetailPage, AdminUsersPage } from '@/features/admin/AdminPages'
 import { ForgotPasswordPage, ResetPasswordPage } from '@/features/auth/pages/password-pages'
 import { LoginPage } from '@/features/auth/pages/login-page'
 import { RegisterPage } from '@/features/auth/pages/register-page'
@@ -51,7 +59,27 @@ const routes: RouteObject[] = [
     children: [
       { index: true, element: <OverviewPage /> },
       { path: 'transactions', element: <TransactionsPage /> },
+      { path: 'transfers', element: <TransfersPage /> },
+      { path: 'transfers/:transferId', element: <TransfersPage /> },
+      { path: 'bills', element: <BillsPage /> },
+      { path: 'cards', element: <CardsPage /> },
+      { path: 'insights', element: <InsightsPage /> },
+      { path: 'notifications', element: <NotificationsPage /> },
+      { path: 'settings', element: <SettingsPage /> },
       { path: 'accounts/:id/transactions', element: <TransactionsPage /> },
+    ],
+  },
+  {
+    path: 'admin',
+    element: <RequireAuth><RequireVerified><RequireRole role="admin"><AdminLayout /></RequireRole></RequireVerified></RequireAuth>,
+    children: [
+      { index: true, element: <AdminOverviewPage /> },
+      { path: 'users', element: <AdminUsersPage /> },
+      { path: 'users/:userId', element: <AdminUserDetailPage /> },
+      { path: 'transactions', element: <AdminTransactionPage /> },
+      { path: 'support', element: <AdminSupportPage /> },
+      { path: 'support/:ticketId', element: <AdminSupportPage /> },
+      { path: 'audit', element: <AdminAuditPage /> },
     ],
   },
   { path: '*', element: <NotFound /> },

@@ -34,6 +34,7 @@ class Account extends Model
             'type' => AccountType::class,
             'status' => AccountStatus::class,
             'balance_cents' => 'integer',
+            'low_balance_notified' => 'boolean',
             'opened_at' => 'immutable_datetime',
         ];
     }

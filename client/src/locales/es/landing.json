@@ -194,7 +194,7 @@
   "rates": {
     "columns": {
       "product": "Producto",
-      "rate": "Rate",
+      "rate": "Tasa",
       "bestFor": "Ideal para"
     },
     "eyebrow": "Tasas",

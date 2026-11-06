@@ -26,10 +26,15 @@ class DomainModelTest extends TestCase
 {
     use RefreshDatabase;
 
-    public function test_model_tests_use_an_isolated_in_memory_database(): void
+    public function test_model_tests_use_an_isolated_test_database(): void
     {
-        $this->assertSame('sqlite', DB::connection()->getDriverName());
-        $this->assertSame(':memory:', DB::connection()->getDatabaseName());
+        if (DB::connection()->getDriverName() === 'sqlite') {
+            $this->assertSame(':memory:', DB::connection()->getDatabaseName());
+            return;
+        }
+
+        $this->assertSame('mysql', DB::connection()->getDriverName());
+        $this->assertSame('westbridge_e2e', DB::connection()->getDatabaseName());
     }
 
     public function test_user_account_and_ledger_relationships_and_enum_casts_work(): void

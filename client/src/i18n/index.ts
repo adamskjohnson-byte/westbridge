@@ -85,7 +85,7 @@ export const i18nReady = i18n
     fallbackLng: 'en',
     supportedLngs: languages.map((language) => language.code),
     load: 'currentOnly',
-    ns: ['common', 'landing', 'pages'],
+    ns: ['common', 'landing', 'pages', 'admin'],
     defaultNS: 'common',
     interpolation: { escapeValue: false },
     missingKeyHandler: import.meta.env.DEV ? (lng, ns, key, fallbackValue) => {

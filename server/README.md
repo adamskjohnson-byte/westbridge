@@ -8,6 +8,35 @@ All feature API endpoints are versioned under `/api/v1`; the infrastructure heal
 
 - `GET /api/v1/config` reports the active `email_verification_required` policy.
 
+### Money movement
+
+All money-movement endpoints require an authenticated, verified, active session. Transfer and bill-payment requests must include an `Idempotency-Key` UUID header; retries with the same body return the original result, while a different body returns `409 idempotency_key_reused`.
+
+- `GET|POST /api/v1/beneficiaries` list or save external recipients; `DELETE /api/v1/beneficiaries/{id}` removes an owned recipient.
+- `POST /api/v1/transfers/lookup` looks up an eligible external account with masked holder details; limited to 10/minute per user.
+- `GET /api/v1/transfers/own` lists active own accounts with masked numbers.
+- `POST /api/v1/transfers` makes own-account or external transfers; `GET /api/v1/transfers` lists transfers and `GET /api/v1/transfers/{id}` reads a transfer involving the caller. Creation is limited to 10/minute per user.
+- `GET /api/v1/limits` reports the UTC-day transfer and bill-payment allowance; transfers between the user's own accounts are excluded.
+- `GET /api/v1/billers`, `POST /api/v1/bill-payments`, and `GET /api/v1/bill-payments` provide the fictional bill catalog and simulated bill payments.
+- `GET|POST /api/v1/cards`, `PATCH /api/v1/cards/{id}`, and the `freeze`, `unfreeze`, and `cancel` actions manage safe virtual debit card metadata. `GET /api/v1/cards?include=cancelled` includes cancelled cards.
+- `POST /api/v1/cards/{id}/test-purchase` makes an idempotent simulated purchase, limited to 10 requests per minute per user. Purchases write card-linked ledger debits and do not consume the transfer daily limit.
+- `GET /api/v1/accounts/{id}/transactions?card_id={cardId}` filters an owned account's transactions to one of the user's cards.
+- `GET /api/v1/notifications`, `/unread-count`, `POST /api/v1/notifications/{id}/read`, `/read-all`, and `DELETE /api/v1/notifications/{id}` manage the caller's typed notifications.
+- `GET /api/v1/settings`, `PATCH /api/v1/settings/profile`, `/preferences`, `POST /api/v1/settings/password`, and `/settings/sessions` manage profile, preferences, password, and signed-in sessions.
+- `GET /api/v1/insights?month=YYYY-MM` returns SQL-aggregated monthly ledger totals, category comparisons, counterparties, largest debits, and zero-filled daily spending.
+
+### Administration
+
+Admin endpoints are read-only except for user suspension/reactivation, account freeze/unfreeze, and support-ticket status, priority, notes, and replies. They require a verified active admin session, are limited to 60 requests per minute per admin (reconciliation: 6/minute), and never expose full account numbers or card data. User/account state changes require the admin's current password and a 10-500 character reason; all admin writes are audited. Admin list endpoints accept `page` and `per_page` (default 20, maximum 100).
+
+- `GET /api/v1/admin/overview` returns operational aggregates and five recent audit events; `GET /api/v1/admin/system/reconcile` checks account balances against ledger rows and writes an audit event.
+- `GET /api/v1/admin/users`, `/users/{id}`, `/transactions`, `/tickets`, `/tickets/{id}`, and `/audit-logs` provide filtered, paginated support and audit views; `/audit-logs/actions` returns action names.
+- `POST /api/v1/admin/users/{id}/suspend|reactivate` and `/accounts/{id}/freeze|unfreeze` perform the allowed account-management actions.
+- `PATCH /api/v1/admin/tickets/{id}` updates ticket status/priority; `POST /api/v1/admin/tickets/{id}/messages` stores an internal note or emails a public reply.
+- `php artisan admin:create {email}` interactively creates a verified admin; `php artisan admin:demote {email}` confirms demotion and revokes sessions. Admins are never created through HTTP.
+
+Account-number lookup responses never contain the full number. Lookup audits record a SHA-256 hash only. Source-account ownership failures return `404` before destination resolution. All balances and ledger movements use integer cents and are written through `LedgerService`.
+
 ### Public forms
 
 - `POST /api/v1/newsletter` accepts an `email` and returns `200 { "message": "Thanks for subscribing." }`. Duplicate addresses receive the same response.
@@ -67,6 +96,26 @@ Mail sends synchronously. Local development defaults to `MAIL_MAILER=log`, which
 ## Demo seed credentials
 
 Local and testing seeders create fictional users with the shared demo-only password `Password123!`. The admin login is `admin@westbridge.test`; a customer login is `customer@westbridge.test`. These credentials are for local/testing demos only and are never seeded in production.
+
+## Concurrency stress test
+
+`composer stress` launches independent PHP worker processes against the configured database and exercises the real transfer, bill-payment, and card-purchase services. It must use a disposable MySQL/MariaDB database whose name ends in `_e2e`; the command refuses other environments, database names, and non-InnoDB money tables. InnoDB row locks and independent connections are required to expose transaction races; SQLite's in-memory test database runs in one process and cannot validate this behavior.
+
+Create the dedicated database with the MySQL account configured in `server/.env` (the default XAMPP root account shown here is local-only):
+
+```sql
+CREATE DATABASE westbridge_e2e CHARACTER SET utf8mb4 COLLATE utf8mb4_unicode_ci;
+GRANT ALL PRIVILEGES ON westbridge_e2e.* TO 'root'@'localhost';
+```
+
+In `server/.env`, set `DB_CONNECTION=mysql` and `DB_DATABASE=westbridge_e2e`, preserving the configured local host, port, username, and password. From `server/`, prepare the disposable schema and run the stress harness:
+
+```powershell
+php artisan dev:e2e-prepare
+composer stress
+```
+
+`dev:e2e-prepare` is guarded by the same local/testing and `_e2e` checks and freshly migrates only that dedicated database. The stress harness itself creates unique users/accounts for each run and does not clear or modify pre-existing records. Run `composer stress` three times to compare repeatability; afterward use `php artisan bank:reconcile` against the same E2E database.
 
 ## Local checks
 

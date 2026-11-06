@@ -3,6 +3,7 @@
 namespace App\Services;
 
 use App\Enums\AccountStatus;
+use App\Enums\CardStatus;
 use App\Enums\TransactionCategory;
 use App\Enums\TransactionDirection;
 use App\Enums\TransferStatus;
@@ -11,11 +12,17 @@ use App\Exceptions\Bank\AccountClosedException;
 use App\Exceptions\Bank\AccountFrozenException;
 use App\Exceptions\Bank\AccountNotFoundException;
 use App\Exceptions\Bank\AccountOwnershipException;
+use App\Exceptions\Bank\AmountInvalidException;
 use App\Exceptions\Bank\CurrencyMismatchException;
 use App\Exceptions\Bank\DailyLimitExceededException;
+use App\Exceptions\Bank\IdempotencyKeyReusedException;
 use App\Exceptions\Bank\InactiveUserException;
 use App\Exceptions\Bank\InsufficientFundsException;
 use App\Exceptions\Bank\InvalidTransferException;
+use App\Exceptions\Bank\RecipientNotFoundException;
+use App\Exceptions\Bank\ReferenceInvalidException;
+use App\Models\BillPayment;
+use App\Models\Card;
 use App\Exceptions\Bank\UserNotFoundException;
 use App\Models\Account;
 use App\Models\AuditLog;
@@ -28,6 +35,82 @@ use Illuminate\Support\Str;
 
 class LedgerService
 {
+    public function cardPurchase(User $initiator, Card $card, string $merchant, int $amountCents, string $key, string $requestHash): array
+    {
+        return DB::transaction(function () use ($initiator, $card, $merchant, $amountCents, $key, $requestHash): array {
+            $user = User::query()->whereKey($initiator->getKey())->lockForUpdate()->firstOrFail();
+            $existing = DB::table('card_purchase_attempts')->where('user_id', $user->getKey())->where('idempotency_key', $key)->first();
+            if ($existing !== null) {
+                if (! hash_equals((string) $existing->request_hash, $requestHash)) {
+                    throw new IdempotencyKeyReusedException;
+                }
+
+                return ['status' => $existing->status, 'code' => $existing->decline_code, 'transaction_id' => $existing->transaction_id, 'balance_after_cents' => $existing->balance_after_cents, 'replayed' => true];
+            }
+
+            $lockedCard = Card::query()->whereKey($card->getKey())->lockForUpdate()->firstOrFail();
+            $account = Account::query()->whereKey($lockedCard->account_id)->lockForUpdate()->firstOrFail();
+            $code = match (true) {
+                $lockedCard->status === CardStatus::Cancelled => 'card_cancelled',
+                $lockedCard->status === CardStatus::Frozen => 'card_frozen',
+                in_array($account->status, [AccountStatus::Frozen, AccountStatus::Closed], true) => 'account_frozen',
+                (int) $account->balance_cents < $amountCents => 'insufficient_funds',
+                $this->cardSpentToday($lockedCard) + $amountCents > (int) $lockedCard->daily_limit_cents => 'card_limit_exceeded',
+                default => null,
+            };
+            $now = Carbon::now('UTC');
+            $audit = [
+                'user_id' => $user->getKey(), 'action' => $code === null ? 'card_purchase.approved' : 'card_purchase.declined',
+                'entity_type' => 'card', 'entity_id' => (string) $lockedCard->getKey(),
+                'metadata' => ['amount_cents' => $amountCents, 'merchant' => $merchant, 'code' => $code], 'created_at' => $now,
+            ];
+            if ($code !== null) {
+                AuditLog::create($audit);
+                DB::table('card_purchase_attempts')->insert([
+                    'user_id' => $user->getKey(), 'card_id' => $lockedCard->getKey(), 'idempotency_key' => $key,
+                    'request_hash' => $requestHash, 'status' => 'declined', 'decline_code' => $code,
+                    'created_at' => $now, 'updated_at' => $now,
+                ]);
+
+                return ['status' => 'declined', 'code' => $code, 'transaction_id' => null, 'balance_after_cents' => (int) $account->balance_cents, 'replayed' => false];
+            }
+
+            $balance = (int) $account->balance_cents - $amountCents;
+            $account->balance_cents = $balance;
+            $account->save();
+            $transaction = Transaction::create([
+                'account_id' => $account->getKey(), 'card_id' => $lockedCard->getKey(),
+                'direction' => TransactionDirection::Debit, 'amount_cents' => $amountCents,
+                'balance_after_cents' => $balance, 'category' => TransactionCategory::Card,
+                'description' => 'Card payment: '.$merchant, 'counterparty_name' => $merchant,
+                'reference' => (string) Str::ulid(), 'posted_at' => $now, 'created_at' => $now,
+            ]);
+            $audit['entity_type'] = 'transaction';
+            $audit['entity_id'] = (string) $transaction->getKey();
+            AuditLog::create($audit);
+            DB::table('card_purchase_attempts')->insert([
+                'user_id' => $user->getKey(), 'card_id' => $lockedCard->getKey(), 'idempotency_key' => $key,
+                'request_hash' => $requestHash, 'status' => 'approved', 'transaction_id' => $transaction->getKey(),
+                'balance_after_cents' => $balance, 'created_at' => $now, 'updated_at' => $now,
+            ]);
+            app(NotificationService::class)->sendAfterCommit($user, 'card_purchase', [
+                'amount_cents' => $amountCents, 'merchant' => $merchant, 'last4' => $lockedCard->last4,
+            ]);
+            app(NotificationService::class)->checkLowBalance($account, false);
+
+            return ['status' => 'approved', 'code' => null, 'transaction_id' => $transaction->getKey(), 'balance_after_cents' => $balance, 'replayed' => false];
+        }, 3);
+    }
+
+    private function cardSpentToday(Card $card): int
+    {
+        return (int) Transaction::query()->where('card_id', $card->getKey())
+            ->where('direction', TransactionDirection::Debit)
+            ->where('posted_at', '>=', Carbon::now('UTC')->startOfDay())
+            ->where('posted_at', '<', Carbon::now('UTC')->addDay()->startOfDay())
+            ->sum('amount_cents');
+    }
+
     public function deposit(Account $to, int $cents, string $description): Transaction
     {
         return DB::transaction(function () use ($to, $cents, $description): Transaction {
@@ -71,6 +154,7 @@ class LedgerService
                 ],
                 'created_at' => $postedAt,
             ]);
+            app(NotificationService::class)->checkLowBalance($account);
 
             return $transaction;
         }, 3);
@@ -83,8 +167,13 @@ class LedgerService
         int $amountCents,
         ?string $memo,
         ?string $idempotencyKey,
+        ?string $destinationType = null,
+        ?string $requestHash = null,
+        ?string $recipientName = null,
+        ?string $destinationNumberMasked = null,
+        ?string $destinationHolderMasked = null,
     ): Transfer {
-        return DB::transaction(function () use ($initiator, $from, $to, $amountCents, $memo, $idempotencyKey): Transfer {
+        return DB::transaction(function () use ($initiator, $from, $to, $amountCents, $memo, $idempotencyKey, $destinationType, $requestHash, $recipientName, $destinationNumberMasked, $destinationHolderMasked): Transfer {
             // Locking the initiator serializes same-user idempotency and daily-limit checks across concurrent requests.
             $lockedInitiator = User::query()->whereKey($initiator->getKey())->lockForUpdate()->first();
             if ($lockedInitiator === null) {
@@ -99,6 +188,10 @@ class LedgerService
                     ->first();
 
                 if ($existingTransfer !== null) {
+                    if ($requestHash !== null && ! hash_equals((string) $existingTransfer->request_hash, $requestHash)) {
+                        throw new IdempotencyKeyReusedException;
+                    }
+
                     return $existingTransfer;
                 }
             }
@@ -108,8 +201,8 @@ class LedgerService
                 throw new InactiveUserException;
             }
             // Reject non-positive amounts before arithmetic or persistence.
-            if ($amountCents <= 0) {
-                throw new InvalidTransferException('Transfer amount must be greater than zero.', 'invalid_amount');
+            if ($amountCents < 1 || $amountCents > 10000000) {
+                throw new AmountInvalidException;
             }
             $fromId = (int) $from->getKey();
             $toId = (int) $to->getKey();
@@ -151,6 +244,13 @@ class LedgerService
             if ($lockedFrom->currency !== $lockedTo->currency) {
                 throw new CurrencyMismatchException;
             }
+            $resolvedDestinationType = $destinationType ?? ((int) $lockedTo->user_id === (int) $lockedInitiator->getKey() ? 'own' : 'account_number');
+            if ($resolvedDestinationType === 'own' && (int) $lockedTo->user_id !== (int) $lockedInitiator->getKey()) {
+                throw new RecipientNotFoundException;
+            }
+            if ($resolvedDestinationType !== 'own' && (int) $lockedTo->user_id === (int) $lockedInitiator->getKey()) {
+                throw new RecipientNotFoundException;
+            }
 
             // Read balances only after both account locks are held so concurrent debits cannot spend stale funds.
             $fromBalance = (int) $lockedFrom->balance_cents;
@@ -161,31 +261,37 @@ class LedgerService
             }
 
             $limit = (int) config('bank.daily_transfer_limit_cents', 500000);
-            $dayStart = Carbon::now()->startOfDay();
-            $dayEnd = $dayStart->copy()->addDay();
+            $usedToday = app(MoneyMovementReadService::class)->usedToday($lockedInitiator, Carbon::now('UTC')->toImmutable());
 
-            // The initiator lock makes this completed-transfer total safe from concurrent transfers by the same user.
-            $outgoingToday = (int) Transfer::query()
-                ->where('initiated_by_user_id', $lockedInitiator->getKey())
-                ->where('status', TransferStatus::Completed->value)
-                ->where('created_at', '>=', $dayStart)
-                ->where('created_at', '<', $dayEnd)
-                ->sum('amount_cents');
-
-            // Compare against the remaining allowance to prevent this request from crossing the user's daily cap.
-            if ($outgoingToday >= $limit || $amountCents > $limit - $outgoingToday) {
+            if ((int) $lockedTo->user_id !== (int) $lockedInitiator->getKey()
+                && ($usedToday >= $limit || $amountCents > $limit - $usedToday)) {
                 throw new DailyLimitExceededException;
             }
+
+            $recipient = $recipientName === null
+                ? User::query()->whereKey($lockedTo->user_id)->first()
+                : null;
+            $targetName = $recipientName ?: trim(($recipient?->first_name ?? '').' '.($recipient?->last_name ?? '')) ?: 'Westbridge customer';
+            $senderMasked = BeneficiaryService::maskHolder($lockedInitiator->first_name, $lockedInitiator->last_name);
+            $targetHolderMasked = $destinationHolderMasked ?: BeneficiaryService::maskHolder(
+                $recipient?->first_name ?? '',
+                $recipient?->last_name ?? '',
+            );
 
             $transfer = Transfer::create([
                 'initiated_by_user_id' => $lockedInitiator->getKey(),
                 'from_account_id' => $lockedFrom->getKey(),
                 'to_account_id' => $lockedTo->getKey(),
+                'destination_type' => $resolvedDestinationType,
+                'destination_name' => $targetName,
+                'destination_number_masked' => $destinationNumberMasked ?: BeneficiaryService::maskAccountNumber($lockedTo->account_number),
+                'destination_holder_masked' => $targetHolderMasked,
                 'amount_cents' => $amountCents,
                 'currency' => $lockedFrom->currency ?: config('bank.default_currency', 'USD'),
                 'memo' => $memo,
                 'status' => TransferStatus::Completed,
                 'idempotency_key' => $idempotencyKey,
+                'request_hash' => $requestHash,
             ]);
 
             $newBalances = [
@@ -209,8 +315,8 @@ class LedgerService
                 'amount_cents' => $amountCents,
                 'balance_after_cents' => $fromBalance - $amountCents,
                 'category' => TransactionCategory::Transfer,
-                'description' => 'Transfer to account '.$lockedTo->account_number,
-                'counterparty_name' => 'Account '.$lockedTo->account_number,
+                'description' => 'Transfer to '.$targetName,
+                'counterparty_name' => $targetName,
                 'reference' => (string) Str::ulid(),
                 'posted_at' => $postedAt,
                 'created_at' => $postedAt,
@@ -223,8 +329,8 @@ class LedgerService
                 'amount_cents' => $amountCents,
                 'balance_after_cents' => $toBalance + $amountCents,
                 'category' => TransactionCategory::Transfer,
-                'description' => 'Transfer from account '.$lockedFrom->account_number,
-                'counterparty_name' => 'Account '.$lockedFrom->account_number,
+                'description' => 'Transfer from '.$senderMasked,
+                'counterparty_name' => $senderMasked,
                 'reference' => (string) Str::ulid(),
                 'posted_at' => $postedAt,
                 'created_at' => $postedAt,
@@ -243,8 +349,133 @@ class LedgerService
                 ],
                 'created_at' => $postedAt,
             ]);
+            if ((int) $lockedFrom->user_id !== (int) $lockedTo->user_id) {
+                $notificationService = app(NotificationService::class);
+                $notificationService->sendAfterCommit($lockedInitiator, 'transfer_sent', [
+                    'amount_cents' => $amountCents,
+                    'to_masked' => BeneficiaryService::maskAccountNumber($lockedTo->account_number),
+                    'reference' => (string) $transfer->getKey(),
+                ]);
+                $recipientUser = User::query()->whereKey($lockedTo->user_id)->first();
+                if ($recipientUser !== null) {
+                    $notificationService->sendAfterCommit($recipientUser, 'transfer_received', [
+                        'amount_cents' => $amountCents,
+                        'from_masked' => BeneficiaryService::maskAccountNumber($lockedFrom->account_number),
+                        'reference' => (string) $transfer->getKey(),
+                    ]);
+                }
+            }
+            app(NotificationService::class)->checkLowBalance($lockedFrom);
+            app(NotificationService::class)->checkLowBalance($lockedTo, false);
 
             return $transfer;
+        }, 3);
+    }
+
+    public function payBill(
+        User $initiator,
+        Account $from,
+        string $billerCode,
+        string $referenceNumber,
+        int $amountCents,
+        string $idempotencyKey,
+        string $requestHash,
+    ): BillPayment {
+        return DB::transaction(function () use ($initiator, $from, $billerCode, $referenceNumber, $amountCents, $idempotencyKey, $requestHash): BillPayment {
+            $lockedUser = User::query()->whereKey($initiator->getKey())->lockForUpdate()->firstOrFail();
+            $existing = BillPayment::query()->where('user_id', $lockedUser->getKey())->where('idempotency_key', $idempotencyKey)->first();
+            if ($existing !== null) {
+                if (! hash_equals((string) $existing->request_hash, $requestHash)) {
+                    throw new IdempotencyKeyReusedException;
+                }
+
+                return $existing;
+            }
+            if ($lockedUser->status !== UserStatus::Active) {
+                throw new InactiveUserException;
+            }
+            if ($amountCents < 1 || $amountCents > 5000000) {
+                throw new AmountInvalidException;
+            }
+
+            $account = Account::query()->whereKey($from->getKey())->lockForUpdate()->first();
+            if ($account === null) {
+                throw new AccountNotFoundException;
+            }
+            if ((int) $account->user_id !== (int) $lockedUser->getKey()) {
+                throw new AccountOwnershipException;
+            }
+            if ($account->status === AccountStatus::Frozen) {
+                throw new AccountFrozenException;
+            }
+            if ($account->status === AccountStatus::Closed) {
+                throw new AccountClosedException;
+            }
+
+            $catalog = app(BillerCatalogService::class);
+            $biller = $catalog->find($billerCode);
+            if (preg_match($biller['reference_pattern'], $referenceNumber) !== 1) {
+                throw new ReferenceInvalidException;
+            }
+            $usedToday = app(MoneyMovementReadService::class)->usedToday($lockedUser, Carbon::now('UTC')->toImmutable());
+            $limit = (int) config('bank.daily_transfer_limit_cents', 500000);
+            if ($usedToday >= $limit || $amountCents > $limit - $usedToday) {
+                throw new DailyLimitExceededException;
+            }
+            $balance = (int) $account->balance_cents;
+            if ($balance < $amountCents) {
+                throw new InsufficientFundsException;
+            }
+
+            $newBalance = $balance - $amountCents;
+            $account->balance_cents = $newBalance;
+            $account->save();
+            $postedAt = Carbon::now('UTC');
+            $transaction = Transaction::create([
+                'account_id' => $account->getKey(),
+                'direction' => TransactionDirection::Debit,
+                'amount_cents' => $amountCents,
+                'balance_after_cents' => $newBalance,
+                'category' => TransactionCategory::BillPayment,
+                'description' => 'Bill payment: '.$biller['name'],
+                'counterparty_name' => $biller['name'],
+                'reference' => (string) Str::ulid(),
+                'posted_at' => $postedAt,
+                'created_at' => $postedAt,
+            ]);
+            $payment = BillPayment::create([
+                'user_id' => $lockedUser->getKey(),
+                'account_id' => $account->getKey(),
+                'biller_code' => $biller['code'],
+                'biller_name' => $biller['name'],
+                'reference_number' => $referenceNumber,
+                'amount_cents' => $amountCents,
+                'status' => 'completed',
+                'transaction_id' => $transaction->getKey(),
+                'idempotency_key' => $idempotencyKey,
+                'request_hash' => $requestHash,
+                'created_at' => $postedAt,
+            ]);
+            AuditLog::create([
+                'user_id' => $lockedUser->getKey(),
+                'action' => 'bill_payment.completed',
+                'entity_type' => 'bill_payment',
+                'entity_id' => (string) $payment->getKey(),
+                'metadata' => [
+                    'account_id' => $account->getKey(),
+                    'biller_code' => $biller['code'],
+                    'amount_cents' => $amountCents,
+                    'currency' => $account->currency,
+                ],
+                'created_at' => $postedAt,
+            ]);
+            app(NotificationService::class)->sendAfterCommit($lockedUser, 'bill_paid', [
+                'amount_cents' => $amountCents,
+                'biller_name' => $biller['name'],
+            ]);
+            app(NotificationService::class)->checkLowBalance($account);
+
+            return $payment;
         }, 3);
     }
 }
